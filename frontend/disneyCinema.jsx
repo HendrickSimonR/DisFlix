@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import configureStore from './store/store';
 import Root from './components/root';
-import * as UserApi from './util/user_api_util';
-import * as SessionApi from './util/session_api_util';
-import * as actions from './actions';
 
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById('root');
+import * as api from './util';
+import * as actions from './actions';
+import configureStore from './store/store';
+
+document.addEventListener('DOMContentLoaded', function () {
   const store = configureStore();
-  window.UserApi = UserApi;
-  window.SessionApi = SessionApi;
+  window.store = store;
+  window.api = api;
   window.actions = actions;
 
+  const root = document.getElementById('content');
   ReactDOM.render(<Root store={store} />, root);
 });

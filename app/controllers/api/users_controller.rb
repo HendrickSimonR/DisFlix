@@ -9,10 +9,9 @@ class Api::UsersController < ApplicationController
     end
   end
   
-  def destroy
+  def show
     @user = selected_user
     if @user
-      @user.destroy
       render :show
     else
       render json: ['An error occurred'], status: 400

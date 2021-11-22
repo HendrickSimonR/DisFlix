@@ -1,10 +1,13 @@
+import { 
+  createUser
+} from '../util/user_api';
 import {
   createSession,
   deleteSession
-} from '../util/api/session_api';
+} from '../util/session_api';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
-export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
+export const SIGNOUT_CURRENT_USER = 'SIGNOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
 export const receiveCurrentUser = user => ({
@@ -13,7 +16,7 @@ export const receiveCurrentUser = user => ({
 });
 
 export const removeCurrentUser = () => ({
-  type: LOGOUT_CURRENT_USER
+  type: SIGNOUT_CURRENT_USER
 });
 
 export const receiveSessionErrors = errors => ({
@@ -21,16 +24,23 @@ export const receiveSessionErrors = errors => ({
   errors
 });
 
-export const loginThunk = userInput => dispatch => (
-  createSession(userInput).then(
+export const signup = formInput => dispatch => {
+  return createUser(formInput).then(
     user => dispatch(receiveCurrentUser(user)),
     error => dispatch(receiveSessionErrors(error))
-  )
-);
+  );
+};
 
-export const logoutThunk = () => dispatch => (
-  deleteSession().then(
+export const signin = formInput => dispatch => {
+  return createSession(formInput).then(
+    user => dispatch(receiveCurrentUser(user)),
+    error => dispatch(receiveSessionErrors(error))
+  );
+};
+
+export const signout = () => dispatch => {
+  return deleteSession().then(
     () => dispatch(removeCurrentUser()),
     error => dispatch(receiveSessionErrors(error))
-  )
-);
+  );
+};
