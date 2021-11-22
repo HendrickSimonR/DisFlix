@@ -4,7 +4,7 @@ export const REMOVE_USER = 'REMOVE_USER';
 export const RECEIVE_USER_ERRORS = 'RECEIVE_USER_ERRORS';
 
 export const receiveUser = user => ({
-  type: RECEIVE_USERS,
+  type: RECEIVE_USER,
   user
 });
 
@@ -21,7 +21,7 @@ export const receiveUserErrors = errors => ({
 export const getUser = id => dispatch => {
   return userApi.getUser(id)
     .then(
-      (user) => dispatch(receiveUsers(user)),
+      (user) => dispatch(receiveUser(user)),
       (errors) => dispatch(receiveUserErrors(errors))
   )
 }
