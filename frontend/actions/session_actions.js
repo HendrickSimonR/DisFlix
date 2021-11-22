@@ -1,10 +1,4 @@
-import { 
-  createUser
-} from '../util/user_api';
-import {
-  createSession,
-  deleteSession
-} from '../util/session_api';
+import { createUser, postSession, deleteSession } from '../util/session_api';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const SIGNOUT_CURRENT_USER = 'SIGNOUT_CURRENT_USER';
@@ -15,7 +9,7 @@ export const receiveCurrentUser = user => ({
   user
 });
 
-export const removeCurrentUser = () => ({
+export const signoutCurrentUser = () => ({
   type: SIGNOUT_CURRENT_USER
 });
 
@@ -24,15 +18,15 @@ export const receiveSessionErrors = errors => ({
   errors
 });
 
-export const signup = formInput => dispatch => {
-  return createUser(formInput).then(
+export const signup = signupInput => dispatch => {
+  return createUser(signupInput).then(
     user => dispatch(receiveCurrentUser(user)),
     error => dispatch(receiveSessionErrors(error))
   );
 };
 
-export const signin = formInput => dispatch => {
-  return createSession(formInput).then(
+export const signin = signinInput => dispatch => {
+  return postSession(signinInput).then(
     user => dispatch(receiveCurrentUser(user)),
     error => dispatch(receiveSessionErrors(error))
   );
@@ -40,7 +34,7 @@ export const signin = formInput => dispatch => {
 
 export const signout = () => dispatch => {
   return deleteSession().then(
-    () => dispatch(removeCurrentUser()),
+    () => dispatch(signoutCurrentUser()),
     error => dispatch(receiveSessionErrors(error))
   );
 };
