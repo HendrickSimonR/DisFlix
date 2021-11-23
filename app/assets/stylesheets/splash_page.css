@@ -1,0 +1,26 @@
+.demobutton{
+  background-color: #0063e5;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.625rem;
+  color: #f9f9f9;
+  opacity: .7;
+  transform: scale(.97);
+  border-radius: 5px;
+  /* transition: 0s;
+    transition-property: all;
+    transition-duration: 0s;
+    transition-timing-function: ease;
+    transition-delay: 0s */
+  border-style: none;
+  padding: 11.5px 24px;
+  max-width: 540px;
+  min-width: 74px;
+  min-height: 50px;
+  margin: .5em .5em .5em 0;
+   transition: background 0.3s ease-in-out;
+}
+
+.demobutton:hover{
+   background-color: #016cf9;
+   cursor: pointer;
+}

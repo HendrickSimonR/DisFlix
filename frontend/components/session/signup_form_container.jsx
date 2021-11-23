@@ -10,7 +10,7 @@ const mSTP = state => {
     formType: 'Sign Up',
     formGreeting: 'Welcome!',
     question: 'Already a Mouseketeer?',
-    link: <Link className="question-link" to="/signin">Sign in</Link>,
+    link: <Link className="question-link" to="/signin">Sign in</Link>
   };
 };
 
