@@ -1,21 +1,42 @@
-import { connect } from 'react-redux';
-import { signin } from '../../actions/session_actions';
+import React from 'react';
 import SessionForm from './session_form';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { signin } from '../../actions/session_actions';
 
-const mSTP = state => {
+const mSTP = (state) => {
   return {
-    user: {
-      username: '',
-      password: ''
-    },
-    formType: 'Sign In'
+    errors: state.errors,
+    formType: 'Sign In',
+    formGreeting: 'Welcome back!',
+    question: 'New in town?',
+    navLink: <Link className="question-link" to="/signup">Sign up now.</Link>,
   };
 };
 
 const mDTP = dispatch => {
   return {
-    submitForm: (user) => dispatch(signin(user)),
+    submitForm: (user) => dispatch(signin(user))
   };
 };
 
-export default connect(mDTP, mSTP)(SessionForm);
+export default connect(mSTP, mDTP)(SessionForm);
+
+
+// const mSTP = state => {
+//   return {
+//     user: {
+//       username: '',
+//       password: ''
+//     },
+//     formType: 'Sign In'
+//   };
+// };
+
+// const mDTP = dispatch => {
+//   return {
+//     submitForm: (user) => dispatch(signin(user)),
+//   };
+// };
+
+// export default connect(mDTP, mSTP)(SessionForm);

@@ -4,18 +4,18 @@
 // } from '../actions/user_actions';
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
-const usersReducer = (state={}, action) => {
-  Object.freeze(state);
-  const newState = Object.assign({}, state)
+const usersReducer = ( oldState = {}, action ) => {
+  Object.freeze(oldState);
+  const newState = Object.assign({}, oldState);
+
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       newState[action.user.id] = action.user;
       return newState;
     default:
-      return state;
+      return oldState;
   }
 }
-
 
 export default usersReducer;
 

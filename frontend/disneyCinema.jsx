@@ -6,7 +6,7 @@ import * as api from './util';
 import * as actions from './actions';
 import configureStore from './store/store';
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
   window.store = store;
   window.api = api;

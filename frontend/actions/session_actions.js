@@ -21,20 +21,20 @@ export const receiveSessionErrors = errors => ({
 export const signup = signupInput => dispatch => {
   return createUser(signupInput).then(
     user => dispatch(receiveCurrentUser(user)),
-    error => dispatch(receiveSessionErrors(error))
+    error => dispatch(receiveSessionErrors(error.responseJSON))
   );
 };
 
 export const signin = signinInput => dispatch => {
   return postSession(signinInput).then(
     user => dispatch(receiveCurrentUser(user)),
-    error => dispatch(receiveSessionErrors(error))
+    error => dispatch(receiveSessionErrors(error.responseJSON))
   );
 };
 
 export const signout = () => dispatch => {
   return deleteSession().then(
     () => dispatch(signoutCurrentUser()),
-    error => dispatch(receiveSessionErrors(error))
+    error => dispatch(receiveSessionErrors(error.responseJSON))
   );
 };
