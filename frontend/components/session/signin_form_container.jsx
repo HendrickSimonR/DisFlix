@@ -8,7 +8,7 @@ const mSTP = state => {
       username: '',
       password: ''
     },
-    formType: 'signin'
+    formType: 'Sign In'
   };
 };
 

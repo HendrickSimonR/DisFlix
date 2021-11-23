@@ -7,11 +7,13 @@ class SessionForm extends React.Component {
     super(props);
     this.state = props.user;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.submitForm(this.state);
+    this.props.history.push('/browse');
   }
 
   update(field) {
@@ -26,7 +28,7 @@ class SessionForm extends React.Component {
     return (
       <div>
         {
-          this.props.formType === 'signin' ? 
+          this.props.formType === 'Sign In' ? 
             <SigninForm
               handleSubmit={this.handleSubmit}
               update={this.update}
