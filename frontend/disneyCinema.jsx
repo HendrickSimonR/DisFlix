@@ -7,11 +7,19 @@ import * as actions from './actions';
 import configureStore from './store/store';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore();
+  let preloadedState = undefined;
+  
+  if (window.user) {
+    preloadedState = {
+      session: { user: window.user }
+    }
+  };
+  
+  const store = configureStore(preloadedState);
   window.store = store;
   window.api = api;
   window.actions = actions;
-
+  
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });

@@ -18,12 +18,6 @@ class SessionForm extends React.Component {
     });
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.submitForm(user);
-  }
-
   renderErrors() {
     return (
       <ul className="errors">
@@ -36,33 +30,46 @@ class SessionForm extends React.Component {
     );
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    const user = Object.assign({}, this.state);
+    this.props.submitForm(user).then(
+      () => this.props.history.push('/dashboard'));
+  }
+
   render() {
     return (
       <div className="signin-form-container">
         <h1>{this.props.formGreeting}</h1>
           <form onSubmit={this.handleSubmit} className="login-form-box">
+            <div>
+              {this.renderErrors()}
+            </div>
+            
             <br />
-            {this.renderErrors()}
-                <div className="signin-form">
-                <br />
-                  <input type="text"
-                    value={this.state.username}
-                    onChange={this.update('username')}
-                    className="signin-input"
-                  />
-                <br />
-                  <input type="password"
-                    value={this.state.password}
-                    onChange={this.update('password')}
-                    className="signin-input"
-                  />
-                <br />
+            
+              <div className="signin-form">
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="signin-input"
+                  placeholder="Username"
+                />
+              <br />
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="signin-input"
+                  placeholder="Password"
+                />
+              <br />
                 <input className="session-submit" type="submit" value={this.props.formType} />
               <br />
             </div>
+            
             <div className="session-option">
-            {this.props.question} {this.props.navLink}
-          </div>
+              <p>{this.props.question} {this.props.link}</p>
+            </div>
         </form>
       </div>
     );

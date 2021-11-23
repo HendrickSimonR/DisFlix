@@ -10,7 +10,7 @@ const mSTP = (state) => {
     formType: 'Sign In',
     formGreeting: 'Welcome back!',
     question: 'New in town?',
-    navLink: <Link className="question-link" to="/signup">Sign up now.</Link>,
+    link: <Link className="question-link" to="/signup">Sign up</Link>,
   };
 };
 
