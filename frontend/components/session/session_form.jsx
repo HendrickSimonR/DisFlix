@@ -35,13 +35,13 @@ class SessionForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.submitForm(user).then(
       () => this.props.history.push('/dashboard'));
-  }
+    }
 
   render() {
     return (
       <div className="signin-form-container">
-        <h1>{this.props.formGreeting}</h1>
-          <form onSubmit={this.handleSubmit} className="login-form-box">
+        <h1 className="form-header">{this.props.formGreeting}</h1>
+          <form onSubmit={this.handleSubmit} className="sign-form-box">
             <div>
               {this.renderErrors()}
             </div>
@@ -63,7 +63,7 @@ class SessionForm extends React.Component {
                   placeholder="Password"
                 />
               <br />
-                <input className="session-submit" type="submit" value={this.props.formType} />
+                <input className="session-submit" type="submit" value={this.props.formType.toUpperCase()} />
               <br />
             </div>
             

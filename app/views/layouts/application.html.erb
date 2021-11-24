@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Nunito+Sans:wght@300;400;800&display=swap" rel="stylesheet">   
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <%= csrf_meta_tags %>
 
@@ -22,9 +22,18 @@
     <% end %>
 
     <script type="text/javascript">
-      window.splash = "<%= image_url('splash-background.jpg') %>";
       window.brands = "<%= image_url('brand-logos.png') %>";
+      window.splash1 = "<%= image_url('splash1.png') %>";
+      window.splash2 = "<%= image_url('splash2.png') %>";
+      window.splash3 = "<%= image_url('splash3.png') %>";
+      window.logo = "<%= image_url('logo.png') %>";
     </script>
+
+    <style>
+      ::-webkit-scrollbar {
+        width: 0px;
+      }
+    </style>
   </head>
 
   <body>

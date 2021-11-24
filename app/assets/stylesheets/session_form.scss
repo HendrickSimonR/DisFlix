@@ -1,0 +1,101 @@
+.form-header {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  margin-left: 20px;
+}
+
+.signin-form-container{
+  display: block;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 4px;
+  color: white;
+  width: 350px;
+  height: 500px;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.signin-input{
+  background-color: rgb(39, 39, 39);
+  border-style: none;
+  border-radius: 4px;
+  width: 285px;
+  color: #f9f9f9;
+  position: relative;
+  padding: 16px;
+  margin-bottom: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+.session-submit{
+  position: relative;
+  background: #0063e6;
+  color: white;
+  font-family: 'Nunito Sans';
+  font-size: 17px;
+  font-weight: 300;
+  border-style: none;
+  border-radius: 4px;
+  margin-top: 15px;
+  height: 50px;
+  width: 318px;
+  padding: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background 0.4s ease-in-out;
+}
+
+.session-submit:hover{
+  background-color: #358cfd;  
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+
+.session-option{
+    color: #737373;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.question-link{
+    color: white;
+    text-decoration: none;
+}
+.question-link:hover{
+    text-decoration: underline;
+}
+
+.error-list {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #2e2e2e;
+}
+
+
+// .signout-button {
+//   font-size: 100px;
+//   font-weight: 500px;
+//   color: white;
+//   background-color: pink;
+//   display: block;
+//   position: absolute;
+//   padding: 50px;
+//   width: 100%;
+// }

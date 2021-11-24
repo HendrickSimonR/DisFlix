@@ -12,10 +12,12 @@ class Dashboard extends React.Component {
   }
   render() {
     return (
-      <button 
+      <div>
+        <button 
         className='signout-button' 
-        onClick={this.handleSignout}>Sign Out
+        onClick={this.handleSignout}>GETCHO MONEY!!!
       </button>
+      </div>
     );
   }
 }
