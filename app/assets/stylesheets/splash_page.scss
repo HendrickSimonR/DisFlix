@@ -16,15 +16,15 @@
 }
 
 .splash-main {
-   background: url("https://i.imgur.com/a8SD9gJ.jpg") no-repeat center center; 
-   background-size: cover;
-   box-shadow: inset 0 0 200px #000000;
+  background: url("https://i.imgur.com/a8SD9gJ.jpg") no-repeat center center; 
+  background-size: cover;
+  box-shadow: inset 0 0 200px #000000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -moz-box-shadow: inset 0 0 200px #000000;
   -webkit-box-shadow: inset 0 0 200px #000000;
-   overflow: hidden;
+  overflow: hidden;
 }
 
 .welcome{
@@ -70,10 +70,10 @@
 }
 
 .demobutton:hover{
-   background-color: #358cfd;
-   cursor: pointer;
-   transition: all 0.4s ease 0s;
-  }
+  background-color: #358cfd;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
   
 .splash-signin{
   font-family: 'Nunito Sans';
