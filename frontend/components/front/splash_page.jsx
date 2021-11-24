@@ -20,8 +20,8 @@ class SplashPage extends React.Component {
 
         <div className="info-container">
           <div className="splash-info-left">
-          <h1 className="info-header">Timeless memories in your hands.</h1>
-            <div className="info-text">
+          <h1 className="info-header-left">Timeless memories in your hands.</h1>
+            <div className="info-text-left">
               <h3>Decades of Disney magic for you</h3>
               <h3>and your family to enjoy, with more</h3>
               <h3>memories waiting to be made.</h3>
@@ -34,7 +34,7 @@ class SplashPage extends React.Component {
           <img src={window.splash2} className="info-pic-left"/>
           <div className="splash-info-right">
           <h1 className="info-header">Feel the force on all platforms.</h1>
-            <div className="info-text">
+            <div className="info-text-right">
               <h3>Watch on Smart TVs, gaming consoles,</h3>
               <h3>Apple TV, Chromecast, Blu-Ray players,</h3>
               <h3>and more.</h3>
@@ -44,8 +44,8 @@ class SplashPage extends React.Component {
 
         <div className="info-container-last">
           <div className="splash-info-left">
-            <h1 className="info-header">Watch your favorite heroes anywhere.</h1>
-            <div className="info-text">
+            <h1 className="info-header-left">Watch your favorite heroes anywhere.</h1>
+            <div className="info-text-left">
               <h3>Stream on your phone, laptop, tablet,</h3>
               <h3>and TV without paying more.</h3>
             </div>
