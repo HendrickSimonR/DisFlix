@@ -22,8 +22,11 @@ class Welcome extends React.Component {
         <h3 className="splash-description">Watch anywhere. Cancel anytime.</h3>
         <button 
           className='demobutton' 
-          onClick={this.handleDemo}>Try it out!
+          onClick={this.handleDemo}>DEMO LOGIN
         </button>
+        <br />
+        <h3 className="terms">Stream now. Terms apply.</h3>
+        <img src={window.brands} className="brands-logo" />
       </div>
     )
   }

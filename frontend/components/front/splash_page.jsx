@@ -11,7 +11,7 @@ class SplashPage extends React.Component {
     return (
       <div className="splash-container">
         <div className="splash-main">
-          <Link className="splash-signin" to="/signin">Sign In</Link>
+          <Link className="splash-signin" to="/signin">SIGN IN</Link>
           <Route exact path="/" handleDemo={this.handleDemo} component={WelcomeContainer} />
         </div>
 
