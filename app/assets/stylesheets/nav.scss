@@ -8,12 +8,14 @@
 
 .nav-bar {
   background-color: rgb(10, 15, 22);
+  color: white;
   position: fixed;
   width: 100%;
   height: 74px;
-  color: white;
-  display: flex;
+  margin: 0;
   align-items: center;
   z-index:4;
   transition: all 1s linear;
+  display: flex;
+  align-items: center;
 }
