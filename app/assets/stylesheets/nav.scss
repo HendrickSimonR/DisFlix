@@ -7,40 +7,13 @@
 }
 
 .nav-bar {
-  // background-color: rgb(10, 15, 22);
+  background-color: rgb(10, 15, 22);
   position: fixed;
   width: 100%;
   height: 74px;
   color: white;
   display: flex;
   align-items: center;
-  z-index: 4;
-  transition: all 0.5s linear;
-}
-
-.nav-show {
-  background-color: rgb(10, 15, 22);
   z-index:4;
-  transition: all 0.5s linear;
-}
-
-.nav-links-container {
-  position: relative;
-  display: flex;
-  margin-left: 13.35%;
-}
-
-.nav-link {
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size:.99vw;
-  margin: 8px;
-  text-decoration: none;
-  transition: all 0.4s ease 0s;
-}
-
-.nav-link:hover {
-  color: rgb(199, 199, 199);
-  transition: all 0.4s ease 0s;
+  transition: all 1s linear;
 }
