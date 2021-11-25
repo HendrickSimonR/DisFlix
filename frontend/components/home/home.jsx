@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Dashboard extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
     this.handleSignout = this.handleSignout.bind(this)
@@ -8,7 +8,7 @@ class Dashboard extends React.Component {
 
   handleSignout() {
     this.props.signout();
-    this.props.history.push('/');
+    // this.props.history.push('/');
   }
   render() {
     return (
@@ -22,4 +22,4 @@ class Dashboard extends React.Component {
   }
 }
 
-export default Dashboard;
+export default Home;
