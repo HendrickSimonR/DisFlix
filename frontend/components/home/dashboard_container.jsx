@@ -1,13 +1,13 @@
-import Dashboard from './dashboard';
+import Home from './home';
 import { signout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 
 const mSTP = state => ({
-  user: state.session.id
+  user: state.session
 });
 
 const mDTP = dispatch => ({
   signout: () => dispatch(signout())
 });
 
-export default connect(mSTP, mDTP)(Dashboard);
+export default connect(mSTP, mDTP)(Home);

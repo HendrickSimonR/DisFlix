@@ -1,18 +1,24 @@
 import React from 'react';
 import SigninFormContainer from './session/signin_form_container';
 import SignupFormContainer from './session/signup_form_container';
-import DashboardContainer from './dashboard/dashboard_container';
+import HomeContainer from './home/home_container';
 import SplashPage from './front/splash_page';
+import NavContainer from './home/nav/nav_container';
 import { Route, Link, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-  <div>
-    <AuthRoute component={SplashPage} />
+  <div>    
+    
+    <header>
+      <ProtectedRoute path="/home" component={NavContainer} />
+    </header>
+    
     <Switch>
+      <AuthRoute exact path='/' component={SplashPage} />
       <AuthRoute exact path="/signin" component={SigninFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <ProtectedRoute path="/dashboard" component={DashboardContainer} />
+      <ProtectedRoute path="/home" component={HomeContainer} />
     </Switch>
   </div>
 );

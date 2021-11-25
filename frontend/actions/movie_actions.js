@@ -13,13 +13,13 @@ export const receiveMovie = ({ movie }) => ({
   movie
 });
 
-export const fetchMovies = () => dispatch => {
+export const getMovies = () => dispatch => {
   return fetchMovies().then(
     movies => dispatch(receiveMovies(movies))
   );
 };
 
-export const fetchMovie = id => dispatch => {
+export const getMovie = id => dispatch => {
   return fetchMovie(id).then(
     movie => dispatch(receiveMovie(movie))
   );
