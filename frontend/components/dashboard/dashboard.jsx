@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
 
-class Home extends React.Component {
+class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.handleSignout = this.handleSignout.bind(this)
@@ -13,14 +12,14 @@ class Home extends React.Component {
   }
   render() {
     return (
-      <div className="home-container">
+      <div>
         <button 
-          className='signout-button' 
-          onClick={this.handleSignout}>GETCHO MONEY!!!
-        </button>
+        className='signout-button' 
+        onClick={this.handleSignout}>GETCHO MONEY!!!
+      </button>
       </div>
     );
   }
 }
 
-export default Home;
+export default Dashboard;
