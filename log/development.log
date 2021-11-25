@@ -16113,3 +16113,21 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for ::1 at 2021-11-25 15:48:39 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "HbbxJbk3K9yvNOyOyKfzbQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 207ms (Views: 205.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-11-25 15:49:23 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "HbbxJbk3K9yvNOyOyKfzbQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 188ms (Views: 186.0ms | ActiveRecord: 0.5ms)
+
+
