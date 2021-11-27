@@ -14,8 +14,8 @@ class Home extends React.Component {
     return (
       <div>
         <button 
-        className='signout-button' 
-        onClick={this.handleSignout}>GETCHO MONEY!!!
+          className='signout-button' 
+          onClick={this.handleSignout}>GETCHO MONEY!!!
       </button>
       </div>
     );

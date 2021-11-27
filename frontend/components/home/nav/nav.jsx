@@ -9,11 +9,11 @@ function Nav() {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 585) {
         handleShow(true);
-      }
-      else {
+      } else {
         handleShow(false);
       }
     });
+    
     return () => {
       window.removeEventListener('scroll', null);
     };

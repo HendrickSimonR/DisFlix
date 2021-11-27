@@ -18,9 +18,9 @@ class WatchlistMovies < ApplicationRecord
 
   belongs_to :user,
     class_name: :User,
-    foreign_id: :user_id
+    foreign_key: :user_id
 
   belongs_to :movie,
     class_name: :Movie,
-    foreign_id: :movie_id 
+    foreign_key: :movie_id 
 end
