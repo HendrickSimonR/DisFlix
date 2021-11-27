@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+  gem 'bcrypt'
   gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -51,7 +52,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
-  gem 'bcrypt'
 end
 
 group :test do
