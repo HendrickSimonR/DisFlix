@@ -52,9 +52,11 @@
   margin: 25px;
   width: 10vw;
   height: 10vw;
+  transition: transform .3s;
 }
 
 .avatar-hover:hover {
+  transform: scale(1.08);
   outline: 3.5px solid rgb(255, 255, 255);
   outline-offset: -3.5px;
   border-radius: 50%;

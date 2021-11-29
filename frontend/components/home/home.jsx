@@ -1,5 +1,7 @@
 import React from 'react';
 import SelectProfile from '../selectProfile/select_profile';
+import BrandButtons from './brand_buttons';
+import Nav from './nav/nav';
 
 class Home extends React.Component {
   constructor(props) {
@@ -13,12 +15,15 @@ class Home extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="home-container">
+        <div className="home-main">
+        <BrandButtons />
         <SelectProfile />
         <button 
           className='signout-button' 
-          onClick={this.handleSignout}>GETCHO MONEY!!!
-      </button>
+          onClick={this.handleSignout}>SIGN OUT
+        </button>
+        </div>
       </div>
     );
   }

@@ -1,0 +1,46 @@
+.brand-buttons-container {
+  display: flex;
+  position: relative;
+  width: 90%;
+  height: 10vw;
+  margin: auto;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  // margin-top: 100px;
+}
+
+.brand-button {
+  outline: 3.5px solid rgb(99, 95, 112);
+  outline-offset: -3.5px;
+  position: relative;
+  // min-width: calc(100%/5 - 10px);
+  width: calc(100%/5 - 16px);
+  height: 132px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #21262e;
+  transition: all .25s;
+  // transition: outline ease-out .25s;
+}
+
+.brand-button:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+  // outline-offset: -3.5px;
+  outline: 3.5px solid rgb(224, 224, 224);
+}
+
+.brand-button-img,
+.brand-button-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-button-video {
+  position: absolute;
+}
+
+.brand-button-video:hover .brand-button-img {
+  display: none;
+}
