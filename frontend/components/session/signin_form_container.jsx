@@ -2,7 +2,7 @@ import React from 'react';
 import SessionForm from './session_form';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { signin } from '../../actions/session_actions';
+import { signin, removeErrors } from '../../actions/session_actions';
 
 const mSTP = (state) => {
   return {
@@ -16,7 +16,8 @@ const mSTP = (state) => {
 
 const mDTP = dispatch => {
   return {
-    submitForm: (user) => dispatch(signin(user))
+    submitForm: (user) => dispatch(signin(user)),
+    removeErrors: () => dispatch(removeErrors())
   };
 };
 

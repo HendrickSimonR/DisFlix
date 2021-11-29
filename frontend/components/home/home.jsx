@@ -1,4 +1,5 @@
 import React from 'react';
+import SelectProfile from '../selectProfile/select_profile';
 
 class Home extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        <SelectProfile />
         <button 
           className='signout-button' 
           onClick={this.handleSignout}>GETCHO MONEY!!!

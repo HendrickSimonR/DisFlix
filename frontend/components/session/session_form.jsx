@@ -5,10 +5,7 @@ import React from 'react';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      username: '',
-      password: ''
-    };
+    this.state = { username: '', password: '' };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -24,7 +21,7 @@ class SessionForm extends React.Component {
       <ul className="errors">
         {this.props.errors.map((error, i) => (
           <div>
-          <li key={`error-${i}`}>
+          <li key={`${i}`}>
             {error}
           </li>
             <br />
@@ -32,6 +29,10 @@ class SessionForm extends React.Component {
         ))}
       </ul>
     );
+  }
+
+  componentWillUnmount() {
+    this.props.removeErrors()
   }
 
   handleSubmit(e) {
