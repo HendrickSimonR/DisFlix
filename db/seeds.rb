@@ -12,6 +12,10 @@ User.delete_all
 Movie.delete_all
 Brand.delete_all
 
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
+ActiveRecord::Base.connection.reset_pk_sequence!('movies')
+ActiveRecord::Base.connection.reset_pk_sequence!('brands')
+
 u1=User.new
 u1.username='mickeymouse'
 u1.password='imagination'
@@ -20,9 +24,8 @@ u1.save
 b1=Brand.new
 b1.name='Disney'
 
+# brand buttons
+file1 = open('https://disneycinema.s3.us-east-2.amazonaws.com/Brand+Button+Videos/disneyButton.mp4')
+b1.button_video.attach(io: file1, filename: 'disneyButton.mp4')
 b1.save
 
-# brand buttons
-
-file1 = open('https://disneycinema.s3.us-east-2.amazonaws.com/Brand+Button+Videos/disneyButton.mp4')
-b1.video.attach(io: file1, filename: 'disneyButton.mp4')

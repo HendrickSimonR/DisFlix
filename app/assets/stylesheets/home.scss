@@ -1,19 +1,26 @@
 .home-container {
   padding-top: 100px;
-  background-color: black;
+  background: url('https://disneycinema.s3.us-east-2.amazonaws.com/Dashboard+Background.png') fixed;
+  height: calc(100vh - 100px);
+  // position: fixed;
+  // width: 100%;
 }
 
 // .home-main {
 // }
 
+.sign-out-container {
+  margin-top: 900px;
+}
+
 .signout-button {
-  margin-top: 0px;
   font-size: 100px;
   font-weight: 500px;
   color: white;
-  background-color: pink;
+  background-color: black;
   display: block;
   position: absolute;
   padding: 50px;
   width: 100%;
+  background: black;
 }

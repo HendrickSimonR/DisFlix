@@ -13,3 +13,9 @@
 // }
 
 // export default SigninForm;
+
+// @brands.each do | brand |
+//   json.set! brand.id do
+//     json.partial! 'brand', brand: brand
+//   end
+// end

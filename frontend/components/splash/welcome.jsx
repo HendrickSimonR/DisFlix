@@ -9,7 +9,7 @@ class Welcome extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    const demo = { username: "MickeyMouse", password: "imagination" };
+    const demo = { username: "mickeymouse", password: "imagination" };
     this.props.signin(demo)
     // .then(
       // () => this.props.history.push('/dashboard')

@@ -19,10 +19,12 @@ class Home extends React.Component {
         <div className="home-main">
         <BrandButtons />
         <SelectProfile />
-        <button 
-          className='signout-button' 
-          onClick={this.handleSignout}>SIGN OUT
-        </button>
+          <div className='sign-out-container'>
+            <button 
+              className='signout-button' 
+              onClick={this.handleSignout}>SIGN OUT
+            </button>
+          </div>
         </div>
       </div>
     );

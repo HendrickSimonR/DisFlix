@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import NavLinks from './nav_links'
+import NavLinks from './nav_links';
+import Profile from './profile';
 
 function Nav() {
   const [show, handleShow] = useState(false);
@@ -25,6 +26,7 @@ function Nav() {
         <img src={window.logo} className="nav-logo" />
       </Link>
       <NavLinks />
+      <Profile />
     </div>
   );
 }

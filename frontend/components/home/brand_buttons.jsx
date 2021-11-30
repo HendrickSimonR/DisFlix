@@ -7,30 +7,56 @@ import ReactPlayer from 'react-player';
 class BrandButtons extends React.Component {
   constructor(props) {
     super(props)
+
+    this.state = {
+      brands: []
+    };
+    this.getBrands = this.getBrands.bind(this);
+  }
+
+  getBrands() {
+    $.ajax({
+      url: "/api/brands"
+    }).then(brands => {
+      this.setState({brands})
+    });
+  }
+
+  componentDidMount() {
+    this.getBrands()
   }
 
   render() {
     return (
       <div className='brand-buttons-container'>
-        <div className='brand-button'>
-          <img src={window.disneyButton} class="brand-button-img" alt="" />
-          <ReactPlayer url='https://disneycinema.s3.us-east-2.amazonaws.com/Brand+Button+Videos/disneyButton.mp4' mute loop className="brand-button-video" />
+        <div className='brand-button brand-disney'>
+          <Link to='/brands/1'>
+            <img src={window.disneyButton} className="brand-button-img" alt="" />
+          </Link>
         </div>
-        <div className='brand-button'>
-          <img src={window.pixarButton} class="brand-button-img" alt="" />
-          <ReactPlayer url='https://disneycinema.s3.us-east-2.amazonaws.com/Brand+Button+Videos/disneyButton.mp4' mute loop className="brand-button-video" />
+
+        <div className='brand-button brand-pixar'>
+          <Link to='/brands/2'>
+            <img src={window.pixarButton} className="brand-button-img" alt="" />
+          </Link>
         </div>
-        <div className='brand-button'>
-          <img src={window.marvelButton} class="brand-button-img" alt="" />
-          <ReactPlayer url='https://disneycinema.s3.us-east-2.amazonaws.com/Brand+Button+Videos/disneyButton.mp4' mute loop className="brand-button-video" />
+
+        <div className='brand-button brand-marvel'>
+          <Link to='/brands/3'>
+            <img src={window.marvelButton} className="brand-button-img" alt="" />
+          </Link>
         </div>
-        <div className='brand-button'>
-          <img src={window.swButton} class="brand-button-img" alt="" />
-          <ReactPlayer url='https://disneycinema.s3.us-east-2.amazonaws.com/Brand+Button+Videos/disneyButton.mp4' mute loop className="brand-button-video" />
+
+        <div className='brand-button brand-star-wars'>
+          <Link to='/brands/4'>
+            <img src={window.swButton} className="brand-button-img" alt="" />
+          </Link>
         </div>
-        <div className='brand-button'>
-          <img src={window.natButton} class="brand-button-img" alt="" />
-          <ReactPlayer url='https://disneycinema.s3.us-east-2.amazonaws.com/Brand+Button+Videos/disneyButton.mp4' mute loop className="brand-button-video" />
+
+        <div className='brand-button brand-nat-geo'>
+          <Link to='/brands/5'>
+            <img src={window.natButton} className="brand-button-img" alt="" />
+          </Link>
         </div>
       </div>
     );
@@ -39,3 +65,11 @@ class BrandButtons extends React.Component {
 
 
 export default BrandButtons;
+
+{/* <video autoPlay={true} loop={true} playsInline={true}>
+            <source src='../../../app/assets/videos/disneyButton.mp4' type='video/mp4' />
+          </video> */}
+{/* <video loop={true} autoPlay={true} playsInline={true} className="brand-button-video">  */ }
+{/* <source src={brand.button_video_url} type="video/mp4" />  */ }
+{/* </video> */ }
+{/* <video controls autoPlay className="brand-button-video"> <source src={this.props.brand.button_video} type="video/mp4" /> </video> */ }

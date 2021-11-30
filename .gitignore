@@ -28,4 +28,6 @@
 
 bundle.js*
 
+/scraps
+
 # /app/assets/javascripts/bundle.js*
