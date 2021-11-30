@@ -19,7 +19,7 @@ class ProfileMenu extends React.Component {
       <div className="profile-menu-container">
         <div className="dropdown-menu">
           <ul className="menu-logout">
-            <li onClick={this.handleLogout} className="logout">Log Out</li>
+            <li onClick={this.handleLogout} className="logout"></li>
           </ul>
         </div>
       </div>
