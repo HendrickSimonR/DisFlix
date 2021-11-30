@@ -20995,3 +20995,9 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 200 OK in 44ms (Views: 0.3ms | ActiveRecord: 10.1ms)
 
 
+  [1m[36mBrand Load (6.9ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT  "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (2.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Brand"], ["name", "button_video"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (5.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
