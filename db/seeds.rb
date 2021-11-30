@@ -20,7 +20,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('brands')
 u1=User.new
 u1.username='mickeymouse'
 u1.password='imagination'
-u1.save
+u1.save!
 
 #Brands
 b1=Brand.new
@@ -38,11 +38,13 @@ b4.name='Star Wars'
 b5=Brand.new
 b5.name='National Geographic'
 
-b1.save
-b2.save
-b3.save 
-b4.save 
-b5.save 
+b1.save!
+b2.save!
+b3.save! 
+b4.save! 
+b5.save!
+
+
 
 #movies
 
@@ -52,7 +54,7 @@ b5.save
 # m1.runtime='1h 24m'
 # m1.rating='TV-PG'
 # m1.year=2021
-# m1.save 
+# m1.save! 
 
 #Disney
 
@@ -62,7 +64,8 @@ m1.description='In celebration of the 50th Anniversary of Walt Disney World Reso
 m1.runtime='1h 24m'
 m1.rating='TV-PG'
 m1.year=2021
-m1.save 
+m1.brand_id=b1.id
+m1.save! 
 
 m2=Movie.new
 m2.title='Hercules'
@@ -70,7 +73,8 @@ m2.description='Taken from the gods as a newborn and adopted on earth, Hercules 
 m2.runtime='1h 38m'
 m2.rating='G'
 m2.year=1997
-m2.save 
+m2.brand_id=b1.id
+m2.save! 
 
 m3=Movie.new
 m3.title='The Little Mermaid'
@@ -78,7 +82,8 @@ m3.description='Ariel, the fun-loving and mischievous mermaid, is enchanted with
 m3.runtime='1h 26m'
 m3.rating='G'
 m3.year=1989
-m3.save 
+m3.brand_id=b1.id
+m3.save! 
 
 #PIXAR 
 
@@ -88,7 +93,8 @@ m4.description='When a little girl named Boo wanders into their world, it’s th
 m4.runtime='1h 32m'
 m4.rating='G'
 m4.year=2001
-m4.save 
+m4.brand_id=b2.id
+m4.save! 
 
 m5=Movie.new
 m5.title='Up'
@@ -96,7 +102,8 @@ m5.description='Retired balloon salesman Carl Fredricksen, part rascal and part 
 m5.runtime='1h 36m'
 m5.rating='PG'
 m5.year=2009
-m5.save 
+m5.brand_id=b2.id
+m5.save! 
 
 m6=Movie.new
 m6.title='Toy Story'
@@ -104,7 +111,8 @@ m6.description='Welcome to an astonishing world where toys play while their owne
 m6.runtime='1h 23m'
 m6.rating='G'
 m6.year=1995
-m6.save 
+m6.brand_id=b2.id
+m6.save! 
 
 # MARVEL 
 
@@ -114,7 +122,8 @@ m7.description='After the untimely passing of his father, the young T’Challa b
 m7.runtime='2h 17m'
 m7.rating='PG-13'
 m7.year=2018
-m7.save 
+m7.brand_id=b3.id
+m7.save! 
 
 m8=Movie.new
 m8.title='Avengers: Infinity War'
@@ -122,7 +131,8 @@ m8.description='With the powerful Thanos on the verge of raining destruction upo
 m8.runtime='2h 32m'
 m8.rating='PG-13'
 m8.year=2018
-m8.save 
+m8.brand_id=b3.id
+m8.save! 
 
 m9=Movie.new
 m9.title='Avengers: Endgame'
@@ -130,7 +140,8 @@ m9.description='The epic conclusion to the Infinity Saga. After devastating even
 m9.runtime='3h 4m'
 m9.rating='PG-13'
 m9.year=2019
-m9.save 
+m9.brand_id=b3.id
+m9.save! 
 
 #STAR WARS 
 
@@ -140,7 +151,8 @@ m10.description='The Rebels scatter after the Empire attacks their base on the i
 m10.runtime='2h 7m'
 m10.rating='PG'
 m10.year=1980
-m10.save 
+m10.brand_id=b4.id
+m10.save! 
 
 m11=Movie.new
 m11.title='Star Wars: Revenge of the Sith'
@@ -148,7 +160,8 @@ m11.description='Clone Wars rage across the galaxy. A sinister Sith Lord seizes 
 m11.runtime='2h 20m'
 m11.rating='PG-13'
 m11.year=2005
-m11.save 
+m11.brand_id=b4.id
+m11.save! 
 
 m12=Movie.new
 m12.title='Rogue One: A Star Wars Story'
@@ -156,7 +169,8 @@ m12.description='In a time of conflict, a group of unlikely heroes band together
 m12.runtime='2h 15m'
 m12.rating='PG-13'
 m12.year=2016
-m12.save 
+m12.brand_id=b4.id
+m12.save! 
 
 #NATIONAL GEOGRAPHIC
 
@@ -166,7 +180,8 @@ m15.description='At -100 degrees F, you can burn up to 5,000 calories a day, and
 m15.runtime='1 Season'
 m15.rating='TV-PG'
 m15.year=2016
-m15.save 
+m15.brand_id=b5.id
+m15.save! 
 
 m14=Movie.new
 m14.title='Earth Moods'
@@ -174,7 +189,8 @@ m14.description='Escape everyday life with Earth Moods. Viewers relax and reset 
 m14.runtime='1 Season'
 m14.rating='TV-G'
 m14.year=2021
-m14.save 
+m14.brand_id=b5.id
+m14.save! 
 
 m13=Movie.new
 m13.title='Cosmos: Possible Worlds'
@@ -182,10 +198,45 @@ m13.description='COSMOS: POSSIBLE WORLDS is a wonder-filled voyage through human
 m13.runtime='1 Season'
 m13.rating='TV-14'
 m13.year=2020
-m13.save 
+m13.brand_id=b5.id
+m13.save!
 
 
 # brand buttons
-file1 = open('https://disneycinema.s3.us-east-2.amazonaws.com/Brand+Button+Videos/disneyButton.mp4')
+file1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Brand+Button+Videos/disneyButton.mp4')
 b1.button_video.attach(io: file1, filename: 'disneyButton.mp4')
 
+
+#movie_photos 
+mPhoto1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m1.jpg') 
+mPhoto2 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m2.jpg') 
+mPhoto3 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m3.jpg') 
+mPhoto4 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m4.jpg') 
+mPhoto5 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m5.jpg') 
+mPhoto6 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m6.jpg') 
+mPhoto7 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m7.jpg') 
+mPhoto8 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m8.jpg') 
+mPhoto9 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m9.jpg') 
+mPhoto10 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m10.jpg') 
+mPhoto11 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m11.jpg') 
+mPhoto12 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m12.jpg') 
+mPhoto13 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m13.jpg') 
+mPhoto14 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m14.jpg') 
+mPhoto15 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m15.jpg') 
+
+
+m1.image.attach(io: mPhoto1, filename: 'm1.jpg')
+m2.image.attach(io: mPhoto2, filename: 'm2.jpg')
+m3.image.attach(io: mPhoto3, filename: 'm3.jpg')
+m4.image.attach(io: mPhoto4, filename: 'm4.jpg')
+m5.image.attach(io: mPhoto5, filename: 'm5.jpg')
+m6.image.attach(io: mPhoto6, filename: 'm6.jpg')
+m7.image.attach(io: mPhoto7, filename: 'm7.jpg')
+m8.image.attach(io: mPhoto8, filename: 'm8.jpg')
+m9.image.attach(io: mPhoto9, filename: 'm9.jpg')
+m10.image.attach(io: mPhoto10, filename: 'm10.jpg')
+m11.image.attach(io: mPhoto11, filename: 'm11.jpg')
+m12.image.attach(io: mPhoto12, filename: 'm12.jpg')
+m13.image.attach(io: mPhoto13, filename: 'm13.jpg')
+m14.image.attach(io: mPhoto14, filename: 'm14.jpg')
+m15.image.attach(io: mPhoto15, filename: 'm15.jpg')

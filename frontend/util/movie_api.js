@@ -1,8 +1,7 @@
-export const fetchMovies = data => (
+export const fetchMovies = () => (
   $.ajax({
     method: 'GET',
-    url: '/api/movies',
-    data
+    url: '/api/movies'
   })
 );
 

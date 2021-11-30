@@ -15,7 +15,7 @@ class SelectProfile extends React.Component {
   hideSelect(e) {
     let selectScreen = document.querySelector('.select-profile-container');
     selectScreen.classList.add('hidden');
-    window.profHidden = true;
+    window.hideProfile = true;
   }
 
   profileMickey(e) {

@@ -6,10 +6,11 @@ class Api::BrandsController < ApplicationController
   
   def show
     @brand = Brand.find(params[:id])
+    @movies = Movie.select{ |movie| @brand.id == movie.brand_id }
     render :show
   end
 
   def brand_params
-    params.requite(:brand).permit(:name, :button_video, :page_video, :image)
+    params.require(:brand).permit(:name, :button_video, :page_video, :image)
   end
 end

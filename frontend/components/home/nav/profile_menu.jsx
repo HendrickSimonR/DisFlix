@@ -9,7 +9,7 @@ class ProfileMenu extends React.Component {
   }
 
   handleLogout() {
-    window.profHidden = false;
+    window.hideProfile = false;
     this.props.logout();
     this.props.history.push('/');
   }

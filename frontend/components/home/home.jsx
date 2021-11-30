@@ -13,12 +13,25 @@ class Home extends React.Component {
     this.props.signout();
     // this.props.history.push('/');
   }
+
+  componentDidMount() {
+    this.props.getMovies()
+  }
+
   render() {
+    let {movies} = this.props; //equivalent to this.props.movies
+
+    if (!movies) {
+      return null;
+    }
+
+    console.log(movies); //Object.values(movies).map
+
     return (
       <div className="home-container">
         <div className="home-main">
-        <BrandButtons />
         <SelectProfile />
+        <BrandButtons />
           <div className='sign-out-container'>
             <button 
               className='signout-button' 
