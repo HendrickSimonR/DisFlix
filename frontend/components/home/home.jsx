@@ -32,3 +32,7 @@ class Home extends React.Component {
 }
 
 export default Home;
+
+{/* <video className='video-test' autoPlay={true} playsInline={true} loop={true}>
+            <source src="b1.button_video" type='video/mp4' />
+          </video> */}

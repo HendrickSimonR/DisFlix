@@ -1,3 +1,3 @@
 json.brand do
-  json.partial! 'api/brands/:id', brand: @brand
+  json.partial! 'api/brands/brand', brand: @brand
 end

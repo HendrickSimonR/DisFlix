@@ -18,3 +18,14 @@
 // import { 
 //   RECEIVE_USER
 // } from "../../actions/user_actions";
+
+// const rootReducer = combineReducers({
+//   entities: combineReducers({
+//     users: usersReducer
+//   }),
+//   errors: combineReducers({
+//     user: userErrorsReducer,
+//     session: sessionErrorsReducer
+//   }),
+//   session: sessionReducer
+// });
