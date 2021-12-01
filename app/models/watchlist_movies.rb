@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: watchlist_movies
+# Table name: watchlist
 #
 #  id         :bigint           not null, primary key
 #  created_at :datetime         not null
@@ -10,11 +10,12 @@
 #
 # Indexes
 #
-#  index_watchlist_movies_on_movie_id  (movie_id)
-#  index_watchlist_movies_on_user_id   (user_id)
+#  index_watchlist_on_movie_id  (movie_id)
+#  index_watchlist_on_user_id   (user_id)
 #
-class WatchlistMovies < ApplicationRecord
+class Watchlist < ApplicationRecord
   validates :user_id, :movie_id, presence: true, uniqueness: true
+  validates :movie_id, uniqueness: { scope: :user_id }
 
   belongs_to :user,
     class_name: :User,
