@@ -1,7 +1,7 @@
 .home-container {
   padding-top: 100px;
   background: url('https://disneycinema.s3.us-east-2.amazonaws.com/Dashboard+Background.png') fixed;
-  height: calc(100vh - 100px);
+  height: 100%;
   // position: fixed;
   // width: 100%;
 }
@@ -9,9 +9,9 @@
 // .home-main {
 // }
 
-.sign-out-container {
-  margin-top: 900px;
-}
+// .sign-out-container {
+//   margin-top: 900px;
+// }
 
 .signout-button {
   font-size: 100px;
