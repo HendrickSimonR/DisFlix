@@ -3,6 +3,7 @@ import SelectProfile from '../selectProfile/select_profile';
 import BrandButtons from './brand_buttons';
 import Nav from './nav/nav';
 import Thumbnail from './thumbnail';
+import Featured from '../featured/featured'
 
 class Home extends React.Component {
   constructor(props) {
@@ -57,8 +58,9 @@ class Home extends React.Component {
 
     return (
       <div className="home-container">
+        <Featured />
         <div className="home-main">
-        {/* <SelectProfile /> */}
+        <SelectProfile />
         <BrandButtons />
 
         <div className="movie-index">
