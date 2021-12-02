@@ -1,26 +1,32 @@
 import { createWatchlist, fetchWatchlist, deleteWatchlist } from '../util/watchlist_api';
 
+export const RECEIVE_NEW_MOVIE = 'RECEIVE_NEW_MOVIE';
 export const RECEIVE_WATCHLIST = 'RECEIVE_WATCHLIST';
 
-const receiveWatchlist = watchlist => ({
-  type: RECEIVE_WATCHLIST,
-  watchlist
+const addToWatchlist = movie => ({
+  type: RECEIVE_NEW_MOVIE,
+  movie
 });
 
-export const getWatchlist = (movieId, userId) => dispatch => {
-  return fetchWatchlist(movieId, userId).then(
-    watchlist => (dispatch(receiveWatchlist(watchlist))
+const receiveEntireWatchlist = watchlist => ({
+  type: RECEIVE_WATCHLIST,
+  watchlist 
+});
+
+export const getWatchlist = (userId) => dispatch => {
+  return fetchWatchlist(userId).then(
+    watchlist => (dispatch(receiveEntireWatchlist(watchlist))
   ))
 };
 
-export const newWatchList = (movieId, userId) => dispatch => {
-  return createWatchlist(movieId, userId).then(
-    watchlist => (dispatch(receiveWatchlist(watchlist))
+export const newAddition = (data) => dispatch => {
+  return createWatchlist(data).then(
+    watchlist => (dispatch(addToWatchlist(watchlist))
   ))
 };
 
-export const destroyWatchlist = (watchlistId, userId) => dispatch => {
-  return deleteWatchlist(watchlistId, userId).then(
-    watchlist => (dispatch(receiveWatchlist(watchlist))
+export const removeMovie = (watchlistId, userId, movieId) => dispatch => {
+  return deleteWatchlist(watchlistId, userId, movieId).then(
+    watchlist => (dispatch(receiveEntireWatchlist(watchlist))
   ))
 };

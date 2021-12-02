@@ -23,6 +23,14 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :watchlists,
+    foreign_key: :user_id,
+    class_name: :Watchlist
+
+  has_many :movies,
+    through: :watchlists,
+    source: :movie  
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user

@@ -1,0 +1,30 @@
+.thumbnail-functions {
+  display: flex;
+}
+
+.add-button {
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: 1.5px solid rgb(87, 87, 87);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 5%;
+  left: 16%; 
+  width: 2vw;
+  height: 2vw;
+  z-index: 2;
+  // background-color: rgba(255, 255, 255, 0);
+}
+
+.add-button:hover {
+  cursor: pointer;
+  border-color: white;
+}
+
+
+.material-icons-outlined {
+  font-size: 22px;
+}
