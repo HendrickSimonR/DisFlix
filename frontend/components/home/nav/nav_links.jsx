@@ -10,7 +10,7 @@ function NavLinks() {
       <li><Link className="nav-link" to="/home/Marvel">Marvel</Link></li>
       <li><Link className="nav-link" to="/home/StarWars">Star Wars</Link></li>
       <li><Link className="nav-link" to="/home/NatGeo">National Geographic</Link></li>
-      <li><Link className="nav-link" to="/home/Watchlist">Watchlist</Link></li>
+      <li><Link className="nav-link" to="/home/watchlist">Watchlist</Link></li>
     </ul>
   );
 }

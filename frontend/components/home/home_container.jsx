@@ -6,7 +6,7 @@ import { selectMovies } from '../../selectors/movie_selector'
 import { getWatchlist, newAddition, removeMovie } from '../../actions/watchlist_actions';
 
 const mSTP = state => {
-  console.log('STATE', state)
+  // console.log('STATE', state)
   return ({
     user: state.session.id,
     movies: selectMovies(state),

@@ -3,12 +3,18 @@ import SelectProfile from '../selectProfile/select_profile';
 import BrandButtons from './brand_buttons';
 import Nav from './nav/nav';
 import Thumbnail from './thumbnail';
-import Featured from '../featured/featured'
+import Featured from '../featured/featured';
+import WatchlistContainer from '../watchlist/watchlist_container';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.handleSignout = this.handleSignout.bind(this)
+    this.handleSignout = this.handleSignout.bind(this);
+    this.disney = React.createRef();
+    this.pixar = React.createRef();
+    this.marvel = React.createRef();
+    this.starWars = React.createRef();
+    this.natGeo = React.createRef();
   }
 
   handleSignout() {
@@ -19,6 +25,34 @@ class Home extends React.Component {
   componentDidMount() {
     this.props.getMovies();
     this.props.getWatchlist({user_id: this.props.user})
+  }
+
+  handleScroll = (direction, brand) => {
+    if (direction === 'left') {
+      if (brand === 'disney') {
+        this.disney.current.style.transform = 'translateX(0px)';
+      } else if (brand === 'pixar') {
+        this.pixar.current.style.transform = 'translateX(0px)';
+      } else if (brand === 'marvel') {
+        this.marvel.current.style.transform = 'translateX(0px)';
+      } else if (brand === 'starWars') {
+        this.starWars.current.style.transform = 'translateX(0px)';
+      } else {
+        this.natGeo.current.style.transform = 'translateX(0px)';
+      }
+    } else if (direction === 'right') {
+      if (brand === 'disney') {
+        this.disney.current.style.transform = 'translateX(-1270px)';
+      } else if (brand === 'pixar') {
+        this.pixar.current.style.transform = 'translateX(-761px)';
+      } else if (brand === 'marvel') {
+        this.marvel.current.style.transform = 'translateX(-1013px)';
+      } else if (brand === 'starWars') {
+        this.starWars.current.style.transform = 'translateX(-511px)';
+      } else {
+        this.natGeo.current.style.transform = 'translateX(-511px)';
+      }
+    }
   }
 
   render() {
@@ -57,6 +91,7 @@ class Home extends React.Component {
     //   console.log(this.starWarsMovies);
     //   console.log(this.natGeoMovies);
     // }
+    let user = this.props.user;
     let watchlist = this.props.watchlist;
     let userWatchlistMovies = [];
 
@@ -71,6 +106,7 @@ class Home extends React.Component {
     return (
       <div className="home-container">
         <Featured />
+        <WatchlistContainer />
         <div className="home-main">
         <SelectProfile />
         <BrandButtons />
@@ -78,7 +114,13 @@ class Home extends React.Component {
         <div className="movie-index">
           <div>
           <h1 className="row-header">Disney</h1>
-          <ul className="movie-row">
+            <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'disney')}>
+              arrow_back_ios
+            </span>
+            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'disney')}>
+              arrow_forward_ios
+            </span>
+              <ul className="movie-row" id="disney-movies" ref={this.disney}>
             {this.disneyMovies.map((movie) => (
               <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
             ))}
@@ -87,7 +129,13 @@ class Home extends React.Component {
           
           <div>
           <h1 className="row-header">Pixar</h1>
-          <ul className="movie-row">
+            <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'pixar')}>
+              arrow_back_ios
+            </span>
+            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'pixar')}>
+              arrow_forward_ios
+            </span>
+              <ul className="movie-row" id="pixar-movies" ref={this.pixar}>
             {this.pixarMovies.map((movie) => (
               <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
             ))}
@@ -96,7 +144,13 @@ class Home extends React.Component {
           
           <div>
           <h1 className="row-header">Marvel</h1>
-          <ul className="movie-row">
+            <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'marvel')}>
+              arrow_back_ios
+            </span>
+            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'marvel')}>
+              arrow_forward_ios
+            </span>
+              <ul className="movie-row" id="marvel-movies" ref={this.marvel}>
             {this.marvelMovies.map((movie) => (
               <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
             ))}
@@ -104,8 +158,14 @@ class Home extends React.Component {
           </div>
 
           <div>
-          <h1 className="row-header">Star Wars</h1>
-          <ul className="movie-row">
+              <h1 className="row-header">Star Wars</h1>
+            <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'starWars')}>
+              arrow_back_ios
+            </span>
+            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'starWars')}>
+              arrow_forward_ios
+            </span>
+              <ul className="movie-row" id="star-wars-movies" ref={this.starWars}>
             {this.starWarsMovies.map((movie) => (
               <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
             ))}
@@ -113,8 +173,14 @@ class Home extends React.Component {
           </div>
 
           <div>
-          <h1 className="row-header">National Geographic</h1>
-          <ul className="movie-row">
+          <h1 className="row-header ">National Geographic</h1>
+            <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'natGeo')}>
+              arrow_back_ios
+            </span>
+            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'natGeo')}>
+              arrow_forward_ios
+            </span>
+              <ul className="movie-row" id="nat-geo-movies" ref={this.natGeo}>
             {this.natGeoMovies.map((movie) => (
               <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
             ))}

@@ -3,21 +3,30 @@
   height: auto;
   border-radius: 4px;
   margin: 2px;
-  transition: transform 1s;
+  padding: 2px;
+  transition: transform 0.8s;
 }
 
-.thumbnail{
+.thumbnail {
   // padding: 5px;
   height: auto;
   width: 18vw;
+  cursor: pointer;
   // height: 8.4375vw;
   border-radius: 9px;
-  margin-left: 23px;
-  margin-right: 10px;
+  // margin-right: 10px;
   transition: all .4s;
   box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
   // -webkit-font-smoothing: subpixel-antialiased;
+    background-size: cover!important;
+  background-position: center!important;
+  display: inline-block;
 }
+
+
+// .thumbnail-hover {
+
+// }
 
 // .WxEV {
 //     backface-visibility: hidden;
@@ -33,22 +42,83 @@
 //     -webkit-font-smoothing: subpixel-antialiased;
 // }
 
-.thumbnail:hover {
-  transform: scale(1.08);
+.thumbnail-container:hover {
+  transform: scale(1.4);
   // outline: 3.5px solid rgb(255, 255, 255);
   // outline-offset: -3.5px;
   // border-radius: 50%;
-  cursor: pointer;
+  // z-index: 2;
+  display: inline;
+  // background: rgb(32, 32, 49);
+  height:100px;
+  margin-top: -10px;
+  transition: all .8s;
+
+  .thumbnail {
+    border-radius: 9px 9px 0px 0px;
+    box-shadow: none;
+    margin-bottom: -1.9px;
+  }
+  
+  .thumbnail-functions {
+    display: inline-flex;
+    // display: ;
+    // margin-left: 8px;
+    margin-right: 3px;
+    // background: #1f1e2b;
+    background: linear-gradient(rgb(43, 44, 56), rgb(36, 38, 50));
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: opacity 300ms ease-out, border-radius 200ms ease-out;
+    border-radius: 0 0 9px 9px;
+    margin-bottom: 10px;
+  }
+
+  .thumbnail-details {
+    margin-left: 4px;
+    margin-top: 9px;
+    display:inline-flex;
+  }
+
+  .thumbnail-details h1 {
+    margin-left: 5px;
+    color:rgb(31, 212, 85);
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+    margin-top: 4px;
+  }
+
+  .thumb-rating {
+    margin-top: 3px;
+    margin-left: 5px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Open Sans';
+    border-color:rgba(255, 255, 255, 0.404);
+    border-style: solid;
+    border-width: thin;
+  }
+
+  .thumb-runtime {
+    margin-top: 3px;
+    margin-left: 5px;
+    font-size: 11px;
+    font-family: 'Open Sans';
+  }
 }
 
 .movie-index {
   // padding-top: 80px;
-  padding-left: 2.1vw;
+  padding-left: 3.4vw;
   // padding-right: 4.1vw;
   // height: 2100px;
   color: white;
   font-family: 'Open Sans', sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .movie-row {
@@ -57,15 +127,75 @@
   // justify-content: space-between; 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 45px;
+  margin-bottom: 60px;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#disney-movies {
+  transform: translateX(0px);
+  transition: all 1.4s;
+}
+
+#pixar-movies {
+  transform: translateX(0px);
+  transition: all 1.4s;
+}
+
+#marvel-movies {
+  transform: translateX(0px);
+  transition: all 1.4s;
+}
+
+#star-wars-movies {
+  transform: translateX(0px);
+  transition: all 1.4s;
+}
+
+#nat-geo-movies {
+  transform: translateX(0px);
+  transition: all 1.4s;
 }
 
 .row-header {
   font-family: 'Open Sans';
   font-weight: 700;
-  margin-left: 2.22vw;
+  margin-left: 0.5vw;
   font-size: 1.4vw;
   // padding-top: 5px;
   padding-bottom: 10px;
   margin-top: 6px;
+}
+
+.left-arrow {
+  margin-top: 3.5vw;
+  margin-left: -2.5vw;
+  font-size: 4vw;
+  color: rgba(54, 54, 54, 0.068);
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.right-arrow {
+  margin-top: 3.5vw;
+  margin-left: 93vw;
+  font-size: 4vw;
+  color: rgba(54, 54, 54, 0.068);
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.left-arrow:hover {
+  color: white;
+}
+
+.right-arrow:hover {
+  color: white;
 }

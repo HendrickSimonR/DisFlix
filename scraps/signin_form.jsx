@@ -19,3 +19,16 @@
 //     json.partial! 'brand', brand: brand
 //   end
 // end
+
+// hoverPlay() {
+//   this.uniqueId = '#'.concat(this.props.movie.brand_id).concat(this.props.movie.id).concat(this.props.movie.year)
+//   let indexMovie = document.querySelector(this.uniqueId);
+//   indexMovie.play();
+// }
+
+// removeHover() {
+//   this.uniqueId = '#'.concat(this.props.movie.brand_id).concat(this.props.movie.id).concat(this.props.movie.year)
+//   let indexMovie = document.querySelector(this.uniqueId);
+//   indexMovie.play();
+// }
+

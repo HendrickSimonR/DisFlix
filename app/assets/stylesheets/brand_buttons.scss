@@ -27,6 +27,7 @@
 
 .brand-button:hover {
   transform: scale(1.08);
+  background: linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50));
   cursor: pointer;
   outline: 3.5px solid rgb(224, 224, 224);
   // outline-offset: -3.5px;

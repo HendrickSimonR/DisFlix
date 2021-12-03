@@ -17,7 +17,7 @@ export const fetchWatchlist = data => {
 };
 
 export const deleteWatchlist = data => {
-  console.log('DATA' ,data)
+  // console.log('DATA' ,data)
   let id = data.watchlist_id;
   
   return $.ajax({
