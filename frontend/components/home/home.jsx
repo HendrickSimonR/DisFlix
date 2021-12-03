@@ -15,6 +15,7 @@ class Home extends React.Component {
     this.marvel = React.createRef();
     this.starWars = React.createRef();
     this.natGeo = React.createRef();
+    this.watchlist = React.createRef();
   }
 
   handleSignout() {
@@ -37,8 +38,10 @@ class Home extends React.Component {
         this.marvel.current.style.transform = 'translateX(0px)';
       } else if (brand === 'starWars') {
         this.starWars.current.style.transform = 'translateX(0px)';
-      } else {
+      } else if (brand === 'natGeo') {
         this.natGeo.current.style.transform = 'translateX(0px)';
+      } else {
+        this.watchlist.current.style.transform = 'translateX(0px)';
       }
     } else if (direction === 'right') {
       if (brand === 'disney') {
@@ -49,10 +52,16 @@ class Home extends React.Component {
         this.marvel.current.style.transform = 'translateX(-1013px)';
       } else if (brand === 'starWars') {
         this.starWars.current.style.transform = 'translateX(-511px)';
-      } else {
+      } else if (brand === 'natGeo') {
         this.natGeo.current.style.transform = 'translateX(-511px)';
+      } else {
+        this.watchlist.current.style.transform = 'translateX(-1270px)';
       }
     }
+  }
+
+  refreshPage() {
+    window.location.reload(true);
   }
 
   render() {
@@ -61,9 +70,16 @@ class Home extends React.Component {
     this.marvelMovies = [];
     this.starWarsMovies = [];
     this.natGeoMovies = []; 
+    this.watchlistMovies = [];
 
     let {movies} = this.props; //equivalent to this.props.movies
     let moviesArr = Object.values(movies);
+    let watchlistObj = this.props.watchlist;
+    let watchlistArr;
+
+    if (Object.values(watchlistObj) !== undefined) {
+      watchlistArr = Object.values(watchlistObj)
+    }
     // moviesArr.sort(() => Math.random() - 0.5);
 
     if (moviesArr.length === 0) {
@@ -84,6 +100,24 @@ class Home extends React.Component {
       })
     }
 
+    if (watchlistArr === undefined || watchlistArr.length === 0) {
+      return null;
+    } else {
+      watchlistArr = Object.values(watchlistObj);
+      for (let i = 0; i < watchlistArr.length; i++) {
+        let watchlistMovie = watchlistArr[i];
+        let watchlistMovieId = watchlistMovie.movie_id;
+
+        for (let j = 0; j < moviesArr.length; j++) {
+          let movie = moviesArr[j];
+
+          if (movie.id === watchlistMovieId) {
+            this.watchlistMovies.push(movie);
+          }
+        }
+      }
+    }
+
     // if (this.disneyMovies.length > 1) {
     //   console.log(this.disneyMovies);
     //   console.log(this.pixarMovies);
@@ -102,7 +136,7 @@ class Home extends React.Component {
     }
 
     console.log('PROPITY', this.props);
-
+  
     return (
       <div className="home-container">
         <Featured />
@@ -111,20 +145,51 @@ class Home extends React.Component {
         <SelectProfile />
         <BrandButtons />
 
+        
         <div className="movie-index">
-          <div>
-          <h1 className="row-header">Disney</h1>
-            <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'disney')}>
+          {this.props.watchlist.includes('No watchlists!') && this.props.watchlist.length === 1 
+        
+          ? <div>
+                <h1 className="row-header">Watchlist</h1>
+                <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
+                  <li className="thumbnail-container" onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}>
+                    <img src={window.placeholder} className="thumbnail" id="placeholder" ></img>
+                  </li>
+                </ul>
+            </div>
+        
+          : this.props.watchlist === []
+          
+          ? this.props.history.push('/')
+          
+          : <div>
+            <h1 className="row-header">Watchlist</h1>
+            <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'watchlist')}>
               arrow_back_ios
             </span>
-            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'disney')}>
+            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'watchlist')}>
               arrow_forward_ios
             </span>
-              <ul className="movie-row" id="disney-movies" ref={this.disney}>
-            {this.disneyMovies.map((movie) => (
-              <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
-            ))}
-          </ul>
+            <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
+              {this.watchlistMovies.map((movie) => (
+                <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+              ))}
+            </ul>
+          </div> }
+
+          <div>
+            <h1 className="row-header">Disney</h1>
+              <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'disney')}>
+                arrow_back_ios
+              </span>
+              <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'disney')}>
+                arrow_forward_ios
+              </span>
+                <ul className="movie-row" id="disney-movies" ref={this.disney}>
+              {this.disneyMovies.map((movie) => (
+                <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
+              ))}
+            </ul>
           </div>
           
           <div>
@@ -188,12 +253,12 @@ class Home extends React.Component {
           </div>
         </div>
 
-          <div className='sign-out-container'>
+          {/* <div className='sign-out-container'>
             <button 
               className='signout-button' 
               onClick={this.handleSignout}>SIGN OUT
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     );

@@ -52,7 +52,7 @@
   // background: rgb(32, 32, 49);
   height:100px;
   margin-top: -10px;
-  transition: all .8s;
+  transition: all .6s;
 
   .thumbnail {
     border-radius: 9px 9px 0px 0px;
@@ -115,7 +115,7 @@
   // padding-top: 80px;
   padding-left: 3.4vw;
   // padding-right: 4.1vw;
-  // height: 2100px;
+  height: 1490px;
   color: white;
   font-family: 'Open Sans', sans-serif;
   overflow: hidden;
@@ -133,6 +133,11 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+}
+
+#watchlist-movies-row {
+  transform: translateX(0px);
+  transition: all 1.4s;
 }
 
 #disney-movies {

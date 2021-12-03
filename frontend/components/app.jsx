@@ -5,6 +5,7 @@ import HomeContainer from './home/home_container';
 import NavContainer from './home/nav/nav_container';
 import WatchlistContainer from './watchlist/watchlist_container'
 import SplashPage from './splash/splash_page';
+import Footer from './splash/footer'
 import { Route, Link, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -21,6 +22,9 @@ const App = () => (
       <ProtectedRoute path="/home" component={HomeContainer} />
       {/* <ProtectedRoute path="/brands/:id" component={BrandContainer} /> */}
     </Switch>
+    <footer>
+      <Footer />
+    </footer>
   </div>
 );
 

@@ -33,6 +33,10 @@
   // left: 16%;  
 }
 
+.thumbnail #placeholder {
+  transform: none !important;
+}
+
 .add-button {
   color: rgb(255, 255, 255);
   border-radius: 50%;

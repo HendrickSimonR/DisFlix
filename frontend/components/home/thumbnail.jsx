@@ -24,7 +24,7 @@ class Thumbnail extends React.Component {
   }
 
   render() {
-    this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year);
+    // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year);
     let watchlistId;
     let watchlist = this.props.watchlist;
     let user = this.props.watchlist;
@@ -34,6 +34,7 @@ class Thumbnail extends React.Component {
       if (userMovies.includes(this.props.movie.id)) {
         movieCheck = true;
       }
+      
       for (let i = 0; i < this.props.watchlist.length; i++) {
         let watchlistMovie = this.props.watchlist[i];
         
@@ -43,7 +44,7 @@ class Thumbnail extends React.Component {
         }
       }
     } 
-
+    
     console.log('THUMB', this.props)
     return (
       <li className="thumbnail-container" onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}>

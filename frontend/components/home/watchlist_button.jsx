@@ -21,10 +21,13 @@ class WatchlistButton extends React.Component {
   watchlistButton(e) {
     if (this.state.added === 'add') {
       this.setState({ added: 'done' })
-      this.props.newAddition({ movie_id: this.props.movieId, user_id: this.props.userId })
+      this.props.newAddition({ movie_id: this.props.movieId, user_id: this.props.userId });
+      // window.location.reload(true);
+
     } else {
       this.setState({ added: 'add' })
-      this.props.removeMovie({ watchlist_id: this.props.watchlistId, movie_id: this.props.movieId, user_id: this.props.userId })
+      this.props.removeMovie({ watchlist_id: this.props.watchlistId, movie_id: this.props.movieId, user_id: this.props.userId });
+        // window.location.reload(true);
     }
   }
 

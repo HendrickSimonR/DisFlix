@@ -44,3 +44,76 @@
   color: rgb(199, 199, 199);
   transition: all 0.4s ease 0s;
 }
+
+.profile-menu-container {
+  display: inline-flex;
+  margin-left: 525px;
+  margin-bottom: 50px;
+  color: white;
+  // display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.849);
+  border-radius: 6px;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: right;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 18px;
+  transition: all 1s;
+}
+
+.profile-menu {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.github-link {
+  text-decoration: none;
+  color: rgb(126, 126, 126);
+  padding: 4px;
+}
+
+.github-link:hover {
+  color: rgb(128, 128, 128);
+}
+
+
+.logout-button {
+  color: white;
+  padding: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logout-button:hover {
+  color: white;
+}
+
+.profile-links a:link {
+  text-decoration: none;
+} 
+
+.profile-links a:visited {
+  text-decoration: none;
+}
+
+.profile-links a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-links a:active {
+  text-decoration: none;
+}
+.profile-menu-container a:hover {
+  background-color: rgba(24, 24, 24, 0.801);
+}
+
+.profile-container:hover .profile-menu-container {
+  display: flex;
+  flex-direction: row;
+}

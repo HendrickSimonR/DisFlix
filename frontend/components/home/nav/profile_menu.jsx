@@ -9,23 +9,29 @@ class ProfileMenu extends React.Component {
   }
 
   handleLogout() {
-    window.hideProfile = false;
-    this.props.logout();
+    // window.hideProfile = false;
+    this.props.signout();
     this.props.history.push('/');
   }
 
   render() {
     return (
       <div className="profile-menu-container">
-        <div className="dropdown-menu">
-          <ul className="menu-logout">
-            <li onClick={this.handleLogout} className="logout"></li>
+        <div className="profile-menu">
+
+          <ul className="profile-links">
+            <li><a href="https://github.com/hendricksimonr/" target="_blank">
+              <div className="github-link">GitHub</div></a>
+            </li>
+          </ul>
+
+          <ul className="logout-button">
+            <li onClick={this.handleLogout} className="logout">Sign out</li>
           </ul>
         </div>
       </div>
     );
   }
 }
-
 
 export default ProfileMenu;
