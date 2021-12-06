@@ -135,7 +135,7 @@ class Home extends React.Component {
       };
     }
 
-    console.log('PROPITY', this.props);
+    // console.log('PROPITY', this.props);
   
     return (
       <div className="home-container">
