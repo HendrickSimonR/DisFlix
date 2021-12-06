@@ -158,9 +158,6 @@ class Home extends React.Component {
                 </ul>
             </div>
         
-          : this.props.watchlist === []
-          
-          ? this.props.history.push('/')
           
           : <div>
             <h1 className="row-header">Watchlist</h1>

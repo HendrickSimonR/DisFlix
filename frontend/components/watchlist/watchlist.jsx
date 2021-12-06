@@ -26,7 +26,7 @@ class Watchlist extends React.Component {
       }
     }
 
-    console.log('WATCHLIST PROPS', this.props)
+    // console.log('WATCHLIST PROPS', this.props)
     //this.props.watchlist to get watchlist 
     return(
       <div className="watchlist-container">

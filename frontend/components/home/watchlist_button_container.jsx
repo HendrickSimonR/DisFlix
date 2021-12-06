@@ -9,7 +9,7 @@ const mSTP = (state, ownProps) => {
   //   watchlist = state.session.watchlist;
   // }
 
-  console.log('CONTAINER', state, ownProps)
+  // console.log('CONTAINER', state, ownProps)
   return {
     watchlist: state.watchlist,
     userId: state.session.id,

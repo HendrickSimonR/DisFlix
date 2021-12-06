@@ -4,7 +4,7 @@ import { signout } from '../../actions/session_actions';
 import { getWatchlist, removeMovie } from '../../actions/watchlist_actions';
 
 const mSTP = state => {
-  console.log('STATE', state)
+  // console.log('STATE', state)
   return ({
     user: state.session.id,
     watchlist: state.watchlist

@@ -36,7 +36,7 @@ class WatchlistButton extends React.Component {
     //   console.log('PROPS', this.props)
     //   console.log('STATE', this.state);
     // }
-    console.log('BUTTON', this.props)
+    // console.log('BUTTON', this.props)
     
     // let watchlistId;
     
