@@ -227,21 +227,21 @@ b1.button_video.attach(io: file1, filename: 'disneyButton.mp4')
 # mPhoto15 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m15.jpg') 
 
 
-m1.image.attach(io: mPhoto1, filename: 'm1.jpg')
-m2.image.attach(io: mPhoto2, filename: 'm2.jpg')
-m3.image.attach(io: mPhoto3, filename: 'm3.jpg')
-m4.image.attach(io: mPhoto4, filename: 'm4.jpg')
-m5.image.attach(io: mPhoto5, filename: 'm5.jpg')
-m6.image.attach(io: mPhoto6, filename: 'm6.jpg')
-m7.image.attach(io: mPhoto7, filename: 'm7.jpg')
-m8.image.attach(io: mPhoto8, filename: 'm8.jpg')
-m9.image.attach(io: mPhoto9, filename: 'm9.jpg')
-m10.image.attach(io: mPhoto10, filename: 'm10.jpg')
-m11.image.attach(io: mPhoto11, filename: 'm11.jpg')
-m12.image.attach(io: mPhoto12, filename: 'm12.jpg')
-m13.image.attach(io: mPhoto13, filename: 'm13.jpg')
-m14.image.attach(io: mPhoto14, filename: 'm14.jpg')
-m15.image.attach(io: mPhoto15, filename: 'm15.jpg')
+# m1.image.attach(io: mPhoto1, filename: 'm1.jpg')
+# m2.image.attach(io: mPhoto2, filename: 'm2.jpg')
+# m3.image.attach(io: mPhoto3, filename: 'm3.jpg')
+# m4.image.attach(io: mPhoto4, filename: 'm4.jpg')
+# m5.image.attach(io: mPhoto5, filename: 'm5.jpg')
+# m6.image.attach(io: mPhoto6, filename: 'm6.jpg')
+# m7.image.attach(io: mPhoto7, filename: 'm7.jpg')
+# m8.image.attach(io: mPhoto8, filename: 'm8.jpg')
+# m9.image.attach(io: mPhoto9, filename: 'm9.jpg')
+# m10.image.attach(io: mPhoto10, filename: 'm10.jpg')
+# m11.image.attach(io: mPhoto11, filename: 'm11.jpg')
+# m12.image.attach(io: mPhoto12, filename: 'm12.jpg')
+# m13.image.attach(io: mPhoto13, filename: 'm13.jpg')
+# m14.image.attach(io: mPhoto14, filename: 'm14.jpg')
+# m15.image.attach(io: mPhoto15, filename: 'm15.jpg')
 
 m16=Movie.new
 m16.title='Fantasia'
@@ -533,48 +533,48 @@ puts "Attaching photos..."
 # mPhoto41 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m41.jpg')  
 
 
-m1.image.attach(io: mPhoto1, filename: 'm1.jpg')
-m2.image.attach(io: mPhoto2, filename: 'm2.jpg')
-m3.image.attach(io: mPhoto3, filename: 'm3.jpg')
-m4.image.attach(io: mPhoto4, filename: 'm4.jpg')
-m5.image.attach(io: mPhoto5, filename: 'm5.jpg')
-m6.image.attach(io: mPhoto6, filename: 'm6.jpg')
-m7.image.attach(io: mPhoto7, filename: 'm7.jpg')
-m8.image.attach(io: mPhoto8, filename: 'm8.jpg')
-m9.image.attach(io: mPhoto9, filename: 'm9.jpg')
-m10.image.attach(io: mPhoto10, filename: 'm10.jpg')
-m11.image.attach(io: mPhoto11, filename: 'm11.jpg')
-m12.image.attach(io: mPhoto12, filename: 'm12.jpg')
-m13.image.attach(io: mPhoto13, filename: 'm13.jpg')
-m14.image.attach(io: mPhoto14, filename: 'm14.jpg')
-m15.image.attach(io: mPhoto15, filename: 'm15.jpg')
-
-m16.image.attach(io: mPhoto16, filename: 'm16.jpg')
-m17.image.attach(io: mPhoto17, filename: 'm17.jpg')
-m18.image.attach(io: mPhoto18, filename: 'm18.jpg')
-m19.image.attach(io: mPhoto19, filename: 'm19.jpg')
-m20.image.attach(io: mPhoto20, filename: 'm20.jpg')
-m21.image.attach(io: mPhoto21, filename: 'm21.jpg')
-m22.image.attach(io: mPhoto22, filename: 'm22.jpg')
-m23.image.attach(io: mPhoto23, filename: 'm23.jpg')
-m24.image.attach(io: mPhoto24, filename: 'm14.jpg')
-m25.image.attach(io: mPhoto25, filename: 'm25.jpg')
-m26.image.attach(io: mPhoto26, filename: 'm26.jpg')
-m27.image.attach(io: mPhoto27, filename: 'm27.jpg')
-m28.image.attach(io: mPhoto28, filename: 'm28.jpg')
-m29.image.attach(io: mPhoto29, filename: 'm29.jpg')
-m30.image.attach(io: mPhoto30, filename: 'm30.jpg')
-m31.image.attach(io: mPhoto31, filename: 'm31.jpg')
-m32.image.attach(io: mPhoto32, filename: 'm32.jpg')
-m33.image.attach(io: mPhoto33, filename: 'm33.jpg')
-m34.image.attach(io: mPhoto34, filename: 'm34.jpg')
-m35.image.attach(io: mPhoto35, filename: 'm35.jpg')
-m36.image.attach(io: mPhoto36, filename: 'm36.jpg')
-m37.image.attach(io: mPhoto37, filename: 'm37.jpg')
-m38.image.attach(io: mPhoto38, filename: 'm38.jpg')
-m39.image.attach(io: mPhoto39, filename: 'm39.jpg')
-m40.image.attach(io: mPhoto40, filename: 'm40.png')
-m41.image.attach(io: mPhoto41, filename: 'm41.jpg')
+# m1.image.attach(io: mPhoto1, filename: 'm1.jpg')
+# m2.image.attach(io: mPhoto2, filename: 'm2.jpg')
+# m3.image.attach(io: mPhoto3, filename: 'm3.jpg')
+# m4.image.attach(io: mPhoto4, filename: 'm4.jpg')
+# m5.image.attach(io: mPhoto5, filename: 'm5.jpg')
+# m6.image.attach(io: mPhoto6, filename: 'm6.jpg')
+# m7.image.attach(io: mPhoto7, filename: 'm7.jpg')
+# m8.image.attach(io: mPhoto8, filename: 'm8.jpg')
+# m9.image.attach(io: mPhoto9, filename: 'm9.jpg')
+# m10.image.attach(io: mPhoto10, filename: 'm10.jpg')
+# m11.image.attach(io: mPhoto11, filename: 'm11.jpg')
+# m12.image.attach(io: mPhoto12, filename: 'm12.jpg')
+# m13.image.attach(io: mPhoto13, filename: 'm13.jpg')
+# m14.image.attach(io: mPhoto14, filename: 'm14.jpg')
+# m15.image.attach(io: mPhoto15, filename: 'm15.jpg')
+# 
+# m16.image.attach(io: mPhoto16, filename: 'm16.jpg')
+# m17.image.attach(io: mPhoto17, filename: 'm17.jpg')
+# m18.image.attach(io: mPhoto18, filename: 'm18.jpg')
+# m19.image.attach(io: mPhoto19, filename: 'm19.jpg')
+# m20.image.attach(io: mPhoto20, filename: 'm20.jpg')
+# m21.image.attach(io: mPhoto21, filename: 'm21.jpg')
+# m22.image.attach(io: mPhoto22, filename: 'm22.jpg')
+# m23.image.attach(io: mPhoto23, filename: 'm23.jpg')
+# m24.image.attach(io: mPhoto24, filename: 'm14.jpg')
+# m25.image.attach(io: mPhoto25, filename: 'm25.jpg')
+# m26.image.attach(io: mPhoto26, filename: 'm26.jpg')
+# m27.image.attach(io: mPhoto27, filename: 'm27.jpg')
+# m28.image.attach(io: mPhoto28, filename: 'm28.jpg')
+# m29.image.attach(io: mPhoto29, filename: 'm29.jpg')
+# m30.image.attach(io: mPhoto30, filename: 'm30.jpg')
+# m31.image.attach(io: mPhoto31, filename: 'm31.jpg')
+# m32.image.attach(io: mPhoto32, filename: 'm32.jpg')
+# m33.image.attach(io: mPhoto33, filename: 'm33.jpg')
+# m34.image.attach(io: mPhoto34, filename: 'm34.jpg')
+# m35.image.attach(io: mPhoto35, filename: 'm35.jpg')
+# m36.image.attach(io: mPhoto36, filename: 'm36.jpg')
+# m37.image.attach(io: mPhoto37, filename: 'm37.jpg')
+# m38.image.attach(io: mPhoto38, filename: 'm38.jpg')
+# m39.image.attach(io: mPhoto39, filename: 'm39.jpg')
+# m40.image.attach(io: mPhoto40, filename: 'm40.png')
+# m41.image.attach(io: mPhoto41, filename: 'm41.jpg')
 
 puts "Photos attached!"
 
@@ -750,210 +750,210 @@ puts "Attaching movies. This could take a while..."
 puts "Attaching Movie 1..."
 
 
-m1.movie.attach(io: mMovie1, filename: 'm1.mp4')
-
-puts "Movie 1 Finished!"
-puts "Attaching Movie 2..."
-
-m2.movie.attach(io: mMovie2, filename: 'm2.mp4')
-
-puts "Movie 2 Finished!"
-puts "Attaching Movie 3..."
-
-m3.movie.attach(io: mMovie3, filename: 'm3.mp4')
-
-puts "Movie 3 Finished!"
-puts "Attaching Movie 4..."
-
-m4.movie.attach(io: mMovie4, filename: 'm4.mp4')
-
-puts "Movie 4 Finished!"
-puts "Attaching Movie 5..."
-
-m5.movie.attach(io: mMovie5, filename: 'm5.mp4')
-
-puts "Movie 5 Finished!"
-puts "Attaching Movie 6..."
-
-m6.movie.attach(io: mMovie6, filename: 'm6.mp4')
-
-puts "Movie 6 Finished!"
-puts "Attaching Movie 7..."
-
-m7.movie.attach(io: mMovie7, filename: 'm7.mp4')
-
-puts "Movie 7 Finished!"
-puts "Attaching Movie 8..."
-
-m8.movie.attach(io: mMovie8, filename: 'm8.mp4')
-
-puts "Movie 8 Finished!"
-puts "Attaching Movie 9..."
-
-m9.movie.attach(io: mMovie9, filename: 'm9.mp4')
-
-puts "Movie 9 Finished!"
-puts "Attaching Movie 10..."
-
-m10.movie.attach(io: mMovie10, filename: 'm10.mp4')
-
-puts "Movie 10 Finished!"
-puts "Attaching Movie 11..."
-
-m11.movie.attach(io: mMovie11, filename: 'm11.mp4')
-
-puts "Movie 11 Finished!"
-puts "Attaching Movie 12..."
-
-m12.movie.attach(io: mMovie12, filename: 'm12.mp4')
-
-
-puts "Movie 12 Finished!"
-puts "Attaching Movie 13..."
-
-m13.movie.attach(io: mMovie13, filename: 'm13.mp4')
-
-puts "Movie 13 Finished!"
-puts "Attaching Movie 14..."
-
-m14.movie.attach(io: mMovie14, filename: 'm14.mp4')
-
-puts "Movie 14 Finished!"
-puts "Attaching Movie 15..."
-
-m15.movie.attach(io: mMovie15, filename: 'm15.mp4')
-
-puts "Movie 15 Finished!"
-puts "Attaching Movie 16..."
-
-m16.movie.attach(io: mMovie16, filename: 'm16.mp4')
-
-puts "Movie 16 Finished!"
-puts "Attaching Movie 17..."
-
-m17.movie.attach(io: mMovie17, filename: 'm17.mp4')
-
-puts "Movie 17 Finished!"
-puts "Attaching Movie 18..."
-
-m18.movie.attach(io: mMovie18, filename: 'm18.mp4')
-
-puts "Movie 18 Finished!"
-puts "Attaching Movie 19..."
-
-m19.movie.attach(io: mMovie19, filename: 'm19.mp4')
-
-puts "Movie 19 Finished!"
-puts "Attaching Movie 20..."
-
-m20.movie.attach(io: mMovie20, filename: 'm20.mp4')
-
-puts "Movie 20 Finished!"
-puts "Attaching Movie 21..."
-
-m21.movie.attach(io: mMovie21, filename: 'm21.mp4')
-
-puts "Movie 21 Finished!"
-puts "Attaching Movie 22..."
-
-m22.movie.attach(io: mMovie22, filename: 'm22.mp4')
-
-puts "Movie 22 Finished!"
-puts "Attaching Movie 23..."
-
-m23.movie.attach(io: mMovie23, filename: 'm23.mp4')
-
-
-puts "Movie 23 Finished!"
-puts "Attaching Movie 24..."
-
-m24.movie.attach(io: mMovie24, filename: 'm24.mp4')
-
-puts "Movie 24 Finished!"
-puts "Attaching Movie 25..."
-
-m25.movie.attach(io: mMovie25, filename: 'm25.mp4')
-
-puts "Movie 25 Finished!"
-puts "Attaching Movie 26..."
-
-m26.movie.attach(io: mMovie26, filename: 'm26.mp4')
-
-puts "Movie 26 Finished!"
-puts "Attaching Movie 27..."
-
-m27.movie.attach(io: mMovie27, filename: 'm27.mp4')
-
-puts "Movie 27 Finished!"
-puts "Attaching Movie 28..."
-
-m28.movie.attach(io: mMovie28, filename: 'm28.mp4')
-
-puts "Movie 28 Finished!"
-puts "Attaching Movie 29..."
-
-m29.movie.attach(io: mMovie29, filename: 'm29.mp4')
-
-puts "Movie 29 Finished!"
-puts "Attaching Movie 30..."
-
-m30.movie.attach(io: mMovie30, filename: 'm30.mp4')
-
-puts "Movie 30 Finished!"
-puts "Attaching Movie 31..."
-
-m31.movie.attach(io: mMovie31, filename: 'm31.mp4')
-
-puts "Movie 31 Finished!"
-puts "Attaching Movie 32..."
-
-m32.movie.attach(io: mMovie32, filename: 'm32.mp4')
-
-puts "Movie 32 Finished!"
-puts "Attaching Movie 33..."
-
-m33.movie.attach(io: mMovie33, filename: 'm33.mp4')
-
-puts "Movie 33 Finished!"
-puts "Attaching Movie 34..."
-
-m34.movie.attach(io: mMovie34, filename: 'm34.mp4')
-
-puts "Movie 34 Finished!"
-puts "Attaching Movie 35..."
-
-m35.movie.attach(io: mMovie35, filename: 'm35.mp4')
-
-puts "Movie 35 Finished!"
-puts "Attaching Movie 36..."
-
-m36.movie.attach(io: mMovie36, filename: 'm36.mp4')
-
-puts "Movie 36 Finished!"
-puts "Attaching Movie 37..."
-
-m37.movie.attach(io: mMovie37, filename: 'm37.mp4')
-
-puts "Movie 37 Finished!"
-puts "Attaching Movie 38..."
-
-m38.movie.attach(io: mMovie38, filename: 'm38.mp4')
-
-puts "Movie 38 Finished!"
-puts "Attaching Movie 39..."
-
-m39.movie.attach(io: mMovie39, filename: 'm39.mp4')
-
-puts "Movie 39 Finished!"
-puts "Attaching Movie 40..."
-
-m40.movie.attach(io: mMovie40, filename: 'm40.mp4')
-
-puts "Movie 40 Finished!"
-puts "Attaching Movie 41..."
-
-m41.movie.attach(io: mMovie41, filename: 'm41.mp4')
-
+# m1.movie.attach(io: mMovie1, filename: 'm1.mp4')
+# 
+# puts "Movie 1 Finished!"
+# puts "Attaching Movie 2..."
+# 
+# m2.movie.attach(io: mMovie2, filename: 'm2.mp4')
+# 
+# puts "Movie 2 Finished!"
+# puts "Attaching Movie 3..."
+# 
+# m3.movie.attach(io: mMovie3, filename: 'm3.mp4')
+# 
+# puts "Movie 3 Finished!"
+# puts "Attaching Movie 4..."
+# 
+# m4.movie.attach(io: mMovie4, filename: 'm4.mp4')
+# 
+# puts "Movie 4 Finished!"
+# puts "Attaching Movie 5..."
+# 
+# m5.movie.attach(io: mMovie5, filename: 'm5.mp4')
+# 
+# puts "Movie 5 Finished!"
+# puts "Attaching Movie 6..."
+# 
+# m6.movie.attach(io: mMovie6, filename: 'm6.mp4')
+# 
+# puts "Movie 6 Finished!"
+# puts "Attaching Movie 7..."
+# 
+# m7.movie.attach(io: mMovie7, filename: 'm7.mp4')
+# 
+# puts "Movie 7 Finished!"
+# puts "Attaching Movie 8..."
+# 
+# m8.movie.attach(io: mMovie8, filename: 'm8.mp4')
+# 
+# puts "Movie 8 Finished!"
+# puts "Attaching Movie 9..."
+# 
+# m9.movie.attach(io: mMovie9, filename: 'm9.mp4')
+# 
+# puts "Movie 9 Finished!"
+# puts "Attaching Movie 10..."
+# 
+# m10.movie.attach(io: mMovie10, filename: 'm10.mp4')
+# 
+# puts "Movie 10 Finished!"
+# puts "Attaching Movie 11..."
+# 
+# m11.movie.attach(io: mMovie11, filename: 'm11.mp4')
+# 
+# puts "Movie 11 Finished!"
+# puts "Attaching Movie 12..."
+# 
+# m12.movie.attach(io: mMovie12, filename: 'm12.mp4')
+# 
+# 
+# puts "Movie 12 Finished!"
+# puts "Attaching Movie 13..."
+# 
+# m13.movie.attach(io: mMovie13, filename: 'm13.mp4')
+# 
+# puts "Movie 13 Finished!"
+# puts "Attaching Movie 14..."
+# 
+# m14.movie.attach(io: mMovie14, filename: 'm14.mp4')
+# 
+# puts "Movie 14 Finished!"
+# puts "Attaching Movie 15..."
+# 
+# m15.movie.attach(io: mMovie15, filename: 'm15.mp4')
+# 
+# puts "Movie 15 Finished!"
+# puts "Attaching Movie 16..."
+# 
+# m16.movie.attach(io: mMovie16, filename: 'm16.mp4')
+# 
+# puts "Movie 16 Finished!"
+# puts "Attaching Movie 17..."
+# 
+# m17.movie.attach(io: mMovie17, filename: 'm17.mp4')
+# 
+# puts "Movie 17 Finished!"
+# puts "Attaching Movie 18..."
+# 
+# m18.movie.attach(io: mMovie18, filename: 'm18.mp4')
+# 
+# puts "Movie 18 Finished!"
+# puts "Attaching Movie 19..."
+# 
+# m19.movie.attach(io: mMovie19, filename: 'm19.mp4')
+# 
+# puts "Movie 19 Finished!"
+# puts "Attaching Movie 20..."
+# 
+# m20.movie.attach(io: mMovie20, filename: 'm20.mp4')
+# 
+# puts "Movie 20 Finished!"
+# puts "Attaching Movie 21..."
+# 
+# m21.movie.attach(io: mMovie21, filename: 'm21.mp4')
+# 
+# puts "Movie 21 Finished!"
+# puts "Attaching Movie 22..."
+# 
+# m22.movie.attach(io: mMovie22, filename: 'm22.mp4')
+# 
+# puts "Movie 22 Finished!"
+# puts "Attaching Movie 23..."
+# 
+# m23.movie.attach(io: mMovie23, filename: 'm23.mp4')
+# 
+# 
+# puts "Movie 23 Finished!"
+# puts "Attaching Movie 24..."
+# 
+# m24.movie.attach(io: mMovie24, filename: 'm24.mp4')
+# 
+# puts "Movie 24 Finished!"
+# puts "Attaching Movie 25..."
+# 
+# m25.movie.attach(io: mMovie25, filename: 'm25.mp4')
+# 
+# puts "Movie 25 Finished!"
+# puts "Attaching Movie 26..."
+# 
+# m26.movie.attach(io: mMovie26, filename: 'm26.mp4')
+# 
+# puts "Movie 26 Finished!"
+# puts "Attaching Movie 27..."
+# 
+# m27.movie.attach(io: mMovie27, filename: 'm27.mp4')
+# 
+# puts "Movie 27 Finished!"
+# puts "Attaching Movie 28..."
+# 
+# m28.movie.attach(io: mMovie28, filename: 'm28.mp4')
+# 
+# puts "Movie 28 Finished!"
+# puts "Attaching Movie 29..."
+# 
+# m29.movie.attach(io: mMovie29, filename: 'm29.mp4')
+# 
+# puts "Movie 29 Finished!"
+# puts "Attaching Movie 30..."
+# 
+# m30.movie.attach(io: mMovie30, filename: 'm30.mp4')
+# 
+# puts "Movie 30 Finished!"
+# puts "Attaching Movie 31..."
+# 
+# m31.movie.attach(io: mMovie31, filename: 'm31.mp4')
+# 
+# puts "Movie 31 Finished!"
+# puts "Attaching Movie 32..."
+# 
+# m32.movie.attach(io: mMovie32, filename: 'm32.mp4')
+# 
+# puts "Movie 32 Finished!"
+# puts "Attaching Movie 33..."
+# 
+# m33.movie.attach(io: mMovie33, filename: 'm33.mp4')
+# 
+# puts "Movie 33 Finished!"
+# puts "Attaching Movie 34..."
+# 
+# m34.movie.attach(io: mMovie34, filename: 'm34.mp4')
+# 
+# puts "Movie 34 Finished!"
+# puts "Attaching Movie 35..."
+# 
+# m35.movie.attach(io: mMovie35, filename: 'm35.mp4')
+# 
+# puts "Movie 35 Finished!"
+# puts "Attaching Movie 36..."
+# 
+# m36.movie.attach(io: mMovie36, filename: 'm36.mp4')
+# 
+# puts "Movie 36 Finished!"
+# puts "Attaching Movie 37..."
+# 
+# m37.movie.attach(io: mMovie37, filename: 'm37.mp4')
+# 
+# puts "Movie 37 Finished!"
+# puts "Attaching Movie 38..."
+# 
+# m38.movie.attach(io: mMovie38, filename: 'm38.mp4')
+# 
+# puts "Movie 38 Finished!"
+# puts "Attaching Movie 39..."
+# 
+# m39.movie.attach(io: mMovie39, filename: 'm39.mp4')
+# 
+# puts "Movie 39 Finished!"
+# puts "Attaching Movie 40..."
+# 
+# m40.movie.attach(io: mMovie40, filename: 'm40.mp4')
+# 
+# puts "Movie 40 Finished!"
+# puts "Attaching Movie 41..."
+# 
+# m41.movie.attach(io: mMovie41, filename: 'm41.mp4')
+# 
 puts "Movie 41 Finished!"
 
 
