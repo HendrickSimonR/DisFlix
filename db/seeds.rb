@@ -210,21 +210,21 @@ b1.button_video.attach(io: file1, filename: 'disneyButton.mp4')
 
 
 #movie_photos 
-mPhoto1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m1.jpg') 
-mPhoto2 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m2.jpg') 
-mPhoto3 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m3.jpg') 
-mPhoto4 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m4.jpg') 
-mPhoto5 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m5.jpg') 
-mPhoto6 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m6.jpg') 
-mPhoto7 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m7.jpg') 
-mPhoto8 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m8.jpg') 
-mPhoto9 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m9.jpg') 
-mPhoto10 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m10.jpg') 
-mPhoto11 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m11.jpg') 
-mPhoto12 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m12.jpg') 
-mPhoto13 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m13.jpg') 
-mPhoto14 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m14.jpg') 
-mPhoto15 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m15.jpg') 
+# mPhoto1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m1.jpg') 
+# mPhoto2 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m2.jpg') 
+# mPhoto3 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m3.jpg') 
+# mPhoto4 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m4.jpg') 
+# mPhoto5 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m5.jpg') 
+# mPhoto6 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m6.jpg') 
+# mPhoto7 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m7.jpg') 
+# mPhoto8 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m8.jpg') 
+# mPhoto9 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m9.jpg') 
+# mPhoto10 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m10.jpg') 
+# mPhoto11 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m11.jpg') 
+# mPhoto12 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m12.jpg') 
+# mPhoto13 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m13.jpg') 
+# mPhoto14 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m14.jpg') 
+# mPhoto15 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m15.jpg') 
 
 
 m1.image.attach(io: mPhoto1, filename: 'm1.jpg')
@@ -489,48 +489,48 @@ puts "Attaching photos..."
 
 
 #movie_photos 
-mPhoto1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m1.jpg') 
-mPhoto2 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m2.jpg') 
-mPhoto3 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m3.jpg') 
-mPhoto4 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m4.jpg') 
-mPhoto5 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m5.jpg') 
-mPhoto6 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m6.jpg') 
-mPhoto7 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m7.jpg') 
-mPhoto8 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m8.jpg') 
-mPhoto9 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m9.jpg') 
-mPhoto10 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m10.jpg') 
-mPhoto11 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m11.jpg') 
-mPhoto12 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m12.jpg') 
-mPhoto13 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m13.jpg') 
-mPhoto14 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m14.jpg') 
-mPhoto15 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m15.jpg') 
-
-mPhoto16 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m16.jpg') 
-mPhoto17 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m17.jpg') 
-mPhoto18 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m18.jpg') 
-mPhoto19 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m19.jpg') 
-mPhoto20 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m20.jpg') 
-mPhoto21 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m21.jpg') 
-mPhoto22 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m22.jpg') 
-mPhoto23 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m23.jpg') 
-mPhoto24 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m24.jpg') 
-mPhoto25 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m25.jpg') 
-mPhoto26 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m26.jpg') 
-mPhoto27 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m27.jpg') 
-mPhoto28 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m28.jpg') 
-mPhoto29 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m29.jpg') 
-mPhoto30 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m30.jpg')
-mPhoto31 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m31.jpg') 
-mPhoto32 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m32.jpg') 
-mPhoto33 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m33.jpg') 
-mPhoto34 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m34.jpg') 
-mPhoto35 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m35.jpg') 
-mPhoto36 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m36.jpg') 
-mPhoto37 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m37.jpg') 
-mPhoto38 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m38.jpg') 
-mPhoto39 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m39.jpg') 
-mPhoto40 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m40.png')  
-mPhoto41 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m41.jpg')  
+# mPhoto1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m1.jpg') 
+# mPhoto2 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m2.jpg') 
+# mPhoto3 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m3.jpg') 
+# mPhoto4 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m4.jpg') 
+# mPhoto5 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m5.jpg') 
+# mPhoto6 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m6.jpg') 
+# mPhoto7 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m7.jpg') 
+# mPhoto8 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m8.jpg') 
+# mPhoto9 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m9.jpg') 
+# mPhoto10 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m10.jpg') 
+# mPhoto11 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m11.jpg') 
+# mPhoto12 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m12.jpg') 
+# mPhoto13 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m13.jpg') 
+# mPhoto14 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m14.jpg') 
+# mPhoto15 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m15.jpg') 
+# 
+# mPhoto16 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m16.jpg') 
+# mPhoto17 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m17.jpg') 
+# mPhoto18 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m18.jpg') 
+# mPhoto19 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m19.jpg') 
+# mPhoto20 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m20.jpg') 
+# mPhoto21 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m21.jpg') 
+# mPhoto22 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m22.jpg') 
+# mPhoto23 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m23.jpg') 
+# mPhoto24 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m24.jpg') 
+# mPhoto25 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m25.jpg') 
+# mPhoto26 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m26.jpg') 
+# mPhoto27 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m27.jpg') 
+# mPhoto28 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m28.jpg') 
+# mPhoto29 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m29.jpg') 
+# mPhoto30 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m30.jpg')
+# mPhoto31 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m31.jpg') 
+# mPhoto32 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m32.jpg') 
+# mPhoto33 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m33.jpg') 
+# mPhoto34 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m34.jpg') 
+# mPhoto35 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m35.jpg') 
+# mPhoto36 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m36.jpg') 
+# mPhoto37 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m37.jpg') 
+# mPhoto38 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m38.jpg') 
+# mPhoto39 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m39.jpg') 
+# mPhoto40 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m40.png')  
+# mPhoto41 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m41.jpg')  
 
 
 m1.image.attach(io: mPhoto1, filename: 'm1.jpg')
@@ -580,169 +580,169 @@ puts "Photos attached!"
 
 puts "Attaching movies. This could take a while..."
 
-puts "Opening movie 1..."
-mMovie1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m1.mp4')
-puts "Movie 1 opened!"
-
-puts "Opening movie 2..."
-mMovie2 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m2.mp4')
-puts "Movie 2 opened!"
-
-puts "Opening movie 3..."
-mMovie3 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m3.mp4')
-puts "Movie 3 opened!"
-
-puts "Opening movie 4..."
-mMovie4 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m4.mp4')
-puts "Movie 4 opened!"
-
-puts "Opening movie 5..."
-mMovie5 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m5.mp4')
-puts "Movie 5 opened!"
-
-puts "Opening movie 6..."
-mMovie6 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m6.mp4')
-puts "Movie 6 opened!"
-
-puts "Opening movie 7..."
-mMovie7 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m7.mp4')
-puts "Movie 7 opened!"
-
-puts "Opening movie 8..."
-mMovie8 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m8.mp4')
-puts "Movie 8 opened!"
-
-puts "Opening movie 9..."
-mMovie9 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m9.mp4')
-puts "Movie 9 opened!"
-
-puts "Opening movie 10..."
-mMovie10 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m10.mp4')
-puts "Movie 10 opened!"
-
-puts "Opening movie 11..."
-mMovie11 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m11.mp4')
-puts "Movie 11 opened!"
-
-puts "Opening movie 12..."
-mMovie12 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m12.mp4')
-puts "Movie 12 opened!"
-
-puts "Opening movie 13..."
-mMovie13 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m13.mp4')
-puts "Movie 13 opened!"
-
-puts "Opening movie 14..."
-mMovie14 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m14.mp4')
-puts "Movie 14 opened!"
-
-puts "Opening movie 15..."
-mMovie15 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m15.mp4')
-puts "Movie 15 opened!"
-
-puts "Opening movie 16..."
-mMovie16 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m16.mp4')
-puts "Movie 16 opened!"
-
-puts "Opening movie 17..."
-mMovie17 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m17.mp4')
-puts "Movie 17 opened!"
-
-puts "Opening movie 18..."
-mMovie18 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m18.mp4')
-puts "Movie 18 opened!"
-
-puts "Opening movie 19..."
-mMovie19 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m19.mp4')
-puts "Movie 19 opened!"
-
-puts "Opening movie 20..."
-mMovie20 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m20.mp4')
-puts "Movie 20 opened!"
-
-puts "Opening movie 21..."
-mMovie21 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m21.mp4')
-puts "Movie 21 opened!"
-
-puts "Opening movie 22..."
-mMovie22 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m22.mp4')
-puts "Movie 22 opened!"
-
-puts "Opening movie 23..."
-mMovie23 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m23.mp4')
-puts "Movie 23 opened!"
-
-puts "Opening movie 24..."
-mMovie24 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m24.mp4')
-puts "Movie 24 opened!"
-
-puts "Opening movie 25..."
-mMovie25 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m25.mp4')
-puts "Movie 25 opened!"
-
-puts "Opening movie 26..."
-mMovie26 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m26.mp4')
-puts "Movie 26 opened!"
-
-puts "Opening movie 27..."
-mMovie27 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m27.mp4')
-puts "Movie 27 opened!"
-
-puts "Opening movie 28..."
-mMovie28 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m28.mp4')
-puts "Movie 28 opened!"
-
-puts "Opening movie 29..."
-mMovie29 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m29.mp4')
-puts "Movie 29 opened!"
-
-puts "Opening movie 30..."
-mMovie30 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m30.mp4')
-puts "Movie 30 opened!"
-
-puts "Opening movie 31..."
-mMovie31 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m31.mp4')
-puts "Movie 31 opened!"
-
-puts "Opening movie 32..."
-mMovie32 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m32.mp4')
-puts "Movie 32 opened!"
-
-puts "Opening movie 33..."
-mMovie33 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m33.mp4')
-puts "Movie 33 opened!"
-
-puts "Opening movie 34..."
-mMovie34 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m34.mp4')
-puts "Movie 34 opened!"
-
-puts "Opening movie 35..."
-mMovie35 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m35.mp4')
-puts "Movie 35 opened!"
-
-puts "Opening movie 36..."
-mMovie36 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m36.mp4')
-puts "Movie 36 opened!"
-
-puts "Opening movie 37..."
-mMovie37 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m37.mp4')
-puts "Movie 37 opened!"
-
-puts "Opening movie 38..."
-mMovie38 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m38.mp4')
-puts "Movie 38 opened!"
-
-puts "Opening movie 39..."
-mMovie39 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m39.mp4')
-puts "Movie 39 opened!"
-
-puts "Opening movie 40..."
-mMovie40 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m40.mp4')
-puts "Movie 40 opened!"
-
-puts "Opening movie 41..."
-mMovie41 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m41.mp4')
-puts "Movie 41 opened!"
+# puts "Opening movie 1..."
+# mMovie1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m1.mp4')
+# puts "Movie 1 opened!"
+# 
+# puts "Opening movie 2..."
+# mMovie2 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m2.mp4')
+# puts "Movie 2 opened!"
+# 
+# puts "Opening movie 3..."
+# mMovie3 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m3.mp4')
+# puts "Movie 3 opened!"
+# 
+# puts "Opening movie 4..."
+# mMovie4 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m4.mp4')
+# puts "Movie 4 opened!"
+# 
+# puts "Opening movie 5..."
+# mMovie5 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m5.mp4')
+# puts "Movie 5 opened!"
+# 
+# puts "Opening movie 6..."
+# mMovie6 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m6.mp4')
+# puts "Movie 6 opened!"
+# 
+# puts "Opening movie 7..."
+# mMovie7 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m7.mp4')
+# puts "Movie 7 opened!"
+# 
+# puts "Opening movie 8..."
+# mMovie8 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m8.mp4')
+# puts "Movie 8 opened!"
+# 
+# puts "Opening movie 9..."
+# mMovie9 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m9.mp4')
+# puts "Movie 9 opened!"
+# 
+# puts "Opening movie 10..."
+# mMovie10 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m10.mp4')
+# puts "Movie 10 opened!"
+# 
+# puts "Opening movie 11..."
+# mMovie11 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m11.mp4')
+# puts "Movie 11 opened!"
+# 
+# puts "Opening movie 12..."
+# mMovie12 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m12.mp4')
+# puts "Movie 12 opened!"
+# 
+# puts "Opening movie 13..."
+# mMovie13 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m13.mp4')
+# puts "Movie 13 opened!"
+# 
+# puts "Opening movie 14..."
+# mMovie14 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m14.mp4')
+# puts "Movie 14 opened!"
+# 
+# puts "Opening movie 15..."
+# mMovie15 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m15.mp4')
+# puts "Movie 15 opened!"
+# 
+# puts "Opening movie 16..."
+# mMovie16 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m16.mp4')
+# puts "Movie 16 opened!"
+# 
+# puts "Opening movie 17..."
+# mMovie17 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m17.mp4')
+# puts "Movie 17 opened!"
+# 
+# puts "Opening movie 18..."
+# mMovie18 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m18.mp4')
+# puts "Movie 18 opened!"
+# 
+# puts "Opening movie 19..."
+# mMovie19 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m19.mp4')
+# puts "Movie 19 opened!"
+# 
+# puts "Opening movie 20..."
+# mMovie20 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m20.mp4')
+# puts "Movie 20 opened!"
+# 
+# puts "Opening movie 21..."
+# mMovie21 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m21.mp4')
+# puts "Movie 21 opened!"
+# 
+# puts "Opening movie 22..."
+# mMovie22 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m22.mp4')
+# puts "Movie 22 opened!"
+# 
+# puts "Opening movie 23..."
+# mMovie23 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m23.mp4')
+# puts "Movie 23 opened!"
+# 
+# puts "Opening movie 24..."
+# mMovie24 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m24.mp4')
+# puts "Movie 24 opened!"
+# 
+# puts "Opening movie 25..."
+# mMovie25 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m25.mp4')
+# puts "Movie 25 opened!"
+# 
+# puts "Opening movie 26..."
+# mMovie26 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m26.mp4')
+# puts "Movie 26 opened!"
+# 
+# puts "Opening movie 27..."
+# mMovie27 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m27.mp4')
+# puts "Movie 27 opened!"
+# 
+# puts "Opening movie 28..."
+# mMovie28 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m28.mp4')
+# puts "Movie 28 opened!"
+# 
+# puts "Opening movie 29..."
+# mMovie29 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m29.mp4')
+# puts "Movie 29 opened!"
+# 
+# puts "Opening movie 30..."
+# mMovie30 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m30.mp4')
+# puts "Movie 30 opened!"
+# 
+# puts "Opening movie 31..."
+# mMovie31 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m31.mp4')
+# puts "Movie 31 opened!"
+# 
+# puts "Opening movie 32..."
+# mMovie32 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m32.mp4')
+# puts "Movie 32 opened!"
+# 
+# puts "Opening movie 33..."
+# mMovie33 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m33.mp4')
+# puts "Movie 33 opened!"
+# 
+# puts "Opening movie 34..."
+# mMovie34 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m34.mp4')
+# puts "Movie 34 opened!"
+# 
+# puts "Opening movie 35..."
+# mMovie35 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m35.mp4')
+# puts "Movie 35 opened!"
+# 
+# puts "Opening movie 36..."
+# mMovie36 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m36.mp4')
+# puts "Movie 36 opened!"
+# 
+# puts "Opening movie 37..."
+# mMovie37 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m37.mp4')
+# puts "Movie 37 opened!"
+# 
+# puts "Opening movie 38..."
+# mMovie38 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m38.mp4')
+# puts "Movie 38 opened!"
+# 
+# puts "Opening movie 39..."
+# mMovie39 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m39.mp4')
+# puts "Movie 39 opened!"
+# 
+# puts "Opening movie 40..."
+# mMovie40 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m40.mp4')
+# puts "Movie 40 opened!"
+# 
+# puts "Opening movie 41..."
+# mMovie41 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m41.mp4')
+# puts "Movie 41 opened!"
 
 
 
