@@ -210,7 +210,7 @@ b1.button_video.attach(io: file1, filename: 'disneyButton.mp4')
 
 
 #movie_photos 
-# mPhoto1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m1.jpg') 
+mPhoto1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m1.jpg') 
 # mPhoto2 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m2.jpg') 
 # mPhoto3 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m3.jpg') 
 # mPhoto4 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m4.jpg') 
@@ -227,7 +227,7 @@ b1.button_video.attach(io: file1, filename: 'disneyButton.mp4')
 # mPhoto15 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Posters/m15.jpg') 
 
 
-# m1.image.attach(io: mPhoto1, filename: 'm1.jpg')
+m1.image.attach(io: mPhoto1, filename: 'm1.jpg')
 # m2.image.attach(io: mPhoto2, filename: 'm2.jpg')
 # m3.image.attach(io: mPhoto3, filename: 'm3.jpg')
 # m4.image.attach(io: mPhoto4, filename: 'm4.jpg')
@@ -750,7 +750,7 @@ puts "Attaching movies. This could take a while..."
 puts "Attaching Movie 1..."
 
 
-# m1.movie.attach(io: mMovie1, filename: 'm1.mp4')
+#m1.movie.attach(io: mMovie1, filename: 'm1.mp4')
 # 
 # puts "Movie 1 Finished!"
 # puts "Attaching Movie 2..."
