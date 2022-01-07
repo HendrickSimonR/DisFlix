@@ -11,6 +11,7 @@ class BrandButtons extends React.Component {
     this.state = {
       brands: []
     };
+    
     this.getBrands = this.getBrands.bind(this);
   }
 
@@ -18,46 +19,48 @@ class BrandButtons extends React.Component {
     $.ajax({
       url: "/api/brands"
     }).then(brands => {
-      this.setState({brands})
+      this.setState({ brands })
     });
   }
 
   componentDidMount() {
-    this.getBrands()
+    this.getBrands();
   }
 
   render() {
     return (
       <div className='brand-buttons-container'>
+
         <div className='brand-button brand-disney'>
-          <Link to='/brands/1'>
+          <Link to='/disney'>
             <img src={window.disneyButton} className="brand-button-img" alt="" />
           </Link>
         </div>
 
         <div className='brand-button brand-pixar'>
-          <Link to='/brands/2'>
+          <Link to='/pixar'>
             <img src={window.pixarButton} className="brand-button-img" alt="" />
           </Link>
         </div>
 
         <div className='brand-button brand-marvel'>
-          <Link to='/brands/3'>
+          <Link to='/marvel'>
             <img src={window.marvelButton} className="brand-button-img" alt="" />
           </Link>
         </div>
 
         <div className='brand-button brand-star-wars'>
-          <Link to='/brands/4'>
+          <Link to='/starwars'>
             <img src={window.swButton} className="brand-button-img" alt="" />
           </Link>
         </div>
 
         <div className='brand-button brand-nat-geo'>
-          <Link to='/brands/5'>
+          <Link to='/natgeo'>
             <img src={window.natButton} className="brand-button-img" alt="" />
           </Link>
         </div>
+
       </div>
     );
   }

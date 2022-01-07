@@ -11,6 +11,6 @@ class Api::BrandsController < ApplicationController
   end
 
   def brand_params
-    params.require(:brand).permit(:name, :button_video, :page_video, :image)
+    params.require(:brand).permit(:name, :page_video, :image)
   end
 end

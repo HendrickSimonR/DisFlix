@@ -1,13 +1,17 @@
 .home-container {
-  padding-top: 100px;
-  background: url('https://disneycinema.s3.us-east-2.amazonaws.com/Dashboard+Background.png') fixed;
+  // padding-top: 100px;
+  background: url('https://i.imgur.com/MmqVKyy.png') fixed;
   height: 100%;
+  margin-bottom: -60px;
   // position: fixed;
   // width: 100%;
 }
 
-// .home-main {
-// }
+.home-main {
+  box-shadow: inset -12px 6vw 4vw 1vw #181b29;
+  position: relative;
+  bottom: 15px;
+}
 
 // .sign-out-container {
 //   margin-top: 900px;

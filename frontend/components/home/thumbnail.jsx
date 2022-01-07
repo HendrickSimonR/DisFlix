@@ -30,6 +30,7 @@ class Thumbnail extends React.Component {
     let user = this.props.watchlist;
     let {userMovies} = this.props;
     let movieCheck = false;
+
     if (userMovies) {
       if (userMovies.includes(this.props.movie.id)) {
         movieCheck = true;
@@ -43,20 +44,26 @@ class Thumbnail extends React.Component {
           break;
         }
       }
+
     } 
     
-    // console.log('THUMB', this.props)
+    // console.log('THUMB', this.props)  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     return (
-      <li className="thumbnail-container" onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}>
+      <li className="thumbnail-container"> 
+        
         <video className="thumbnail" poster={this.props.movie.image_url}>
           <source src={this.props.movie.movie_url} type="video/mp4" /> 
         </video>
+
         <div className="thumbnail-functions">
+
           <div className="thumbnail-buttons">
             <span className="material-icons thumb-play-circle">play_circle</span>
             <WatchlistButtonContainer watchlistId={watchlistId} watchlist={watchlist} movieCheck={movieCheck} movieId={this.props.movie.id} />
           </div>
+          
           <br />
+          
           <div className="thumbnail-details">
             <h1>100% Match</h1>
             <h3>
@@ -64,7 +71,9 @@ class Thumbnail extends React.Component {
               <strong className="thumb-runtime">{this.props.movie.runtime}</strong>
             </h3>
           </div>
+
         </div>
+
       </li>
     )
   }

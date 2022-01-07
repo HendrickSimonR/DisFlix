@@ -1,7 +1,8 @@
 .brand-buttons-container {
   display: flex;
   position: relative;
-  width: 87.8%;
+  bottom: 16px;
+  width: 88.8%;
   height: 9.8vw;
   margin: auto;
   margin-bottom: 50px;
@@ -16,10 +17,10 @@
   outline-offset: -3.5px;
   position: relative;
   width: calc(100%/5 - 17px);
-  height: 132px;
+  height: 9.4vw;
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50));
+  background: linear-gradient(rgb(46, 48, 59), rgb(32, 34, 44));
   transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s !important;
   // display: block;
   // transition: all .25s;
@@ -35,28 +36,31 @@
 }
 
 .brand-disney:hover {
-  background: url('https://disneycinema.s3.us-east-2.amazonaws.com/disneyButtonGif.gif');
+  background: url('https://media.giphy.com/media/4SAmpuwtG5tOz6tl1Z/giphy.gif');
   background-size: cover;
-  
+  background-color: linear-gradient(#3a3c4a, #242632);
 }
 
 .brand-pixar:hover {
-  background: url('https://disneycinema.s3.us-east-2.amazonaws.com/pixarButtonGif.gif');
+  background: url('https://media.giphy.com/media/YunF7XBknEsYAsOF2o/giphy.gif');
   background-size: cover;
+  background-color: linear-gradient(#3a3c4a, #242632);
 }
 
 .brand-marvel:hover {
-  background: url('https://disneycinema.s3.us-east-2.amazonaws.com/marvelButtonGif.gif');
+  background: url('https://media.giphy.com/media/TynaWrK1dxRm8tEW7w/giphy.gif');
   background-size: cover;
+  background-color: linear-gradient(#3a3c4a, #242632);
 }
 
 .brand-star-wars:hover {
-  background: url('https://disneycinema.s3.us-east-2.amazonaws.com/swButtonGif.gif');
+  background: url('https://media.giphy.com/media/AvlTJnV85DJXWyt7Tw/giphy.gif');
   background-size: cover;
+  background-color: linear-gradient(#3a3c4a, #242632);
 }
 
 .brand-nat-geo:hover {
-  background: url('https://disneycinema.s3.us-east-2.amazonaws.com/natGeoGif.gif');
+  background: url('https://media.giphy.com/media/HTReXqPV8GxqvUC5RV/giphy.gif');
   background-size: cover;
 }
 

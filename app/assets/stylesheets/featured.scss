@@ -1,6 +1,10 @@
 .featured {
-  height: 85vh;
-  position: relative;
+  height: 103vh;
+  position: static;
+  bottom: 8vw;
+  background-image: url("https://i.imgur.com/roimLHs.jpg");  
+  box-shadow: inset 0px -6vw 2vw -2vw #181b29;
+  background-size: cover;
 
   img {
     width:100%;
@@ -22,6 +26,8 @@
     img {
       // top: 0.1vw;
       width: 44vw;
+      position: relative;
+      bottom: 10px;
     }
 
     .blurb {

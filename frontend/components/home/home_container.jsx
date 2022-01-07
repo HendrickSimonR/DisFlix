@@ -2,7 +2,7 @@ import Home from './home';
 import { signout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { getMovies } from '../../actions/movie_actions'; 
-import { selectMovies } from '../../selectors/movie_selector'
+import { selectMovies } from '../../selectors/movie_selector';
 import { getWatchlist, newAddition, removeMovie } from '../../actions/watchlist_actions';
 
 const mSTP = state => {

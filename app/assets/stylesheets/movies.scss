@@ -112,10 +112,10 @@
   // padding-top: 80px;
   padding-left: 3.4vw;
   // padding-right: 4.1vw;
-  height: 1490px;
+  // height: 1490px;
   color: white;
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .movie-row {
@@ -173,7 +173,7 @@ html, body {
 }
 
 .left-arrow {
-  margin-top: 3.5vw;
+  margin-top: 2.5vw;
   margin-left: -2.5vw;
   font-size: 4vw;
   color: rgba(54, 54, 54, 0.068);
@@ -184,7 +184,7 @@ html, body {
 }
 
 .right-arrow {
-  margin-top: 3.5vw;
+  margin-top: 2.5vw;
   margin-left: 93vw;
   font-size: 4vw;
   color: rgba(54, 54, 54, 0.068);
@@ -193,6 +193,27 @@ html, body {
   cursor: pointer;
   transition: all 0.2s;
 }
+// .left-arrow, .right-arrow {
+//   // margin-top: 3.5vw;
+//   // margin-left: -2.5vw;
+//   font-size: 3vw;
+//   color: rgba(54, 54, 54, 0.068);
+//   // position: absolute;
+//   // z-index: 1;
+//   cursor: pointer;
+//   transition: all 0.2s;
+// }
+
+// .right-arrow {
+//   // margin-top: 3.5vw;
+//   // margin-left: 93vw;
+//   font-size: 3vw;
+//   color: rgba(54, 54, 54, 0.068);
+//   // position: absolute;
+//   // z-index: 1;
+//   cursor: pointer;
+//   transition: all 0.2s;
+// }
 
 .left-arrow:hover {
   color: white;

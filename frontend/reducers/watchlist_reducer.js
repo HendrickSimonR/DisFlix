@@ -1,7 +1,8 @@
 import { RECEIVE_WATCHLIST, RECEIVE_NEW_MOVIE } from '../actions/watchlist_actions';
 
-const watchlistReducer =  (oldState = {}, action ) => {
+const watchlistReducer =  (oldState = {}, action) => {
   Object.freeze(oldState);
+  
   let newState = Object.assign({}, oldState) 
   
   switch (action.type) {

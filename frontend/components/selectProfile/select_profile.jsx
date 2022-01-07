@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class SelectProfile extends React.Component {
   constructor(props) {
     super(props);
+
     this.hideSelect = this.hideSelect.bind(this);
     this.profileMickey = this.profileMickey.bind(this);
     this.profileDory = this.profileDory.bind(this);
@@ -85,6 +86,7 @@ class SelectProfile extends React.Component {
               <h2>Spider-Man</h2>
             </Link>
           </li>
+
         </ul>
       </div>
     );

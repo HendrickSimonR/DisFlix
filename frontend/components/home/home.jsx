@@ -45,17 +45,17 @@ class Home extends React.Component {
       }
     } else if (direction === 'right') {
       if (brand === 'disney') {
-        this.disney.current.style.transform = 'translateX(-1270px)';
+        this.disney.current.style.transform = 'translateX(-96.3%)';
       } else if (brand === 'pixar') {
-        this.pixar.current.style.transform = 'translateX(-761px)';
+        this.pixar.current.style.transform = 'translateX(-96.3%)';
       } else if (brand === 'marvel') {
-        this.marvel.current.style.transform = 'translateX(-1013px)';
+        this.marvel.current.style.transform = 'translateX(-96.3%)';
       } else if (brand === 'starWars') {
-        this.starWars.current.style.transform = 'translateX(-511px)';
+        this.starWars.current.style.transform = 'translateX(-96.3%)';
       } else if (brand === 'natGeo') {
-        this.natGeo.current.style.transform = 'translateX(-511px)';
+        this.natGeo.current.style.transform = 'translateX(-96.3%)';
       } else {
-        this.watchlist.current.style.transform = 'translateX(-1270px)';
+        this.watchlist.current.style.transform = 'translateX(-96.3%)';
       }
     }
   }
@@ -65,6 +65,10 @@ class Home extends React.Component {
   }
 
   render() {
+    console.log('window', typeof(window.location.href))
+    console.log('whooo', this.props);
+    console.log('state', this.state);
+
     this.disneyMovies = [];
     this.pixarMovies = [];
     this.marvelMovies = [];
@@ -72,7 +76,7 @@ class Home extends React.Component {
     this.natGeoMovies = []; 
     this.watchlistMovies = [];
 
-    let {movies} = this.props; //equivalent to this.props.movies
+    let { movies } = this.props; //equivalent to this.props.movies
     let moviesArr = Object.values(movies);
     let watchlistObj = this.props.watchlist;
     let watchlistArr;
@@ -141,121 +145,149 @@ class Home extends React.Component {
       <div className="home-container">
         <Featured />
         <WatchlistContainer />
+
         <div className="home-main">
-        <SelectProfile />
-        <BrandButtons />
+          {window.profilePic ? null : <SelectProfile /> }
+          <BrandButtons />
 
         
-        <div className="movie-index">
-          {this.props.watchlist.includes('No watchlists!') && this.props.watchlist.length === 1 
-        
-          ? <div>
+          <div className="movie-index">
+            { (this.props.watchlist.includes('No watchlists!') && this.props.watchlist.length === 1) || this.props.watchlist === []
+
+            ?  null //<div>
+            //     <h1 className="row-header">Watchlist</h1>
+            //       <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
+            //         <li className="thumbnail-container" >
+            //           <img src={window.placeholder} className="thumbnail" id="placeholder" ></img>
+            //         </li>
+            //       </ul>
+            //   </div>
+
+
+            : <div>
                 <h1 className="row-header">Watchlist</h1>
+
+                <div className="scroll-arrows">
+                  <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'watchlist')}>
+                    arrow_back_ios
+                  </span>
+                  <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'watchlist')}>
+                    arrow_forward_ios
+                  </span>
+                </div>
+
                 <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
-                  <li className="thumbnail-container" onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}>
-                    <img src={window.placeholder} className="thumbnail" id="placeholder" ></img>
-                  </li>
+                  {this.watchlistMovies.map((movie) => (
+                    <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                  ))}
                 </ul>
+              </div> }
+
+
+            <div>
+              <h1 className="row-header">Disney</h1>
+                
+              <div className="scroll-arrows">
+                <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'disney')}>
+                  arrow_back_ios
+                </span>
+                <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'disney')}>
+                  arrow_forward_ios
+                </span>
+              </div>
+                
+              <ul className="movie-row" id="disney-movies" ref={this.disney}>
+                {this.disneyMovies.map((movie) => (
+                  <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
+                ))}
+              </ul>
+
             </div>
-        
-          
-          : <div>
-            <h1 className="row-header">Watchlist</h1>
-            <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'watchlist')}>
-              arrow_back_ios
-            </span>
-            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'watchlist')}>
-              arrow_forward_ios
-            </span>
-            <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
-              {this.watchlistMovies.map((movie) => (
-                <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
-              ))}
-            </ul>
-          </div> }
+                
+            <div>
+              <h1 className="row-header">Pixar</h1>
+                
+              <div className="scroll-arrows">
+                <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'pixar')}>
+                  arrow_back_ios
+                </span>
+                <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'pixar')}>
+                  arrow_forward_ios
+                </span>
+              </div>
 
-          <div>
-            <h1 className="row-header">Disney</h1>
-              <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'disney')}>
-                arrow_back_ios
-              </span>
-              <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'disney')}>
-                arrow_forward_ios
-              </span>
-                <ul className="movie-row" id="disney-movies" ref={this.disney}>
-              {this.disneyMovies.map((movie) => (
-                <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
-              ))}
-            </ul>
-          </div>
-          
-          <div>
-          <h1 className="row-header">Pixar</h1>
-            <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'pixar')}>
-              arrow_back_ios
-            </span>
-            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'pixar')}>
-              arrow_forward_ios
-            </span>
               <ul className="movie-row" id="pixar-movies" ref={this.pixar}>
-            {this.pixarMovies.map((movie) => (
-              <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
-            ))}
-          </ul>
-          </div>
-          
-          <div>
-          <h1 className="row-header">Marvel</h1>
-            <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'marvel')}>
-              arrow_back_ios
-            </span>
-            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'marvel')}>
-              arrow_forward_ios
-            </span>
+                {this.pixarMovies.map((movie) => (
+                  <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
+                ))}
+              </ul>
+            </div>
+                
+            <div>            
+              <h1 className="row-header">Marvel</h1>
+
+              <div className="scroll-arrows">
+                <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'marvel')}>
+                  arrow_back_ios
+                </span>
+                <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'marvel')}>
+                  arrow_forward_ios
+                </span>
+              </div>
+
               <ul className="movie-row" id="marvel-movies" ref={this.marvel}>
-            {this.marvelMovies.map((movie) => (
-              <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
-            ))}
-          </ul>
-          </div>
+                {this.marvelMovies.map((movie) => (
+                  <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                ))}
+              </ul>
+            </div>
 
-          <div>
+            <div>
               <h1 className="row-header">Star Wars</h1>
-            <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'starWars')}>
-              arrow_back_ios
-            </span>
-            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'starWars')}>
-              arrow_forward_ios
-            </span>
+
+              <div className="scroll-arrows">
+                <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'starWars')}>
+                  arrow_back_ios
+                </span>
+                <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'starWars')}>
+                  arrow_forward_ios
+                </span>
+              </div>
+
               <ul className="movie-row" id="star-wars-movies" ref={this.starWars}>
-            {this.starWarsMovies.map((movie) => (
-              <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
-            ))}
-          </ul>
-          </div>
+                {this.starWarsMovies.map((movie) => (
+                  <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                ))}
+              </ul>
+            </div>
 
-          <div>
-          <h1 className="row-header ">National Geographic</h1>
-            <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'natGeo')}>
-              arrow_back_ios
-            </span>
-            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'natGeo')}>
-              arrow_forward_ios
-            </span>
+            <div>
+              <h1 className="row-header ">National Geographic</h1>
+                
+              <div className="scroll-arrows">
+                <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'natGeo')}>
+                  arrow_back_ios
+                </span>
+                <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'natGeo')}>
+                  arrow_forward_ios
+                </span>
+              </div>
+
               <ul className="movie-row" id="nat-geo-movies" ref={this.natGeo}>
-            {this.natGeoMovies.map((movie) => (
-              <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
-            ))}
-          </ul>
-          </div>
-        </div>
+                {this.natGeoMovies.map((movie) => (
+                  <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                ))}
+              </ul>
+            </div>
 
-          {/* <div className='sign-out-container'>
-            <button 
-              className='signout-button' 
-              onClick={this.handleSignout}>SIGN OUT
-            </button>
-          </div> */}
+          </div>
+
+            {/* <div className='sign-out-container'>
+              <button 
+                className='signout-button' 
+                onClick={this.handleSignout}>SIGN OUT
+              </button>
+            </div> */}
         </div>
       </div>
     );
