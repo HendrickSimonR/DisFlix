@@ -6,16 +6,28 @@ class Brand extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.getMovies();
+    this.props.getWatchlist({user_id: this.props.user})
+  }
+
   render() {
     this.disney = [];
     this.pixar = [];
     this.marvel = [];
     this.starWars = [];
     this.natGeo = []; 
-    
+    this.watchlistMovies = [];
+
     let allMovies = {};
     let { movies } = this.props; //equivalent to this.props.movies
     let moviesArr = Object.values(movies);
+    let watchlistObj = this.props.watchlist;
+    let watchlistArr;
+
+    if (Object.values(watchlistObj) !== undefined) {
+      watchlistArr = Object.values(watchlistObj)
+    }
 
     if (moviesArr.length === 0) {
       return null;
@@ -39,37 +51,66 @@ class Brand extends React.Component {
       allMovies['marvel'] = this.marvel;
       allMovies['starWars'] = this.starWars;
       allMovies['natGeo'] = this.natGeo;
+
+
     }
 
-    
+    if (watchlistArr === undefined || watchlistArr.length === 0) {
+      return null;
+    } else {
+      watchlistArr = Object.values(watchlistObj);
 
-    let brand;
+      for (let i = 0; i < watchlistArr.length; i++) {
+        let watchlistMovie = watchlistArr[i];
+        let watchlistMovieId = watchlistMovie.movie_id;
+
+        for (let j = 0; j < moviesArr.length; j++) {
+          let movie = moviesArr[j];
+
+          if (movie.id === watchlistMovieId) {
+            this.watchlistMovies.push(movie);
+          }
+        }
+      }
+    }
+
+    let user = this.props.user;
+    let watchlist = this.props.watchlist;
+    let userWatchlistMovies = [];
+
+    if (this.props.watchlist) {
+      for (let i = 0; i < this.props.watchlist.length; i++) {
+        userWatchlistMovies.push(this.props.watchlist[i].movie_id);
+      };
+    }
+
+    let films;
 
     if (window.location.href.includes('disney')) {
-      brand = allMovies['disney'];
+      films = allMovies['disney'];
     } else if (window.location.href.includes('pixar')) {
-      brand = allMovies['pixar'];
+      films = allMovies['pixar'];
     } else if (window.location.href.includes('marvel')) {
-      brand = allMovies['marvel'];
+      films = allMovies['marvel'];
     } else if (window.location.href.includes('starwars')) {
-      brand = allMovies['starWars'];
-    } else {
-      brand = allMovies['natGeo'];
-    } 
+      films = allMovies['starWars'];
+    } else if (window.location.href.includes('natgeo')) {
+      films = allMovies['natGeo'];
+    } else if (window.location.href.includes('watchlist')) {
+      films = this.watchlistMovies;
+    }
     
     
     console.log('DISNEY', this.state, this.props)
-    console.log('MOVIES', this.disney)
     console.log('WINDOW', window.location.href)
-    console.log('BRAND', brand)
+    console.log('FILMS', films)
     console.log('ALL', allMovies)
-
-
+    console.log('WATCHLIST', this.props.watchlist)
 
     return (
-      <div className="brand-page">
-        <ul className="brand-movies">
-          {brand.map((movie) => (
+      <div className="films-container">
+        <ul className="films-rows">
+          {films.map((movie) => (
             <Thumbnail user={user} key={movie.id} movie={movie}/>
           ))}
         </ul>

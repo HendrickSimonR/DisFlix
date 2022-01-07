@@ -27,7 +27,12 @@ class Api::WatchlistsController < ApplicationController
     @watchlist = Watchlist.find(params[:watchlist_id])
     @watchlist.destroy
     @watchlists = Watchlist.where(user_id: params[:user_id])
-    render :index
+    
+    if !@watchlists.empty?
+      render :index
+    else 
+      render json: ['No watchlists!']
+    end
   end
 
   def user_params

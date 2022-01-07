@@ -108,6 +108,7 @@ class Home extends React.Component {
       return null;
     } else {
       watchlistArr = Object.values(watchlistObj);
+      
       for (let i = 0; i < watchlistArr.length; i++) {
         let watchlistMovie = watchlistArr[i];
         let watchlistMovieId = watchlistMovie.movie_id;
@@ -208,7 +209,7 @@ class Home extends React.Component {
               <h1 className="row-header">Pixar</h1>
                 
               <div className="scroll-arrows">
-                <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'pixar')}>
+                <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'pixar')}>
                   arrow_back_ios
                 </span>
                 <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'pixar')}>
@@ -227,7 +228,7 @@ class Home extends React.Component {
               <h1 className="row-header">Marvel</h1>
 
               <div className="scroll-arrows">
-                <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'marvel')}>
+                <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'marvel')}>
                   arrow_back_ios
                 </span>
                 <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'marvel')}>
@@ -246,7 +247,7 @@ class Home extends React.Component {
               <h1 className="row-header">Star Wars</h1>
 
               <div className="scroll-arrows">
-                <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'starWars')}>
+                <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'starWars')}>
                   arrow_back_ios
                 </span>
                 <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'starWars')}>
@@ -265,7 +266,7 @@ class Home extends React.Component {
               <h1 className="row-header ">National Geographic</h1>
                 
               <div className="scroll-arrows">
-                <span class="material-icons left-arrow" onClick={() => this.handleScroll('left', 'natGeo')}>
+                <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'natGeo')}>
                   arrow_back_ios
                 </span>
                 <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'natGeo')}>
