@@ -28,7 +28,12 @@ class Thumbnail extends React.Component {
     let watchlistId;
     let watchlist = this.props.watchlist;
     let {userMovies} = this.props;
+    let windowUrl = 'home';
     // let movieCheck = false;
+
+    if (!window.location.href.includes('home')) {
+      windowUrl = 'other';
+    } 
 
     if (watchlist) {
 
@@ -53,7 +58,7 @@ class Thumbnail extends React.Component {
 
     // console.log('THUMB', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     return (
-      <li className="thumbnail-container"> 
+      <li className={windowUrl === 'home' ? "thumbnail-container" : "thumbnail-specific"} > 
         <div>{this.props.movie.title}</div>
         <video className="thumbnail" poster={this.props.movie.image_url}>
           <source src={this.props.movie.movie_url} type="video/mp4" /> 
