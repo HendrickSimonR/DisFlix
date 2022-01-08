@@ -24,6 +24,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
+    console.log('HOME DID MOUNT')
     this.props.getMovies();
     this.props.getWatchlist({user_id: this.props.user})
   }
@@ -34,6 +35,7 @@ class Home extends React.Component {
         this.disney.current.style.transform = 'translateX(0px)';
       } else if (brand === 'pixar') {
         this.pixar.current.style.transform = 'translateX(0px)';
+        // document.getElementById("left-arrow").classList.toggle("hide");
       } else if (brand === 'marvel') {
         this.marvel.current.style.transform = 'translateX(0px)';
       } else if (brand === 'starWars') {
@@ -65,9 +67,9 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log('window', typeof(window.location.href))
-    console.log('whooo', this.props);
-    console.log('state', this.state);
+    // console.log('window', typeof(window.location.href))
+    // console.log('HOMEPAGE', this.props);
+    // console.log('state', this.state);
 
     this.disneyMovies = [];
     this.pixarMovies = [];
@@ -89,6 +91,8 @@ class Home extends React.Component {
     if (moviesArr.length === 0) {
       return null;
     } else {
+      // console.log('MOVIESARR', moviesArr);
+
       moviesArr.forEach(movie => {
         if (movie['brand_id'] === 1) {
           this.disneyMovies.push(movie);
@@ -108,7 +112,7 @@ class Home extends React.Component {
       return null;
     } else {
       watchlistArr = Object.values(watchlistObj);
-      
+
       for (let i = 0; i < watchlistArr.length; i++) {
         let watchlistMovie = watchlistArr[i];
         let watchlistMovieId = watchlistMovie.movie_id;
@@ -124,12 +128,13 @@ class Home extends React.Component {
     }
 
     // if (this.disneyMovies.length > 1) {
-    //   console.log(this.disneyMovies);
-    //   console.log(this.pixarMovies);
-    //   console.log(this.marvelMovies);
-    //   console.log(this.starWarsMovies);
-    //   console.log(this.natGeoMovies);
+    //   console.log('MOVIES', this.disneyMovies);
+    //   console.log('MOVIES', this.pixarMovies);
+    //   console.log('MOVIES', this.marvelMovies);
+    //   console.log('MOVIES', this.starWarsMovies);
+    //   console.log('MOVIES', this.natGeoMovies);
     // }
+
     let user = this.props.user;
     let watchlist = this.props.watchlist;
     let userWatchlistMovies = [];
@@ -145,7 +150,6 @@ class Home extends React.Component {
     return (
       <div className="home-container">
         <Featured />
-        <WatchlistContainer />
 
         <div className="home-main">
           {window.profilePic ? null : <SelectProfile /> }
@@ -169,10 +173,10 @@ class Home extends React.Component {
                 <h1 className="row-header">Watchlist</h1>
 
                 <div className="scroll-arrows">
-                  <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'watchlist')}>
+                  <span className="material-icons" id="left-arrow" onClick={() => this.handleScroll('left', 'watchlist')}>
                     arrow_back_ios
                   </span>
-                  <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'watchlist')}>
+                  <span className="material-icons" id="right-arrow" onClick={() => this.handleScroll('right', 'watchlist')}>
                     arrow_forward_ios
                   </span>
                 </div>
@@ -189,10 +193,10 @@ class Home extends React.Component {
               <h1 className="row-header">Disney</h1>
                 
               <div className="scroll-arrows">
-                <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'disney')}>
+                <span className="material-icons" id="left-arrow" onClick={() => this.handleScroll('left', 'disney')}>
                   arrow_back_ios
                 </span>
-                <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'disney')}>
+                <span className="material-icons" id="right-arrow"  onClick={() => this.handleScroll('right', 'disney')}>
                   arrow_forward_ios
                 </span>
               </div>
@@ -209,10 +213,10 @@ class Home extends React.Component {
               <h1 className="row-header">Pixar</h1>
                 
               <div className="scroll-arrows">
-                <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'pixar')}>
+                <span className="material-icons" id="left-arrow" onClick={() => this.handleScroll('left', 'pixar')}>
                   arrow_back_ios
                 </span>
-                <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'pixar')}>
+                <span className="material-icons" id="right-arrow"  onClick={() => this.handleScroll('right', 'pixar')}>
                   arrow_forward_ios
                 </span>
               </div>
@@ -228,10 +232,10 @@ class Home extends React.Component {
               <h1 className="row-header">Marvel</h1>
 
               <div className="scroll-arrows">
-                <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'marvel')}>
+                <span className="material-icons" id="left-arrow" onClick={() => this.handleScroll('left', 'marvel')}>
                   arrow_back_ios
                 </span>
-                <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'marvel')}>
+                <span className="material-icons" id="right-arrow"  onClick={() => this.handleScroll('right', 'marvel')}>
                   arrow_forward_ios
                 </span>
               </div>
@@ -247,10 +251,10 @@ class Home extends React.Component {
               <h1 className="row-header">Star Wars</h1>
 
               <div className="scroll-arrows">
-                <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'starWars')}>
+                <span className="material-icons" id="left-arrow" onClick={() => this.handleScroll('left', 'starWars')}>
                   arrow_back_ios
                 </span>
-                <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'starWars')}>
+                <span className="material-icons" id="right-arrow" onClick={() => this.handleScroll('right', 'starWars')}>
                   arrow_forward_ios
                 </span>
               </div>
@@ -266,10 +270,10 @@ class Home extends React.Component {
               <h1 className="row-header ">National Geographic</h1>
                 
               <div className="scroll-arrows">
-                <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'natGeo')}>
+                <span className="material-icons" id="left-arrow" onClick={() => this.handleScroll('left', 'natGeo')}>
                   arrow_back_ios
                 </span>
-                <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'natGeo')}>
+                <span className="material-icons" id="right-arrow" onClick={() => this.handleScroll('right', 'natGeo')}>
                   arrow_forward_ios
                 </span>
               </div>

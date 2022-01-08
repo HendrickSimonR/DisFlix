@@ -172,7 +172,7 @@ html, body {
   margin-top: 6px;
 }
 
-.left-arrow {
+#left-arrow {
   margin-top: 2.5vw;
   margin-left: -2.5vw;
   font-size: 4vw;
@@ -183,7 +183,7 @@ html, body {
   transition: all 0.2s;
 }
 
-.right-arrow {
+#right-arrow {
   margin-top: 2.5vw;
   margin-left: 93vw;
   font-size: 4vw;
@@ -215,10 +215,14 @@ html, body {
 //   transition: all 0.2s;
 // }
 
-.left-arrow:hover {
+#left-arrow:hover {
   color: white;
 }
 
-.right-arrow:hover {
+#right-arrow:hover {
   color: white;
 }
+
+#left-arrow.hide {
+  color: red;
+} 

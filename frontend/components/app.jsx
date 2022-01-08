@@ -29,7 +29,7 @@ const App = () => (
       <ProtectedRoute path="/marvel" component={BrandContainer} />
       <ProtectedRoute path="/starwars" component={BrandContainer} />
       <ProtectedRoute path="/natgeo" component={BrandContainer} />
-      <ProtectedRoute path="/watchlist" component={BrandContainer} />
+      <ProtectedRoute path="/watchlist" component={WatchlistContainer} />
     </Switch>
 
     <footer>

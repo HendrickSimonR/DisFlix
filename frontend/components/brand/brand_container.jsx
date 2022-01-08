@@ -11,7 +11,8 @@ const mSTP = state => {
     user: state.session.id,
     movies: selectMovies(state),
     watchlist: state.watchlist
-})};
+  })
+};
 
 const mDTP = dispatch => ({
   signout: () => dispatch(signout()),

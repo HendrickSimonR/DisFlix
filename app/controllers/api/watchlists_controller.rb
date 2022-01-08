@@ -22,7 +22,7 @@ class Api::WatchlistsController < ApplicationController
       render json: ['No watchlists!']
     end
   end
-  
+
   def destroy
     @watchlist = Watchlist.find(params[:watchlist_id])
     @watchlist.destroy

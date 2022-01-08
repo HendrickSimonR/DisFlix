@@ -27,30 +27,34 @@ class Thumbnail extends React.Component {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year);
     let watchlistId;
     let watchlist = this.props.watchlist;
-    let user = this.props.watchlist;
     let {userMovies} = this.props;
-    let movieCheck = false;
+    // let movieCheck = false;
 
-    if (userMovies) {
-      if (userMovies.includes(this.props.movie.id)) {
-        movieCheck = true;
-      }
+    if (watchlist) {
+
+      // if (userMovies) {
+      //   if (userMovies.includes(this.props.movie.id)) {
+      //     movieCheck = true;
+      //   }
+      // }
       
       for (let i = 0; i < this.props.watchlist.length; i++) {
         let watchlistMovie = this.props.watchlist[i];
-        
+        // console.log('WATCHLIST MOVIE', watchlistMovie)
         if (watchlistMovie.movie_id === this.props.movie.id) {
           watchlistId = watchlistMovie.id;
+          // console.log('WATCHLIST ID', watchlistId)
           break;
+        } else {
+          watchlistId = watchlistMovie.id;
         }
-      }
+      } 
+    }    
 
-    } 
-    
-    // console.log('THUMB', this.props)  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
+    // console.log('THUMB', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     return (
       <li className="thumbnail-container"> 
-        
+        <div>{this.props.movie.title}</div>
         <video className="thumbnail" poster={this.props.movie.image_url}>
           <source src={this.props.movie.movie_url} type="video/mp4" /> 
         </video>
@@ -59,7 +63,7 @@ class Thumbnail extends React.Component {
 
           <div className="thumbnail-buttons">
             <span className="material-icons thumb-play-circle">play_circle</span>
-            <WatchlistButtonContainer watchlistId={watchlistId} watchlist={watchlist} movieCheck={movieCheck} movieId={this.props.movie.id} />
+            <WatchlistButtonContainer watchlistId={watchlistId} watchlist={watchlist} movieId={this.props.movie.id} />
           </div>
           
           <br />

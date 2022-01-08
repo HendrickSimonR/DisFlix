@@ -7,6 +7,7 @@ class Brand extends React.Component {
   }
 
   componentDidMount() {
+    console.log('BRAND DID MOUNT')
     this.props.getMovies();
     this.props.getWatchlist({user_id: this.props.user})
   }
@@ -25,9 +26,6 @@ class Brand extends React.Component {
     let watchlistObj = this.props.watchlist;
     let watchlistArr;
 
-    if (Object.values(watchlistObj) !== undefined) {
-      watchlistArr = Object.values(watchlistObj)
-    }
 
     if (moviesArr.length === 0) {
       return null;
@@ -52,37 +50,52 @@ class Brand extends React.Component {
       allMovies['starWars'] = this.starWars;
       allMovies['natGeo'] = this.natGeo;
 
+      if (Object.values(watchlistObj) !== undefined) {
+        watchlistArr = Object.values(watchlistObj);
 
-    }
+        for (let i = 0; i < watchlistArr.length; i++) {
+          let watchlistMovie = watchlistArr[i];
+          let watchlistMovieId = watchlistMovie.movie_id;
 
-    if (watchlistArr === undefined || watchlistArr.length === 0) {
-      return null;
-    } else {
-      watchlistArr = Object.values(watchlistObj);
+          for (let j = 0; j < moviesArr.length; j++) {
+            let movie = moviesArr[j];
 
-      for (let i = 0; i < watchlistArr.length; i++) {
-        let watchlistMovie = watchlistArr[i];
-        let watchlistMovieId = watchlistMovie.movie_id;
-
-        for (let j = 0; j < moviesArr.length; j++) {
-          let movie = moviesArr[j];
-
-          if (movie.id === watchlistMovieId) {
-            this.watchlistMovies.push(movie);
+            if (movie.id === watchlistMovieId) {
+              this.watchlistMovies.push(movie);
+            }
           }
         }
       }
     }
 
-    let user = this.props.user;
-    let watchlist = this.props.watchlist;
-    let userWatchlistMovies = [];
+    // if (watchlistArr === undefined || watchlistArr.length === 0) {
+    //   return null;
+    // } else {
+    //   watchlistArr = Object.values(watchlistObj);
 
-    if (this.props.watchlist) {
-      for (let i = 0; i < this.props.watchlist.length; i++) {
-        userWatchlistMovies.push(this.props.watchlist[i].movie_id);
-      };
-    }
+    //   for (let i = 0; i < watchlistArr.length; i++) {
+    //     let watchlistMovie = watchlistArr[i];
+    //     let watchlistMovieId = watchlistMovie.movie_id;
+
+    //     for (let j = 0; j < moviesArr.length; j++) {
+    //       let movie = moviesArr[j];
+
+    //       if (movie.id === watchlistMovieId) {
+    //         this.watchlistMovies.push(movie);
+    //       }
+    //     }
+    //   }
+    // }
+
+    // let user = this.props.user;
+    // let watchlist = this.props.watchlist;
+    // let userWatchlistMovies = [];
+
+    // if (this.props.watchlist) {
+    //   for (let i = 0; i < this.props.watchlist.length; i++) {
+    //     userWatchlistMovies.push(this.props.watchlist[i].movie_id);
+    //   };
+    // }
 
     let films;
 
@@ -101,17 +114,17 @@ class Brand extends React.Component {
     }
     
     
-    console.log('DISNEY', this.state, this.props)
-    console.log('WINDOW', window.location.href)
-    console.log('FILMS', films)
-    console.log('ALL', allMovies)
-    console.log('WATCHLIST', this.props.watchlist)
+    // console.log('DISNEY', this.state, this.props)
+    // console.log('WINDOW', window.location.href)
+    // console.log('FILMS', films)
+    // console.log('ALL', allMovies)
+    // console.log('PROPS IN BRAND', this.props)
 
     return (
       <div className="films-container">
         <ul className="films-rows">
           {films.map((movie) => (
-            <Thumbnail user={user} key={movie.id} movie={movie}/>
+            <Thumbnail user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
           ))}
         </ul>
       </div>
