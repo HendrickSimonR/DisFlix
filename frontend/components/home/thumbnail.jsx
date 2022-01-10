@@ -59,6 +59,7 @@ class Thumbnail extends React.Component {
     // console.log('THUMB', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     return (
       <li className={windowUrl === 'home' ? "thumbnail-container" : "thumbnail-specific"} > 
+        <div>{this.props.movie.title}</div>
         <video className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} poster={this.props.movie.image_url}>
           <source src={this.props.movie.movie_url} type="video/mp4" /> 
         </video>
