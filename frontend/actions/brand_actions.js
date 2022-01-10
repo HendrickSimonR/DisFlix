@@ -25,3 +25,5 @@ export const getBrand = id => dispatch => {
     brand => dispatch(receiveBrand(brand))
   );
 };
+
+// comment

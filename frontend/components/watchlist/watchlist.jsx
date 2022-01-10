@@ -20,8 +20,9 @@ class Watchlist extends React.Component {
   }
 
   render() {
-
     this.watchlistMovies = [];
+
+    let user = this.props.user;
     let { movies } = this.props;
     let moviesArr = Object.values(movies);
 

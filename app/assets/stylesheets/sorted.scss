@@ -1,0 +1,107 @@
+.films-container, .watchlist-container {
+  background: url("https://i.imgur.com/MmqVKyy.png") fixed;
+  display: flex;
+  transition: all 3s ease 0s;
+  /* width: 100%; */
+  justify-content: center;
+  /* margin: 0 auto; */
+  /* display: grid; */
+}
+
+.films-rows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 20px 0;
+  margin-top: 15vh;
+  margin-bottom: 20vh;
+  width: 80%;
+
+
+  .thumbnail-specific {
+    color: white;
+    // width: 24.3vw;
+    // height: 16vw;
+    border-radius: 4px;
+    margin: 2px;
+    padding: 2px;
+    transition: transform 0.8s;
+  }
+
+  .thumbnail.sorted {
+    width: 24.3vw;
+    border-radius: 4px;
+  }
+}
+
+.thumbnail-specific:hover {
+  transform: scale(1.4);
+  transform-origin: center;
+  // outline: 3.5px solid rgb(255, 255, 255);
+  // outline-offset: -3.5px;
+  // border-radius: 50%;
+  // z-index: 2;
+  display: inline;
+  // background: rgb(32, 32, 49);
+  height:100px;
+  margin-top: -10px;
+  transition: all .6s;
+  z-index: 5;
+
+  .thumbnail {
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: none;
+    // margin-bottom: -1.9px;
+  }
+
+  .thumbnail-functions {
+    display: flex;
+    position: relative;
+    bottom: 5px;
+    margin-right: 3px;
+    background: linear-gradient(rgb(37, 38, 48), rgb(29, 31, 39));
+    color: #fff;
+    // width: 100%;
+    height: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: opacity 300ms ease-out, border-radius 200ms ease-out;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 10px;
+    width: 24.3vw;
+    box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
+  }
+
+  .thumbnail-details {
+    margin-left: 4px;
+    margin-top: 9px;
+    display:inline-flex;
+  }
+
+  .thumbnail-details h1 {
+    margin-left: 5px;
+    color:rgb(31, 212, 85);
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+    margin-top: 4px;
+  }
+
+  .thumb-rating {
+    margin-top: 3px;
+    margin-left: 5px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Open Sans';
+    border-color:rgba(255, 255, 255, 0.404);
+    border-style: solid;
+    border-width: thin;
+  }
+
+  .thumb-runtime {
+    margin-top: 3px;
+    margin-left: 5px;
+    font-size: 11px;
+    font-family: 'Open Sans';
+  }
+}

@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 class ProfileMenu extends React.Component {
   constructor(props) {
     super(props)
-    this.handleLogout = this.handleLogout.bind(this)
+    this.handleSignout = this.handleSignout.bind(this)
   }
 
-  handleLogout() {
-    // window.hideProfile = false;
+  handleSignout() {
+    window.hideProfile = false;
+    window.profilePic = null;
     this.props.signout();
-    this.props.history.push('/');
   }
 
   render() {
@@ -26,7 +26,7 @@ class ProfileMenu extends React.Component {
           </ul>
 
           <ul className="logout-button">
-            <li onClick={this.handleLogout} className="logout">Sign out</li>
+            <li onClick={this.handleSignout} className="logout">Sign out</li>
           </ul>
         </div>
       </div>

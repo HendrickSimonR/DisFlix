@@ -30,4 +30,5 @@ bundle.js*
 
 /scraps
 
+/.git*
 # /app/assets/javascripts/bundle.js*

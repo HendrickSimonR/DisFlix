@@ -10,15 +10,15 @@
 .thumbnail {
   // padding: 5px;
   height: auto;
-  width: 18vw;
+  width: 18.3vw;
   cursor: pointer;
   // height: 8.4375vw;
-  border-radius: 9px;
+  border-radius: 3px;
   // margin-right: 10px;
-  transition: all .4s;
+  transition: all .4s ease, box-shadow 0s;
   box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
   // -webkit-font-smoothing: subpixel-antialiased;
-    background-size: cover!important;
+  background-size: cover!important;
   background-position: center!important;
   display: inline-block;
 }
@@ -53,25 +53,30 @@
   height:100px;
   margin-top: -10px;
   transition: all .6s;
+  z-index: 10;
 
   .thumbnail {
-    border-radius: 9px 9px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
     box-shadow: none;
-    margin-bottom: -1.9px;
+    // margin-bottom: -1.9px;
   }
   
   .thumbnail-functions {
-    display: inline-flex;
+    display: flex;
+    position: relative;
+    bottom: 3px;
+    transition: bottom 0s;
     margin-right: 3px;
-    background: linear-gradient(rgb(43, 44, 56), rgb(36, 38, 50));
+    background: linear-gradient(rgb(37, 38, 48), rgb(29, 31, 39));
     color: #fff;
-    width: 100%;
+    // width: 100%;
     height: 50px;
     padding: 5px;
     box-sizing: border-box;
     transition: opacity 300ms ease-out, border-radius 200ms ease-out;
-    border-radius: 0 0 9px 9px;
+    border-radius: 0 0 5px 5px;
     margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
   }
 
   .thumbnail-details {
@@ -111,6 +116,7 @@
 .movie-index {
   // padding-top: 80px;
   padding-left: 3.4vw;
+  margin-bottom: 20vh;
   // padding-right: 4.1vw;
   // height: 1490px;
   color: white;
@@ -173,7 +179,7 @@ html, body {
 }
 
 #left-arrow {
-  margin-top: 2.5vw;
+  margin-top: 3.5vw;
   margin-left: -2.5vw;
   font-size: 4vw;
   color: rgba(54, 54, 54, 0.068);
@@ -184,7 +190,7 @@ html, body {
 }
 
 #right-arrow {
-  margin-top: 2.5vw;
+  margin-top: 3.5vw;
   margin-left: 93vw;
   font-size: 4vw;
   color: rgba(54, 54, 54, 0.068);

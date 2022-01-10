@@ -19,28 +19,37 @@ class SelectProfile extends React.Component {
     window.hideProfile = true;
   }
 
+  handleScroll() {
+    window.scrollTo(0, 0);
+  }
+
   profileMickey(e) {
     window.profilePic = window.mickey;
+    this.handleScroll();
     this.hideSelect();
   }
 
   profileDory(e) {
     window.profilePic = window.dory;
+    this.handleScroll();
     this.hideSelect();
   }
 
   profileMoana(e) {
     window.profilePic = window.moana;
+    this.handleScroll();
     this.hideSelect();
   }
 
   profileC3PO(e) {
     window.profilePic = window.c3po;
+    this.handleScroll();
     this.hideSelect();
   }
 
   profileSpidey(e) {
     window.profilePic = window.Spidey;
+    this.handleScroll();
     this.hideSelect();
   }
 

@@ -10,6 +10,7 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.handleSignout = this.handleSignout.bind(this);
+    this.watchlistLink = this.watchlistLink.bind(this);
     this.disney = React.createRef();
     this.pixar = React.createRef();
     this.marvel = React.createRef();
@@ -19,8 +20,14 @@ class Home extends React.Component {
   }
 
   handleSignout() {
+    console.log('profile', window.profilePic)
     this.props.signout();
     // this.props.history.push('/');
+  }
+
+  watchlistLink(){
+    window.scrollTo(0, 0);
+    this.props.history.push('/watchlist');
   }
 
   componentDidMount() {
@@ -145,7 +152,7 @@ class Home extends React.Component {
       };
     }
 
-    // console.log('PROPITY', this.props);
+    console.log('PROPITY', this.props);
   
     return (
       <div className="home-container">
@@ -182,9 +189,18 @@ class Home extends React.Component {
                 </div>
 
                 <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
-                  {this.watchlistMovies.map((movie) => (
+                  {this.watchlistMovies.slice(0, 9).map((movie) => (
                     <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                   ))}
+
+                  {this.watchlistMovies.length > 10 ? 
+                    <li className="thumbnail-container" >
+                      <img onClick={this.watchlistLink} src={window.placeholder} className="thumbnail" id="placeholder" ></img>
+                      <div className="thumbnail-functions placeholder">
+                        Visit the Watchlist Page for your full watchlist!
+                      </div>
+                    </li> 
+                  : null }
                 </ul>
               </div> }
 

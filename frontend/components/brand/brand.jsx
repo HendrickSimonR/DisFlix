@@ -20,6 +20,7 @@ class Brand extends React.Component {
     this.natGeo = []; 
     this.watchlistMovies = [];
 
+    let user = this.props.user;
     let allMovies = {};
     let { movies } = this.props; //equivalent to this.props.movies
     let moviesArr = Object.values(movies);
@@ -30,6 +31,7 @@ class Brand extends React.Component {
     if (moviesArr.length === 0) {
       return null;
     } else {
+      moviesArr;
       moviesArr.forEach(movie => {
         if (movie['brand_id'] === 1) {
           this.disney.push(movie);
@@ -113,6 +115,7 @@ class Brand extends React.Component {
       films = this.watchlistMovies;
     }
     
+    // moviesArr.sort(() => Math.random() - 0.5);
     
     // console.log('DISNEY', this.state, this.props)
     // console.log('WINDOW', window.location.href)

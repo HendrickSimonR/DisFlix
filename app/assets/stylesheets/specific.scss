@@ -1,3 +1,26 @@
 .films-container, .watchlist-container {
-  background: rgb(22, 22, 44);
+  background: #16162c;
+  display: flex;
+  /* width: 100%; */
+  justify-content: center;
+  /* margin: 0 auto; */
+  /* display: grid; */
+}
+
+.films-rows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 23px;
+
+  .thumbnail-specific {
+    background-color: black;
+    color: white;
+    width: 24.3vw;
+    height: 16vw;
+    border-radius: 4px;
+    margin: 2px;
+    padding: 2px;
+    transition: transform 0.8s;
+  }
 }
