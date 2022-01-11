@@ -1,5 +1,5 @@
 import React from 'react';
-import Thumbnail from '../home/thumbnail';
+import Thumbnail from '../thumbnail/thumbnail';
 
 class Watchlist extends React.Component {
   constructor(props) {

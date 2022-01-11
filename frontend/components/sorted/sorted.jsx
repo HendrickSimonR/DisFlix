@@ -1,16 +1,16 @@
 import React from 'react';
-import Thumbnail from '../home/thumbnail';
+import Thumbnail from '../thumbnail/thumbnail';
 
 // KEEP
 
-class Brand extends React.Component {
+class Sorted extends React.Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
     this.props.getMovies();
-    this.props.getWatchlist({user_id: this.props.user})
+    this.props.getWatchlist({user_id: this.props.user});
   }
 
   render() {
@@ -145,9 +145,10 @@ class Brand extends React.Component {
         </ul>
         
         }
+        
       </div>
     )
   }
 }
 
-export default Brand;
+export default Sorted;

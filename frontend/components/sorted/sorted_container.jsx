@@ -1,4 +1,4 @@
-import Brand from './brand';
+import Sorted from './sorted';
 import { connect } from 'react-redux';
 import { selectMovies } from '../../selectors/movie_selector';
 import { getMovies } from '../../actions/movie_actions'; 
@@ -20,4 +20,6 @@ const mDTP = dispatch => ({
   removeMovie: data => dispatch(removeMovie(data))
 });
 
-export default connect(mSTP, mDTP)(Brand);
+export default connect(mSTP, mDTP)(Sorted);
+
+// KEEP

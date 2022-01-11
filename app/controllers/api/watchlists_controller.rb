@@ -24,7 +24,7 @@ class Api::WatchlistsController < ApplicationController
   end
 
   def destroy
-    @watchlist = Watchlist.find(params[:watchlist_id])
+    @watchlist = Watchlist.find(params[:id])
     @watchlist.destroy
     @watchlists = Watchlist.where(user_id: params[:user_id])
     

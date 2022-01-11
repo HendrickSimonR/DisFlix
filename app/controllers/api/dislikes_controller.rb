@@ -23,9 +23,9 @@ class Api::DislikesController < ApplicationController
   end 
 
   def destroy
-    @dislike = Dislike.find(params[:dislike_id])
+    @dislike = Dislike.find(params[:id])
     @dislike.destroy
-    @dislike = Dislike.where(user_id: params[:user_id])
+    @dislikes = Dislike.where(user_id: params[:user_id])
 
     if !@dislikes.empty?
       render :index

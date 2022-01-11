@@ -4,7 +4,7 @@ class Api::LikesController < ApplicationController
     @like.user_id = params[:user_id]
     @like.movie_id = params[:movie_id]
 
-    if @dislike.save 
+    if @like.save 
       render :create
     else 
       render json: ['Already liked!']
@@ -23,7 +23,7 @@ class Api::LikesController < ApplicationController
   end 
 
   def destroy
-    @like = Like.find(params[:like_id])
+    @like = Like.find(params[:id])
     @like.destroy
 
     @likes = Like.where(user_id: params[:user_id])
