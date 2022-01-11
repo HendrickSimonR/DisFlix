@@ -57,10 +57,10 @@ class LikeButtons extends React.Component {
     this.likeId;
     this.dislikeId;
 
-    let blankThumbUp = <span className="material-icons-outlined blank-thumb-up">thumb_up</span>
-    let filledThumbUp = <span className="material-icons-round filled-thumb-up">thumb_up</span>
-    let blankThumbDown = <span className="material-icons-outlined blank-thumb-down">thumb_down</span>
-    let filledThumbDown = <span class="material-icons-round filled-thumb-down">thumb_down</span>
+    let blankThumbUp = <span className="material-icons-outlined like-button up" onClick={this.toggleLike}>thumb_up</span>
+    let filledThumbUp = <span className="material-icons-round like-button up" onClick={this.toggleLike}>thumb_up</span>
+    let blankThumbDown = <span className="material-icons-outlined like-button down" onClick={this.toggleDislike}>thumb_down</span>
+    let filledThumbDown = <span className="material-icons-round like-button down" onClick={this.toggleDislike}>thumb_down</span>
 
     for (let i = 0; i < this.props.likes.length; i++) {
       let like = this.props.likes[i];
@@ -91,8 +91,12 @@ class LikeButtons extends React.Component {
 
     return (
       <div className="like-buttons">
-        <p onClick={this.toggleLike}>{ this.liked === true ? filledThumbUp : blankThumbUp }</p>
-        <p onClick={this.toggleDislike}>{this.disliked === true ? filledThumbDown : blankThumbDown }</p>
+        <div>
+          {this.liked === true ? filledThumbUp : blankThumbUp }
+        </div>
+        <div>
+          {this.disliked === true ? filledThumbDown : blankThumbDown }
+        </div>
       </div>
     )
   }
