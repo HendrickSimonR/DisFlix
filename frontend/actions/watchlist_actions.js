@@ -13,20 +13,22 @@ const receiveEntireWatchlist = watchlist => ({
   watchlist 
 });
 
+
+
 export const getWatchlist = (userId) => dispatch => {
   return fetchWatchlist(userId).then(
-    watchlist => (dispatch(receiveEntireWatchlist(watchlist))
-  ))
+    watchlist => (dispatch(receiveEntireWatchlist(watchlist)))
+  )
 };
 
 export const newAddition = (data) => dispatch => {
   return createWatchlist(data).then(
-    watchlist => (dispatch(addToWatchlist(watchlist))
-  ))
+    watchlist => (dispatch(addToWatchlist(watchlist)))
+  )
 };
 
 export const removeMovie = (watchlistId, userId, movieId) => dispatch => {
   return deleteWatchlist(watchlistId, userId, movieId).then(
-    watchlist => (dispatch(receiveEntireWatchlist(watchlist))
-  ))
+    watchlist => (dispatch(receiveEntireWatchlist(watchlist)))
+  )
 };

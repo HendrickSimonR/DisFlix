@@ -1,0 +1,1 @@
+json.extract! @dislikes, :id, :movie_id

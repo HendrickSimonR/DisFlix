@@ -9,6 +9,7 @@ export const createWatchlist = data => (
 export const fetchWatchlist = data => {
   // let id = data.user_id;
   // debugger
+
   return $.ajax({
     url: `/api/watchlists`,
     method: 'GET',

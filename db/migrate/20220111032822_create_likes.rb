@@ -10,3 +10,4 @@ class CreateLikes < ActiveRecord::Migration[5.2]
     add_index :likes, :user_id
   end
 end
+

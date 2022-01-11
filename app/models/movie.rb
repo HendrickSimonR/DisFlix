@@ -23,6 +23,14 @@ class Movie < ApplicationRecord
     class_name: :Brand,
     foreign_key: :brand_id
 
+  has_one :like,
+    class_name: :Like,
+    foreign_key: :movie_id
+    
+  has_one :dislike,
+    class_name: :Dislike,
+    foreign_key: :movie_id
+
   has_one_attached :image 
   has_one_attached :index_movie
   has_one_attached :movie

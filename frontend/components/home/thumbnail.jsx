@@ -71,8 +71,8 @@ class Thumbnail extends React.Component {
               <WatchlistButtonContainer watchlistId={watchlistId} watchlist={watchlist} movieId={this.props.movie.id} />
             </div>
 
-            <div classname="thumbnail-buttons-right">
-              <span class="material-icons-outlined expand-modal">
+            <div className="thumbnail-buttons-right">
+              <span className="material-icons-outlined expand-modal">
                 expand_more
               </span>
             </div>
