@@ -1,13 +1,14 @@
 import React from 'react';
 import Thumbnail from '../home/thumbnail';
 
+// KEEP
+
 class Brand extends React.Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    console.log('BRAND DID MOUNT')
     this.props.getMovies();
     this.props.getWatchlist({user_id: this.props.user})
   }
@@ -21,12 +22,11 @@ class Brand extends React.Component {
     this.watchlistMovies = [];
 
     let user = this.props.user;
-    let allMovies = {};
     let { movies } = this.props; //equivalent to this.props.movies
+    let allMovies = {};
     let moviesArr = Object.values(movies);
     let watchlistObj = this.props.watchlist;
-    let watchlistArr;
-
+    let location = window.location.href;
 
     if (moviesArr.length === 0) {
       return null;
@@ -53,7 +53,7 @@ class Brand extends React.Component {
       allMovies['natGeo'] = this.natGeo;
 
       if (Object.values(watchlistObj) !== undefined) {
-        watchlistArr = Object.values(watchlistObj);
+        let watchlistArr = Object.values(watchlistObj);
 
         for (let i = 0; i < watchlistArr.length; i++) {
           let watchlistMovie = watchlistArr[i];
@@ -101,35 +101,50 @@ class Brand extends React.Component {
 
     let films;
 
-    if (window.location.href.includes('disney')) {
+    if (location.includes('disney')) {
       films = allMovies['disney'];
-    } else if (window.location.href.includes('pixar')) {
+    } else if (location.includes('pixar')) {
       films = allMovies['pixar'];
-    } else if (window.location.href.includes('marvel')) {
+    } else if (location.includes('marvel')) {
       films = allMovies['marvel'];
-    } else if (window.location.href.includes('starwars')) {
+    } else if (location.includes('starwars')) {
       films = allMovies['starWars'];
-    } else if (window.location.href.includes('natgeo')) {
+    } else if (location.includes('natgeo')) {
       films = allMovies['natGeo'];
-    } else if (window.location.href.includes('watchlist')) {
+    } else if (location.includes('watchlist')) {
       films = this.watchlistMovies;
     }
     
     // moviesArr.sort(() => Math.random() - 0.5);
     
     // console.log('DISNEY', this.state, this.props)
-    // console.log('WINDOW', window.location.href)
+    // console.log('WINDOW', location)
     // console.log('FILMS', films)
     // console.log('ALL', allMovies)
     // console.log('PROPS IN BRAND', this.props)
 
     return (
-      <div className="films-container">
+      <div className={location.includes('watchlist') ? "watchlist-container" : "films-container"}>
+        
+        { location.includes('watchlist') 
+        
+        ?
+
+        <ul className="films-rows">
+          {this.watchlistMovies.map((movie) => (
+            <Thumbnail user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
+          ))}
+        </ul>
+        
+        :
+
         <ul className="films-rows">
           {films.map((movie) => (
             <Thumbnail user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
           ))}
         </ul>
+        
+        }
       </div>
     )
   }

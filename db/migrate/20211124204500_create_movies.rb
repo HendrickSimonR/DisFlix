@@ -7,6 +7,7 @@ class CreateMovies < ActiveRecord::Migration[5.2]
       t.string :runtime, null: false
       t.integer :brand_id, null: false 
       t.integer :year, null: false
+      t.string :tags, null: false 
       t.timestamps
     end
 

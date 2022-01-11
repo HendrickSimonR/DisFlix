@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
 import Thumbnail from '../home/thumbnail';
-// import Nav from '../home/nav/nav';
 
 class Watchlist extends React.Component {
   constructor(props) {
@@ -14,7 +12,6 @@ class Watchlist extends React.Component {
   // }
 
   componentDidMount() {
-    console.log('WATCHLIST WILL MOUNT')
     this.props.getMovies();
     this.props.getWatchlist({user_id: this.props.user})
   }

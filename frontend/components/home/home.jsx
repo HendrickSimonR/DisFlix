@@ -193,8 +193,8 @@ class Home extends React.Component {
                     <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                   ))}
 
-                  {this.watchlistMovies.length > 10 ? 
-                    <li className="thumbnail-container" >
+                  {this.watchlistMovies.length >= 10 ? 
+                    <li className="thumbnail-container placeholder" >
                       <img onClick={this.watchlistLink} src={window.placeholder} className="thumbnail" id="placeholder" ></img>
                       <div className="thumbnail-functions placeholder">
                         Visit the Watchlist Page for your full watchlist!

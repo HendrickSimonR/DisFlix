@@ -58,7 +58,7 @@ class Thumbnail extends React.Component {
 
     // console.log('THUMB', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     return (
-      <li className={windowUrl === 'home' ? "thumbnail-container" : "thumbnail-specific"} > 
+      <div className={windowUrl === 'home' ? "thumbnail-container" : "thumbnail-specific"} > 
         <video className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} poster={this.props.movie.image_url}>
           <source src={this.props.movie.movie_url} type="video/mp4" /> 
         </video>
@@ -66,12 +66,18 @@ class Thumbnail extends React.Component {
         <div className="thumbnail-functions">
 
           <div className="thumbnail-buttons">
-            <span className="material-icons thumb-play-circle">play_circle</span>
-            <WatchlistButtonContainer watchlistId={watchlistId} watchlist={watchlist} movieId={this.props.movie.id} />
+            <div className="thumbnail-buttons-left">
+              <span className="material-icons thumb-play-circle">play_circle</span>
+              <WatchlistButtonContainer watchlistId={watchlistId} watchlist={watchlist} movieId={this.props.movie.id} />
+            </div>
+
+            <div classname="thumbnail-buttons-right">
+              <span class="material-icons-outlined expand-modal">
+                expand_more
+              </span>
+            </div>
           </div>
-          
-          <br />
-          
+
           <div className="thumbnail-details">
             <h1>100% Match</h1>
             <h3>
@@ -79,10 +85,10 @@ class Thumbnail extends React.Component {
               <strong className="thumb-runtime">{this.props.movie.runtime}</strong>
             </h3>
           </div>
-
         </div>
 
-      </li>
+
+      </div>
     )
   }
 }

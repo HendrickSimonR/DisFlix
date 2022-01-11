@@ -1,5 +1,6 @@
 .thumbnail-functions {
   display: none;  
+  flex-direction: column;
   margin-right: 3px;
   background: #1d1c27;
   color: #fff;
@@ -28,13 +29,19 @@
 }
 
 .thumbnail-buttons {
-  display:flex;
+  display: flex;
   flex-direction: row;
+  justify-content: space-between;
   // margin-top: 5px;
 }
 
+.thumbnail-buttons-left {
+  display: flex;
+  flex-direction: row;
+}
+
 .thumbnail-functions:hover {
-  display: inline;  
+  display: inline;
   // left: 16%;  
 }
 
@@ -66,6 +73,21 @@
 .add-button:hover {
   cursor: pointer;
   border-color: white;
+}
+
+.expand-modal {
+    color: white;
+    border-radius: 50%;
+    border: 1.5px solid #575757;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3px;
+    left: 3%;
+    width: 2vw;
+    height: 2vw;
+    z-index: 0;
 }
 
 .material-icons-outlined {

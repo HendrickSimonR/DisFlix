@@ -6,7 +6,6 @@ import { signout } from '../../actions/session_actions';
 import { getWatchlist, removeMovie } from '../../actions/watchlist_actions';
 
 const mSTP = state => {
-  // console.log('STATE', state)
   return ({
     user: state.session.id,
     movies: selectMovies(state),
@@ -22,3 +21,5 @@ const mDTP = dispatch => ({
 });
 
 export default connect(mSTP, mDTP)(Watchlist);
+
+// KEEP
