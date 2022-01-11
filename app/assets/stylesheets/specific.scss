@@ -1,5 +1,6 @@
 .films-container, .watchlist-container {
   background: #16162c;
+  // background: url('https://i.imgur.com/MmqVKyy.png') fixed;
   display: flex;
   /* width: 100%; */
   justify-content: center;
@@ -14,10 +15,10 @@
     gap: 23px;
 
   .thumbnail-specific {
-    background-color: black;
+    // background-color: black;
     color: white;
-    width: 24.3vw;
-    height: 16vw;
+    // width: 24.3vw;
+    // height: 16vw;
     border-radius: 4px;
     margin: 2px;
     padding: 2px;
