@@ -43,7 +43,7 @@ export const removeDislike = data => {
 };
 
 export const fetchDislikes = data => {
-  console.log('DISLIKEDATA', data);
+  // console.log('DISLIKEDATA', data);
   return $.ajax({
     url: '/api/dislikes',
     method: 'GET',

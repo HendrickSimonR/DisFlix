@@ -5,9 +5,7 @@ import WatchlistButton from './watchlist_button';
 const mSTP = (state, ownProps) => {
   let id = state.session.id;
   let watchlist = state.watchlist;
-  // if (state.session.watchlist) {
-  //   watchlist = state.session.watchlist;
-  // }
+
 
   // console.log('CONTAINER', state, ownProps)
   return {

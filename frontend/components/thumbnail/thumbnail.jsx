@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import WatchlistButtonContainer from './watchlist_button_container';
+import LikeButtonsContainer from './like_buttons_container';
 
 class Thumbnail extends React.Component {
   constructor(props) {
@@ -56,7 +57,7 @@ class Thumbnail extends React.Component {
       } 
     }    
 
-    // console.log('THUMB', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
+    // console.log('THUMBMOVIEID', this.props.movie.id) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     return (
       <div className={windowUrl === 'home' ? "thumbnail-container" : "thumbnail-specific"} > 
         <video className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} poster={this.props.movie.image_url}>
@@ -69,6 +70,7 @@ class Thumbnail extends React.Component {
             <div className="thumbnail-buttons-left">
               <span className="material-icons thumb-play-circle">play_circle</span>
               <WatchlistButtonContainer watchlistId={watchlistId} watchlist={watchlist} movieId={this.props.movie.id} />
+              <LikeButtonsContainer movieId={this.props.movie.id}/>
             </div>
 
             <div className="thumbnail-buttons-right">

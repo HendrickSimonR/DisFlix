@@ -1,1 +1,1 @@
-json.extract! @like, :id, :movie_id
+json.extract! @like, :id, :movie_id, :user_id

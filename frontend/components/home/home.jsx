@@ -20,7 +20,6 @@ class Home extends React.Component {
   handleSignout() {
     console.log('profile', window.profilePic)
     this.props.signout();
-    // this.props.history.push('/');
   }
 
   watchlistLink(){
@@ -31,8 +30,8 @@ class Home extends React.Component {
   componentDidMount() {
     console.log('HOME DID MOUNT')
     this.props.getMovies();
-    this.props.getLikes({user_id: this.props.user});
-    this.props.getDislikes({user_id: this.props.user});
+    // this.props.getLikes({user_id: this.props.user});
+    // this.props.getDislikes({user_id: this.props.user});
     this.props.getWatchlist({user_id: this.props.user});
   }
 
