@@ -165,7 +165,15 @@
   top: 12%;
   left: 2.5%;
 
-  .thumbnail-tags h3 {
+  .thumbnail-tags li {
     font-size: 10px;
+  }
+
+  #tag-separator {
+    color: #5f5f5f;
+    font-size: 1.25vw;
+    position: relative;
+    bottom: 13%;
+    margin: 0 1.5%;
   }
 }

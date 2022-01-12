@@ -31,7 +31,6 @@ class Thumbnail extends React.Component {
     let { userMovies } = this.props;
     let windowUrl = 'home';
     let tags = this.props.movie.tags;
-    let separateTags;
     let separator = <p id="tag-separator">•</p>;
     let tag1;
     let tag2;
