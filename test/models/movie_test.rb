@@ -6,9 +6,9 @@
 #  description :text             not null
 #  rating      :string           not null
 #  runtime     :string           not null
-#  tags        :string
+#  tags        :string           not null
 #  title       :string           not null
-#  topic       :string
+#  topic       :string           not null
 #  year        :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
