@@ -188,8 +188,8 @@ class Home extends React.Component {
                 </div>
 
                 <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
-                  {this.watchlistMovies.slice(0, 9).map((movie) => (
-                    <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                  {this.watchlistMovies.slice(0, 9).map((movie, i) => (
+                    <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                   ))}
 
                   {this.watchlistMovies.length >= 10 ? 
@@ -217,8 +217,8 @@ class Home extends React.Component {
               </div>
                 
               <ul className="movie-row" id="disney-movies" ref={this.disney}>
-                {this.disneyMovies.map((movie) => (
-                  <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
+                {this.disneyMovies.map((movie, i) => (
+                  <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
                 ))}
               </ul>
 
@@ -237,8 +237,8 @@ class Home extends React.Component {
               </div>
 
               <ul className="movie-row" id="pixar-movies" ref={this.pixar}>
-                {this.pixarMovies.map((movie) => (
-                  <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
+                {this.pixarMovies.map((movie, i) => (
+                  <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
                 ))}
               </ul>
             </div>
@@ -256,8 +256,8 @@ class Home extends React.Component {
               </div>
 
               <ul className="movie-row" id="marvel-movies" ref={this.marvel}>
-                {this.marvelMovies.map((movie) => (
-                  <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                {this.marvelMovies.map((movie, i) => (
+                  <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                 ))}
               </ul>
             </div>
@@ -275,8 +275,8 @@ class Home extends React.Component {
               </div>
 
               <ul className="movie-row" id="star-wars-movies" ref={this.starWars}>
-                {this.starWarsMovies.map((movie) => (
-                  <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                {this.starWarsMovies.map((movie, i) => (
+                  <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                 ))}
               </ul>
             </div>
@@ -294,8 +294,8 @@ class Home extends React.Component {
               </div>
 
               <ul className="movie-row" id="nat-geo-movies" ref={this.natGeo}>
-                {this.natGeoMovies.map((movie) => (
-                  <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                {this.natGeoMovies.map((movie, i) => (
+                  <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                 ))}
               </ul>
             </div>

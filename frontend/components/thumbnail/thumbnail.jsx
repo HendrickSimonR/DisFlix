@@ -36,6 +36,10 @@ class Thumbnail extends React.Component {
     let tag2;
     let tag3;
 
+    if (this.props.index) {
+      console.log('THUMBPROPS', this.props.index, this.props.movie)
+    }
+
     if (tags !== undefined) {
       let separated = tags.split('•');
       // console.log('TAGS', separateTags)
@@ -43,8 +47,6 @@ class Thumbnail extends React.Component {
       tag1 = separated[0];
       tag2 = separated[1];
       tag3 = separated[2];
-
-      console.log(tag1, tag2, tag3)
     }
 
     // let movieCheck = false;
@@ -77,7 +79,13 @@ class Thumbnail extends React.Component {
 
     // console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     return (
-      <div className={windowUrl === 'home' ? "thumbnail-container" : "thumbnail-specific"} > 
+      <div className={ windowUrl === 'home' && this.props.index === 0 ? "thumbnail-container first" 
+        : windowUrl === 'home' && this.props.index === 4 ? "thumbnail-container middle" 
+        : windowUrl === 'home' && this.props.index === 9 ? "thumbnail-container last" 
+        : windowUrl === 'home' ? "thumbnail-container" 
+        : "thumbnail-specific"} > 
+
+
         <video className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} poster={this.props.movie.image_url}>
           <source src={this.props.movie.movie_url} type="video/mp4" /> 
         </video>

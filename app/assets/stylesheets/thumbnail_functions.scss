@@ -164,6 +164,7 @@
   position: relative;
   top: 12%;
   left: 2.5%;
+  font-family: 'Open Sans';
 
   .thumbnail-tags li {
     font-size: 10px;
@@ -171,9 +172,9 @@
 
   #tag-separator {
     color: #5f5f5f;
-    font-size: 1.25vw;
+    font-size: 1.1vw;
     position: relative;
-    bottom: 13%;
+    bottom: 14%;
     margin: 0 1.5%;
   }
 }
