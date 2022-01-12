@@ -57,7 +57,7 @@ class Thumbnail extends React.Component {
       } 
     }    
 
-    // console.log('THUMBMOVIEID', this.props.movie.id) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
+    // console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     return (
       <div className={windowUrl === 'home' ? "thumbnail-container" : "thumbnail-specific"} > 
         <video className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} poster={this.props.movie.image_url}>
@@ -85,6 +85,9 @@ class Thumbnail extends React.Component {
               <strong className="thumb-rating">{this.props.movie.rating}</strong> 
               <strong className="thumb-runtime">{this.props.movie.runtime}</strong>
             </h3>
+          </div>
+          <div className="thumbnail-tags">
+            <h3>{this.props.movie.tags}</h3>
           </div>
         </div>
 
