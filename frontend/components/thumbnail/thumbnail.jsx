@@ -28,8 +28,26 @@ class Thumbnail extends React.Component {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year);
     let watchlistId;
     let watchlist = this.props.watchlist;
-    let {userMovies} = this.props;
+    let { userMovies } = this.props;
     let windowUrl = 'home';
+    let tags = this.props.movie.tags;
+    let separateTags;
+    let separator = <p id="tag-separator">•</p>;
+    let tag1;
+    let tag2;
+    let tag3;
+
+    if (tags !== undefined) {
+      let separated = tags.split('•');
+      // console.log('TAGS', separateTags)
+
+      tag1 = separated[0];
+      tag2 = separated[1];
+      tag3 = separated[2];
+
+      console.log(tag1, tag2, tag3)
+    }
+
     // let movieCheck = false;
 
     if (!window.location.href.includes('home')) {
@@ -56,6 +74,7 @@ class Thumbnail extends React.Component {
         }
       } 
     }    
+
 
     // console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     return (
@@ -87,7 +106,11 @@ class Thumbnail extends React.Component {
             </h3>
           </div>
           <div className="thumbnail-tags">
-            <h3>{this.props.movie.tags}</h3>
+            <li>{tag1}</li>
+              {separator}
+            <li>{tag2}</li>
+              {separator}
+            <li>{tag3}</li>
           </div>
         </div>
 
