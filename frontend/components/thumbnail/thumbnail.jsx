@@ -65,7 +65,6 @@ class Thumbnail extends React.Component {
         </video>
 
         <div className="thumbnail-functions">
-
           <div className="thumbnail-buttons">
             <div className="thumbnail-buttons-left">
               <span className="material-icons thumb-play-circle">play_circle</span>

@@ -17,7 +17,7 @@
 #  index_movies_on_title  (title)
 #
 class Movie < ApplicationRecord
-  validates :title, :description, :runtime, :rating, :year, :brand_id, presence: true
+  validates :title, :description, :runtime, :rating, :year, :brand_id, :tags, :topic, presence: true
 
   belongs_to :brands,
     class_name: :Brand,

@@ -68,6 +68,8 @@ ActiveRecord::Schema.define(version: 2022_01_11_032852) do
     t.string "runtime", null: false
     t.integer "brand_id", null: false
     t.integer "year", null: false
+    t.string "tags", null: false
+    t.string "topic", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["title"], name: "index_movies_on_title"

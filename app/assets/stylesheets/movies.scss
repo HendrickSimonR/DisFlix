@@ -13,7 +13,7 @@
   width: 18.3vw;
   cursor: pointer;
   // height: 8.4375vw;
-  border-radius: 3px;
+  border-radius: 3px 3px 5px 5px;
   // margin-right: 10px;
   transition: all .4s ease, box-shadow 0s;
   box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
@@ -21,6 +21,10 @@
   background-size: cover!important;
   background-position: center!important;
   display: inline-block;
+}
+
+.thumbnail-details {
+  // z-index: 4;
 }
 
 
@@ -43,7 +47,7 @@
 // }
 
 .thumbnail-container:hover {
-  transform: scale(1.4);
+  transform: scale(1.4) translate(0, -48px);
   // outline: 3.5px solid rgb(255, 255, 255);
   // outline-offset: -3.5px;
   // border-radius: 50%;
@@ -53,7 +57,8 @@
   height:100px;
   margin-top: -15px;
   transition: all .6s;
-  z-index: 10;
+  position: relative;
+  z-index: 2;
 
   .thumbnail {
     border-radius: 5px 5px 0px 0px;
@@ -64,13 +69,13 @@
   .thumbnail-functions {
     display: flex;
     position: relative;
-    bottom: 3px;
+    bottom: 4px;
     transition: bottom 0s;
     margin-right: 3px;
     background: linear-gradient(rgb(37, 38, 48), rgb(29, 31, 39));
     color: #fff;
     // width: 100%;
-    height: 50px;
+    height: 92%;
     padding: 5px;
     box-sizing: border-box;
     transition: opacity 300ms ease-out, border-radius 200ms ease-out;
@@ -100,9 +105,13 @@
     font-size: 11px;
     font-weight: 500;
     font-family: 'Open Sans';
-    border-color:rgba(255, 255, 255, 0.404);
-    border-style: solid;
-    border-width: thin;
+    /* border-color: rgba(255, 255, 255, 0.404); */
+    /* border-style: solid; */
+    /* border-width: thin; */
+    outline: rgba(255, 255, 255, 0.504);
+    outline-width: thin;
+    outline-style: solid;
+    outline-offset: 2.4px;
   }
 
   .thumb-runtime {
@@ -122,7 +131,7 @@
 .movie-index {
   // padding-top: 80px;
   padding-left: 3.4vw;
-  margin-bottom: 20vh;
+  margin-bottom: 11vh;
   // padding-right: 4.1vw;
   // height: 1490px;
   color: white;
@@ -136,7 +145,7 @@
   // justify-content: space-between; 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 60px;
+  margin-bottom: 9vh;
 }
 
 html, body {

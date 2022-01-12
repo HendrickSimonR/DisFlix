@@ -67,6 +67,7 @@ m1.runtime='1h 24m'
 m1.rating='TV-PG'
 m1.year=2021
 m1.brand_id=b1.id
+m1.tags='••'
 m1.save! 
 
 m2=Movie.new
