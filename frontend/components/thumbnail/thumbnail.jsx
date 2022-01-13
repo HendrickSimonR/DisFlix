@@ -111,35 +111,27 @@ class Thumbnail extends React.Component {
     
     return (
       <div className={ 
-         windowUrl === 'home' && this.props.index === 0 && disliked === true ? "thumbnail-container first disliked"
-        : windowUrl === 'home' && this.props.index === 0 ? "thumbnail-container first" 
+        windowUrl === 'home' && this.props.index === 0 ? "thumbnail-container first" 
 
-        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 1 && disliked === true ? "thumbnail-container middle disney disliked"
         : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 1 ? "thumbnail-container middle disney"
 
-        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 2 && disliked === true ? "thumbnail-container middle pixar disliked" 
         : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 2 ? "thumbnail-container middle pixar"
 
-        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 3 && disliked === true ? "thumbnail-container middle marvel disliked" 
         : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 3 ? "thumbnail-container middle marvel"
-
-        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 4 && disliked === true ? "thumbnail-container middle star-wars disliked" 
+ 
         : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 4 ? "thumbnail-container middle star-wars"
 
-        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 5 && disliked === true ? "thumbnail-container middle nat-geo disliked" 
         : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 5 ? "thumbnail-container middle nat-geo" 
-
-        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 6 && disliked === true ? "thumbnail-container middle watchlist disliked"  
+  
         : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 6 ? "thumbnail-container middle watchlist"
 
-        : windowUrl === 'home' && this.props.index === 8 && disliked === true ? "thumbnail-container last disliked" 
         : windowUrl === 'home' && this.props.index === 8 ? "thumbnail-container last" 
 
-        : windowUrl === 'home' && disliked === true ? "thumbnail-container disliked" 
         : windowUrl === 'home' ? "thumbnail-container" 
         
-        : disliked === true ? "thumbnail-specific disliked" 
-        : "thumbnail-specific"} > 
+        : "thumbnail-specific"}   
+        
+        id={ disliked === true ? 'disliked' : "" }> 
 
 
         <video className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} poster={this.props.movie.image_url}>

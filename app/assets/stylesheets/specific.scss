@@ -1,10 +1,3 @@
-.films-container, .watchlist-container {
-  background: #16162c;
-  // background: url('https://i.imgur.com/MmqVKyy.png') fixed;
-  /* margin: 0 auto; */
-  /* display: grid; */
-}
-
 .films-rows {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

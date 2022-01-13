@@ -119,34 +119,39 @@ class Sorted extends React.Component {
     
     // moviesArr.sort(() => Math.random() - 0.5);
     
-    console.log('DISNEY', this.state, this.props)
+    // console.log('DISNEY', this.state, this.props)
     // console.log('WINDOW', location)
     // console.log('FILMS', films)
     // console.log('ALL', allMovies)
 
 
     return (
-      <div className={location.includes('watchlist') ? "watchlist-container" : "films-container"}>
+      <div className={ location.includes('watchlist') ? "watchlist-container" : "films-container" }>
         
         { location.includes('watchlist') 
         
         ?
-
-        <ul className="films-rows">
-          {this.watchlistMovies.map((movie) => (
-            <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
-          ))}
-        </ul>
+        <div>
+          <h1>My Watchlist</h1>
+          <ul className="films-rows">
+            { this.watchlistMovies.map((movie) => (
+              <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
+              ))}
+          </ul>
+        </div>
 
         :
-
-        <ul className="films-rows">
-          {films.map((movie) => (
-            <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
-          ))}
-        </ul>
+        
+        <div>
+          <ul className="films-rows">
+            { films.map((movie) => (
+              <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
+            ))}
+          </ul>
+        </div>
         
         }
+
         <Footer/>
       </div>
     )

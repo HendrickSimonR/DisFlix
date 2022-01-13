@@ -40,39 +40,70 @@ class Home extends React.Component {
     if (direction === 'left') {
       if (brand === 'disney') {
         this.disney.current.style.transform = 'translateX(0px)';
-        // let disneyMid = document.getElementsByClassName("thumbnail-container middle disney");
+        let mid = document.getElementsByClassName("thumbnail-container middle disney swiped");
+        mid[0].classList.remove('swiped');
+        
         // let newRule = 'thumbnail-container.middle.disney { transform: scale(1.4) translate(-1.3vw, -48px) !important}'
         // console.log('disneymid', disneyMid[0]);
         // disneyMid[0].style.transform = 'scale(1.4) translate(-1.3vw, -48px) !important';
         // console.log('ATTEMPT', window.getComputedStyle(disneyMid, null))
       } else if (brand === 'pixar') {
         this.pixar.current.style.transform = 'translateX(0px)';
+        let mid = document.getElementsByClassName("thumbnail-container middle pixar swiped");
+        mid[0].classList.remove('swiped');
         // document.getElementById("left-arrow").classList.toggle("hide");
       } else if (brand === 'marvel') {
         this.marvel.current.style.transform = 'translateX(0px)';
+        let mid = document.getElementsByClassName("thumbnail-container middle marvel swiped");
+        mid[0].classList.remove('swiped');
+
       } else if (brand === 'starWars') {
         this.starWars.current.style.transform = 'translateX(0px)';
+        let mid = document.getElementsByClassName("thumbnail-container middle star-wars swiped");
+        mid[0].classList.remove('swiped');
+
       } else if (brand === 'natGeo') {
         this.natGeo.current.style.transform = 'translateX(0px)';
+        let mid = document.getElementsByClassName("thumbnail-container middle nat-geo swiped");
+        mid[0].classList.remove('swiped');
+
       } else {
         this.watchlist.current.style.transform = 'translateX(0px)';
+        let mid = document.getElementsByClassName("thumbnail-container middle watchlist swiped");
+        mid[0].classList.remove('swiped');
       }
+
     } else if (direction === 'right') {
+
       if (brand === 'disney') {
         this.disney.current.style.transform = 'translateX(-78.5%)';
-        let disneyMid = document.getElementsByClassName("thumbnail-container middle disney");
-        disneyMid[0].style.transform = 'scale(1.4) translate(1.3vw, -48px) !important';
+        let mid = document.getElementsByClassName("thumbnail-container middle disney");
+        mid[0].classList.add('swiped');
 
       } else if (brand === 'pixar') {
         this.pixar.current.style.transform = 'translateX(-78.5%)';
+        let mid = document.getElementsByClassName("thumbnail-container middle pixar");
+        mid[0].classList.add('swiped');
+
       } else if (brand === 'marvel') {
         this.marvel.current.style.transform = 'translateX(-78.5%)';
+        let mid = document.getElementsByClassName("thumbnail-container middle marvel");
+        mid[0].classList.add('swiped');
+
       } else if (brand === 'starWars') {
         this.starWars.current.style.transform = 'translateX(-78.5%)';
+        let mid = document.getElementsByClassName("thumbnail-container middle star-wars");
+        mid[0].classList.add('swiped');
+
       } else if (brand === 'natGeo') {
         this.natGeo.current.style.transform = 'translateX(-78.5%)';
+        let mid = document.getElementsByClassName("thumbnail-container middle nat-geo");
+        mid[0].classList.add('swiped');
+
       } else {
         this.watchlist.current.style.transform = 'translateX(-78.5%)';
+        let mid = document.getElementsByClassName("thumbnail-container middle watchlist");
+        mid[0].classList.add('swiped');
       }
     }
   }

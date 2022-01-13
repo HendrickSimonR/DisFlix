@@ -30,6 +30,7 @@ const App = () => (
       <ProtectedRoute path="/natgeo" component={SortedContainer} />
       <ProtectedRoute path="/watchlist" component={SortedContainer} />
     </Switch>
+    {/* <Footer/> */}
   </div>
 );
 

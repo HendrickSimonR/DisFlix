@@ -35,6 +35,29 @@
   transform: scale(1.4) translate(-2.6vw, -48px) !important;
 }
 
+.thumbnail-container.middle.disney.swiped:hover {
+  transform:scale(1.4) translate(1.2vw, -48px) !important;
+}
+
+.thumbnail-container.middle.pixar.swiped:hover {
+  transform:scale(1.4) translate(1.2vw, -48px) !important;
+}
+
+.thumbnail-container.middle.marvel.swiped:hover {
+  transform:scale(1.4) translate(1.2vw, -48px) !important;
+}
+
+.thumbnail-container.middle.star-wars.swiped:hover {
+  transform:scale(1.4) translate(1.2vw, -48px) !important;
+}
+
+.thumbnail-container.middle.nat-geo.swiped:hover {
+  transform:scale(1.4) translate(1.2vw, -48px) !important;
+}
+
+.thumbnail-container.middle.watchlist.swiped:hover {
+  transform:scale(1.4) translate(1.2vw, -48px) !important;
+}
 // .thumbnail-hover {
 
 // }
@@ -268,61 +291,67 @@ html, body {
   color: red;
 } 
 
-.thumbnail-container.first.disliked {
-  .thumbnail {
-    filter: grayscale(100%);
-  }
-}
+// .thumbnail-container.first.disliked {
+//   .thumbnail {
+//     filter: grayscale(100%);
+//   }
+// }
 
-.thumbnail-container.middle.disney.disliked {
-  .thumbnail {
-    filter: grayscale(100%);
-  }
-}
+// .thumbnail-container.middle.disney.disliked {
+//   .thumbnail {
+//     filter: grayscale(100%);
+//   }
+// }
 
-.thumbnail-container.middle.pixar.disliked {
-  .thumbnail {
-    filter: grayscale(100%);
-  }
-}
+// .thumbnail-container.middle.pixar.disliked {
+//   .thumbnail {
+//     filter: grayscale(100%);
+//   }
+// }
 
-.thumbnail-container.middle.marvel.disliked {
-  .thumbnail {
-    filter: grayscale(100%);
-  }
-}
+// .thumbnail-container.middle.marvel.disliked {
+//   .thumbnail {
+//     filter: grayscale(100%);
+//   }
+// }
 
-.thumbnail-container.middle.star-wars.disliked {
-  .thumbnail {
-    filter: grayscale(100%);
-  }
-}
+// .thumbnail-container.middle.star-wars.disliked {
+//   .thumbnail {
+//     filter: grayscale(100%);
+//   }
+// }
 
-.thumbnail-container.middle.nat-geo.disliked {
-  .thumbnail {
-    filter: grayscale(100%);
-  }
-}
+// .thumbnail-container.middle.nat-geo.disliked {
+//   .thumbnail {
+//     filter: grayscale(100%);
+//   }
+// }
 
-.thumbnail-container.middle.watchlist.disliked {
-  .thumbnail {
-    filter: grayscale(100%);
-  }
-}
+// .thumbnail-container.middle.watchlist.disliked {
+//   .thumbnail {
+//     filter: grayscale(100%);
+//   }
+// }
 
-.thumbnail-container.last.disliked {
-  .thumbnail {
-    filter: grayscale(100%);
-  }
-}
+// .thumbnail-container.last.disliked {
+//   .thumbnail {
+//     filter: grayscale(100%);
+//   }
+// }
 
-.thumbnail-container.disliked {
-  .thumbnail {
-    filter: grayscale(100%);
-  }
-}
+// .thumbnail-container.disliked {
+//   .thumbnail {
+//     filter: grayscale(100%);
+//   }
+// }
 
-.thumbnail-specific.disliked {
+// .thumbnail-specific.disliked {
+//   .thumbnail {
+//     filter: grayscale(100%);
+//   }
+// }
+
+#disliked {
   .thumbnail {
     filter: grayscale(100%);
   }
