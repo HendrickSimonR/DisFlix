@@ -1,9 +1,13 @@
 .films-container, .watchlist-container {
-  background: url("https://i.imgur.com/MmqVKyy.png") fixed;
+  // background: url("https://i.imgur.com/MmqVKyy.png") fixed;
   display: flex;
+  flex-direction: column;
   transition: all 3s ease 0s;
   /* width: 100%; */
   justify-content: center;
+  display: flex;
+  width: 100%; 
+  position: absolute;
   /* margin: 0 auto; */
   /* display: grid; */
 }
@@ -69,7 +73,7 @@
     border-radius: 0 0 5px 5px;
     margin-bottom: 10px;
     width: 24.3vw;
-    box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
+    // box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
   }
 
   .thumbnail-details {

@@ -6,7 +6,7 @@ import NavContainer from './home/nav/nav_container';
 import SortedContainer from './sorted/sorted_container';
 import WatchlistContainer from './watchlist/watchlist_container';
 import SplashPage from './splash/splash_page';
-import Footer from './splash/footer'
+import Footer from './footer/footer';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -30,10 +30,6 @@ const App = () => (
       <ProtectedRoute path="/natgeo" component={SortedContainer} />
       <ProtectedRoute path="/watchlist" component={SortedContainer} />
     </Switch>
-
-    <footer>
-      <Footer />
-    </footer>
   </div>
 );
 

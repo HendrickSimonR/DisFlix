@@ -3,6 +3,7 @@ import SelectProfile from '../selectProfile/select_profile';
 import BrandButtons from './brand_buttons';
 import Thumbnail from '../thumbnail/thumbnail';
 import Featured from '../featured/featured';
+import Footer from '../footer/footer';
 
 class Home extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Home extends React.Component {
   }
 
   handleSignout() {
-    console.log('profile', window.profilePic)
+    // console.log('profile', window.profilePic)
     this.props.signout();
   }
 
@@ -28,7 +29,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    console.log('HOME DID MOUNT')
+    // console.log('HOME DID MOUNT')
     this.props.getMovies();
     // this.props.getLikes({user_id: this.props.user});
     // this.props.getDislikes({user_id: this.props.user});
@@ -68,9 +69,9 @@ class Home extends React.Component {
     }
   }
 
-  refreshPage() {
-    window.location.reload(true);
-  }
+  // refreshPage() {
+  //   window.location.reload(true);
+  // }
 
   render() {
     // console.log('window', typeof(window.location.href))
@@ -309,6 +310,8 @@ class Home extends React.Component {
               </button>
             </div> */}
         </div>
+
+        <Footer/>
       </div>
     );
   }

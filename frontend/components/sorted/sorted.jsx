@@ -1,5 +1,6 @@
 import React from 'react';
 import Thumbnail from '../thumbnail/thumbnail';
+import Footer from '../footer/footer';
 
 // KEEP
 
@@ -145,7 +146,7 @@ class Sorted extends React.Component {
         </ul>
         
         }
-        
+        <Footer/>
       </div>
     )
   }

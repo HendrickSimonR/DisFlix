@@ -17,18 +17,18 @@ class LikeButtons extends React.Component {
     if (this.liked === true) {
       this.liked = false;
       this.props.deleteLike({like_id: this.likeId, user_id: this.props.user, movie_id: this.props.movieId});
-      console.log('NO MORE LIKE', this.liked);
+      // console.log('NO MORE LIKE', this.liked);
     } else if (this.disliked === true) {
       this.disliked = false;
       this.liked = true;
       this.props.deleteDislike({dislike_id: this.dislikeId, user_id: this.props.user, movie_id: this.props.movieId});
-      console.log('NO MORE DISLIKE', this.disliked);
+      // console.log('NO MORE DISLIKE', this.disliked);
       this.props.newLike({ movie_id: this.props.movieId, user_id: this.props.user });
-      console.log('ME LIKEY', this.liked);
+      // console.log('ME LIKEY', this.liked);
     } else {
       this.liked = true;
       this.props.newLike({ movie_id: this.props.movieId, user_id: this.props.user });
-      console.log('FRESH LIKE', this.liked);
+      // console.log('FRESH LIKE', this.liked);
     }
   }
 
@@ -36,18 +36,18 @@ class LikeButtons extends React.Component {
     if (this.disliked === true) {
       this.disliked = false;
       this.props.deleteDislike({dislike_id: this.dislikeId, user_id: this.props.user, movie_id: this.props.movieId});
-      console.log('NO MORE DISLIKE', this.disliked);
+      // console.log('NO MORE DISLIKE', this.disliked);
     } else if (this.liked === true) {
       this.liked = false;
       this.disliked = true;
       this.props.deleteLike({like_id: this.likeId, user_id: this.props.user, movie_id: this.props.movieId});
-      console.log('NO MORE LIKE', this.liked);
+      // console.log('NO MORE LIKE', this.liked);
       this.props.newDislike({ movie_id: this.props.movieId, user_id: this.props.user });
-      console.log('ME DISLIKEY', this.disliked);
+      // console.log('ME DISLIKEY', this.disliked);
     } else {
       this.disliked = true;
       this.props.newDislike({ movie_id: this.props.movieId, user_id: this.props.user });
-      console.log('FRESH DISLIKE', this.disliked);
+      // console.log('FRESH DISLIKE', this.disliked);
     }
   }
 

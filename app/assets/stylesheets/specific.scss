@@ -1,10 +1,6 @@
 .films-container, .watchlist-container {
   background: #16162c;
   // background: url('https://i.imgur.com/MmqVKyy.png') fixed;
-  display: flex;
-  width: 100%; 
-  justify-content: center;
-  position: absolute;
   /* margin: 0 auto; */
   /* display: grid; */
 }
@@ -13,7 +9,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-    gap: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    // gap: 23px;
 
   .thumbnail-specific {
     // background-color: black;
