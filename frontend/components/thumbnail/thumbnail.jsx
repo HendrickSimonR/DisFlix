@@ -81,7 +81,7 @@ class Thumbnail extends React.Component {
     return (
       <div className={ windowUrl === 'home' && this.props.index === 0 ? "thumbnail-container first" 
         : windowUrl === 'home' && this.props.index === 4 ? "thumbnail-container middle" 
-        : windowUrl === 'home' && this.props.index === 9 ? "thumbnail-container last" 
+        : windowUrl === 'home' && this.props.index === 8 ? "thumbnail-container last" 
         : windowUrl === 'home' ? "thumbnail-container" 
         : "thumbnail-specific"} > 
 

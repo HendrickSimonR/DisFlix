@@ -117,6 +117,18 @@ m5.tags='Comedy • Unlikely Pair • Adventure'
 m5.topic='Emotional'
 m5.save! 
 
+m23=Movie.new
+m23.title='Wall-E'
+m23.description='After hundreds of lonely years of doing what he was built for, the curious and lovable robot WALL-E discovers a new purpose in life when he meets a sleek robot named EVE. Join them and a hilarious cast of characters on a journey across the universe.'
+m23.runtime='1h 39m'
+m23.rating='G'
+m23.year=2008
+m23.brand_id=b2.id
+m23.tags='Sci-Fi • Comedy • Romance'
+m23.topic='Adventurous'
+m23.save! 
+
+
 m6=Movie.new
 m6.title='Toy Story'
 m6.description='Welcome to an astonishing world where toys play while their owners are away. Meet Woody, Buzz and all their friends in an adventure filled with humor, heart and friendship.'
@@ -127,6 +139,17 @@ m6.brand_id=b2.id
 m6.tags='Comedy • Fantasy • Adventure'
 m6.topic='Exciting'
 m6.save! 
+
+m25=Movie.new
+m25.title='Ratatouille'
+m25.description='In one of Paris’ finest restaurants, Remy, a determined young rat, dreams of becoming a renowned French chef, setting off a hilarious chain of events.'
+m25.runtime='1h 51m'
+m25.rating='G'
+m25.year=2007
+m25.brand_id=b2.id
+m25.tags='Drama • Comedy • Adventure'
+m25.topic='Inspiring'
+m25.save! 
 
 # MARVEL 
 
@@ -165,16 +188,17 @@ m9.save!
 
 #STAR WARS 
 
-m10=Movie.new
-m10.title='Star Wars: The Empire Strikes Back'
-m10.description='The Rebels scatter after the Empire attacks their base on the ice planet Hoth. Han Solo and Princess Leia are pursued by Imperials, while Luke trains with Jedi Master Yoda to prepare for his battle with Darth Vader.'
-m10.runtime='2h 7m'
-m10.rating='PG'
-m10.year=1980
-m10.brand_id=b4.id
-m10.tags='Action • Sci-Fi • Drama'
-m10.topic='Forceful'
-m10.save! 
+m44=Movie.new
+m44.title='Star Wars: The Mandalorian'
+m44.description='After the fall of the Galactic empire, lawlessness has spread throughout the galaxy.'
+m44.runtime='2 Seasons'
+m44.rating='TV-14'
+m44.year=2019
+m44.brand_id=b4.id
+m44.tags='Action • Sci-Fi • Drama'
+m44.topic='Forceful'
+m44.save!
+
 
 m11=Movie.new
 m11.title='Star Wars: Revenge of the Sith'
@@ -186,6 +210,17 @@ m11.brand_id=b4.id
 m11.tags='Action • Sci-Fi • Drama'
 m11.topic='Forceful'
 m11.save! 
+
+m10=Movie.new
+m10.title='Star Wars: The Empire Strikes Back'
+m10.description='The Rebels scatter after the Empire attacks their base on the ice planet Hoth. Han Solo and Princess Leia are pursued by Imperials, while Luke trains with Jedi Master Yoda to prepare for his battle with Darth Vader.'
+m10.runtime='2h 7m'
+m10.rating='PG'
+m10.year=1980
+m10.brand_id=b4.id
+m10.tags='Action • Sci-Fi • Drama'
+m10.topic='Forceful'
+m10.save! 
 
 m12=Movie.new
 m12.title='Rogue One: A Star Wars Story'
@@ -200,16 +235,16 @@ m12.save!
 
 #NATIONAL GEOGRAPHIC
 
-m15=Movie.new
-m15.title='Continent 7: Antarctica'
-m15.description='At -100 degrees F, you can burn up to 5,000 calories a day, and with winter at less than 1% humidity, your body will lose water just breathing. This is Antarctica, where close-knit communities of scientists, engineers, and hardened field vets have forged an existence unlike anything on our planet, fighting brutal conditions to conduct crucial science.'
-m15.runtime='1 Season'
-m15.rating='TV-PG'
-m15.year=2016
-m15.brand_id=b5.id
-m15.tags='Documentary • Geography • Drama'
-m15.topic='Intense'
-m15.save! 
+m39=Movie.new
+m39.title='Magic of Disney’s Animal Kingdom'
+m39.description='Kenya, a Masai giraffe, steps up for a pedicure. Mac, an African elephant and the Park’s biggest resident, has a routine checkup that reveals a mouthful of mystery. It’s make or break for a much smaller resident, Popcorn, a rescued chicken with an egg problem who requires surgery. Walt Disney Imagineers dream up a magical palm tree that illuminates the elephants during the Park’s evening safari.'
+m39.runtime='1 Season'
+m39.rating='TV-PG'
+m39.year=2020
+m39.brand_id=b5.id
+m39.tags='Documentary • Animals • Disney Parks'
+m39.topic='Insightful'
+m39.save!
 
 m14=Movie.new
 m14.title='Earth Moods'
@@ -328,16 +363,16 @@ m20.tags='Musical • Comedy • Fantasy'
 m20.topic='Adventurous'
 m20.save! 
 
-m21=Movie.new
-m21.title='Tangled'
-m21.description='When the kingdom’s most wanted bandit is taken hostage by Rapunzel — a teen with 70 feet of golden hair who’s looking to escape the tower where shes been locked away for years — the unlikely duo sets off on a hair-raising escapade.'
-m21.runtime='1h 31m'
-m21.rating='G'
-m21.year=1991
-m21.brand_id=b1.id
-m21.tags='Musical • Comedy • Romance'
-m21.topic='Adventurous'
-m21.save! 
+# m21=Movie.new
+# m21.title='Tangled'
+# m21.description='When the kingdom’s most wanted bandit is taken hostage by Rapunzel — a teen with 70 feet of golden hair who’s looking to escape the tower where shes been locked away for years — the unlikely duo sets off on a hair-raising escapade.'
+# m21.runtime='1h 31m'
+# m21.rating='G'
+# m21.year=1991
+# m21.brand_id=b1.id
+# m21.tags='Musical • Comedy • Romance'
+# m21.topic='Adventurous'
+# m21.save! 
 
 m22=Movie.new
 m22.title='Beauty and the Beast'
@@ -350,17 +385,6 @@ m22.tags='Drama • Comedy • Romance'
 m22.topic='Emotional'
 m22.save! 
 
-m23=Movie.new
-m23.title='Wall-E'
-m23.description='After hundreds of lonely years of doing what he was built for, the curious and lovable robot WALL-E discovers a new purpose in life when he meets a sleek robot named EVE. Join them and a hilarious cast of characters on a journey across the universe.'
-m23.runtime='1h 39m'
-m23.rating='G'
-m23.year=2008
-m23.brand_id=b2.id
-m23.tags='Sci-Fi • Comedy • Romance'
-m23.topic='Adventurous'
-m23.save! 
-
 m24=Movie.new
 m24.title='Finding Nemo'
 m24.description='When young clownfish Nemo is unexpectedly captured from Australia’s Great Barrier Reef and taken to a dentist’s office aquarium, it’s up to Marlin, his worrisome father, and Dory, a friendly but forgetful regal blue tang fish, to make the epic journey to bring him home.'
@@ -372,16 +396,17 @@ m24.tags='Action • Comedy • Aquatic'
 m24.topic='Adventurous'
 m24.save! 
 
-m25=Movie.new
-m25.title='Ratatouille'
-m25.description='In one of Paris’ finest restaurants, Remy, a determined young rat, dreams of becoming a renowned French chef, setting off a hilarious chain of events.'
-m25.runtime='1h 51m'
-m25.rating='G'
-m25.year=2007
-m25.brand_id=b2.id
-m25.tags='Drama • Comedy • Adventure'
-m25.topic='Inspiring'
-m25.save! 
+m42=Movie.new
+m42.title='The Incredibles'
+m42.description='As Mr. Incredible and Elastigirl, Bob and his wife Helen were among the world’s greatest crime fighters.  But fifteen years after their glory days, they have been forced to adopt civilian identities and live "normal" lives with their three kids. Itching to get back into action, they get their chance when a mysterious message summons Bob to a remote island.'
+m42.runtime='1h 55m'
+m42.rating='PG'
+m42.year=2004
+m42.brand_id=b2.id
+m42.tags='Action • Comedy • Family'
+m42.topic='Thrilling'
+m42.save!
+
 
 m26=Movie.new
 m26.title='Inside Out'
@@ -405,17 +430,6 @@ m27.tags='Musical • Comedy • Adventure'
 m27.topic='Adventurous'
 m27.save!
 
-m28=Movie.new
-m28.title='Captain America: Civil War'
-m28.description='Pressure mounts to hold the Avengers accountable for the destruction left in their wake after battling Ultron. When Captain America and Iron Man find themselves with opposing views, the Avengers take sides, leading to the ultimate battle between Earths mightiest heroes.'
-m28.runtime='2h 30m'
-m28.rating='PG-13'
-m28.year=2016
-m28.brand_id=b3.id
-m28.tags='Action • Drama • Sci-Fi'
-m28.topic='Intense'
-m28.save!
-
 m29=Movie.new
 m29.title='WandaVision'
 m29.description='Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems.'
@@ -438,6 +452,17 @@ m30.brand_id=b3.id
 m30.tags='Sci-Fi • Comedy • Adventure'
 m30.topic='Thrilling'
 m30.save!
+
+m28=Movie.new
+m28.title='Captain America: Civil War'
+m28.description='Pressure mounts to hold the Avengers accountable for the destruction left in their wake after battling Ultron. When Captain America and Iron Man find themselves with opposing views, the Avengers take sides, leading to the ultimate battle between Earths mightiest heroes.'
+m28.runtime='2h 30m'
+m28.rating='PG-13'
+m28.year=2016
+m28.brand_id=b3.id
+m28.tags='Action • Drama • Sci-Fi'
+m28.topic='Intense'
+m28.save!
 
 m31=Movie.new
 m31.title='Thor: Ragnarok'
@@ -527,17 +552,6 @@ m38.tags='Reality • Family • Documentary'
 m38.topic='Fun'
 m38.save!
 
-m39=Movie.new
-m39.title='Magic of Disney’s Animal Kingdom'
-m39.description='Kenya, a Masai giraffe, steps up for a pedicure. Mac, an African elephant and the Park’s biggest resident, has a routine checkup that reveals a mouthful of mystery. It’s make or break for a much smaller resident, Popcorn, a rescued chicken with an egg problem who requires surgery. Walt Disney Imagineers dream up a magical palm tree that illuminates the elephants during the Park’s evening safari.'
-m39.runtime='1 Season'
-m39.rating='TV-PG'
-m39.year=2020
-m39.brand_id=b5.id
-m39.tags='Documentary • Animals • Disney Parks'
-m39.topic='Insightful'
-m39.save!
-
 m40=Movie.new
 m40.title='Growing Up Animal'
 m40.description='Heart-warming stories following the development of baby animals on the magical journey from the mysteries of the womb to the challenges of the wild.'
@@ -560,6 +574,51 @@ m41.tags='Documentary • Animals • Nature'
 m41.topic='Insightful'
 m41.save!
 
+
+m43=Movie.new
+m43.title='Star Wars: The Force Awakens'
+m43.description='As a new threat to the galaxy rises, Rey, a desert scavenger, and Finn, an ex-stormtrooper, must join Han Solo and Chewbacca to search for the one hope of restoring peace. Experience the motion picture event of a generation in Star Wars: The Force Awakens.'
+m43.runtime='2h 16m'
+m43.rating='PG-13'
+m43.year=2015
+m43.brand_id=b4.id
+m43.tags='Action • Sci-Fi • Drama'
+m43.topic='Forceful'
+m43.save!
+
+
+m45=Movie.new
+m45.title='Brain Games'
+m45.description='Are you ready for a truly mind-blowing experience? The Emmy® Award nominated Brain Games features interactive games and experiments designed to mess with your mind and reveal the inner-workings of your brain, exploring the science of perception, memory, attention, illusion, stress, morality, and much more.'
+m45.runtime='8 Seasons'
+m45.rating='TV-14'
+m45.year=2020
+m45.brand_id=b5.id
+m45.tags='Game Show • Family • Kids'
+m45.topic='Exciting'
+m45.save!
+
+m46=Movie.new
+m46.title='Dog Whisperer'
+m46.description='World-renowned dog behavior expert Cesar Millan helps dogs overcome behavior issues and helps their owners build positive relationships with their pets. Whether resolving a dog’s aggression, fear, anxiety, or many other issues, each episode documents remarkable transformations under Cesar’s guidance, as he "rehabilitates dogs and trains people" to achieve happier lives together.'
+m46.runtime='6 Seasons'
+m46.rating='TV-G'
+m46.year=2011
+m46.brand_id=b5.id
+m46.tags='Reality • Family • Animals'
+m46.topic='Heart-Warming'
+m46.save!
+
+m15=Movie.new
+m15.title='Continent 7: Antarctica'
+m15.description='At -100 degrees F, you can burn up to 5,000 calories a day, and with winter at less than 1% humidity, your body will lose water just breathing. This is Antarctica, where close-knit communities of scientists, engineers, and hardened field vets have forged an existence unlike anything on our planet, fighting brutal conditions to conduct crucial science.'
+m15.runtime='1 Season'
+m15.rating='TV-PG'
+m15.year=2016
+m15.brand_id=b5.id
+m15.tags='Documentary • Geography • Drama'
+m15.topic='Intense'
+m15.save! 
 
 puts "Movies finished!"
 
@@ -592,7 +651,7 @@ mPhoto17 = URI.open('https://i.imgur.com/zCJZrRN.jpg')
 mPhoto18 = URI.open('https://i.imgur.com/tRbM5In.jpg') 
 mPhoto19 = URI.open('https://i.imgur.com/aYiqk27.jpg') 
 mPhoto20 = URI.open('https://i.imgur.com/yhhGkkf.jpg') 
-mPhoto21 = URI.open('https://i.imgur.com/5313cmi.jpg') 
+# mPhoto21 = URI.open('https://i.imgur.com/5313cmi.jpg') 
 mPhoto22 = URI.open('https://i.imgur.com/DkbGEIq.jpg') 
 mPhoto23 = URI.open('https://i.imgur.com/7ayaaAm.jpg') 
 mPhoto24 = URI.open('https://i.imgur.com/csi2qtC.jpg') 
@@ -613,6 +672,13 @@ mPhoto38 = URI.open('https://i.imgur.com/CPV08iW.jpg')
 mPhoto39 = URI.open('https://i.imgur.com/ejHYdoy.jpg') 
 mPhoto40 = URI.open('https://i.imgur.com/hIVLv13.jpg')  
 mPhoto41 = URI.open('https://i.imgur.com/U2lQfAq.jpg')  
+
+mPhoto42 = URI.open('https://i.imgur.com/QoVZs1h.jpg')  
+mPhoto43 = URI.open('https://i.imgur.com/E807b99.jpg')  
+mPhoto44 = URI.open('https://i.imgur.com/15E7O99.jpg')  
+mPhoto45 = URI.open('https://i.imgur.com/7xujvcc.jpg')  
+mPhoto46 = URI.open('https://i.imgur.com/QVZW5Tu.jpg')  
+
 
 
 m1.image.attach(io: mPhoto1, filename: 'm1.jpg')
@@ -636,7 +702,7 @@ m17.image.attach(io: mPhoto17, filename: 'm17.jpg')
 m18.image.attach(io: mPhoto18, filename: 'm18.jpg')
 m19.image.attach(io: mPhoto19, filename: 'm19.jpg')
 m20.image.attach(io: mPhoto20, filename: 'm20.jpg')
-m21.image.attach(io: mPhoto21, filename: 'm21.jpg')
+# m21.image.attach(io: mPhoto21, filename: 'm21.jpg')
 m22.image.attach(io: mPhoto22, filename: 'm22.jpg')
 m23.image.attach(io: mPhoto23, filename: 'm23.jpg')
 m24.image.attach(io: mPhoto24, filename: 'm14.jpg')
@@ -657,6 +723,13 @@ m38.image.attach(io: mPhoto38, filename: 'm38.jpg')
 m39.image.attach(io: mPhoto39, filename: 'm39.jpg')
 m40.image.attach(io: mPhoto40, filename: 'm40.png')
 m41.image.attach(io: mPhoto41, filename: 'm41.jpg')
+
+m42.image.attach(io: mPhoto42, filename: 'm42.jpg')
+m43.image.attach(io: mPhoto43, filename: 'm43.jpg')
+m44.image.attach(io: mPhoto44, filename: 'm44.jpg')
+m45.image.attach(io: mPhoto45, filename: 'm45.jpg')
+m46.image.attach(io: mPhoto46, filename: 'm46.jpg')
+
 
 puts "Photos attached!"
 

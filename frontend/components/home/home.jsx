@@ -54,17 +54,17 @@ class Home extends React.Component {
       }
     } else if (direction === 'right') {
       if (brand === 'disney') {
-        this.disney.current.style.transform = 'translateX(-96.3%)';
+        this.disney.current.style.transform = 'translateX(-78.5%)';
       } else if (brand === 'pixar') {
-        this.pixar.current.style.transform = 'translateX(-96.3%)';
+        this.pixar.current.style.transform = 'translateX(-78.5%)';
       } else if (brand === 'marvel') {
-        this.marvel.current.style.transform = 'translateX(-96.3%)';
+        this.marvel.current.style.transform = 'translateX(-78.5%)';
       } else if (brand === 'starWars') {
-        this.starWars.current.style.transform = 'translateX(-96.3%)';
+        this.starWars.current.style.transform = 'translateX(-78.5%)';
       } else if (brand === 'natGeo') {
-        this.natGeo.current.style.transform = 'translateX(-96.3%)';
+        this.natGeo.current.style.transform = 'translateX(-78.5%)';
       } else {
-        this.watchlist.current.style.transform = 'translateX(-96.3%)';
+        this.watchlist.current.style.transform = 'translateX(-78.5%)';
       }
     }
   }

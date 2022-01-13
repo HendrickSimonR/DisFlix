@@ -28,6 +28,7 @@ class Sorted extends React.Component {
     let moviesArr = Object.values(movies);
     let watchlistObj = this.props.watchlist;
     let location = window.location.href;
+    let renderCriteria = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40]
 
     if (moviesArr.length === 0) {
       return null;
@@ -122,7 +123,7 @@ class Sorted extends React.Component {
     // console.log('WINDOW', location)
     // console.log('FILMS', films)
     // console.log('ALL', allMovies)
-    // console.log('PROPS IN BRAND', this.props)
+
 
     return (
       <div className={location.includes('watchlist') ? "watchlist-container" : "films-container"}>
@@ -136,7 +137,7 @@ class Sorted extends React.Component {
             <Thumbnail user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
           ))}
         </ul>
-        
+
         :
 
         <ul className="films-rows">
