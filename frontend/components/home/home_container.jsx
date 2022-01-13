@@ -11,7 +11,9 @@ const mSTP = state => {
   return ({
     user: state.session.id,
     movies: selectMovies(state),
-    watchlist: state.watchlist
+    watchlist: state.watchlist,
+    likes: state.likes,
+    dislikes: state.dislikes
 })};
 
 const mDTP = dispatch => ({

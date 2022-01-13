@@ -117,18 +117,6 @@ m5.tags='Comedy • Unlikely Pair • Adventure'
 m5.topic='Emotional'
 m5.save! 
 
-m23=Movie.new
-m23.title='Wall-E'
-m23.description='After hundreds of lonely years of doing what he was built for, the curious and lovable robot WALL-E discovers a new purpose in life when he meets a sleek robot named EVE. Join them and a hilarious cast of characters on a journey across the universe.'
-m23.runtime='1h 39m'
-m23.rating='G'
-m23.year=2008
-m23.brand_id=b2.id
-m23.tags='Sci-Fi • Comedy • Romance'
-m23.topic='Adventurous'
-m23.save! 
-
-
 m6=Movie.new
 m6.title='Toy Story'
 m6.description='Welcome to an astonishing world where toys play while their owners are away. Meet Woody, Buzz and all their friends in an adventure filled with humor, heart and friendship.'
@@ -150,6 +138,17 @@ m25.brand_id=b2.id
 m25.tags='Drama • Comedy • Adventure'
 m25.topic='Inspiring'
 m25.save! 
+
+m23=Movie.new
+m23.title='Wall-E'
+m23.description='After hundreds of lonely years of doing what he was built for, the curious and lovable robot WALL-E discovers a new purpose in life when he meets a sleek robot named EVE. Join them and a hilarious cast of characters on a journey across the universe.'
+m23.runtime='1h 39m'
+m23.rating='G'
+m23.year=2008
+m23.brand_id=b2.id
+m23.tags='Sci-Fi • Comedy • Romance'
+m23.topic='Adventurous'
+m23.save! 
 
 # MARVEL 
 
@@ -187,18 +186,6 @@ m9.topic='Epic'
 m9.save! 
 
 #STAR WARS 
-
-m44=Movie.new
-m44.title='Star Wars: The Mandalorian'
-m44.description='After the fall of the Galactic empire, lawlessness has spread throughout the galaxy.'
-m44.runtime='2 Seasons'
-m44.rating='TV-14'
-m44.year=2019
-m44.brand_id=b4.id
-m44.tags='Action • Sci-Fi • Drama'
-m44.topic='Forceful'
-m44.save!
-
 
 m11=Movie.new
 m11.title='Star Wars: Revenge of the Sith'
@@ -257,17 +244,6 @@ m14.tags='Documentary • Geography • Travel'
 m14.topic='Calming'
 m14.save! 
 
-m13=Movie.new
-m13.title='Cosmos: Possible Worlds'
-m13.description='COSMOS: POSSIBLE WORLDS is a wonder-filled voyage through humanity’s past, present and future, transporting viewers to lost worlds and worlds yet to be revealed by science.'
-m13.runtime='1 Season'
-m13.rating='TV-14'
-m13.year=2020
-m13.brand_id=b5.id
-m13.tags='Documentary • Science • History'
-m13.topic='Insightful'
-m13.save!
-
 
 # brand buttons
 # file1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Brand+Button+Videos/disneyButton.mp4')
@@ -306,18 +282,7 @@ m13.save!
 # m12.image.attach(io: mPhoto12, filename: 'm12.jpg')
 # m13.image.attach(io: mPhoto13, filename: 'm13.jpg')
 # m14.image.attach(io: mPhoto14, filename: 'm14.jpg')
-# m15.image.attach(io: mPhoto15, filename: 'm15.jpg')
-
-m16=Movie.new
-m16.title='Fantasia'
-m16.description='Walt Disney`s timeless masterpiece is an extraordinary blend of classical music with innovative animation. Featuring eight sequences—see the music come to life and hear the pictures burst into song in this groundbreaking film.'
-m16.runtime='2h 6m'
-m16.rating='G'
-m16.year=1940
-m16.brand_id=b1.id
-m16.tags='Musical • Animation • Classic'
-m16.topic='Timeless'
-m16.save! 
+# m15.image.attach(io: mPhoto15, filename: 'm15.jpg') 
 
 m17=Movie.new
 m17.title='High School Musical'
@@ -329,6 +294,17 @@ m17.brand_id=b1.id
 m17.tags='Musical • Comedy • Drama'
 m17.topic='Fun'
 m17.save! 
+
+m16=Movie.new
+m16.title='Fantasia'
+m16.description='Walt Disney`s timeless masterpiece is an extraordinary blend of classical music with innovative animation. Featuring eight sequences—see the music come to life and hear the pictures burst into song in this groundbreaking film.'
+m16.runtime='2h 6m'
+m16.rating='G'
+m16.year=1940
+m16.brand_id=b1.id
+m16.tags='Musical • Animation • Classic'
+m16.topic='Timeless'
+m16.save!
 
 m18=Movie.new
 m18.title='The Lion King'
@@ -363,27 +339,27 @@ m20.tags='Musical • Comedy • Fantasy'
 m20.topic='Adventurous'
 m20.save! 
 
-# m21=Movie.new
-# m21.title='Tangled'
-# m21.description='When the kingdom’s most wanted bandit is taken hostage by Rapunzel — a teen with 70 feet of golden hair who’s looking to escape the tower where shes been locked away for years — the unlikely duo sets off on a hair-raising escapade.'
-# m21.runtime='1h 31m'
-# m21.rating='G'
-# m21.year=1991
-# m21.brand_id=b1.id
-# m21.tags='Musical • Comedy • Romance'
-# m21.topic='Adventurous'
-# m21.save! 
+m21=Movie.new
+m21.title='Tangled'
+m21.description='When the kingdom’s most wanted bandit is taken hostage by Rapunzel — a teen with 70 feet of golden hair who’s looking to escape the tower where shes been locked away for years — the unlikely duo sets off on a hair-raising escapade.'
+m21.runtime='1h 31m'
+m21.rating='G'
+m21.year=1991
+m21.brand_id=b1.id
+m21.tags='Musical • Comedy • Romance'
+m21.topic='Adventurous'
+m21.save! 
 
-m22=Movie.new
-m22.title='Beauty and the Beast'
-m22.description='Embark on an epic adventure with Belle, Beast, and all the characters you love, with the music you’ll never forget.'
-m22.runtime='1h 31m'
-m22.rating='G'
-m22.year=1991
-m22.brand_id=b1.id
-m22.tags='Drama • Comedy • Romance'
-m22.topic='Emotional'
-m22.save! 
+# m22=Movie.new
+# m22.title='Beauty and the Beast'
+# m22.description='Embark on an epic adventure with Belle, Beast, and all the characters you love, with the music you’ll never forget.'
+# m22.runtime='1h 31m'
+# m22.rating='G'
+# m22.year=1991
+# m22.brand_id=b1.id
+# m22.tags='Drama • Comedy • Romance'
+# m22.topic='Emotional'
+# m22.save! 
 
 m24=Movie.new
 m24.title='Finding Nemo'
@@ -430,18 +406,6 @@ m27.tags='Musical • Comedy • Adventure'
 m27.topic='Adventurous'
 m27.save!
 
-m29=Movie.new
-m29.title='WandaVision'
-m29.description='Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems.'
-m29.runtime='1 Season'
-m29.rating='TV-14'
-m29.year=2021
-m29.brand_id=b3.id
-m29.tags='Mystery • Comedy • Action'
-m29.topic='Mind-Bending'
-m29.save!
-
-
 m30=Movie.new
 m30.title='Guardians of the Galaxy'
 m30.description='Brash adventurer Peter Quill finds himself the object of an unrelenting bounty hunt after stealing a mysterious orb coveted by a powerful villain with ambitions that threaten the entire universe. To evade capture, Quill joins with a quartet of disparate misfits: Rocket, a gun-toting raccoon; Groot, a tree-like humanoid; the deadly and enigmatic Gamora; and revenge-driven Drax the Destroyer.'
@@ -452,6 +416,17 @@ m30.brand_id=b3.id
 m30.tags='Sci-Fi • Comedy • Adventure'
 m30.topic='Thrilling'
 m30.save!
+
+m29=Movie.new
+m29.title='WandaVision'
+m29.description='Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems.'
+m29.runtime='1 Season'
+m29.rating='TV-14'
+m29.year=2021
+m29.brand_id=b3.id
+m29.tags='Mystery • Comedy • Action'
+m29.topic='Mind-Bending'
+m29.save!
 
 m28=Movie.new
 m28.title='Captain America: Civil War'
@@ -496,6 +471,17 @@ m33.brand_id=b3.id
 m33.tags='Action • Comedy • Sci-Fi'
 m33.topic='Thrilling'
 m33.save!
+
+m44=Movie.new
+m44.title='Star Wars: The Mandalorian'
+m44.description='After the fall of the Galactic empire, lawlessness has spread throughout the galaxy.'
+m44.runtime='2 Seasons'
+m44.rating='TV-14'
+m44.year=2019
+m44.brand_id=b4.id
+m44.tags='Action • Sci-Fi • Drama'
+m44.topic='Forceful'
+m44.save!
 
 m34=Movie.new
 m34.title='Star Wars: A New Hope'
@@ -562,6 +548,17 @@ m40.brand_id=b5.id
 m40.tags='Documentary • Animals • Nature'
 m40.topic='Touching'
 m40.save!
+
+m13=Movie.new
+m13.title='Cosmos: Possible Worlds'
+m13.description='COSMOS: POSSIBLE WORLDS is a wonder-filled voyage through humanity’s past, present and future, transporting viewers to lost worlds and worlds yet to be revealed by science.'
+m13.runtime='1 Season'
+m13.rating='TV-14'
+m13.year=2020
+m13.brand_id=b5.id
+m13.tags='Documentary • Science • History'
+m13.topic='Insightful'
+m13.save!
 
 m41=Movie.new
 m41.title='Most Wanted Sharks'
@@ -651,8 +648,8 @@ mPhoto17 = URI.open('https://i.imgur.com/zCJZrRN.jpg')
 mPhoto18 = URI.open('https://i.imgur.com/tRbM5In.jpg') 
 mPhoto19 = URI.open('https://i.imgur.com/aYiqk27.jpg') 
 mPhoto20 = URI.open('https://i.imgur.com/yhhGkkf.jpg') 
-# mPhoto21 = URI.open('https://i.imgur.com/5313cmi.jpg') 
-mPhoto22 = URI.open('https://i.imgur.com/DkbGEIq.jpg') 
+mPhoto21 = URI.open('https://i.imgur.com/5313cmi.jpg') 
+# mPhoto22 = URI.open('https://i.imgur.com/DkbGEIq.jpg') 
 mPhoto23 = URI.open('https://i.imgur.com/7ayaaAm.jpg') 
 mPhoto24 = URI.open('https://i.imgur.com/csi2qtC.jpg') 
 mPhoto25 = URI.open('https://i.imgur.com/3bDH25h.jpg') 
@@ -702,8 +699,8 @@ m17.image.attach(io: mPhoto17, filename: 'm17.jpg')
 m18.image.attach(io: mPhoto18, filename: 'm18.jpg')
 m19.image.attach(io: mPhoto19, filename: 'm19.jpg')
 m20.image.attach(io: mPhoto20, filename: 'm20.jpg')
-# m21.image.attach(io: mPhoto21, filename: 'm21.jpg')
-m22.image.attach(io: mPhoto22, filename: 'm22.jpg')
+m21.image.attach(io: mPhoto21, filename: 'm21.jpg')
+# m22.image.attach(io: mPhoto22, filename: 'm22.jpg')
 m23.image.attach(io: mPhoto23, filename: 'm23.jpg')
 m24.image.attach(io: mPhoto24, filename: 'm14.jpg')
 m25.image.attach(io: mPhoto25, filename: 'm25.jpg')

@@ -267,3 +267,63 @@ html, body {
 #left-arrow.hide {
   color: red;
 } 
+
+.thumbnail-container.first.disliked {
+  .thumbnail {
+    filter: grayscale(100%);
+  }
+}
+
+.thumbnail-container.middle.disney.disliked {
+  .thumbnail {
+    filter: grayscale(100%);
+  }
+}
+
+.thumbnail-container.middle.pixar.disliked {
+  .thumbnail {
+    filter: grayscale(100%);
+  }
+}
+
+.thumbnail-container.middle.marvel.disliked {
+  .thumbnail {
+    filter: grayscale(100%);
+  }
+}
+
+.thumbnail-container.middle.star-wars.disliked {
+  .thumbnail {
+    filter: grayscale(100%);
+  }
+}
+
+.thumbnail-container.middle.nat-geo.disliked {
+  .thumbnail {
+    filter: grayscale(100%);
+  }
+}
+
+.thumbnail-container.middle.watchlist.disliked {
+  .thumbnail {
+    filter: grayscale(100%);
+  }
+}
+
+.thumbnail-container.last.disliked {
+  .thumbnail {
+    filter: grayscale(100%);
+  }
+}
+
+.thumbnail-container.disliked {
+  .thumbnail {
+    filter: grayscale(100%);
+  }
+}
+
+.thumbnail-specific.disliked {
+  .thumbnail {
+    filter: grayscale(100%);
+  }
+}

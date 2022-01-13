@@ -40,6 +40,11 @@ class Home extends React.Component {
     if (direction === 'left') {
       if (brand === 'disney') {
         this.disney.current.style.transform = 'translateX(0px)';
+        // let disneyMid = document.getElementsByClassName("thumbnail-container middle disney");
+        // let newRule = 'thumbnail-container.middle.disney { transform: scale(1.4) translate(-1.3vw, -48px) !important}'
+        // console.log('disneymid', disneyMid[0]);
+        // disneyMid[0].style.transform = 'scale(1.4) translate(-1.3vw, -48px) !important';
+        // console.log('ATTEMPT', window.getComputedStyle(disneyMid, null))
       } else if (brand === 'pixar') {
         this.pixar.current.style.transform = 'translateX(0px)';
         // document.getElementById("left-arrow").classList.toggle("hide");
@@ -55,6 +60,9 @@ class Home extends React.Component {
     } else if (direction === 'right') {
       if (brand === 'disney') {
         this.disney.current.style.transform = 'translateX(-78.5%)';
+        let disneyMid = document.getElementsByClassName("thumbnail-container middle disney");
+        disneyMid[0].style.transform = 'scale(1.4) translate(1.3vw, -48px) !important';
+
       } else if (brand === 'pixar') {
         this.pixar.current.style.transform = 'translateX(-78.5%)';
       } else if (brand === 'marvel') {
@@ -89,6 +97,7 @@ class Home extends React.Component {
     let moviesArr = Object.values(movies);
     let watchlistObj = this.props.watchlist;
     let watchlistArr;
+    // let disliked = false;
 
     if (Object.values(watchlistObj) !== undefined) {
       watchlistArr = Object.values(watchlistObj)
@@ -152,8 +161,28 @@ class Home extends React.Component {
       };
     }
 
-    console.log('PROPITY', this.props);
-  
+    
+    // if (this.props.dislikes) {
+    //   for (let i = 0; i < this.props.dislikes.length; i++) {
+    //     let dislike = this.props.dislikes[i];
+
+    //     for (let j = 0; j < moviesArr.length; j++) {
+    //       let movie = moviesArr[j];
+          
+    //       if (dislike.movie_id === movie.id) {
+    //         disliked = true;
+    //         break;
+    //       }
+    //     } 
+    //   }
+    //   console.log('DISLIKED', disliked)
+    // }
+
+
+    // console.log('PROPITY', this.props);
+    // console.log('PROPITYSTATE', this.state);
+    
+
     return (
       <div className="home-container">
         <Featured />
@@ -189,11 +218,11 @@ class Home extends React.Component {
                 </div>
 
                 <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
-                  {this.watchlistMovies.slice(0, 9).map((movie, i) => (
-                    <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                  {this.watchlistMovies.slice(0, 8).map((movie, i) => (
+                    <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={6} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                   ))}
 
-                  {this.watchlistMovies.length >= 10 ? 
+                  {this.watchlistMovies.length >= 9 ? 
                     <li className="thumbnail-container placeholder" >
                       <img onClick={this.watchlistLink} src={window.placeholder} className="thumbnail" id="placeholder" ></img>
                       <div className="thumbnail-functions placeholder">
@@ -219,7 +248,7 @@ class Home extends React.Component {
                 
               <ul className="movie-row" id="disney-movies" ref={this.disney}>
                 {this.disneyMovies.map((movie, i) => (
-                  <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
+                  <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
                 ))}
               </ul>
 
@@ -239,7 +268,7 @@ class Home extends React.Component {
 
               <ul className="movie-row" id="pixar-movies" ref={this.pixar}>
                 {this.pixarMovies.map((movie, i) => (
-                  <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
+                  <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
                 ))}
               </ul>
             </div>
@@ -258,7 +287,7 @@ class Home extends React.Component {
 
               <ul className="movie-row" id="marvel-movies" ref={this.marvel}>
                 {this.marvelMovies.map((movie, i) => (
-                  <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                  <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                 ))}
               </ul>
             </div>
@@ -277,7 +306,7 @@ class Home extends React.Component {
 
               <ul className="movie-row" id="star-wars-movies" ref={this.starWars}>
                 {this.starWarsMovies.map((movie, i) => (
-                  <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                  <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                 ))}
               </ul>
             </div>
@@ -296,7 +325,7 @@ class Home extends React.Component {
 
               <ul className="movie-row" id="nat-geo-movies" ref={this.natGeo}>
                 {this.natGeoMovies.map((movie, i) => (
-                  <Thumbnail index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                  <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                 ))}
               </ul>
             </div>

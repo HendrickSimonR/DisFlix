@@ -9,19 +9,19 @@ class LikeButtons extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getLikes({user_id: this.props.user});
-    this.props.getDislikes({user_id: this.props.user});
+    this.props.getLikes({ user_id: this.props.user });
+    this.props.getDislikes({ user_id: this.props.user });
   }
 
   toggleLike() {
     if (this.liked === true) {
       this.liked = false;
-      this.props.deleteLike({like_id: this.likeId, user_id: this.props.user, movie_id: this.props.movieId});
+      this.props.deleteLike({ like_id: this.likeId, user_id: this.props.user, movie_id: this.props.movieId });
       // console.log('NO MORE LIKE', this.liked);
     } else if (this.disliked === true) {
       this.disliked = false;
       this.liked = true;
-      this.props.deleteDislike({dislike_id: this.dislikeId, user_id: this.props.user, movie_id: this.props.movieId});
+      this.props.deleteDislike({ dislike_id: this.dislikeId, user_id: this.props.user, movie_id: this.props.movieId });
       // console.log('NO MORE DISLIKE', this.disliked);
       this.props.newLike({ movie_id: this.props.movieId, user_id: this.props.user });
       // console.log('ME LIKEY', this.liked);
@@ -35,12 +35,12 @@ class LikeButtons extends React.Component {
   toggleDislike() {
     if (this.disliked === true) {
       this.disliked = false;
-      this.props.deleteDislike({dislike_id: this.dislikeId, user_id: this.props.user, movie_id: this.props.movieId});
+      this.props.deleteDislike({ dislike_id: this.dislikeId, user_id: this.props.user, movie_id: this.props.movieId });
       // console.log('NO MORE DISLIKE', this.disliked);
     } else if (this.liked === true) {
       this.liked = false;
       this.disliked = true;
-      this.props.deleteLike({like_id: this.likeId, user_id: this.props.user, movie_id: this.props.movieId});
+      this.props.deleteLike({ like_id: this.likeId, user_id: this.props.user, movie_id: this.props.movieId });
       // console.log('NO MORE LIKE', this.liked);
       this.props.newDislike({ movie_id: this.props.movieId, user_id: this.props.user });
       // console.log('ME DISLIKEY', this.disliked);
@@ -84,10 +84,12 @@ class LikeButtons extends React.Component {
       if (this.props.user === user && this.props.movieId === movie) {
         this.disliked = true;
         this.dislikeId = dislike.id;
-        // console.log('falsechains', this.liked, user, movie);
+        // console.log('truechains', this.disliked, user, movie);
+        // console.log('disike Id', this.dislikeId);
         break;
       }
     }
+
 
     return (
       <div className="like-buttons">

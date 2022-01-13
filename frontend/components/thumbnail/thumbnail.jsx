@@ -32,6 +32,9 @@ class Thumbnail extends React.Component {
     let windowUrl = 'home';
     let tags = this.props.movie.tags;
     let separator = <p id="tag-separator">•</p>;
+    // let likes = [];
+    // let dislikes = [];
+    let disliked = false;
     let tag1;
     let tag2;
     let tag3;
@@ -49,10 +52,34 @@ class Thumbnail extends React.Component {
       tag3 = separated[2];
     }
 
+    // if (this.props.likes) {
+    //   for (let i = 0; i < this.props.likes.length; i++) {
+    //     let movie = this.props.likes[i];
+    //     likes.push(movie.movie_id);
+    //   }
+    //   console.log('likes', likes)
+    // }
+
+    if (this.props.dislikes) {
+      for (let i = 0; i < this.props.dislikes.length; i++) {
+        let dislike = this.props.dislikes[i];
+        // console.log('DL', dislike, this.props.movie.id)
+
+        if (dislike.movie_id === this.props.movie.id) {
+          disliked = true;
+          break;
+        }
+        // console.log(`DISLIKED ${disliked}`, dislike, `MOVIEID = ${this.props.movie.id}`)
+      }
+    }
+
+
+
     // let movieCheck = false;
 
     if (!window.location.href.includes('home')) {
       windowUrl = 'other';
+      // console.log('disliked', disliked)
     } 
 
     if (watchlist) {
@@ -70,19 +97,48 @@ class Thumbnail extends React.Component {
           watchlistId = watchlistMovie.id;
           // console.log('WATCHLIST ID', watchlistId)
           break;
-        } else {
-          watchlistId = watchlistMovie.id;
-        }
+        } 
+         // else {
+        //   watchlistId = watchlistMovie.id;
+        // }
       } 
     }    
 
 
+
+
     // console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
+    
     return (
-      <div className={ windowUrl === 'home' && this.props.index === 0 ? "thumbnail-container first" 
-        : windowUrl === 'home' && this.props.index === 4 ? "thumbnail-container middle" 
+      <div className={ 
+         windowUrl === 'home' && this.props.index === 0 && disliked === true ? "thumbnail-container first disliked"
+        : windowUrl === 'home' && this.props.index === 0 ? "thumbnail-container first" 
+
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 1 && disliked === true ? "thumbnail-container middle disney disliked"
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 1 ? "thumbnail-container middle disney"
+
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 2 && disliked === true ? "thumbnail-container middle pixar disliked" 
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 2 ? "thumbnail-container middle pixar"
+
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 3 && disliked === true ? "thumbnail-container middle marvel disliked" 
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 3 ? "thumbnail-container middle marvel"
+
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 4 && disliked === true ? "thumbnail-container middle star-wars disliked" 
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 4 ? "thumbnail-container middle star-wars"
+
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 5 && disliked === true ? "thumbnail-container middle nat-geo disliked" 
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 5 ? "thumbnail-container middle nat-geo" 
+
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 6 && disliked === true ? "thumbnail-container middle watchlist disliked"  
+        : windowUrl === 'home' && this.props.index === 4 && this.props.brand === 6 ? "thumbnail-container middle watchlist"
+
+        : windowUrl === 'home' && this.props.index === 8 && disliked === true ? "thumbnail-container last disliked" 
         : windowUrl === 'home' && this.props.index === 8 ? "thumbnail-container last" 
+
+        : windowUrl === 'home' && disliked === true ? "thumbnail-container disliked" 
         : windowUrl === 'home' ? "thumbnail-container" 
+        
+        : disliked === true ? "thumbnail-specific disliked" 
         : "thumbnail-specific"} > 
 
 

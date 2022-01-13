@@ -28,7 +28,7 @@ class Sorted extends React.Component {
     let moviesArr = Object.values(movies);
     let watchlistObj = this.props.watchlist;
     let location = window.location.href;
-    let renderCriteria = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40]
+    // let renderCriteria = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40]
 
     if (moviesArr.length === 0) {
       return null;
@@ -104,22 +104,22 @@ class Sorted extends React.Component {
     let films;
 
     if (location.includes('disney')) {
-      films = allMovies['disney'];
+      films = allMovies['disney'].reverse();
     } else if (location.includes('pixar')) {
-      films = allMovies['pixar'];
+      films = allMovies['pixar'].reverse();
     } else if (location.includes('marvel')) {
-      films = allMovies['marvel'];
+      films = allMovies['marvel'].reverse();
     } else if (location.includes('starwars')) {
-      films = allMovies['starWars'];
+      films = allMovies['starWars'].reverse();
     } else if (location.includes('natgeo')) {
-      films = allMovies['natGeo'];
+      films = allMovies['natGeo'].reverse();
     } else if (location.includes('watchlist')) {
       films = this.watchlistMovies;
     }
     
     // moviesArr.sort(() => Math.random() - 0.5);
     
-    // console.log('DISNEY', this.state, this.props)
+    console.log('DISNEY', this.state, this.props)
     // console.log('WINDOW', location)
     // console.log('FILMS', films)
     // console.log('ALL', allMovies)
@@ -134,7 +134,7 @@ class Sorted extends React.Component {
 
         <ul className="films-rows">
           {this.watchlistMovies.map((movie) => (
-            <Thumbnail user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
+            <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
           ))}
         </ul>
 
@@ -142,7 +142,7 @@ class Sorted extends React.Component {
 
         <ul className="films-rows">
           {films.map((movie) => (
-            <Thumbnail user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
+            <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
           ))}
         </ul>
         
