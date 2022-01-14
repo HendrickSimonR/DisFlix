@@ -68,7 +68,7 @@ m1.rating='TV-PG'
 m1.year=2021
 m1.brand_id=b1.id
 m1.tags='Disney Parks • Family • Documentary'
-m1.topic='Insightful'
+m1.topic='Feel-Good'
 m1.save! 
 
 m2=Movie.new
@@ -103,7 +103,7 @@ m4.rating='G'
 m4.year=2001
 m4.brand_id=b2.id
 m4.tags='Comedy • Fantasy • Adventure'
-m4.topic='Heart-Warming'
+m4.topic='Heartfelt'
 m4.save! 
 
 m5=Movie.new
@@ -325,7 +325,7 @@ m19.rating='G'
 m19.year=1999
 m19.brand_id=b1.id
 m19.tags='Drama • Comedy • Romance'
-m19.topic='Action-Packed'
+m19.topic='Thrilling'
 m19.save! 
 
 m20=Movie.new
@@ -347,7 +347,7 @@ m21.rating='G'
 m21.year=1991
 m21.brand_id=b1.id
 m21.tags='Musical • Comedy • Romance'
-m21.topic='Adventurous'
+m21.topic='Heartfelt'
 m21.save! 
 
 # m22=Movie.new
@@ -368,7 +368,7 @@ m24.runtime='1h 43m'
 m24.rating='G'
 m24.year=2003
 m24.brand_id=b2.id
-m24.tags='Action • Comedy • Aquatic'
+m24.tags='Action • Comedy • Animals'
 m24.topic='Adventurous'
 m24.save! 
 
@@ -403,7 +403,7 @@ m27.rating='PG'
 m27.year=2017
 m27.brand_id=b2.id
 m27.tags='Musical • Comedy • Adventure'
-m27.topic='Adventurous'
+m27.topic='Heartfelt'
 m27.save!
 
 m30=Movie.new
@@ -414,7 +414,7 @@ m30.rating='PG-13'
 m30.year=2014
 m30.brand_id=b3.id
 m30.tags='Sci-Fi • Comedy • Adventure'
-m30.topic='Thrilling'
+m30.topic='Exciting'
 m30.save!
 
 m29=Movie.new
@@ -535,7 +535,7 @@ m38.rating='PG'
 m38.year=2021
 m38.brand_id=b5.id
 m38.tags='Reality • Family • Documentary'
-m38.topic='Fun'
+m38.topic='Feel-Good'
 m38.save!
 
 m40=Movie.new
@@ -546,7 +546,7 @@ m40.rating='TV-PG'
 m40.year=2021
 m40.brand_id=b5.id
 m40.tags='Documentary • Animals • Nature'
-m40.topic='Touching'
+m40.topic='Heartfelt'
 m40.save!
 
 m13=Movie.new
@@ -603,7 +603,7 @@ m46.rating='TV-G'
 m46.year=2011
 m46.brand_id=b5.id
 m46.tags='Reality • Family • Animals'
-m46.topic='Heart-Warming'
+m46.topic='Heartfelt'
 m46.save!
 
 m15=Movie.new
