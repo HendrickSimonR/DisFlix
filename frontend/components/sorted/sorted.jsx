@@ -126,11 +126,17 @@ class Sorted extends React.Component {
 
 
     return (
-      <div className={ location.includes('watchlist') ? "watchlist-container" : "films-container" }>
+      <div className={ location.includes('watchlist') ? "watchlist-container" 
+        : location.includes('disney') ? "films-container disney" 
+        : location.includes('pixar') ? "films-container pixar" 
+        : location.includes('marvel') ? "films-container marvel" 
+        : location.includes('starwars') ? "films-container star-wars" 
+        : "films-container nat-geo" }>
         
         { location.includes('watchlist') 
         
         ?
+        
         <div>
           <h1>My Watchlist</h1>
           <ul className="films-rows">
