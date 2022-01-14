@@ -129,7 +129,7 @@ class Sorted extends React.Component {
     console.log('SORTED', this.props)
 
     if (location.includes('watchlist')) {
-      this.state({collection: 'watchlist'})
+      this.state.collection = 'watchlist'
       
       films = 
         <div>
