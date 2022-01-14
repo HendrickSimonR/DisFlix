@@ -10,8 +10,8 @@ class Sorted extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getMovies();
-    this.props.getWatchlist({user_id: this.props.user});
+    // this.props.getMovies();
+    // this.props.getWatchlist({user_id: this.props.user});
   }
 
   render() {
@@ -117,7 +117,10 @@ class Sorted extends React.Component {
 
     let films;
 
+    console.log('SORTED', this.props)
+
     if (location.includes('watchlist')) {
+      // this.setState({collection: 'watchlist'})
       films = 
         <div>
           <ul className="films-rows watchlist">
@@ -127,6 +130,7 @@ class Sorted extends React.Component {
           </ul>
         </div>
     } else if (location.includes('disney')) {
+      // this.setState({collection: 'Disney'})
       films = 
         <div>
           <ul className="films-rows disney">
@@ -136,6 +140,7 @@ class Sorted extends React.Component {
           </ul>
         </div>
     } else if (location.includes('pixar')) {
+      // this.setState({collection: 'Pixar'})
       films = 
         <div>
           <ul className="films-rows pixar">
@@ -145,6 +150,7 @@ class Sorted extends React.Component {
           </ul>
         </div>  
     } else if (location.includes('marvel')) {
+      // this.setState({collection: 'Marvel'})
       films = 
         <div>
           <ul className="films-rows marvel">
@@ -154,6 +160,7 @@ class Sorted extends React.Component {
           </ul>
         </div>   
     } else if (location.includes('starwars')) {
+      // this.setState({collection: 'Star Wars'})
       films = 
         <div>
           <ul className="films-rows star-wars">
@@ -163,6 +170,7 @@ class Sorted extends React.Component {
           </ul>
         </div> 
     } else {
+      // this.setState({collection: 'Nat Geo'})
       films = 
         <div>
           <ul className="films-rows nat-geo">
@@ -182,7 +190,7 @@ class Sorted extends React.Component {
     // console.log('WINDOW', location)
     // console.log('FILMS', films)
     // console.log('ALL', allMovies)
-
+console.log(this.state)
 
     return (
       <div className={ location.includes('watchlist') ? "watchlist-container" 

@@ -12,8 +12,8 @@ class Watchlist extends React.Component {
   // }
 
   componentDidMount() {
-    this.props.getMovies();
-    this.props.getWatchlist({user_id: this.props.user})
+    // this.props.getMovies();
+    // this.props.getWatchlist({user_id: this.props.user})
   }
 
   render() {

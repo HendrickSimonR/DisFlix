@@ -12,7 +12,8 @@ const mSTP = state => {
     likes: state.likes,
     dislikes: state.dislikes,
     movies: selectMovies(state),
-    watchlist: state.watchlist
+    watchlist: state.watchlist,
+    collection: window.location.href
   })
 };
 

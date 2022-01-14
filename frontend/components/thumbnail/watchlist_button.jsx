@@ -9,7 +9,7 @@ class WatchlistButton extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getWatchlist({ user_id: this.props.userId });
+    // this.props.getWatchlist({ user_id: this.props.userId });
   }
   
   // addSetter() {

@@ -9,8 +9,8 @@ class LikeButtons extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getLikes({ user_id: this.props.user });
-    this.props.getDislikes({ user_id: this.props.user });
+    // this.props.getLikes({ user_id: this.props.user });
+    // this.props.getDislikes({ user_id: this.props.user });
   }
 
   toggleLike() {

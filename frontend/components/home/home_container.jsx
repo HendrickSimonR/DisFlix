@@ -7,7 +7,7 @@ import { selectMovies } from '../../selectors/movie_selector';
 import { getWatchlist } from '../../actions/watchlist_actions';
 
 const mSTP = state => {
-  // console.log('STATE', state);
+  console.log('STATE', state);
   return ({
     user: state.session.id,
     movies: selectMovies(state),
@@ -19,7 +19,9 @@ const mSTP = state => {
 const mDTP = dispatch => ({
   signout: () => dispatch(signout()),
   getMovies: () => dispatch(getMovies()),
-  getWatchlist: userId => dispatch(getWatchlist(userId))
+  getWatchlist: userId => dispatch(getWatchlist(userId)),
+  getLikes: userId => dispatch(getLikes(userId)),
+  getDislikes: userId => dispatch(getDislikes(userId))
 });
 
 export default connect(mSTP, mDTP)(Home);

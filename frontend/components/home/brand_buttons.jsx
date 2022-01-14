@@ -29,7 +29,7 @@ class BrandButtons extends React.Component {
   }
 
   componentDidMount() {
-    this.getBrands();
+    // this.getBrands();
   }
 
   render() {
