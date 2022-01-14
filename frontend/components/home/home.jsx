@@ -34,12 +34,12 @@ class Home extends React.Component {
     // this.props.getLikes({user_id: this.props.user});
     // this.props.getDislikes({user_id: this.props.user});
     this.props.getWatchlist({user_id: this.props.user});
-  }
-
-  componentWillMount() {
     this.props.getLikes({user_id: this.props.user});
     this.props.getDislikes({user_id: this.props.user}); 
   }
+
+  // componentWillMount() {
+  // }
  
   handleScroll = (direction, brand) => {
     if (direction === 'left') {

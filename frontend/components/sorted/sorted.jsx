@@ -7,11 +7,19 @@ import Footer from '../footer/footer';
 class Sorted extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {collection: 'none'}
   }
 
   componentDidMount() {
     // this.props.getMovies();
     // this.props.getWatchlist({user_id: this.props.user});
+  }
+  componentDidUpdate(prevProps) {
+    console.log('idk', this.props.match.path, prevProps.match.path)
+    if (this.props.match.path !== prevProps.match.path) {
+      this.forceUpdate();
+    }
   }
 
   render() {
@@ -120,7 +128,8 @@ class Sorted extends React.Component {
     console.log('SORTED', this.props)
 
     if (location.includes('watchlist')) {
-      // this.setState({collection: 'watchlist'})
+      this.state({collection: 'watchlist'})
+      
       films = 
         <div>
           <ul className="films-rows watchlist">
