@@ -8,7 +8,7 @@ class Sorted extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {collection: 'none'}
+    this.state = { collection: 'none' }
   }
 
   componentDidMount() {
@@ -19,6 +19,7 @@ class Sorted extends React.Component {
     console.log('idk', this.props.match.path, prevProps.match.path)
     if (this.props.match.path !== prevProps.match.path) {
       this.props.collection = window.location.href
+      this.setState({collection: this.props.collection})
     }
   }
 
