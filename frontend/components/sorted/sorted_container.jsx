@@ -13,8 +13,6 @@ import { getWatchlist, removeMovie } from '../../actions/watchlist_actions';
 
 
 const mSTP = state => {
-  console.log('SORTED STATE', state, selectMovies(state))
-  
   let allMovies = selectMovies(state);
   let disneyFilms = [];
   let pixarFilms = [];
@@ -22,7 +20,7 @@ const mSTP = state => {
   let starWarsFilms = [];
   let natGeoFilms = [];
 
-  
+
   for (let i = 0; i < allMovies.length; i++) {
     let film = allMovies[i];
 

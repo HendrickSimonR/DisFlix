@@ -8,7 +8,6 @@ class Marvel extends React.Component {
   }
 
   render() {
-    console.log('MARVEL', this.props);
     let user = this.props.user;
     this.marvelMovies = this.props.marvel.reverse();
 
