@@ -18,7 +18,7 @@ class Sorted extends React.Component {
   componentDidUpdate(prevProps) {
     console.log('idk', this.props.match.path, prevProps.match.path)
     if (this.props.match.path !== prevProps.match.path) {
-      this.forceUpdate();
+      this.props.collection = window.location.href
     }
   }
 
