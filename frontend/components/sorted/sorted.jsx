@@ -140,7 +140,7 @@ class Sorted extends React.Component {
         ? 
 
         <div>
-          <ul className="films-rows">
+          <ul className="films-rows watchlist">
             { this.watchlistMovies.map((movie) => (
               <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
               ))}
@@ -150,7 +150,7 @@ class Sorted extends React.Component {
         : location.includes('disney') ? 
         
         <div>
-          <ul className="films-rows">
+          <ul className="films-rows disney">
             { this.disney.map((movie) => (
               <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
             ))}
@@ -160,7 +160,7 @@ class Sorted extends React.Component {
         : location.includes('pixar') ? 
 
         <div>
-          <ul className="films-rows">
+          <ul className="films-rows pixar">
             { this.pixar.map((movie) => (
               <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
             ))}
@@ -170,7 +170,7 @@ class Sorted extends React.Component {
         : location.includes('marvel') ?
 
         <div>
-          <ul className="films-rows">
+          <ul className="films-rows marvel">
             { this.marvel.map((movie) => (
               <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
             ))}
@@ -180,7 +180,7 @@ class Sorted extends React.Component {
         : location.includes('starwars') ?
 
         <div>
-          <ul className="films-rows">
+          <ul className="films-rows star-wars">
             { this.starWars.map((movie) => (
               <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
             ))}
@@ -190,7 +190,7 @@ class Sorted extends React.Component {
         : 
 
         <div>
-          <ul className="films-rows">
+          <ul className="films-rows nat-geo">
             { this.natGeo.map((movie) => (
               <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
             ))}
