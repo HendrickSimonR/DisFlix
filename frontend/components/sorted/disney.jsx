@@ -9,6 +9,7 @@ class Disney extends React.Component {
 
   render() {
     console.log('DISNEY', this.props);
+    let user = this.props.user;
     this.disneyMovies = this.props.disney.reverse();
 
     return(

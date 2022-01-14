@@ -22,17 +22,22 @@ const mSTP = state => {
   let starWarsFilms = [];
   let natGeoFilms = [];
 
+  
   for (let i = 0; i < allMovies.length; i++) {
     let film = allMovies[i];
 
     if (film.brand_id === 1) {
       disneyFilms.push(film);
+
     } else if (film.brand_id === 2) {
       pixarFilms.push(film);
+
     } else if (film.brand_id === 3) {
       marvelFilms.push(film);
+
     } else if ((film.brand_id === 4)) {
       starWarsFilms.push(film);
+
     } else {
       natGeoFilms.push(film);
     }

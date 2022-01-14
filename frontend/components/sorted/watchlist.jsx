@@ -19,6 +19,7 @@ class Watchlist extends React.Component {
 
   render() {
     this.watchlist = [];
+    let user = this.props.user;
     let watchlistComponent = <div></div>;
 
     if (this.props.watchlist) {

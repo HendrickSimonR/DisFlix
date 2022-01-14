@@ -9,6 +9,7 @@ class StarWars extends React.Component {
 
   render() {
     console.log('STARWARS', this.props);
+    let user = this.props.user;
     this.starWarsMovies = this.props.starWars.reverse();
 
     return(
@@ -18,7 +19,7 @@ class StarWars extends React.Component {
             <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
           ))}
         </ul>
-        
+
         <Footer />
       </div>
     )

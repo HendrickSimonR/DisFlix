@@ -9,6 +9,7 @@ class Pixar extends React.Component {
 
   render() {
     console.log('PIXAR', this.props);
+    let user = this.props.user;
     this.pixarMovies = this.props.pixar.reverse();
 
     return(

@@ -9,6 +9,7 @@ class NatGeo extends React.Component {
 
   render() {
     console.log('NATGEO', this.props);
+    let user = this.props.user;
     this.natGeoMovies = this.props.natGeo.reverse();
 
     return(
