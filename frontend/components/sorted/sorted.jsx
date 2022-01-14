@@ -103,6 +103,8 @@ class Sorted extends React.Component {
 
     let films;
 
+
+
     if (location.includes('disney')) {
       films = allMovies['disney'].reverse();
     } else if (location.includes('pixar')) {
@@ -135,10 +137,9 @@ class Sorted extends React.Component {
         
         { location.includes('watchlist') 
         
-        ?
-        
+        ? 
+
         <div>
-          <h1>My Watchlist</h1>
           <ul className="films-rows">
             { this.watchlistMovies.map((movie) => (
               <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
@@ -146,16 +147,56 @@ class Sorted extends React.Component {
           </ul>
         </div>
 
-        :
+        : location.includes('disney') ? 
         
         <div>
           <ul className="films-rows">
-            { films.map((movie) => (
+            { this.disney.map((movie) => (
               <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
             ))}
           </ul>
         </div>
         
+        : location.includes('pixar') ? 
+
+        <div>
+          <ul className="films-rows">
+            { this.pixar.map((movie) => (
+              <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
+            ))}
+          </ul>
+        </div>  
+        
+        : location.includes('marvel') ?
+
+        <div>
+          <ul className="films-rows">
+            { this.marvel.map((movie) => (
+              <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
+            ))}
+          </ul>
+        </div>
+
+        : location.includes('starwars') ?
+
+        <div>
+          <ul className="films-rows">
+            { this.starWars.map((movie) => (
+              <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
+            ))}
+          </ul>
+        </div>
+
+        : 
+
+        <div>
+          <ul className="films-rows">
+            { this.natGeo.map((movie) => (
+              <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
+            ))}
+          </ul>
+        </div>
+
         }
 
         <Footer/>
