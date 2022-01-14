@@ -8,7 +8,6 @@ import moviesReducer from './movies_reducer';
 import modalReducer from './modal_reducer';
 import brandsReducer from './brands_reducer';
 import watchlistReducer from './watchlist_reducer';
-import modalReducer from './modal_reducer';
 
 const rootReducer = combineReducers({
   brands: brandsReducer,

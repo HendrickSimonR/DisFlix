@@ -1,7 +1,7 @@
 import React from 'react';
 import SelectProfile from '../selectProfile/select_profile';
 import BrandButtons from './brand_buttons';
-import Thumbnail from '../thumbnail/thumbnail';
+import ThumbnailContainer from '../thumbnail/thumbnail_container';
 import Featured from '../featured/featured';
 import Footer from '../footer/footer';
 
@@ -332,7 +332,7 @@ class Home extends React.Component {
 
                 <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
                   {this.watchlistMovies.slice(0, 8).map((movie, i) => (
-                    <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={6} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                    <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} brand={6} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                   ))}
 
                   {this.watchlistMovies.length >= 9 ? 
@@ -361,7 +361,7 @@ class Home extends React.Component {
                 
               <ul className="movie-row" id="disney-movies" ref={this.disney}>
                 {this.disneyMovies.map((movie, i) => (
-                  <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
+                  <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
                 ))}
               </ul>
 
@@ -381,7 +381,7 @@ class Home extends React.Component {
 
               <ul className="movie-row" id="pixar-movies" ref={this.pixar}>
                 {this.pixarMovies.map((movie, i) => (
-                  <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
+                  <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
                 ))}
               </ul>
             </div>
@@ -400,7 +400,7 @@ class Home extends React.Component {
 
               <ul className="movie-row" id="marvel-movies" ref={this.marvel}>
                 {this.marvelMovies.map((movie, i) => (
-                  <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                  <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                 ))}
               </ul>
             </div>
@@ -419,7 +419,7 @@ class Home extends React.Component {
 
               <ul className="movie-row" id="star-wars-movies" ref={this.starWars}>
                 {this.starWarsMovies.map((movie, i) => (
-                  <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                  <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                 ))}
               </ul>
             </div>
@@ -438,7 +438,7 @@ class Home extends React.Component {
 
               <ul className="movie-row" id="nat-geo-movies" ref={this.natGeo}>
                 {this.natGeoMovies.map((movie, i) => (
-                  <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                  <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
                 ))}
               </ul>
             </div>

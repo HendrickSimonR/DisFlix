@@ -3,10 +3,6 @@ import { getWatchlist, newAddition, removeMovie } from '../../actions/watchlist_
 import WatchlistButton from './watchlist_button';
 
 const mSTP = (state, ownProps) => {
-  let id = state.session.id;
-  let watchlist = state.watchlist;
-
-
   // console.log('CONTAINER', state, ownProps)
   return {
     watchlist: state.watchlist,

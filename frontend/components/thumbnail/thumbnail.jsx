@@ -43,6 +43,8 @@ class Thumbnail extends React.Component {
     //   // console.log('THUMBPROPS', this.props.index, this.props.movie)
     // }
 
+    // console.log('THUMBPROPS', this.props)
+
     if (tags !== undefined) {
       let separated = tags.split('•');
       // console.log('TAGS', separateTags)
@@ -147,7 +149,7 @@ class Thumbnail extends React.Component {
             </div>
 
             <div className="thumbnail-buttons-right">
-              <span className="material-icons-outlined expand-modal">
+              <span className="material-icons-outlined expand-modal" onClick={this.props.openModal}>
                 expand_more
               </span>
             </div>

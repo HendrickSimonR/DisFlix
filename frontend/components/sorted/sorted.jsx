@@ -1,5 +1,5 @@
 import React from 'react';
-import Thumbnail from '../thumbnail/thumbnail';
+import ThumbnailContainer from '../thumbnail/thumbnail_container';
 import Footer from '../footer/footer';
 
 // KEEP
@@ -135,7 +135,7 @@ class Sorted extends React.Component {
           <h1>My Watchlist</h1>
           <ul className="films-rows">
             { this.watchlistMovies.map((movie) => (
-              <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
+              <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
               ))}
           </ul>
         </div>
@@ -145,7 +145,7 @@ class Sorted extends React.Component {
         <div>
           <ul className="films-rows">
             { films.map((movie) => (
-              <Thumbnail likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
+              <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
             ))}
           </ul>
         </div>

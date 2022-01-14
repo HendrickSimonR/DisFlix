@@ -1,4 +1,5 @@
 import React from 'react';
+import MovieInfoModal from './movie_info_modal';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 

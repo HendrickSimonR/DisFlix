@@ -9,6 +9,7 @@ import SplashPage from './splash/splash_page';
 import Footer from './footer/footer';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import Modal from './modal/modal';
 
 const App = () => (
   <div>
@@ -17,6 +18,7 @@ const App = () => (
     </header>
 
     <AuthRoute component={SplashPage} />
+    <Modal/>
     <Switch>
       <AuthRoute exact path="/signin" component={SigninFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
