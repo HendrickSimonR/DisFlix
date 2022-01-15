@@ -36,11 +36,17 @@ class MovieModal extends React.Component {
       }
     }
     
-    // console.log('MOVIE MODAL PROPS ', film, this.props.movie, moviesArr)
+    console.log('MOVIE PROPS ', film)
 
     return (
-      <div className="edit-modal">
-        {film.title}
+      <div className="movie-modal">
+        <video className="modal-movie" poster={film.image_url}>
+          <source src={this.props.movie.movie_url} type="video/mp4" /> 
+        </video>
+
+        <div className="modal-description">
+          {film.description}
+        </div>
       </div>
     )
   }
