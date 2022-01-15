@@ -4,14 +4,12 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 
 function Modal({modal, closeModal}) {
-  if (!modal) {
-    return null;
-  }
+  if (!modal) return null;
   
+  let movieId;
   let modalComponent;
   let renderMovie = false;
-  
-  let possibleNums = ['1', '2', '3', '4']
+  let possibleNums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   // console.log('MODAL', modal)
   // console.log('TYPEOF', typeof(num))
   
@@ -20,24 +18,19 @@ function Modal({modal, closeModal}) {
     
     if (modal.includes(possibleNum)) {
       renderMovie = true;
+      movieId = parseInt(modal);
       break;
     }
   }
 
-  let num = parseInt(modal);
-  let other = parseInt('poop');
+  // let other = parseInt('poop');
   
   if (renderMovie === true) {
-    modalComponent = <MovieModalContainer movie={num} />
-    // debugger
+    modalComponent = <MovieModalContainer movie={movieId} />
+    // CHANGE THIS WHEN EDIT PROFILE IS ESTABLISHED
   } else {
     return null;
   }
-  
-  
-
-
-
 
   // switch (num) {
   //   // case 'editProfile':
