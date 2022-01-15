@@ -8,7 +8,7 @@ class StarWars extends React.Component {
   }
 
   render() {
-    console.log('STARWARS', this.props);
+    // console.log('STARWARS', this.props);
     let user = this.props.user;
     this.starWarsMovies = this.props.starWars.reverse();
 

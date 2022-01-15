@@ -6,6 +6,12 @@ import LikeButtonsContainer from './like_buttons_container';
 class Thumbnail extends React.Component {
   constructor(props) {
     super(props)
+
+    this.showMovie = this.showMovie.bind(this);
+  }
+
+  componentDidMount() {
+    // console.log('THUMB PROPS', this.props)
   }
 
   // hoverVideo() {
@@ -19,6 +25,10 @@ class Thumbnail extends React.Component {
   //   let indexMovie = document.getElementById(this.uniqueId);
   //   indexMovie.load();
   // }
+
+  showMovie() {
+    this.props.openModal(this.props.movie.id)
+  }
 
   hoverPlay(event) {
     event.target.play();
@@ -84,7 +94,7 @@ class Thumbnail extends React.Component {
       // console.log('disliked', disliked)
     } 
 
-    if (watchlist) {
+    if (watchlist) { 
 
       // if (userMovies) {
       //   if (userMovies.includes(this.props.movie.id)) {
@@ -149,7 +159,7 @@ class Thumbnail extends React.Component {
             </div>
 
             <div className="thumbnail-buttons-right">
-              <span className="material-icons-outlined expand-modal" onClick={this.props.openModal}>
+              <span className="material-icons-outlined expand-modal" onClick={this.showMovie}>
                 expand_more
               </span>
             </div>

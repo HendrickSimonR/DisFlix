@@ -14,7 +14,6 @@ const receiveEntireWatchlist = watchlist => ({
 });
 
 
-
 export const getWatchlist = (userId) => dispatch => {
   return fetchWatchlist(userId).then(
     watchlist => (dispatch(receiveEntireWatchlist(watchlist)))

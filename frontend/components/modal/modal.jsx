@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieInfoModal from './movie_info_modal';
+import MovieModalContainer from './movie_modal_container';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 
@@ -8,32 +8,64 @@ function Modal({modal, closeModal}) {
     return null;
   }
   
-  let component;
+  let modalComponent;
+  let renderMovie = false;
   
-  switch (modal) {
-    case 'editProfile':
-      component = <EditProfileModalContainer/>;
+  let possibleNums = ['1', '2', '3', '4']
+  // console.log('MODAL', modal)
+  // console.log('TYPEOF', typeof(num))
+  
+  for (let i = 0; i < possibleNums.length; i++) {
+    let possibleNum = possibleNums[i];
+    
+    if (modal.includes(possibleNum)) {
+      renderMovie = true;
       break;
-    case 'movieInfo':
-      component = <MovieInfoModal/>;
-      break;
-    default:
-      return null;
+    }
+  }
+
+  let num = parseInt(modal);
+  let other = parseInt('poop');
+  
+  if (renderMovie === true) {
+    modalComponent = <MovieModalContainer movie={num} />
+    // debugger
+  } else {
+    return null;
   }
   
+  
+
+
+
+
+  // switch (num) {
+  //   // case 'editProfile':
+  //   //   component = <EditProfileModalContainer/>;
+  //   //   break;
+  //   case typeof(num) === 'number':
+  //     component = <MovieModalContainer />;
+  //     break;
+  //   default:
+  //     return null;
+  // }
+  
+
   return (
     <div className="modal-background" onClick={closeModal}>
       <div className="modal-child" onClick={e => e.stopPropagation()}>
-        { component }
+        { modalComponent }
       </div>
     </div>
   );
 }
 
 const mapStateToProps = state => {
+  // console.log('MODAL STATE', state)
   return {
     modal: state.modal,
-    props: state.props
+    props: state.props,
+    movies: state.movies
   };
 };
 

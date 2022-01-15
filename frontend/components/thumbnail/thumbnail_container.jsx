@@ -13,7 +13,7 @@ const mSTP = state => {
 };
 
 const mDTP = dispatch => ({
-  openModal: () => dispatch(openModal('movieInfo')),
+  openModal: movieId => dispatch(openModal(`${movieId}`)),
   getMovie: id => dispatch(getMovie(id))
     // fetchUser: (userId) => dispatch(fetchUserInfo(userId))
 });
