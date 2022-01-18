@@ -67,8 +67,9 @@ m1.runtime='1h 24m'
 m1.rating='TV-PG'
 m1.year=2021
 m1.brand_id=b1.id
-m1.tags='Disney Parks • Family • Documentary'
+m1.tags='Disney Parks, Family, Documentary'
 m1.topic='Feel-Good'
+m1.cast='Whoopi Goldberg, Christina Aguilera, Halle Bailey'
 m1.save! 
 
 m2=Movie.new
@@ -78,8 +79,9 @@ m2.runtime='1h 38m'
 m2.rating='G'
 m2.year=1997
 m2.brand_id=b1.id
-m2.tags='Adventure • Coming of Age • Comedy'
+m2.tags='Adventure, Coming of Age, Comedy'
 m2.topic='Inspiring'
+m2.cast='Tate Donovan, Susan Egan, James Woods, Danny DeVito'
 m2.save! 
 
 m3=Movie.new
@@ -89,8 +91,9 @@ m3.runtime='1h 26m'
 m3.rating='G'
 m3.year=1989
 m3.brand_id=b1.id
-m3.tags='Disney Princess • Fantasy • Musical'
+m3.tags='Disney Princess, Fantasy, Musical'
 m3.topic='Adventurous'
+m3.cast='Jodi Benson, Kenneth Mars, Samuel E. Wright, Pat Carroll'
 m3.save! 
 
 #PIXAR 
@@ -102,8 +105,9 @@ m4.runtime='1h 32m'
 m4.rating='G'
 m4.year=2001
 m4.brand_id=b2.id
-m4.tags='Comedy • Fantasy • Adventure'
+m4.tags='Comedy, Fantasy, Adventure'
 m4.topic='Heartfelt'
+m4.cast='John Goodman, Billy Crystal, Steve Buscemi, Mary Gibbs'
 m4.save! 
 
 m5=Movie.new
@@ -113,8 +117,9 @@ m5.runtime='1h 36m'
 m5.rating='PG'
 m5.year=2009
 m5.brand_id=b2.id
-m5.tags='Comedy • Unlikely Pair • Adventure'
+m5.tags='Comedy, Unlikely Pair, Adventure'
 m5.topic='Emotional'
+m5.cast='Carl Fredricksen, Bob Peterson, Jordan Nagai, Christopher Plummer'
 m5.save! 
 
 m6=Movie.new
@@ -124,8 +129,9 @@ m6.runtime='1h 23m'
 m6.rating='G'
 m6.year=1995
 m6.brand_id=b2.id
-m6.tags='Comedy • Fantasy • Adventure'
+m6.tags='Comedy, Fantasy, Adventure'
 m6.topic='Exciting'
+m6.cast='Tom Hanks, Tim Allen, John Morris, Joan Cusack'
 m6.save! 
 
 m25=Movie.new
@@ -135,8 +141,9 @@ m25.runtime='1h 51m'
 m25.rating='G'
 m25.year=2007
 m25.brand_id=b2.id
-m25.tags='Drama • Comedy • Adventure'
+m25.tags='Drama, Comedy, Adventure'
 m25.topic='Inspiring'
+m25.cast='Patton Oswalt, Lou Romano, Peter O’Toole, Janeane Garofalo'
 m25.save! 
 
 m23=Movie.new
@@ -146,8 +153,9 @@ m23.runtime='1h 39m'
 m23.rating='G'
 m23.year=2008
 m23.brand_id=b2.id
-m23.tags='Sci-Fi • Comedy • Romance'
+m23.tags='Sci-Fi, Comedy, Romance'
 m23.topic='Adventurous'
+m23.cast='Ben Burtt, Elissa Knight, Jeff Garlin, Sigourney Weaver'
 m23.save! 
 
 # MARVEL 
@@ -159,8 +167,9 @@ m7.runtime='2h 17m'
 m7.rating='PG-13'
 m7.year=2018
 m7.brand_id=b3.id
-m7.tags='Action • Sci-Fi • Drama'
+m7.tags='Action, Sci-Fi, Drama'
 m7.topic='Impactful'
+m7.cast='Chadwick Boseman, Michael B. Jordan, Lupita Nyong’o, Angela Bassett'
 m7.save! 
 
 m8=Movie.new
@@ -170,8 +179,9 @@ m8.runtime='2h 32m'
 m8.rating='PG-13'
 m8.year=2018
 m8.brand_id=b3.id
-m8.tags='Action • Sci-Fi • Drama'
+m8.tags='Action, Sci-Fi, Drama'
 m8.topic='Thrilling'
+m8.cast='Robert Downey Jr., Chris Evans, Chris Hemsworth, Scarlett Johansson'
 m8.save! 
 
 m9=Movie.new
@@ -181,8 +191,9 @@ m9.runtime='3h 4m'
 m9.rating='PG-13'
 m9.year=2019
 m9.brand_id=b3.id
-m9.tags='Action • Sci-Fi • Drama'
+m9.tags='Action, Sci-Fi, Drama'
 m9.topic='Epic'
+m9.cast='Robert Downey Jr., Chris Evans, Chris Hemsworth, Scarlett Johansson'
 m9.save! 
 
 #STAR WARS 
@@ -194,8 +205,9 @@ m11.runtime='2h 20m'
 m11.rating='PG-13'
 m11.year=2005
 m11.brand_id=b4.id
-m11.tags='Action • Sci-Fi • Drama'
+m11.tags='Action, Sci-Fi, Drama'
 m11.topic='Forceful'
+m11.cast='Hayden Christensen, Ewan McGregor, Natalie Portman, Samuel L. Jackson' 
 m11.save! 
 
 m10=Movie.new
@@ -205,8 +217,9 @@ m10.runtime='2h 7m'
 m10.rating='PG'
 m10.year=1980
 m10.brand_id=b4.id
-m10.tags='Action • Sci-Fi • Drama'
+m10.tags='Action, Sci-Fi, Drama'
 m10.topic='Forceful'
+m10.cast='Mark Hamill, Harrison Ford, Carrie Fisher, Frank Oz'
 m10.save! 
 
 m12=Movie.new
@@ -216,8 +229,9 @@ m12.runtime='2h 15m'
 m12.rating='PG-13'
 m12.year=2016
 m12.brand_id=b4.id
-m12.tags='Action • Sci-Fi • Drama'
+m12.tags='Action, Sci-Fi, Drama'
 m12.topic='Forceful'
+m12.cast='Felicity Jones, Diego Luna, Ben Mendelsohn, Donnie Yen'
 m12.save! 
 
 #NATIONAL GEOGRAPHIC
@@ -229,8 +243,9 @@ m39.runtime='1 Season'
 m39.rating='TV-PG'
 m39.year=2020
 m39.brand_id=b5.id
-m39.tags='Documentary • Animals • Disney Parks'
+m39.tags='Documentary, Animals, Disney Parks'
 m39.topic='Insightful'
+m39.cast='Josh Gad, Ida Darvish, Michelle Monoghan, Kristen Bell'
 m39.save!
 
 m14=Movie.new
@@ -240,8 +255,9 @@ m14.runtime='1 Season'
 m14.rating='TV-G'
 m14.year=2021
 m14.brand_id=b5.id
-m14.tags='Documentary • Geography • Travel'
+m14.tags='Documentary, Geography, Travel'
 m14.topic='Calming'
+m14.cast='Christine Weber'
 m14.save! 
 
 
@@ -291,8 +307,9 @@ m17.runtime='1h 40m'
 m17.rating='TV-G'
 m17.year=2006
 m17.brand_id=b1.id
-m17.tags='Musical • Comedy • Drama'
+m17.tags='Musical, Comedy, Drama'
 m17.topic='Fun'
+m17.cast='Zac Efron, Vanesa Hidgens, Ashley Tisdale, Corbin Bleu'
 m17.save! 
 
 m16=Movie.new
@@ -302,8 +319,9 @@ m16.runtime='2h 6m'
 m16.rating='G'
 m16.year=1940
 m16.brand_id=b1.id
-m16.tags='Musical • Animation • Classic'
+m16.tags='Musical, Animation, Classic'
 m16.topic='Timeless'
+m16.cast='Walt Disney, Leopold Stokowski, Deems Taylor, Julietta Novis'
 m16.save!
 
 m18=Movie.new
@@ -313,8 +331,9 @@ m18.runtime='1h 32m'
 m18.rating='G'
 m18.year=1994
 m18.brand_id=b1.id
-m18.tags='Drama • Coming of Age • Comedy'
+m18.tags='Drama, Coming of Age, Comedy'
 m18.topic='Exciting'
+m18.cast='Matthew Broderick, James Earl Jones, Jeremy Irons, Moira Kelly'
 m18.save! 
 
 m19=Movie.new
@@ -324,8 +343,9 @@ m19.runtime='1h 35m'
 m19.rating='G'
 m19.year=1999
 m19.brand_id=b1.id
-m19.tags='Drama • Comedy • Romance'
+m19.tags='Drama, Comedy, Romance'
 m19.topic='Thrilling'
+m19.cast='Tony Goldwyn, Minnie Driver, Rosie O’Donnell, Brian Blessed'
 m19.save! 
 
 m20=Movie.new
@@ -335,8 +355,9 @@ m20.runtime='1h 49m'
 m20.rating='PG'
 m20.year=2016
 m20.brand_id=b1.id
-m20.tags='Musical • Comedy • Fantasy'
+m20.tags='Musical, Comedy, Fantasy'
 m20.topic='Adventurous'
+m20.cast='Auli’i Cravalho, Dwayne Johnson, Jemaine Clement, Nicole Scherzinger'
 m20.save! 
 
 m21=Movie.new
@@ -346,8 +367,9 @@ m21.runtime='1h 31m'
 m21.rating='G'
 m21.year=1991
 m21.brand_id=b1.id
-m21.tags='Musical • Comedy • Romance'
+m21.tags='Musical, Comedy, Romance'
 m21.topic='Heartfelt'
+m21.cast='Mandy Moore, Zachary Levi, Donna Murphy, Jeffrey Tambor'
 m21.save! 
 
 # m22=Movie.new
@@ -357,7 +379,7 @@ m21.save!
 # m22.rating='G'
 # m22.year=1991
 # m22.brand_id=b1.id
-# m22.tags='Drama • Comedy • Romance'
+# m22.tags='Drama, Comedy, Romance'
 # m22.topic='Emotional'
 # m22.save! 
 
@@ -368,8 +390,9 @@ m24.runtime='1h 43m'
 m24.rating='G'
 m24.year=2003
 m24.brand_id=b2.id
-m24.tags='Action • Comedy • Animals'
+m24.tags='Action, Comedy, Animals'
 m24.topic='Adventurous'
+m24.cast='Albert Brooks, Ellen DeGeneres, Alexander Gould, Willem Dafoe'
 m24.save! 
 
 m42=Movie.new
@@ -379,8 +402,9 @@ m42.runtime='1h 55m'
 m42.rating='PG'
 m42.year=2004
 m42.brand_id=b2.id
-m42.tags='Action • Comedy • Family'
+m42.tags='Action, Comedy, Family'
 m42.topic='Thrilling'
+m42.cast='Craig T. Nelson, Holly Hunter, Samuel L. Jackson, Brad Bird'
 m42.save!
 
 
@@ -391,8 +415,9 @@ m26.runtime='1h 35m'
 m26.rating='PG'
 m26.year=2015
 m26.brand_id=b2.id
-m26.tags='Drama • Comedy • Fantasy'
+m26.tags='Drama, Comedy, Fantasy'
 m26.topic='Emotional'
+m26.cast='Amy Poehler, Phyllis Smith, Richard Kind, Kaitlyn Dias'
 m26.save! 
 
 m27=Movie.new
@@ -402,8 +427,9 @@ m27.runtime='1h 44m'
 m27.rating='PG'
 m27.year=2017
 m27.brand_id=b2.id
-m27.tags='Musical • Comedy • Adventure'
+m27.tags='Musical, Comedy, Adventure'
 m27.topic='Heartfelt'
+m27.cast='Anthony Gonzalez, Gael Garcia Bernal, Benhamin Bratt, Alanna Ubach'
 m27.save!
 
 m30=Movie.new
@@ -413,8 +439,9 @@ m30.runtime='2h 2m'
 m30.rating='PG-13'
 m30.year=2014
 m30.brand_id=b3.id
-m30.tags='Sci-Fi • Comedy • Adventure'
+m30.tags='Sci-Fi, Comedy, Adventure'
 m30.topic='Exciting'
+m30.cast='Chris Pratt, Zoe Saldana, Dave Bautista, Bradley Cooper'
 m30.save!
 
 m29=Movie.new
@@ -424,8 +451,9 @@ m29.runtime='1 Season'
 m29.rating='TV-14'
 m29.year=2021
 m29.brand_id=b3.id
-m29.tags='Mystery • Comedy • Action'
+m29.tags='Mystery, Comedy, Action'
 m29.topic='Mind-Bending'
+m29.cast='Elizabeth Olsen, Paul Bettany, Kathryn Hahn, Kat Dennings'
 m29.save!
 
 m28=Movie.new
@@ -435,8 +463,9 @@ m28.runtime='2h 30m'
 m28.rating='PG-13'
 m28.year=2016
 m28.brand_id=b3.id
-m28.tags='Action • Drama • Sci-Fi'
+m28.tags='Action, Drama, Sci-Fi'
 m28.topic='Intense'
+m28.cast='Chris Evans, Robert Downey Jr., Sebastian Stan, Anthony Mackie'
 m28.save!
 
 m31=Movie.new
@@ -446,8 +475,9 @@ m31.runtime='2h 12m'
 m31.rating='PG-13'
 m31.year=2017
 m31.brand_id=b3.id
-m31.tags='Comedy • Action • Fantasy'
+m31.tags='Comedy, Action, Fantasy'
 m31.topic='Action-Packed'
+m31.cast='Chris Hemsworth, Tom Hiddleston, Cate Blanchett, Tessa Thompson'
 m31.save!
 
 m32=Movie.new
@@ -457,8 +487,9 @@ m32.runtime='1h 56m'
 m32.rating='PG-13'
 m32.year=2016
 m32.brand_id=b3.id
-m32.tags='Drama • Comedy • Fantasy'
+m32.tags='Drama, Comedy, Fantasy'
 m32.topic='Mind-Bending'
+m32.cast='Benedict Cumberbatch, Rachel McAdams, Benedict Wong, Tilda Swinton'
 m32.save!
 
 m33=Movie.new
@@ -468,8 +499,9 @@ m33.runtime='2h 5m'
 m33.rating='PG-13'
 m33.year=2010
 m33.brand_id=b3.id
-m33.tags='Action • Comedy • Sci-Fi'
+m33.tags='Action, Comedy, Sci-Fi'
 m33.topic='Thrilling'
+m33.cast='Robert Downey Jr., Jon Favreau, Gwyneth Paltrow, Don Cheadle'
 m33.save!
 
 m44=Movie.new
@@ -479,8 +511,9 @@ m44.runtime='2 Seasons'
 m44.rating='TV-14'
 m44.year=2019
 m44.brand_id=b4.id
-m44.tags='Action • Sci-Fi • Drama'
+m44.tags='Action, Sci-Fi, Drama'
 m44.topic='Forceful'
+m44.cast='Pedro Pascal, Gina Carano, Ming-Na Wen, Giancarlo Esposito'
 m44.save!
 
 m34=Movie.new
@@ -490,8 +523,9 @@ m34.runtime='2h 4m'
 m34.rating='PG'
 m34.year=1977
 m34.brand_id=b4.id
-m34.tags='Action • Sci-Fi • Drama'
+m34.tags='Action, Sci-Fi, Drama'
 m34.topic='Forceful'
+m34.cast='Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guinness'
 m34.save!
 
 m35=Movie.new
@@ -501,8 +535,9 @@ m35.runtime='2h 22m'
 m35.rating='PG'
 m35.year=2002
 m35.brand_id=b4.id
-m35.tags='Action • Sci-Fi • Romance'
+m35.tags='Action, Sci-Fi, Romance'
 m35.topic='Forceful'
+m35.cast='Hayden Christensen, Natalie Portman, Ewan McGregor, Christopher Lee'
 m35.save!
 
 m36=Movie.new
@@ -512,8 +547,9 @@ m36.runtime='2h 14m'
 m36.rating='PG'
 m36.year=1983
 m36.brand_id=b4.id
-m36.tags='Action • Sci-Fi • Drama'
+m36.tags='Action, Sci-Fi, Drama'
 m36.topic='Forceful'
+m36.cast='Mark Hamill, Carrie Fisher, Harrison Ford, Ian McDiarmid'
 m36.save!
 
 m37=Movie.new
@@ -523,8 +559,9 @@ m37.runtime='2h 16m'
 m37.rating='PG'
 m37.year=1999
 m37.brand_id=b4.id
-m37.tags='Action • Sci-Fi • Drama'
+m37.tags='Action, Sci-Fi, Drama'
 m37.topic='Forceful'
+m37.cast='Liam Neeson, Jake Lloyd, Ewan McGregor, Natalie Portman'
 m37.save!
 
 m38=Movie.new
@@ -534,8 +571,9 @@ m38.runtime='2 Seasons'
 m38.rating='PG'
 m38.year=2021
 m38.brand_id=b5.id
-m38.tags='Reality • Family • Documentary'
+m38.tags='Reality, Family, Documentary'
 m38.topic='Feel-Good'
+m38.cast='Jeff Goldblum'
 m38.save!
 
 m40=Movie.new
@@ -545,8 +583,9 @@ m40.runtime='1 Season'
 m40.rating='TV-PG'
 m40.year=2021
 m40.brand_id=b5.id
-m40.tags='Documentary • Animals • Nature'
+m40.tags='Documentary, Animals, Nature'
 m40.topic='Heartfelt'
+m40.cast='Tracee Ellis Ross'
 m40.save!
 
 m13=Movie.new
@@ -556,8 +595,9 @@ m13.runtime='1 Season'
 m13.rating='TV-14'
 m13.year=2020
 m13.brand_id=b5.id
-m13.tags='Documentary • Science • History'
+m13.tags='Documentary, Science, History'
 m13.topic='Insightful'
+m13.cast='Neil deGrasse Tyson, Brendan Bradley, Matthew Jayson, Viggo Mortensen'
 m13.save!
 
 m41=Movie.new
@@ -567,8 +607,9 @@ m41.runtime='44m'
 m41.rating='TV-PG'
 m41.year=2020
 m41.brand_id=b5.id
-m41.tags='Documentary • Animals • Nature'
+m41.tags='Documentary, Animals, Nature'
 m41.topic='Insightful'
+m41.cast='Sharks'
 m41.save!
 
 
@@ -579,8 +620,9 @@ m43.runtime='2h 16m'
 m43.rating='PG-13'
 m43.year=2015
 m43.brand_id=b4.id
-m43.tags='Action • Sci-Fi • Drama'
+m43.tags='Action, Sci-Fi, Drama'
 m43.topic='Forceful'
+m43.cast='Daisy Ridley, Adam Driver, John Boyega, Oscar Isaac'
 m43.save!
 
 
@@ -591,8 +633,9 @@ m45.runtime='8 Seasons'
 m45.rating='TV-14'
 m45.year=2020
 m45.brand_id=b5.id
-m45.tags='Game Show • Family • Kids'
+m45.tags='Game Show, Family, Kids'
 m45.topic='Exciting'
+m45.cast='Keegan-Michael Key, Neil Patrick Harris, Cara Santa Maria'
 m45.save!
 
 m46=Movie.new
@@ -602,8 +645,9 @@ m46.runtime='6 Seasons'
 m46.rating='TV-G'
 m46.year=2011
 m46.brand_id=b5.id
-m46.tags='Reality • Family • Animals'
+m46.tags='Reality, Family, Animals'
 m46.topic='Heartfelt'
+m46.cast='Cesar Millan, Shera Bechard, Ed McMahon, Paul Dini'
 m46.save!
 
 m15=Movie.new
@@ -613,8 +657,9 @@ m15.runtime='1 Season'
 m15.rating='TV-PG'
 m15.year=2016
 m15.brand_id=b5.id
-m15.tags='Documentary • Geography • Drama'
+m15.tags='Documentary, Geography, Drama'
 m15.topic='Intense'
+m15.cast='Chris Browning, Brett Zimmerman, Walter Fauntleroy, Amber Midthunder' 
 m15.save! 
 
 puts "Movies finished!"
@@ -1107,9 +1152,5 @@ puts "Attaching Movie 1..."
 # m41.movie.attach(io: mMovie41, filename: 'm41.mp4')
 # 
 puts "Movie 41 Finished!"
-
-
-
-
 puts "Movies attached!"
 puts "ALL DONE!"

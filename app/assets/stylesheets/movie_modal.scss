@@ -17,6 +17,11 @@
   background: #1d1c27;
 }
 
+.movie-modal {
+  color: white;
+  font-family: 'Open Sans';
+}
+
 .modal-movie {
   background-size: cover;
   display: inline-block;
@@ -28,4 +33,32 @@
   font-family: 'Open Sans';
   font-size: 1.35vw;
   line-height: 2vw;
+}
+
+.movie-modal-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-modal-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-modal-bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-modal-right {
+  list-style: none;
+}
+
+.movie-modal-info {
+  display: flex;
+  flex-direction: row;
+
+  h1 {
+    color: green;
+  }
 }

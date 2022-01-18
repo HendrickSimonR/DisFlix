@@ -3,6 +3,7 @@
 # Table name: movies
 #
 #  id          :bigint           not null, primary key
+#  cast        :string
 #  description :text             not null
 #  rating      :string           not null
 #  runtime     :string           not null
@@ -19,7 +20,7 @@
 #  index_movies_on_title  (title)
 #
 class Movie < ApplicationRecord
-  validates :title, :description, :runtime, :rating, :year, :brand_id, :tags, :topic, presence: true
+  validates :title, :description, :runtime, :rating, :year, :brand_id, :tags, :topic, :cast, presence: true
 
   belongs_to :brands,
     class_name: :Brand,

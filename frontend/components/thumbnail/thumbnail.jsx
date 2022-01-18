@@ -56,7 +56,7 @@ class Thumbnail extends React.Component {
     // console.log('THUMBPROPS', this.props)
 
     if (tags !== undefined) {
-      let separated = tags.split('•');
+      let separated = tags.split(', ');
       // console.log('TAGS', separateTags)
 
       tag1 = separated[0];

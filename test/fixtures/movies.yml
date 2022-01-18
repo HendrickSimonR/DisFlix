@@ -3,6 +3,7 @@
 # Table name: movies
 #
 #  id          :bigint           not null, primary key
+#  cast        :string
 #  description :text             not null
 #  rating      :string           not null
 #  runtime     :string           not null

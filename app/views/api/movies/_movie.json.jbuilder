@@ -1,4 +1,4 @@
-json.extract! movie, :id, :title, :description, :runtime, :rating, :year, :brand_id, :tags, :topic
+json.extract! movie, :id, :title, :description, :runtime, :rating, :year, :brand_id, :tags, :topic, :cast
 json.image_url url_for(movie.image)
 # json.movie_url url_for(movie.movie)
 # json.movie_url url_for(movie.index_movie)

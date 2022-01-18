@@ -1,4 +1,6 @@
 import React from "react";
+import LikeButtonsContainer from '../thumbnail/like_buttons_container';
+import WatchlistButtonContainer from '../thumbnail/watchlist_button_container';
 import { withRouter } from 'react-router';
 
 class MovieModal extends React.Component {
@@ -8,11 +10,11 @@ class MovieModal extends React.Component {
     this.state = { movie: null }
   }
 
-  componentDidMount() {
-    this.props.getMovie(this.props.movie);
-    // console.log('film', film)
-    // this.setState 
-  }
+  // componentDidMount() {
+  //   this.props.getMovie(this.props.movie);
+  //   // console.log('film', film)
+  //   // this.setState 
+  // }
 
   render() {
     let film = null;
@@ -43,9 +45,28 @@ class MovieModal extends React.Component {
         <video className="modal-movie" poster={film.image_url}>
           <source src={this.props.movie.movie_url} type="video/mp4" /> 
         </video>
-
-        <div className="modal-description">
-          {film.description}
+        
+        <div className="movie-modal-buttons">
+          <h2><span class="material-icons">play_arrow</span></h2>
+          <WatchlistButtonContainer />
+          <LikeButtonsContainer />
+        </div>
+        <div className="movie-modal-bottom">
+          <div className="movie-modal-left">
+            <div className="movie-modal-info">
+              <h1>100% Match</h1>
+              <h2>{film.rating}</h2>
+              <h2>{film.runtime}</h2>
+            </div>
+            <div className="modal-description">
+              {film.description}
+            </div>
+          </div>
+          <div className="movie-modal-right">
+            <div>Cast: <span>{film.cast}, more</span></div>
+            <div><span>Genres:</span> {film.tags}</div>
+            <div><span>This feature is:</span> {film.topic}</div>
+          </div>
         </div>
       </div>
     )
