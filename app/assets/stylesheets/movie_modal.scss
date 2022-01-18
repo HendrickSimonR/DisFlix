@@ -10,11 +10,13 @@
 
 .modal-child {
   position: absolute;
-  top: 40vh;
+  top: 54%;
   left: 50vw;
-  width: 60%;
+  height: 98%;
+  min-width: 850px;
   transform: translate(-50%, -50%);
   background: #1d1c27;
+  border-radius: 7px;
 }
 
 .movie-modal {
@@ -26,6 +28,24 @@
   background-size: cover;
   display: inline-block;
   width: 100%;
+  border-radius: 7px;
+}
+
+.modal-movie-player {
+  height: auto;
+}
+
+.modal-movie-shadow {
+  position: absolute;
+  width: 100%;
+  height: 481.13px;
+  box-shadow: inset 0px -80px 44px -18px #1d1c27;
+  top: 0;
+  left: 0;
+}
+
+.movie-modal-details {
+  padding: 0% 5% 3%;
 }
 
 .modal-description {
@@ -36,6 +56,13 @@
 }
 
 .movie-modal-buttons {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 17vh;
+}
+
+.movie-modal-play {
   display: flex;
   flex-direction: row;
 }
@@ -51,7 +78,11 @@
 }
 
 .movie-modal-right {
-  list-style: none;
+  color: rgb(90, 90, 90);
+
+  span {
+    color: white;
+  }
 }
 
 .movie-modal-info {

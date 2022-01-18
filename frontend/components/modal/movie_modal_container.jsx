@@ -4,12 +4,13 @@ import { closeModal } from '../../actions/modal_actions';
 import MovieModal from './movie_modal';
 
 const mSTP = (state) => {
-  // console.log('MODAL STATE', state)
+  console.log('MODAL STATE', state)
   return {
     movies: state.movies,
     likes: state.likes,
     dislikes: state.dislikes,
-    watchlist: state.watchlist
+    watchlist: state.watchlist,
+    user: state.session.id
   }
 }
 
