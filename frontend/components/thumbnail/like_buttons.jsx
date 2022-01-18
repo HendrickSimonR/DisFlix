@@ -92,7 +92,7 @@ class LikeButtons extends React.Component {
 
 
     return (
-      <div className="like-buttons">
+      <div className={this.props.modalButton ? "like-buttons modal" : "like-buttons"}>
         <div>
           {this.liked === true ? filledThumbUp : blankThumbUp }
         </div>

@@ -3,6 +3,8 @@ export const CLOSE_MODAL = 'CLOSE_MODAL';
 
 export const openModal = modal => {
   // console.log('HOOOOPLAGH')
+  document.body.style.top = `-${window.scrollY}px`;
+  document.body.style.position = 'fixed';
 
   return {
     type: OPEN_MODAL,
@@ -11,6 +13,11 @@ export const openModal = modal => {
 };
 
 export const closeModal = () => {
+  const scrollY = document.body.style.top;
+  document.body.style.position = '';
+  document.body.style.top = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
   return {
     type: CLOSE_MODAL
   };

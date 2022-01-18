@@ -69,7 +69,7 @@ class WatchlistButton extends React.Component {
     // console.log('MOVIECHECK', this.props.movieCheck, this.props.movieId);
 
     return (
-      <div onClick={this.watchlistButton} className="add-button">
+      <div onClick={this.watchlistButton} className={this.props.modalButton ? "add-button modal" : "add-button"}>
         <p className="material-icons-outlined">
           {/* {this.state.added = 'done'} */}
           {movieCheck === true ? this.state.added = 'done' : this.state.added = 'add'}

@@ -66,11 +66,11 @@ class MovieModal extends React.Component {
           <div className="movie-modal-buttons">
             <div className="movie-modal-buttons-left">
               <div className="movie-modal-play">
-                <h2><span className="material-icons">play_arrow</span></h2>
-                <h2>PLAY</h2>
+                <h1><span className="material-icons-round">play_arrow</span></h1>
+                <h2>Play</h2>
               </div>
-              <WatchlistButtonContainer movieId={film.id} userId={this.props.user} watchlistId={watchlistId} />
-              <LikeButtonsContainer movieId={film.id} user={this.props.user} />
+              <WatchlistButtonContainer modalButton={true} movieId={film.id} userId={this.props.user} watchlistId={watchlistId} />
+              <LikeButtonsContainer modalButton={true} movieId={film.id} user={this.props.user} />
             </div>
 
             <div className="movie-modal-buttons-right">
@@ -84,8 +84,9 @@ class MovieModal extends React.Component {
             <div className="movie-modal-left">
               <div className="movie-modal-info">
                 <h1>100% Match</h1>
+                <h3>{film.year}</h3>
                 <h2>{film.rating}</h2>
-                <h2>{film.runtime}</h2>
+                <h3>{film.runtime}</h3>
               </div>
               <div className="modal-description">
                 {film.description}
