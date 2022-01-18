@@ -99,6 +99,11 @@
   }
 }
 
+.movie-modal-play:hover {
+  cursor: pointer;
+  filter: brightness(0.92);
+}
+
 .movie-modal-buttons {
   display: flex;
   flex-direction: row;
@@ -172,10 +177,10 @@
   top: 6%;
   left: 4%;
   border: 2.2px solid grey;
-  width: 5.4vw;
+  width: 5.6vw;
   position: relative;
   height: 2.5vw;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.31);
 
 
   p {
@@ -184,6 +189,42 @@
   }
 }
 
+.add-button.modal:hover {
+  background: rgba(110, 110, 110, 0.31);
+}
+
 .like-buttons.modal {
   position: relative;
+  left: 10%;
+  
+  .like-button.up {
+    border: 2.2px solid grey;
+    padding-left: 0.55vw;
+    padding-top: 0.6vw;
+    height: 87.8%;
+    width: 83%;
+    position: relative;
+    left: -6%;
+    top: -8.3%;
+    font-size: 1.5vw;
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .like-button.down {
+    border: 2.2px solid grey;
+    padding-left: 0.45vw;
+    padding-top: 0.55vw;
+    height: 90%;
+    width: 93%;
+    position: relative;
+    left: 23.5%;
+    top: -10%;
+    font-size: 1.55vw;
+    background: rgba(0, 0, 0, 0.31);
+  }
+
+  .like-button.up:hover, .like-button.down:hover {
+    border: 2.2px solid white;
+    background: rgba(110, 110, 110, 0.31);
+  }
 }
