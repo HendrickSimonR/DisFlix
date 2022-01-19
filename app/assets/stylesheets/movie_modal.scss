@@ -23,6 +23,7 @@
 .movie-modal {
   color: white;
   font-family: 'Open Sans';
+  transition: all 0.4s ease 0s;
 }
 
 .modal-movie {
@@ -74,6 +75,8 @@
 }
 
 .movie-modal-play {
+  position: relative;
+  top: 4%;
   display: flex;
   flex-direction: row;
   padding: 1% 15% 0% 5%;
@@ -131,6 +134,15 @@
 
   span {
     color: white;
+  } 
+  
+  p {
+    font-style: italic;
+  }
+  
+  p:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 }
 
@@ -176,11 +188,11 @@
 .add-button.modal {
   top: 6%;
   left: 4%;
-  border: 2.2px solid grey;
+  border: 2.2px solid rgb(148, 148, 148);
   width: 5.6vw;
   position: relative;
   height: 2.5vw;
-  background: rgba(0, 0, 0, 0.31);
+  background: rgba(0, 0, 0, 0.45);
 
 
   p {
@@ -190,7 +202,7 @@
 }
 
 .add-button.modal:hover {
-  background: rgba(110, 110, 110, 0.31);
+  background: rgba(95, 95, 95, 0.31);
 }
 
 .like-buttons.modal {
@@ -198,11 +210,11 @@
   left: 10%;
   
   .like-button.up {
-    border: 2.2px solid grey;
-    padding-left: 0.55vw;
+    border: 2.2px solid rgb(148, 148, 148);
+    padding-left: 0.5vw;
     padding-top: 0.6vw;
     height: 87.8%;
-    width: 83%;
+    width: 89%;
     position: relative;
     left: -6%;
     top: -8.3%;
@@ -211,7 +223,7 @@
   }
 
   .like-button.down {
-    border: 2.2px solid grey;
+    border: 2.2px solid rgb(148, 148, 148);
     padding-left: 0.45vw;
     padding-top: 0.55vw;
     height: 90%;
@@ -220,11 +232,52 @@
     left: 23.5%;
     top: -10%;
     font-size: 1.55vw;
-    background: rgba(0, 0, 0, 0.31);
+    background: rgba(0, 0, 0, 0.45);
   }
 
   .like-button.up:hover, .like-button.down:hover {
     border: 2.2px solid white;
-    background: rgba(110, 110, 110, 0.31);
+    background: rgba(95, 95, 95, 0.31);
   }
+}
+
+.modal-volume-on {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.45);
+  position: relative;
+  top: 4%;
+  right: 25%;
+  font-size: 1.4vw;
+  border: 2.2px solid grey;
+  border-radius: 50%;
+  padding-top: 0.5vw;
+  padding-left: 0.45vw;
+  padding-right: 0.5vw;
+  padding-bottom: 0.45vw;
+}
+
+.modal-volume-on:hover {
+  border: 2.2px solid white;
+  background: rgba(95, 95, 95, 0.31);
+}
+
+.close-modal {
+  /* background: white; */
+  color: rgb(10, 10, 10);
+  position: fixed;
+  font-size: 2.6vw;
+  top: 2.5%;
+  right: 2%;
+  z-index: 5;
+  cursor: pointer;
+  /* border-radius: 21%; */
+}
+
+#close-fill {
+  color: white;
+  position: fixed;
+  top: 3.2%;
+  right: 2.4%;
+  font-size: 2vw;
+  z-index: 3;
 }

@@ -61,6 +61,15 @@ class MovieModal extends React.Component {
           </video>
           <div className="modal-movie-shadow"></div>
         </div>
+
+        <div>
+          <span onClick={this.props.closeModal} className="material-icons-sharp close-modal">
+            cancel
+          </span>
+          <span onClick={this.props.closeModal} className="material-icons-round" id="close-fill">
+            circle
+          </span>
+        </div>
         
         <div className="movie-modal-details">
           <div className="movie-modal-buttons">
@@ -74,7 +83,7 @@ class MovieModal extends React.Component {
             </div>
 
             <div className="movie-modal-buttons-right">
-              <span className="material-icons-round">
+              <span className="material-icons-round modal-volume-on">
                 volume_up
               </span>
             </div>
@@ -93,7 +102,7 @@ class MovieModal extends React.Component {
               </div>
             </div>
             <div className="movie-modal-right">
-              <div>Cast: <span>{film.cast}, more</span></div>
+              <div>Cast: <span>{film.cast}</span></div>
               <div>Genres: <span>{film.tags}</span></div>
               <div>This feature is: <span>{film.topic}</span></div>
             </div>

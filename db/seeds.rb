@@ -309,7 +309,7 @@ m17.year=2006
 m17.brand_id=b1.id
 m17.tags='Musical, Comedy, Drama'
 m17.topic='Fun'
-m17.cast='Zac Efron, Vanesa Hidgens, Ashley Tisdale, Corbin Bleu'
+m17.cast='Zac Efron, Vanesa Hudgens, Ashley Tisdale, Corbin Bleu'
 m17.save! 
 
 m16=Movie.new
