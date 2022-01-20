@@ -21,9 +21,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/signin" component={SigninFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      {/* <ProtectedRoute exact path="/watchlist" component={WatchlistContainer} /> */}
       <ProtectedRoute path="/home" component={HomeContainer} />
-      {/* <ProtectedRoute path="/brands/:id" component={BrandContainer} /> */}
       <ProtectedRoute path="/disney" component={AllSorted.disney} />
       <ProtectedRoute path="/pixar" component={AllSorted.pixar} />
       <ProtectedRoute path="/marvel" component={AllSorted.marvel} />
