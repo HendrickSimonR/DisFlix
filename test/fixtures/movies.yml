@@ -5,6 +5,7 @@
 #  id          :bigint           not null, primary key
 #  cast        :string
 #  description :text             not null
+#  keywords    :text
 #  rating      :string           not null
 #  runtime     :string           not null
 #  tags        :string           not null
