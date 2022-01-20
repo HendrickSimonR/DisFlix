@@ -17,17 +17,15 @@ class ProfileMenu extends React.Component {
 
   render() {
     return (
-      <div className="profile-menu-container">
+      <div className="profile-menu-container hidden" id="profile-menu">
         <div className="profile-menu">
 
           <ul className="profile-links">
-            <li><a href="https://github.com/hendricksimonr/" target="_blank">
+            <li>
+              <a href="https://github.com/hendricksimonr/" target="_blank">
               <div className="github-link">GitHub</div></a>
             </li>
-          </ul>
-
-          <ul className="logout-button">
-            <li onClick={this.handleSignout} className="logout">Sign out</li>
+            <li onClick={this.handleSignout} className="logout-button">Sign out</li>
           </ul>
         </div>
       </div>

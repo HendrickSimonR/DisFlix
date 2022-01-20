@@ -2,6 +2,7 @@ import React from 'react';
 import SigninFormContainer from './session/signin_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import HomeContainer from './home/home_container';
+import SearchContainer from './search/search_container';
 import NavContainer from './home/nav/nav_container';
 import AllSorted from './sorted/sorted_container';
 import SplashPage from './splash/splash_page';
@@ -28,6 +29,7 @@ const App = () => (
       <ProtectedRoute path="/starwars" component={AllSorted.starWars} />
       <ProtectedRoute path="/natgeo" component={AllSorted.natGeo} />
       <ProtectedRoute path="/watchlist" component={AllSorted.watchlist} />
+      <ProtectedRoute path="/search/:search" component={SearchContainer} />
     </Switch>
     {/* <Footer/> */}
   </div>

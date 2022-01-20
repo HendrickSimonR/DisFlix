@@ -7,9 +7,11 @@ import { selectMovies } from '../../selectors/movie_selector';
 
 const mSTP = (state, { match }) => {
   console.log('SEARCHSTATE', state)
-  const searchTerm = match.params.searchTerm;
+  console.log('match', match)
+  const search = match.params.search;
+  
   return {
-    searchTerm,
+    search,
     movies: selectMovies(state),
     watchlist: state.watchlist,
     likes: state.likes,
@@ -18,7 +20,7 @@ const mSTP = (state, { match }) => {
 };
 
 const mDTP = dispatch => ({
-  fetchMovies: () => dispatch(fetchMovies())
+  getMovies: () => dispatch(getMovies())
 })
 
 export default connect(mSTP, mDTP)(Search);

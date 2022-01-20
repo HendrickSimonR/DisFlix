@@ -42,12 +42,13 @@ class Search extends React.Component {
     this.props.movies.forEach(movie => {
       if(searchMovies(this.props.search, movie) === true) {
         this.moviesFound.push(movie);
+        console.log('MOVIE SEARCHED', this.moviesFound)
       }
     })
 
     return(
-      <div className="searched-movies">
-        <ul className="search-rows">
+      <div className="films-container">
+        <ul className="films-rows">
           {this.moviesFound.map((movie) => (
             <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
           ))}
