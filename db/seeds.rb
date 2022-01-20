@@ -111,7 +111,7 @@ m4.brand_id=b2.id
 m4.tags='Comedy, Fantasy, Adventure'
 m4.topic='Heartfelt'
 m4.cast='John Goodman, Billy Crystal, Steve Buscemi, Mary Gibbs'
-m4.keywords='Pixar, Mike Wazowski, Sullivan, Sully, Boo, 2319, Randall, Abominable, Snowman, Himalayas'
+m4.keywords='Pixar, Mike Wazowski, Sullivan, Sully, Boo, 2319, Randall, Abominable, Snowman, Himalayas, Doors, Scare Floor'
 m4.save! 
 
 m5=Movie.new
@@ -232,7 +232,7 @@ m10.brand_id=b4.id
 m10.tags='Action, Sci-Fi, Drama'
 m10.topic='Forceful'
 m10.cast='Mark Hamill, Harrison Ford, Carrie Fisher, Frank Oz'
-m10.keywords='Lucasfilm, C3PO, R2D2, George Lucas, Star Wars, Space, Chewbacca, War, Darth Vader, Sidious, Yoda, Luke Skywalker, Princess Leia, Han Solo, Lando Calrissian, Obi-Wan Kenobi, I Am Your Father, Lightsabers, Force'
+m10.keywords='Lucasfilm, C3PO, R2D2, Episode 5, V, George Lucas, Star Wars, Space, Chewbacca, War, Darth Vader, Sidious, Yoda, Luke Skywalker, Princess Leia, Han Solo, Lando Calrissian, Obi-Wan Kenobi, I Am Your Father, Lightsabers, Force'
 m10.save! 
 
 m12=Movie.new
@@ -559,7 +559,7 @@ m34.brand_id=b4.id
 m34.tags='Action, Sci-Fi, Drama'
 m34.topic='Forceful'
 m34.cast='Mark Hamill, Carrie Fisher, Harrison Ford, Alec Guinness'
-m34.keywords='George Lucas, Lucasfilm, C3PO, R2D2, Star Wars, Force, Lightsabers, Space, Luke, Ben Kenobi, Obi-Wan Kenobi, Princess Leia, Han Solo, Chewbacca, Darth Vader, Death Star, Sidious, War'
+m34.keywords='George Lucas, Episode 4, IV, Lucasfilm, C3PO, R2D2, Star Wars, Force, Lightsabers, Space, Luke, Ben Kenobi, Obi-Wan Kenobi, Princess Leia, Han Solo, Chewbacca, Darth Vader, Death Star, Sidious, War'
 m34.save!
 
 m35=Movie.new
@@ -572,7 +572,7 @@ m35.brand_id=b4.id
 m35.tags='Action, Sci-Fi, Romance'
 m35.topic='Forceful'
 m35.cast='Hayden Christensen, Natalie Portman, Ewan McGregor, Christopher Lee, Samuel L. Jackson'
-m35.keywords='George Lucas, Lucasfilm, C3PO, R2D2, Star Wars, Lightsabers, Space, Romance, Love, Sand, Obi-Wan Kenobi, Yoda, Count Dooku, Mace Windu, C3PO, R2D2'
+m35.keywords='George Lucas, Episode 2, II, Lucasfilm, C3PO, R2D2, Star Wars, Lightsabers, Space, Romance, Love, Sand, Obi-Wan Kenobi, Yoda, Count Dooku, Mace Windu, C3PO, R2D2'
 m35.save!
 
 m36=Movie.new
@@ -585,7 +585,7 @@ m36.brand_id=b4.id
 m36.tags='Action, Sci-Fi, Drama'
 m36.topic='Forceful'
 m36.cast='Mark Hamill, Carrie Fisher, Harrison Ford, Ian McDiarmid, James Earl Jones, Frank Oz'
-m36.keywords='George Lucas, Lucasfilm, C3PO, R2D2, Star Wars, Lightsabers, Space, War, Darth Vader, Sidious, Obi-Wan Kenobi, Yoda, Han Solo, Princess Leia'
+m36.keywords='George Lucas, Episode 6, VI, Lucasfilm, C3PO, R2D2, Star Wars, Lightsabers, Space, War, Darth Vader, Sidious, Obi-Wan Kenobi, Yoda, Han Solo, Princess Leia'
 m36.save!
 
 m37=Movie.new
@@ -598,7 +598,7 @@ m37.brand_id=b4.id
 m37.tags='Action, Sci-Fi, Drama'
 m37.topic='Forceful'
 m37.cast='Liam Neeson, Jake Lloyd, Ewan McGregor, Natalie Portman'
-m37.keywords='Star Wars, George Lucas, Lucasfilm, C3PO, R2D2, Lightsabers, Racing, Race, Duel of the Fates, Obi-Wan Kenobi, Padme, Yoda, Mace Windu'
+m37.keywords='Star Wars, Episode 1, I, George Lucas, Lucasfilm, C3PO, R2D2, Lightsabers, Racing, Race, Duel of the Fates, Obi-Wan Kenobi, Padme, Yoda, Mace Windu'
 m37.save!
 
 m38=Movie.new
@@ -611,7 +611,7 @@ m38.brand_id=b5.id
 m38.tags='Reality, Family, Documentary'
 m38.topic='Feel-Good'
 m38.cast='Jeff Goldblum'
-m38.keywords='National Geographic, Natgeo, Adventure, Series, Thought-Provoking'
+m38.keywords='National Geographic, Natgeo, Nat Geo, Adventure, Series, Thought-Provoking'
 m38.save!
 
 m40=Movie.new
@@ -624,7 +624,7 @@ m40.brand_id=b5.id
 m40.tags='Documentary, Animals, Nature'
 m40.topic='Heartfelt'
 m40.cast='Tracee Ellis Ross'
-m40.keywords='National Geographic, Natgeo, Feel-Good, Animals, Nature, Life'
+m40.keywords='National Geographic, Natgeo, Nat Geo, Feel-Good, Animals, Nature, Life'
 m40.save!
 
 m13=Movie.new
@@ -637,7 +637,7 @@ m13.brand_id=b5.id
 m13.tags='Documentary, Science, History'
 m13.topic='Insightful'
 m13.cast='Neil deGrasse Tyson, Brendan Bradley, Matthew Jayson, Viggo Mortensen'
-m13.keywords='National Geographic, Natgeo, Space, Science, Explore, Exploration'
+m13.keywords='National Geographic, Natgeo, Nat Geo, Space, Science, Explore, Exploration'
 m13.save!
 
 m41=Movie.new
@@ -650,7 +650,7 @@ m41.brand_id=b5.id
 m41.tags='Documentary, Animals, Nature'
 m41.topic='Insightful'
 m41.cast='Sharks'
-m41.keywords='National Geographic, Natgeo, Ocean, Sea, Sharks, Adventure'
+m41.keywords='National Geographic, Natgeo, Nat Geo, Ocean, Sea, Sharks, Adventure'
 m41.save!
 
 
@@ -664,7 +664,7 @@ m43.brand_id=b4.id
 m43.tags='Action, Sci-Fi, Drama'
 m43.topic='Forceful'
 m43.cast='Daisy Ridley, Adam Driver, John Boyega, Oscar Isaac'
-m43.keywords='Star Wars, George Lucas, Lucasfilm, Lightsabers, BB-8, Space, War, Kylo Renn, Empire'
+m43.keywords='Star Wars, Episode 7, VII, George Lucas, Lucasfilm, Lightsabers, BB-8, Space, War, Kylo Renn, Empire'
 m43.save!
 
 
@@ -678,7 +678,7 @@ m45.brand_id=b5.id
 m45.tags='Game Show, Family, Kids'
 m45.topic='Exciting'
 m45.cast='Keegan-Michael Key, Neil Patrick Harris, Cara Santa Maria'
-m45.keywords='Series, Fun, National Geographic, Natgeo'
+m45.keywords='Series, Fun, National Geographic, Natgeo, Nat Geo'
 m45.save!
 
 m46=Movie.new
@@ -691,7 +691,7 @@ m46.brand_id=b5.id
 m46.tags='Reality, Family, Animals'
 m46.topic='Heartfelt'
 m46.cast='Cesar Millan, Shera Bechard, Ed McMahon, Paul Dini'
-m46.keywords='Feel-Good, National Geographic, Natgeo, Dogs, Animals, Series'
+m46.keywords='Feel-Good, National Geographic, Natgeo, Nat Geo, Dogs, Animals, Series'
 m46.save!
 
 m15=Movie.new
@@ -704,7 +704,7 @@ m15.brand_id=b5.id
 m15.tags='Documentary, Geography, Drama'
 m15.topic='Intense'
 m15.cast='Chris Browning, Brett Zimmerman, Walter Fauntleroy, Amber Midthunder' 
-m15.keywords='Explore, Adventure, Journey, National Geographic, Natgeo, Travel, Snow'
+m15.keywords='Explore, Adventure, Journey, National Geographic, Nat Geo, Natgeo, Travel, Snow'
 m15.save! 
 
 puts "Movies finished!"
