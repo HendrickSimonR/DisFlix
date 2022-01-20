@@ -48,11 +48,17 @@ class Search extends React.Component {
 
     return(
       <div className="films-container">
-        <ul className="films-rows">
+        {this.moviesFound.length === 0 ?
+          <div className="nothing-container">
+            <img src={window.surprised} className="mickey-surprised" />
+            <h1>Try your search again!</h1>
+          </div>
+        : <ul className="films-rows">
           {this.moviesFound.map((movie) => (
             <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
-          ))}
+            ))}
         </ul>
+        }
       </div>
     )
   }

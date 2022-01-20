@@ -64,4 +64,16 @@
   font-size: 1.04vw;
 }
 
+.nothing-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  left: 16%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  top: 8%;
+  font-family: 'Open Sans';
+  font-size: 2.5vw;
+}
 
