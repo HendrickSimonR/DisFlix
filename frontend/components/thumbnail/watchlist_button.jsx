@@ -57,12 +57,13 @@ class WatchlistButton extends React.Component {
           movieCheck = true;
           break;
         }
+
+        // if (window.location.href.includes('watchlist') && ) {
+        //   movieCheck = true;
+        // } 
       }
     }
 
-    if (window.location.href.includes('watchlist')) {
-      movieCheck = true;
-    } 
     
     // console.log('WATCHLIST ID', this.props.watchlistId)
     // console.log('WTACHLISTBUTTONWATCHLIST', this.props);

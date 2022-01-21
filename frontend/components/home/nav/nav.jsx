@@ -39,7 +39,7 @@ class Nav extends React.Component {
 
     
     return(
-      <div className="nav-bar" id="nav-bar">
+      <div className="nav-bar-hidden" id="nav-bar">
         <div className="nav-left">
           <Link to="/home">
             <img src={window.logo} className="nav-logo" />

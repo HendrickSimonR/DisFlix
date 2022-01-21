@@ -78,7 +78,7 @@ class MovieModal extends React.Component {
                 <h1><span className="material-icons-round">play_arrow</span></h1>
                 <h2>Play</h2>
               </div>
-              <WatchlistButtonContainer modalButton={true} movieId={film.id} userId={this.props.user} watchlistId={watchlistId} />
+              <WatchlistButtonContainer modalButton={true} movieId={film.id} userId={this.props.user} watchlistId={watchlistId} watchlist={this.props.watchlist} />
               <LikeButtonsContainer modalButton={true} movieId={film.id} user={this.props.user} />
             </div>
 

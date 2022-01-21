@@ -22,6 +22,8 @@ class Watchlist extends React.Component {
     let user = this.props.user;
     let watchlistComponent = <div></div>;
 
+    // console.log('WATCHLIST PROPS', this.props)
+
     if (this.props.watchlist) {
       for (let i = 0; i < this.props.watchlist.length; i++) {
         let watchlistMovie = this.props.watchlist[i];
@@ -38,7 +40,7 @@ class Watchlist extends React.Component {
       watchlistComponent =
         <ul className="films-rows">
           {this.watchlist.map((movie) => (
-            <ThumbnailContainer user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
+            <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
           ))}
         </ul>
     }

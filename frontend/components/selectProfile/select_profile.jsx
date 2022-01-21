@@ -14,8 +14,11 @@ class SelectProfile extends React.Component {
   }
 
   hideSelect(e) {
+    let nav = document.querySelector('#nav-bar');
     let selectScreen = document.querySelector('.select-profile-container');
     selectScreen.classList.add('hidden');
+    nav.classList.remove('nav-bar-hidden');
+    nav.classList.add('nav-bar');
     window.hideProfile = true;
   }
 
