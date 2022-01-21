@@ -39,6 +39,10 @@ class User < ApplicationRecord
     through: :watchlists,
     source: :movie  
 
+  has_many :profiles, 
+    foreign_key: :user_id,
+    class_name: :Profile
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user

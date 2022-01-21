@@ -12,10 +12,13 @@
 #
 #  index_profiles_on_user_id  (user_id)
 #
-require 'test_helper'
+class Profile < ApplicationRecord
+  validates :user_id, :profile_id, presence: true
+  validates :profile_name, presence: true, uniqueness: { scope: :user_id }
 
-class ProfileTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  has_one_attached :avatar
+  
+  belongs_to :user,
+    foreign_key: :user_id,
+    class_name: :User
 end

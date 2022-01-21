@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_20_033609) do
+ActiveRecord::Schema.define(version: 2022_01_21_191224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,9 +80,6 @@ ActiveRecord::Schema.define(version: 2022_01_20_033609) do
   create_table "profiles", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "profile_name", null: false
-    t.string "maturity_setting", default: "NC-17", null: false
-    t.boolean "autoplay_next_episode", default: true, null: false
-    t.boolean "autoplay_preview", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_profiles_on_user_id"

@@ -1,22 +1,11 @@
-import {
-  RECEIVE_SESSION_ERRORS,
-  RECEIVE_CURRENT_USER,
-  REMOVE_ERRORS
-} from '../actions/session_actions';
+import { combineReducers } from 'redux';
+import profileErrorsReducer from './profile_errors_reducer';
+import sessionErrorsReducer from './session_errors_reducer';
 
-const errorsReducer = (oldState = [], action) => {
-  Object.freeze(oldState);
 
-  switch (action.type) {
-    case RECEIVE_SESSION_ERRORS:
-      return action.errors;
-    case RECEIVE_CURRENT_USER:
-      return [];
-    case REMOVE_ERRORS:
-      return [];
-    default:
-      return oldState;
-  }
-};
+const errorsReducer = combineReducers({
+  session: sessionErrorsReducer,
+  profile: profileErrorsReducer
+})
 
 export default errorsReducer;

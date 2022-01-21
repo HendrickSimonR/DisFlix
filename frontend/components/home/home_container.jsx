@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { getMovies } from '../../actions/movie_actions'; 
 import { selectMovies } from '../../selectors/movie_selector';
 import { getWatchlist } from '../../actions/watchlist_actions';
+import { getProfiles } from '../../actions/profile_actions';
 
 const mSTP = state => {
   // console.log('STATE', state);
@@ -13,7 +14,8 @@ const mSTP = state => {
     movies: selectMovies(state),
     watchlist: state.watchlist,
     likes: state.likes,
-    dislikes: state.dislikes
+    dislikes: state.dislikes,
+    profiles: state.profiles
 })};
 
 const mDTP = dispatch => ({
@@ -21,7 +23,8 @@ const mDTP = dispatch => ({
   getMovies: () => dispatch(getMovies()),
   getWatchlist: userId => dispatch(getWatchlist(userId)),
   getLikes: userId => dispatch(getLikes(userId)),
-  getDislikes: userId => dispatch(getDislikes(userId))
+  getDislikes: userId => dispatch(getDislikes(userId)),
+  getProfiles: userId => dispatch(getProfiles(userId)) 
 });
 
 export default connect(mSTP, mDTP)(Home);

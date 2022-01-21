@@ -1,3 +1,3 @@
 json.movie do
-    json.partial! '/api/movies/movie', movie: @movie
+  json.partial! '/api/movies/movie', movie: @movie
 end

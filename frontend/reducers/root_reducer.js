@@ -8,6 +8,7 @@ import moviesReducer from './movies_reducer';
 import modalReducer from './modal_reducer';
 import brandsReducer from './brands_reducer';
 import watchlistReducer from './watchlist_reducer';
+import profileReducer from './profile_reducer';
 
 const rootReducer = combineReducers({
   brands: brandsReducer,
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   movies: moviesReducer,
   session: sessionReducer,
   user: usersReducer,
+  profiles: profileReducer,
   watchlist: watchlistReducer
 });
 

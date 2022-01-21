@@ -2,14 +2,11 @@
 #
 # Table name: profiles
 #
-#  id                    :bigint           not null, primary key
-#  autoplay_next_episode :boolean          default(TRUE), not null
-#  autoplay_preview      :boolean          default(TRUE), not null
-#  maturity_setting      :string           default("NC-17"), not null
-#  profile_name          :string           not null
-#  created_at            :datetime         not null
-#  updated_at            :datetime         not null
-#  user_id               :integer          not null
+#  id           :bigint           not null, primary key
+#  profile_name :string           not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  user_id      :integer          not null
 #
 # Indexes
 #

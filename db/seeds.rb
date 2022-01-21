@@ -11,6 +11,8 @@ require 'open-uri'
 User.delete_all
 Movie.delete_all
 Brand.delete_all
+Profile.delete_all
+Watchlist.delete_all
 
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('movies')
@@ -21,6 +23,11 @@ u1=User.new
 u1.username='mickeymouse'
 u1.password='imagination'
 u1.save!
+
+p1=Profile.new(user_id: u1.id, profile_name: "Mickey", maturity_setting: "NC-17", autoplay_next_episode: true, autoplay_preview: true)
+p1avatar = open("#{Rails.root}/app/assets/images/mickey.png")
+p1.avatar.attach(io: p1avatar, filename: " mickey.png")
+p1.save!
 
 #Brands
 b1=Brand.new

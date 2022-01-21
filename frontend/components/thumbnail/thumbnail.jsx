@@ -146,7 +146,7 @@ class Thumbnail extends React.Component {
         id={ disliked === true ? 'disliked' : "" }> 
 
 
-        <video className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} poster={this.props.movie.image_url}>
+        <video className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} poster={this.props.movie.image_url} onClick={this.showMovie}>
           <source src={this.props.movie.movie_url} type="video/mp4" /> 
         </video>
 
