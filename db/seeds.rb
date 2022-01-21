@@ -29,6 +29,9 @@ p1avatar = open("#{Rails.root}/app/assets/images/mickey.png")
 p1.avatar.attach(io: p1avatar, filename: " mickey.png")
 p1.save!
 
+# mPhoto22 = URI.open('https://i.imgur.com/DkbGEIq.jpg') 
+
+
 #Brands
 b1=Brand.new
 b1.name='Disney'

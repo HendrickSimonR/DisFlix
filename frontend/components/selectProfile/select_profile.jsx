@@ -28,6 +28,12 @@ class SelectProfile extends React.Component {
     window.scrollTo(0, 0);
   }
 
+  // selectProfile(pic) {
+  //   window.profilePic = ;
+  //   this.handleScroll();
+  //   this.hideSelect(); 
+  // }
+
   profileMickey(e) {
     window.profilePic = window.mickey;
     this.handleScroll();
@@ -88,8 +94,8 @@ class SelectProfile extends React.Component {
           
           <li>
             <Link className="avatar-container" to="/home">
-              <img src={window.dory} onClick={this.profileDory} className="avatar-hover" />
-              <h2>Dory</h2>
+              <img src={this.profiles[0].avatar} onClick={this.profileMickey} className="avatar-hover" />
+                <h2>{this.profiles[0].profile_name}</h2>
             </Link>
           </li>
 
