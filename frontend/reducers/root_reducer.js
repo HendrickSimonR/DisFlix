@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import avatarsReducer from './avatars_reducer'
 import usersReducer from './users_reducer';
 import errorsReducer from './errors_reducer';
 import sessionReducer from './session_reducer';
@@ -11,6 +12,7 @@ import watchlistReducer from './watchlist_reducer';
 import profileReducer from './profile_reducer';
 
 const rootReducer = combineReducers({
+  avatars: avatarsReducer,
   brands: brandsReducer,
   errors: errorsReducer,
   likes: likesReducer,
