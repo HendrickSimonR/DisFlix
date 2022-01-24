@@ -68,7 +68,7 @@
   display:none;
 }
 
-.select-header, .profiles {
+.select-header, .profiles, .re-run {
   animation: fadeIn linear 1s;
   -webkit-animation: fadeIn linear 1s;
   -moz-animation: fadeIn linear 1s;
@@ -76,4 +76,15 @@
   -ms-animation: fadeIn linear 1s;
 }
 
+.re-run {
+  color: rgba(255, 255, 255, 0.333);
+  position: relative;
+  top: 10vh;
+  font-size: 3.3vw !important;
+  transition: all 0.4s ease 0s;
+}
+
+.re-run:hover {
+  color: white;
+}
 

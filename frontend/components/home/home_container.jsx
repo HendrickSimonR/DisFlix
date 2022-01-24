@@ -11,6 +11,7 @@ import { getAvatars } from '../../actions/avatar_actions';
 const mSTP = state => {
   // console.log('STATE', state);
   return ({
+    avatars: state.avatars,
     user: state.session.id,
     movies: selectMovies(state),
     watchlist: state.watchlist,

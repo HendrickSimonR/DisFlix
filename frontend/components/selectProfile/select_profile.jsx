@@ -5,8 +5,11 @@ class SelectProfile extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log('SELECT PROPS', this.props)
+    this.state = { selectedAvatars: [] };
 
+    console.log('SELECT PROPS', this.props)
+    // this.selectAvatars = this.selectAvatars.bind(this);
+    this.selectProfile = this.selectProfile.bind(this);
     this.hideSelect = this.hideSelect.bind(this);
     this.profileMickey = this.profileMickey.bind(this);
     this.profileDory = this.profileDory.bind(this);
@@ -17,8 +20,9 @@ class SelectProfile extends React.Component {
 
   hideSelect(e) {
     let nav = document.querySelector('#nav-bar');
-    let selectScreen = document.querySelector('.select-profile-container');
-    selectScreen.classList.add('hidden');
+    // let selectScreen = document.querySelector('.select-profile-container');
+    // console.log('bullshit', nav, selectScreen)
+    // selectScreen.classList.add('hidden');
     nav.classList.remove('nav-bar-hidden');
     nav.classList.add('nav-bar');
     window.hideProfile = true;
@@ -33,6 +37,36 @@ class SelectProfile extends React.Component {
   //   this.handleScroll();
   //   this.hideSelect(); 
   // }
+
+  // componentDidMount() {
+  //   let selected = this.selectAvatars();
+  //   this.setState({ selectedAvatars: selected })
+  //   console.log('did it work', this.state)
+  // }
+
+  // selectAvatars() {
+  //   let avatars = Object.values(this.props.avatars);
+  //   let selected = [];
+  //   avatars = avatars.sort(() => (Math.random() - 0.5));
+    
+  //   let i = 0;
+  //   while (i < 5) {
+  //     selected.push(avatars[i]);
+  //     this.state.selectedAvatars.push(avatars[i]);
+  //     console.log('select', selected, this.state)
+  //     i++;
+  //   }
+
+  //   // this.setState({ selectedAvatars: selected })
+  //   console.log('THIS HAPPENS HERE', this.state)
+  // }
+
+  selectProfile(i) {
+    window.profilePic = this.selected[i].image;
+    console.log('stuff', window.profilePic)
+    this.handleScroll();
+    this.hideSelect();
+  }
 
   profileMickey(e) {
     window.profilePic = window.mickey;
@@ -65,19 +99,34 @@ class SelectProfile extends React.Component {
   }
 
   render() {
-    this.profiles = Object.values(this.props.profiles);
-    console.log('propile', this.profiles)
-
-    this.profiles.map(profile => {
-      let name = profile.profile_name;
-      let avatar = profile.avatar;
-
-      console.log('PROFILESTUFF', name, avatar)
-      console.log('SELECTPROPS', this.props, this.state)
-    });
-
-
+    // let avatars = null;
+    let avatars = Object.values(this.props.avatars);
+    this.selected = [];
+    avatars = avatars.sort(() => (Math.random() - 0.5));
     
+    if (avatars.length > 0) {
+      let i = 0;
+      while (i < 5) {
+        this.selected.push(avatars[i]);
+      // this.state.selectedAvatars.push(avatars[i]);
+        console.log('select', this.selected, this.state)
+        i++;
+      }
+    }
+    // if (this.state.selectedAvatars.length < 0) {
+    //   avatars = this.state.selectedAvatars;
+    // }
+
+    // this.profiles.map(profile => {
+    //   let name = profile.profile_name;
+    //   let avatar = profile.avatar;
+
+    //   console.log('PROFILESTUFF', name, avatar)
+      // console.log('SELECTPROPS', this.props, this.state)
+    // });
+
+
+
 
     return (
       <div className="select-profile-container">
@@ -89,6 +138,69 @@ class SelectProfile extends React.Component {
 
         <ul className="profiles">
           <li>
+            <Link className="avatar-container" to="/home">
+              <img src={this.selected[0].image} onClick={(e) => this.selectProfile(0)} className="avatar-hover" />
+                <h2>{this.selected[0].character}</h2>
+            </Link>
+          </li>
+
+          <li>
+            <Link className="avatar-container" to="/home">
+              <img src={this.selected[1].image} onClick={(e) => this.selectProfile(1)} className="avatar-hover" />
+                <h2>{this.selected[1].character}</h2>
+            </Link>
+          </li>
+
+          <li>
+            <Link className="avatar-container" to="/home">
+              <img src={this.selected[2].image} onClick={(e) => this.selectProfile(2)} className="avatar-hover" />
+                <h2>{this.selected[2].character}</h2>
+            </Link>
+          </li>
+
+          <li>
+            <Link className="avatar-container" to="/home">
+              <img src={this.selected[3].image} onClick={(e) => this.selectProfile(3)} className="avatar-hover" />
+                <h2>{this.selected[3].character}</h2>
+            </Link>
+          </li>
+
+          <li>
+            <Link className="avatar-container" to="/home">
+              <img src={this.selected[4].image} onClick={(e) => this.selectProfile(4)} className="avatar-hover" />
+                <h2>{this.selected[4].character}</h2>
+            </Link>
+          </li>
+          
+          {/* <li>
+            <Link className="avatar-container" to="/home">
+              <img src={this.profiles[0].avatar} onClick={this.profileMickey} className="avatar-hover" />
+                <h2>{this.profiles[0].profile_name}</h2>
+            </Link>
+          </li> */}
+
+          {/* <li>
+            <Link className="avatar-container" to="/home">
+              <img src={window.moana} onClick={this.profileMoana} className="avatar-hover" />
+              <h2>Moana</h2>
+            </Link>
+          </li>
+
+          <li>
+            <Link className="avatar-container" to="/home">
+              <img src={window.c3po} onClick={this.profileC3PO} className="avatar-hover" />
+              <h2>C-3PO</h2>
+            </Link>
+          </li>
+
+          <li>
+            <Link className="avatar-container" to="/home">
+              <img src={window.spidey} onClick={this.profileSpidey} className="avatar-hover" />
+              <h2>Spider-Man</h2>
+            </Link>
+          </li> */}
+
+          {/* <li>
             <Link className="avatar-container" to="/home">
               <img src={window.mickey} onClick={this.profileMickey} className="avatar-hover" />
                 <h2>Mickey</h2>
@@ -121,9 +233,24 @@ class SelectProfile extends React.Component {
               <img src={window.spidey} onClick={this.profileSpidey} className="avatar-hover" />
               <h2>Spider-Man</h2>
             </Link>
-          </li>
+          </li> */}
+
+          {/* <li>
+            {this.selected.map((avatar) => {
+              <Link className="avatar-container" to="/home">
+                <img src={avatar.image} onClick={this.profileSpidey} className="avatar-hover" />
+                <h2>{avatar.character}</h2>
+              </Link>
+              })}
+          </li> */}
 
         </ul>
+        
+        <Link to='/home'>
+          <span className="material-icons-outlined re-run">
+            all_inclusive
+          </span>
+        </Link>
       </div>
     );
   }

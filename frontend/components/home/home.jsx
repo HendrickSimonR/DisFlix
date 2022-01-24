@@ -297,7 +297,7 @@ class Home extends React.Component {
     // }
 
 
-    // console.log('PROPITY', this.props);
+    console.log('PROPITY', this.props);
     // console.log('PROPITYSTATE', this.state);
     
 
@@ -306,7 +306,7 @@ class Home extends React.Component {
         <Featured />
 
         <div className="home-main">
-          {window.profilePic ? null : <AvatarsContainer profiles={this.props.profiles}/> }
+          {window.hideProfile === true ? null : <SelectProfile avatars={this.props.avatars} /> }
           <BrandButtons />
 
         

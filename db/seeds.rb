@@ -245,9 +245,9 @@ aPhoto29 = URI.open('https://i.imgur.com/1sgCh4k.png')
 aPhoto30 = URI.open('https://i.imgur.com/KRrPXqz.png') 
 aPhoto31 = URI.open('https://i.imgur.com/zHpT6cg.png')
 aPhoto32 = URI.open('https://i.imgur.com/vRi08HV.png') 
-aPhoto33 = URI.open('https://i.imgur.com/RNlPUTu.png') 
-aPhoto34 = URI.open('https://i.imgur.com/pJy7Egk.png') 
-aPhoto35 = URI.open('https://i.imgur.com/ZnYqSx0.png') 
+aPhoto33 = URI.open('https://i.imgur.com/ZnYqSx0.png') 
+aPhoto34 = URI.open('https://i.imgur.com/RNlPUTu.png') 
+aPhoto35 = URI.open('https://i.imgur.com/pJy7Egk.png') 
 
 puts "Attaching Avatars..."
 
