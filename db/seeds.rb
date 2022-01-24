@@ -24,7 +24,7 @@ u1.username='mickeymouse'
 u1.password='imagination'
 u1.save!
 
-p1=Profile.new(user_id: u1.id, profile_name: "Mickey", maturity_setting: "NC-17", autoplay_next_episode: true, autoplay_preview: true)
+p1=Profile.new(user_id: u1.id, profile_name: "Mickey")
 p1avatar = open("#{Rails.root}/app/assets/images/mickey.png")
 p1.avatar.attach(io: p1avatar, filename: " mickey.png")
 p1.save!
@@ -65,6 +65,235 @@ b5.save!
 # m1.rating='TV-PG'
 # m1.year=2021
 # m1.save! 
+
+#avatars
+
+puts "Generating avatars..."
+
+a1=Avatar.new
+a1.character='Falcon'
+a1.save!
+
+a2=Avatar.new
+a2.character='Ariel'
+a2.save!
+
+a3=Avatar.new
+a3.character='Mickey'
+a3.save!
+
+a4=Avatar.new
+a4.character='C-3PO'
+a4.save!
+
+a5=Avatar.new
+a5.character='Dory'
+a5.save!
+
+a6=Avatar.new
+a6.character='Groot'
+a6.save!
+
+a7=Avatar.new
+a7.character='Kate'
+a7.save!
+
+a8=Avatar.new
+a8.character='Moana'
+a8.save!
+
+a9=Avatar.new
+a9.character='Pluto'
+a9.save!
+
+a10=Avatar.new
+a10.character='The Mandalorian'
+a10.save!
+
+a11=Avatar.new
+a11.character='Belle'
+a11.save!
+
+a12=Avatar.new
+a12.character='Iron-Man'
+a12.save!
+
+a13=Avatar.new
+a13.character='Wanda'
+a13.save!
+
+a14=Avatar.new
+a14.character='Darth Vader'
+a14.save!
+
+a15=Avatar.new
+a15.character='Pumba'
+a15.save!
+
+a16=Avatar.new
+a16.character='Chewbacca'
+a16.save!
+
+a17=Avatar.new
+a17.character='Mike'
+a17.save!
+
+a18=Avatar.new
+a18.character='Spider-Man'
+a18.save!
+
+a19=Avatar.new
+a19.character='R2-D2'
+a19.save!
+
+a20=Avatar.new
+a20.character='Pocahontas'
+a20.save!
+
+a21=Avatar.new
+a21.character='Baby Yoda'
+a21.save!
+
+a22=Avatar.new
+a22.character='Winnie'
+a22.save!
+
+a23=Avatar.new
+a23.character='Hannah'
+a23.save!
+
+a24=Avatar.new
+a24.character='Buzz'
+a24.save!
+
+a25=Avatar.new
+a25.character='Jack-Jack'
+a25.save!
+
+a26=Avatar.new
+a26.character='Stormtrooper'
+a26.save!
+
+a27=Avatar.new
+a27.character='Dumbo'
+a27.save!
+
+a28=Avatar.new
+a28.character='Goofy'
+a28.save!
+
+a29=Avatar.new 
+a29.character='Donald'
+a29.save! 
+
+a30=Avatar.new 
+a30.character='Minnie'
+a30.save!
+
+a31=Avatar.new 
+a31.character='Flik'
+a31.save! 
+
+a32=Avatar.new 
+a32.character='Remy'
+a32.save!
+
+a33=Avatar.new
+a33.character='Stitch'
+a33.save!
+
+a34=Avatar.new
+a34.character='Mulan'
+a34.save!
+
+a35=Avatar.new
+a35.character='Wall-E'
+a35.save!
+
+puts "Avatars created!"
+puts "Opening avatars..."
+
+aPhoto1 = URI.open('https://i.imgur.com/rhqp1Kt.png')
+aPhoto2 = URI.open('https://i.imgur.com/w4pQksJ.png') 
+aPhoto3 = URI.open('https://i.imgur.com/lTcePZl.png') 
+aPhoto4 = URI.open('https://i.imgur.com/sn3A9Hs.png') 
+aPhoto5 = URI.open('https://i.imgur.com/qjVFrvB.png') 
+aPhoto6 = URI.open('https://i.imgur.com/NtZiDVl.png')
+aPhoto7 = URI.open('https://i.imgur.com/aInUgYo.png') 
+aPhoto8 = URI.open('https://i.imgur.com/0gQ07qj.png') 
+aPhoto9 = URI.open('https://i.imgur.com/M72NAgL.png') 
+aPhoto10 = URI.open('https://i.imgur.com/N8qF6wL.png') 
+aPhoto11 = URI.open('https://i.imgur.com/0pEbFia.png')
+aPhoto12 = URI.open('https://i.imgur.com/cwY0ASm.png') 
+aPhoto13 = URI.open('https://i.imgur.com/YlID47k.png') 
+aPhoto14 = URI.open('https://i.imgur.com/Io1GxNB.png') 
+aPhoto15 = URI.open('https://i.imgur.com/TcmPCHw.png') 
+aPhoto16 = URI.open('https://i.imgur.com/p5cjdTB.png')
+aPhoto17 = URI.open('https://i.imgur.com/OaTYLCe.png') 
+aPhoto18 = URI.open('https://i.imgur.com/OiZ56El.png') 
+aPhoto19 = URI.open('https://i.imgur.com/W0kOFvG.png') 
+aPhoto20 = URI.open('https://i.imgur.com/23fMYsB.png') 
+aPhoto21 = URI.open('https://i.imgur.com/CwMQqjh.png')
+aPhoto22 = URI.open('https://i.imgur.com/k1xr7dn.png') 
+aPhoto23 = URI.open('https://i.imgur.com/JzVH2HJ.png') 
+aPhoto24 = URI.open('https://i.imgur.com/nTCrRoR.png') 
+aPhoto25 = URI.open('https://i.imgur.com/ZMIYNit.png') 
+aPhoto26 = URI.open('https://i.imgur.com/7OrEXUc.png')
+aPhoto27 = URI.open('https://i.imgur.com/p5OAn8U.png') 
+aPhoto28 = URI.open('https://i.imgur.com/55d4TZg.png') 
+aPhoto29 = URI.open('https://i.imgur.com/1sgCh4k.png')
+aPhoto30 = URI.open('https://i.imgur.com/KRrPXqz.png') 
+aPhoto31 = URI.open('https://i.imgur.com/zHpT6cg.png')
+aPhoto32 = URI.open('https://i.imgur.com/vRi08HV.png') 
+aPhoto33 = URI.open('https://i.imgur.com/RNlPUTu.png') 
+aPhoto34 = URI.open('https://i.imgur.com/pJy7Egk.png') 
+aPhoto35 = URI.open('https://i.imgur.com/ZnYqSx0.png') 
+
+puts "Attaching Avatars..."
+
+a1.image.attach(io: aPhoto1, filename: '01.png')
+a2.image.attach(io: aPhoto2, filename: '02.png')
+a3.image.attach(io: aPhoto3, filename: '03.png')
+a4.image.attach(io: aPhoto4, filename: '04.png')
+a5.image.attach(io: aPhoto5, filename: '05.png')
+a6.image.attach(io: aPhoto6, filename: '06.png')
+a7.image.attach(io: aPhoto7, filename: '07.png')
+a8.image.attach(io: aPhoto8, filename: '08.png')
+a9.image.attach(io: aPhoto9, filename: '09.png')
+a10.image.attach(io: aPhoto10, filename: '10.png')
+a11.image.attach(io: aPhoto11, filename: '11.png')
+a12.image.attach(io: aPhoto12, filename: '12.png')
+a13.image.attach(io: aPhoto13, filename: '13.png')
+a14.image.attach(io: aPhoto14, filename: '14.png')
+a15.image.attach(io: aPhoto15, filename: '15.png')
+a16.image.attach(io: aPhoto16, filename: '16.png')
+a17.image.attach(io: aPhoto17, filename: '17.png')
+a18.image.attach(io: aPhoto18, filename: '18.png')
+a19.image.attach(io: aPhoto19, filename: '19.png')
+a20.image.attach(io: aPhoto20, filename: '20.png')
+a21.image.attach(io: aPhoto21, filename: '21.png')
+a22.image.attach(io: aPhoto22, filename: '22.png')
+a23.image.attach(io: aPhoto23, filename: '23.png')
+a24.image.attach(io: aPhoto24, filename: '24.png')
+a25.image.attach(io: aPhoto25, filename: '25.png')
+a26.image.attach(io: aPhoto26, filename: '26.png')
+a27.image.attach(io: aPhoto27, filename: '27.png')
+a28.image.attach(io: aPhoto28, filename: '28.png')
+a29.image.attach(io: aPhoto29, filename: '29.png')
+a30.image.attach(io: aPhoto30, filename: '30.png')
+a31.image.attach(io: aPhoto31, filename: '31.png')
+a32.image.attach(io: aPhoto32, filename: '32.png')
+a33.image.attach(io: aPhoto33, filename: '33.png')
+a34.image.attach(io: aPhoto34, filename: '34.png')
+a35.image.attach(io: aPhoto35, filename: '35.png')
+
+
+puts "Avatars done!"
+
+
+
+
+
 
 puts "Generating movies..."
 

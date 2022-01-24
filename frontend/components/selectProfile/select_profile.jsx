@@ -73,8 +73,11 @@ class SelectProfile extends React.Component {
       let avatar = profile.avatar;
 
       console.log('PROFILESTUFF', name, avatar)
+      console.log('SELECTPROPS', this.props, this.state)
     });
 
+
+    
 
     return (
       <div className="select-profile-container">

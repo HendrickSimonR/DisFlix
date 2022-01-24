@@ -13,7 +13,7 @@
 #  index_profiles_on_user_id  (user_id)
 #
 class Profile < ApplicationRecord
-  validates :user_id, :profile_id, presence: true
+  validates :user_id, presence: true
   validates :profile_name, presence: true, uniqueness: { scope: :user_id }
 
   has_one_attached :avatar

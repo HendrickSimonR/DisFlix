@@ -1,6 +1,7 @@
 import React from 'react';
 import SelectProfile from '../selectProfile/select_profile';
 import BrandButtons from './brand_buttons';
+import AvatarsContainer from '../avatars/avatars_container';
 import ThumbnailContainer from '../thumbnail/thumbnail_container';
 import Featured from '../featured/featured';
 import Footer from '../footer/footer';
@@ -29,6 +30,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
+    this.props.getAvatars();
     this.props.getMovies();
     this.props.getWatchlist({user_id: this.props.user});
     this.props.getLikes({user_id: this.props.user});
@@ -304,7 +306,7 @@ class Home extends React.Component {
         <Featured />
 
         <div className="home-main">
-          {window.profilePic ? null : <SelectProfile profiles={this.props.profiles}/> }
+          {window.profilePic ? null : <AvatarsContainer profiles={this.props.profiles}/> }
           <BrandButtons />
 
         
