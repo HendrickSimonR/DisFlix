@@ -153,7 +153,7 @@ class Thumbnail extends React.Component {
         <div className="thumbnail-functions">
           <div className="thumbnail-buttons">
             <div className="thumbnail-buttons-left">
-              <span className="material-icons thumb-play-circle">play_circle</span>
+              <span className="material-icons thumb-play-circle">play_circle </span>
               <WatchlistButtonContainer watchlistId={watchlistId} watchlist={watchlist} movieId={this.props.movie.id} />
               <LikeButtonsContainer movieId={this.props.movie.id}/>
             </div>
