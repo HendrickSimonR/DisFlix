@@ -19,6 +19,7 @@ const mSTP = state => {
   let marvelFilms = [];
   let starWarsFilms = [];
   let natGeoFilms = [];
+  let brandId;
 
 
   for (let i = 0; i < allMovies.length; i++) {
@@ -41,11 +42,29 @@ const mSTP = state => {
     }
   }
 
+  if (window.location.href.includes('disney')) {
+    brandId = 1;
+  } else if (window.location.href.includes('pixar')) {
+    brandId = 2;
+  } else if (window.location.href.includes('marvel')) {
+    brandId = 3;
+  } else if (window.location.href.includes('starwars')) {
+    brandId = 4;
+  } else if (window.location.href.includes('natgeo')) {
+    brandId = 5;
+  } else {
+    brandId = 0;
+  }
+
+  console.log('sorted state', state)
   return ({
+    current_brand: brandId,
     user: state.session.id,
+    brands: state.brands,
     likes: state.likes,
     dislikes: state.dislikes,
     movies: allMovies,
+    modal: state.modal,
     disney: disneyFilms,
     pixar: pixarFilms,
     marvel: marvelFilms,

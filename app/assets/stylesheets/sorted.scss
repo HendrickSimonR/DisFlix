@@ -17,8 +17,14 @@
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   gap: 20px 0;
-  margin-top: 15vh;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 15vh; */
   margin-bottom: 30vh;
+  padding-bottom: 30vh;
+  position: relative;
+  top: 74vh;
+  // bottom: 38vh;
   width: 80%;
 
 
@@ -126,4 +132,15 @@
     top: -7.5%;
     left: 13%;
   }
+}
+
+.brand-container-video {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.brand-container-video.scrolled {
+  filter: brightness(30%);
 }
