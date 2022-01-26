@@ -1,4 +1,4 @@
-import Avatars from './avatars';
+// import Avatars from './avatars';
 import { connect } from "react-redux";
 import { getAvatars, getAvatar } from '../../actions/avatar_actions'; 
 
@@ -14,4 +14,4 @@ const mDTP = dispatch => ({
   getAvatar: id => dispatch(getAvatar(id))
 });
 
-export default connect(mSTP, mDTP)(Avatars)
+// export default connect(mSTP, mDTP)(Avatars)

@@ -140,35 +140,35 @@ class SelectProfile extends React.Component {
           <li>
             <Link className="avatar-container" to="/home">
               <img src={this.selected[0].image} onClick={(e) => this.selectProfile(0)} className="avatar-hover" />
-                <h2>{this.selected[0].character}</h2>
+              <h2 onClick={(e) => this.selectProfile(0)}>{this.selected[0].character}</h2>
             </Link>
           </li>
 
           <li>
             <Link className="avatar-container" to="/home">
               <img src={this.selected[1].image} onClick={(e) => this.selectProfile(1)} className="avatar-hover" />
-                <h2>{this.selected[1].character}</h2>
+              <h2 onClick={(e) => this.selectProfile(1)}>{this.selected[1].character}</h2>
             </Link>
           </li>
 
           <li>
             <Link className="avatar-container" to="/home">
               <img src={this.selected[2].image} onClick={(e) => this.selectProfile(2)} className="avatar-hover" />
-                <h2>{this.selected[2].character}</h2>
+              <h2 onClick={(e) => this.selectProfile(2)}>{this.selected[2].character}</h2>
             </Link>
           </li>
 
           <li>
             <Link className="avatar-container" to="/home">
               <img src={this.selected[3].image} onClick={(e) => this.selectProfile(3)} className="avatar-hover" />
-                <h2>{this.selected[3].character}</h2>
+              <h2 onClick={(e) => this.selectProfile(3)}>{this.selected[3].character}</h2>
             </Link>
           </li>
 
           <li>
-            <Link className="avatar-container" to="/home">
+            <Link className="avatar-container" to="/home" >
               <img src={this.selected[4].image} onClick={(e) => this.selectProfile(4)} className="avatar-hover" />
-                <h2>{this.selected[4].character}</h2>
+              <h2 onClick={(e) => this.selectProfile(4)}>{this.selected[4].character}</h2>
             </Link>
           </li>
           
