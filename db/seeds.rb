@@ -31,6 +31,7 @@ p1.save!
 
 # mPhoto22 = URI.open('https://i.imgur.com/DkbGEIq.jpg') 
 
+puts "Creating brands..."
 
 #Brands
 b1=Brand.new
@@ -54,7 +55,24 @@ b3.save!
 b4.save! 
 b5.save!
 
+puts "brands created!"
 
+puts "Attaching brand posters..."
+
+bPhoto1 = URI.open('https://i.imgur.com/xFzQ2ZY.jpg')
+bPhoto2 = URI.open('https://i.imgur.com/hUZxWm1.jpg')
+bPhoto3 = URI.open('https://i.imgur.com/tbnUtSL.jpg')
+bPhoto4 = URI.open('https://i.imgur.com/WZ1OcfO.jpg')
+bPhoto5 = URI.open('https://i.imgur.com/d5Bjl85.jpg')
+
+
+b1.image.attach(io: bPhoto1, filename: 'bp1.png')
+b2.image.attach(io: bPhoto2, filename: 'bp2.png')
+b3.image.attach(io: bPhoto3, filename: 'bp3.png')
+b4.image.attach(io: bPhoto4, filename: 'bp4.png')
+b5.image.attach(io: bPhoto5, filename: 'bp5.png')
+
+puts "Brand posters attached!"
 
 #movies
 
@@ -289,10 +307,6 @@ a35.image.attach(io: aPhoto35, filename: '35.png')
 
 
 puts "Avatars done!"
-
-
-
-
 
 
 puts "Generating movies..."

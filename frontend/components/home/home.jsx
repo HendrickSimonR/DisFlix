@@ -31,6 +31,7 @@ class Home extends React.Component {
 
   componentDidMount() {
     this.props.getAvatars();
+    this.props.getBrands();
     this.props.getMovies();
     this.props.getWatchlist({user_id: this.props.user});
     this.props.getLikes({user_id: this.props.user});

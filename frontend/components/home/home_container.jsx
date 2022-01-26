@@ -1,4 +1,5 @@
 import Home from './home';
+import { getBrands } from '../../actions/brand_actions';
 import { getLikes, getDislikes } from '../../actions/like_actions';
 import { signout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
@@ -9,9 +10,10 @@ import { getProfiles } from '../../actions/profile_actions';
 import { getAvatars } from '../../actions/avatar_actions';
 
 const mSTP = state => {
-  // console.log('STATE', state);
+  console.log('STATE', state);
   return ({
     avatars: state.avatars,
+    brands: state.brands,
     user: state.session.id,
     movies: selectMovies(state),
     watchlist: state.watchlist,
@@ -22,6 +24,7 @@ const mSTP = state => {
 
 const mDTP = dispatch => ({
   signout: () => dispatch(signout()),
+  getBrands: () => dispatch(getBrands()),
   getMovies: () => dispatch(getMovies()),
   getWatchlist: userId => dispatch(getWatchlist(userId)),
   getLikes: userId => dispatch(getLikes(userId)),

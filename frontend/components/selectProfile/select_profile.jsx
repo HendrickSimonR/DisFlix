@@ -103,11 +103,14 @@ class SelectProfile extends React.Component {
     let avatars = Object.values(this.props.avatars);
     this.selected = [];
     avatars = avatars.sort(() => (Math.random() - 0.5));
+
+    console.log('avatars', avatars)
     
     if (avatars.length > 0) {
       let i = 0;
       while (i < 5) {
         this.selected.push(avatars[i]);
+        avatars.pop();
       // this.state.selectedAvatars.push(avatars[i]);
         console.log('select', this.selected, this.state)
         i++;
@@ -135,6 +138,8 @@ class SelectProfile extends React.Component {
         <img src={window.logo} className="select-profile-logo" />
 
         <h1 className="select-header">Who's Watching?</h1>
+
+        { this.selected.length > 0 ?
 
         <ul className="profiles">
           <li>
@@ -245,6 +250,7 @@ class SelectProfile extends React.Component {
           </li> */}
 
         </ul>
+          : '' }
         
         <Link to='/home'>
           <span className="material-icons-outlined re-run">
