@@ -248,7 +248,7 @@ class SelectProfile extends React.Component {
         
         <Link to='/home'>
           <span className="material-icons-outlined re-run">
-            all_inclusive
+            refresh
           </span>
         </Link>
       </div>
