@@ -8,23 +8,39 @@ class Thumbnail extends React.Component {
     super(props)
 
     this.showMovie = this.showMovie.bind(this);
+    this.hoverVideo = this.hoverVideo.bind(this);
+    this.exitVideo = this.exitVideo.bind(this);
+    this.displayPoster = this.displayPoster.bind(this);
   }
 
   componentDidMount() {
     // console.log('THUMB PROPS', this.props)
   }
 
-  // hoverVideo() {
-  //   this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
-  //   let indexMovie = document.getElementById(this.uniqueId);
-  //   indexMovie.play();
-  // }
+  displayPoster(id) {
+    let movie = document.getElementById(id);
+    let poster = document.getElementById('thumb-poster');
+    movie.style.display = 'none';
+    poster.style.display = 'inline-block';
+  }
 
-  // exitVideo() {
-  //   this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
-  //   let indexMovie = document.getElementById(this.uniqueId);
-  //   indexMovie.load();
-  // }
+  hoverVideo(id) {
+    // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
+    let indexMovie = document.getElementById(id);
+    indexMovie.play();
+    console.log('enter', indexMovie);
+  }
+
+  exitVideo(id) {
+    // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
+    let indexMovie = document.getElementById(id);
+    let poster = document.getElementById('thumb-poster');
+    indexMovie.pause();
+    indexMovie.load();
+    poster.style.display = 'none';
+    indexMovie.style.display = 'inline-block';
+    console.log('exit', indexMovie);
+  }
 
   showMovie() {
     this.props.openModal(this.props.movie.id);
@@ -36,6 +52,7 @@ class Thumbnail extends React.Component {
 
   render() {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year);
+    this.uniqueId = this.props.movie.id + 999;
     let watchlistId;
     let watchlist = this.props.watchlist;
     let { userMovies } = this.props;
@@ -119,7 +136,7 @@ class Thumbnail extends React.Component {
 
 
 
-    // console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
+    console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     
     return (
       <div className={ 
@@ -143,11 +160,28 @@ class Thumbnail extends React.Component {
         
         : "thumbnail-specific"}   
         
-        id={ disliked === true ? 'disliked' : "" }> 
+        id={ disliked === true ? 'disliked' : "" }
+        
+        onMouseEnter={() => this.hoverVideo(this.uniqueId)} onMouseLeave={() => this.exitVideo(this.uniqueId)}> 
 
+        <img 
+          alt 
+          id="thumb-poster"
+          src={this.props.movie.image_url} 
+          className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} 
+          onClick={this.showMovie}
+          style={{ display: 'none'}}
+        />
 
-        <video className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} poster={this.props.movie.image_url} onClick={this.showMovie}>
-          <source src={this.props.movie.movie_url} type="video/mp4" /> 
+        <video 
+          id={this.uniqueId} 
+          className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"}
+          poster={this.props.movie.image_url} 
+          onClick={this.showMovie}
+          onEnded={() => this.displayPoster(this.uniqueId)}
+        >
+
+          <source src={this.props.test} type="video/mp4" /> 
         </video>
 
         <div className="thumbnail-functions">
