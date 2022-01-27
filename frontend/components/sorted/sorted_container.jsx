@@ -14,7 +14,7 @@ function shadowFilter(state) {
   let image = document.getElementById('brand-container-poster');
   let video = document.getElementById('brand-container-video');
   // let props = this.props;
-  
+
   if ($(window).scrollTop() < 100) {
     image.style.transition = 'none';
     image.style.filter = 'brightness(100%)';
@@ -99,7 +99,8 @@ const mSTP = state => {
     starWars: starWarsFilms,
     natGeo: natGeoFilms,
     watchlist: state.watchlist,
-    shadowFilter: shadowFilter
+    shadowFilter: shadowFilter,
+    test: state.brands[state.brands.length - 1]
   })
 };
 

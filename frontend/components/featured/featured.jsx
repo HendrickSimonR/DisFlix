@@ -44,6 +44,7 @@ class Featured extends React.Component {
     let movie = document.querySelector(".brand-container-video.featured");
     movieContainer.style.display = 'block';
     movie.style.display = 'block';
+    movie.load();
     movie.play();
   }
 
@@ -59,11 +60,20 @@ class Featured extends React.Component {
     }
   }
 
+  // muteFromThumb() {
+  //   this.setState({ mute: 'volume_off' });
+  // }
+
   
 
   render() {
     let movie = this.props.featured.movie_url;
-    console.log('FEATURED', this.props, this.state)
+    // let vid = document.querySelector(".brand-container-video.featured");
+
+    // if (vid && vid.muted === true) this.muteFromThumb;
+
+    console.log('FEATURED', this.props, this.state);
+
 
     return (
       <div className="featured" id="featured-container">
@@ -122,9 +132,9 @@ class Featured extends React.Component {
           {/* </button> */}
           <div className="featured-right"> 
             <span className='material-icons-round featured-volume' onClick={this.state.moviePlay === true ? (e) => this.handleMute(e) : () => this.replayFeatured()}>
-            { this.state.moviePlay === true ? 
-              this.state.mute : 'refresh' 
-            }
+              { this.state.moviePlay === true ? 
+                this.state.mute : 'refresh' 
+              }
             </span>
             <p>TV-PG</p>
           </div>

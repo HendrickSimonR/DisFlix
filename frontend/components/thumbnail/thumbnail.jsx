@@ -51,18 +51,23 @@ class Thumbnail extends React.Component {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
     this.setState({ moviePlay: !this.state.moviePlay });
     let indexMovie = document.getElementById(id);
+    if (window.location.href.includes('home')) {
+      let vid = document.querySelector(".brand-container-video.featured");
+      vid.muted = true;
+    }
+
     let volume = document.getElementById(id + 'volume');
     volume.style.display = 'inline-block';
     indexMovie.play();
     console.log('enter', indexMovie, this.state);
   }
 
-  exitVideo(id) {
+  exitVideo(id, posterId) {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
     this.setState({ moviePlay: !this.state.moviePlay });
     let volume = document.getElementById(id + 'volume');
     let indexMovie = document.getElementById(id);
-    let poster = document.getElementById('thumb-poster');
+    let poster = document.getElementById(posterId);
     volume.style.display = 'none';
     indexMovie.pause();
     indexMovie.load();
@@ -75,9 +80,9 @@ class Thumbnail extends React.Component {
     this.props.openModal(this.props.movie.id);
   }
 
-  hoverPlay(event) {
-    event.target.play();
-  }
+  // hoverPlay(event) {
+  //   event.target.play();
+  // }
 
   render() {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year);
@@ -192,7 +197,7 @@ class Thumbnail extends React.Component {
         
         id={ disliked === true ? 'disliked' : "" }
         
-        onMouseEnter={() => this.hoverVideo(this.uniqueId)} onMouseLeave={() => this.exitVideo(this.uniqueId)}> 
+        onMouseEnter={() => this.hoverVideo(this.uniqueId)} onMouseLeave={() => this.exitVideo(this.uniqueId, this.posterId)}> 
 
         <img 
           alt 

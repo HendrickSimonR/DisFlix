@@ -17,7 +17,6 @@ class Home extends React.Component {
     this.starWars = React.createRef();
     this.natGeo = React.createRef();
     this.watchlist = React.createRef();
-
     this.playFeatured = this.playFeatured.bind(this);
   }
 
