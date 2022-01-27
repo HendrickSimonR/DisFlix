@@ -7,6 +7,7 @@ class Featured extends React.Component {
     super(props)
     this.displayPoster = this.displayPoster.bind(this);
     this.displayShadow = this.displayShadow.bind(this);
+    this.state = { mute: 'volume_up' }
   }
 
   displayShadow() {
@@ -34,6 +35,18 @@ class Featured extends React.Component {
     // container.style.background = 'inline'
   }
 
+  handleMute(e){
+    if(this.state.mute === 'volume_up'){
+      this.setState({mute: 'volume_off'})
+      let vid = document.querySelector(".brand-container-video.featured");
+      if (vid) vid.muted = true;    
+    } else {
+      this.setState({mute: 'volume_up'})
+      let vid = document.querySelector(".brand-container-video.featured");
+      if (vid) vid.muted = false;
+    }
+  }
+
   
 
   render() {
@@ -46,7 +59,15 @@ class Featured extends React.Component {
         {/* <img id="brand-container-poster" className="brand-container-video" src="https://i.imgur.com/roimLHs.jpg" alt='' /> */}
         
         <div className="featured-movie-container" id="featured-movie-container">
-          <video onPlay={() => this.displayShadow()} playsInline poster="" className="brand-container-video featured" id="brand-container-video" onEnded={() => this.displayPoster()}>
+          <video 
+            onPlay={() => this.displayShadow()} 
+            playsInline 
+            poster="" 
+            className="brand-container-video featured" 
+            id="brand-container-video" 
+            onEnded={() => this.displayPoster()} 
+            style={{display: 'none'}}
+          >
             <source src={movie} type="video/mp4" /> 
           </video>
           <div className="featured-video-shadow" id="featured-video-shadow"></div>
@@ -66,6 +87,19 @@ class Featured extends React.Component {
 
 
         <div className="featured-buttons">
+
+          <div className="featured-left">
+            <div className="featured-play-button">
+              <h1><span className="material-icons-sharp">play_arrow</span></h1>
+              <h2>Play</h2>
+            </div>
+            <div className="featured-info-button" onClick={() => this.props.openModal('1')}>
+              <span className="material-icons-outlined featured-info-icon">
+                info
+              </span>
+              <h2>More Info</h2>
+            </div>
+          </div>
           {/* <button variant="contained" className="featured-play"> */}
             {/* <PlayArrow /> */}
             {/* <span>Play</span> */}
@@ -74,6 +108,11 @@ class Featured extends React.Component {
             {/* <InfoOutlined /> */}
             {/* <span>More Info</span> */}
           {/* </button> */}
+          <div className="featured-right"> 
+            <span className='material-icons-round featured-volume' onClick={(e) => this.handleMute(e)}>
+              {this.state.mute}
+            </span>
+          </div>
         </div>
       </div>
     </div>

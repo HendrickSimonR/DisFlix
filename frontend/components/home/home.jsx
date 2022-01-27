@@ -25,7 +25,8 @@ class Home extends React.Component {
     let movieContainer = document.getElementById('featured-movie-container');
     let movie = document.querySelector(".brand-container-video.featured");
     movieContainer.style.display = 'block';
-    console.log('movieasfasf', movie)
+    console.log('movieasfasf', movie);
+    movie.style.display = 'block';
     movie.play();
   }
 
@@ -319,7 +320,7 @@ class Home extends React.Component {
 
     return (
       <div className="home-container">
-        <Featured featured={featured}/>
+        <Featured featured={featured} openModal={this.props.openModal}/>
 
         <div className="home-main">
           {window.hideProfile === true ? null : <SelectProfile avatars={this.props.avatars} /> }

@@ -15,9 +15,8 @@
   }
 
   .featured-info {
-    width: 35%;
+    width: 100%;
     position: absolute;
-    left: 50px;
     bottom: 100px;
     color: white;
     display: flex;
@@ -25,9 +24,9 @@
 
     img {
       // top: 0.1vw;
-      width: 44vw;
+      width: 34vw;
+      left: 64px;
       position: relative;
-      bottom: 10px;
     }
 
     .blurb {
@@ -81,6 +80,9 @@
   position: absolute;
   width: 100%;
   top: 0;
+  transition-delay: 1s;
+  transition-property: display;
+  animation: fadeIn ease 1s;
 }
 
 .featured-video-shadow {
@@ -95,4 +97,90 @@
   position: relative;
   top: 0vh;
   height: 103vh;
+}
+
+.featured-volume {
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.featured-buttons {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.featured-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.featured-play-button {
+  position: relative;
+  top: 4%;
+  display: flex;
+  flex-direction: row;
+  padding: 0% 8% 0% 4%;
+  background: white;
+  color: black;
+  font-family: 'Lato';
+  font-size: 1.25vw;
+  font-weight: 600;
+  border-radius: 4px;
+  /* height: 70%; */
+  width: 90px;
+  /* line-height: 3px; */
+
+  span {
+    color: black;
+    font-size: 2.9vw;
+    position: relative;
+    left: 2px;
+    top: 2px;
+  }
+
+  h2 {
+    position: relative;
+    top: 11px;
+    left: 5%;
+    font-weight: 700;
+  }
+}
+
+.featured-play-button:hover {
+  cursor: pointer;
+  filter: brightness(0.92);
+}
+
+.featured-info-button {
+    background: rgb(107, 107, 107);
+    width: 158px;
+    position: relative;
+    top: 2.2px;
+    left: 11px;
+    border-radius: 4px;
+    padding: 6px 1px 6px 16px;
+    display: flex;
+    flex-direction: row;
+
+  span {
+    font-size: 29px;
+  }
+
+  h2 {
+    position: relative;
+    font-family: 'Open Sans';
+    font-size: 15.5px;
+    font-weight: 600;
+    top: 7px;
+    left: 9px;
+  }
+}
+
+.featured-info-button:hover {
+  cursor: pointer;
+  background:rgba(107, 107, 107, 0.541);
 }

@@ -68,6 +68,7 @@ class SelectProfile extends React.Component {
     this.hideSelect();
     if (window.hideProfile === true){
       let movie = document.querySelector(".brand-container-video.featured");
+      movie.style.display = 'block';
       movie.play();
     }
   }
