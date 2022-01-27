@@ -178,3 +178,27 @@
     margin: 0 1.5%;
   }
 }
+
+.mute-and-refresh {
+  display: relative;
+  position: absolute;
+  right: 4.58vw;
+  bottom: -2.32vw;
+
+  .featured-volume {
+    font-size: 16.7px;
+    padding: 4px;
+    border: solid 1.5px;
+    display: none;
+  }
+}
+
+.mute-and-refresh.sorted {
+  /* right: 3px; */
+  top: 11.2vw;
+  right: 4.84vw;
+  
+  .featured-volume {
+    font-size: 16.5px;
+  }
+}

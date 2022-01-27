@@ -6,40 +6,69 @@ import LikeButtonsContainer from './like_buttons_container';
 class Thumbnail extends React.Component {
   constructor(props) {
     super(props)
-
+    this.state = { mute: 'volume_up', moviePlay: false }
     this.showMovie = this.showMovie.bind(this);
     this.hoverVideo = this.hoverVideo.bind(this);
     this.exitVideo = this.exitVideo.bind(this);
     this.displayPoster = this.displayPoster.bind(this);
   }
 
+  handleMute(id){
+    if(this.state.mute === 'volume_up'){
+      this.setState({mute: 'volume_off'});
+      let vid = document.getElementById(id);
+      console.log('id', id)
+      if (vid) vid.muted = true;    
+    } else {
+      this.setState({mute: 'volume_up'});
+      let vid = document.getElementById(id);
+      if (vid) vid.muted = false;
+    }
+  }
+
+  replayFeatured(posterId, movieId) {
+    this.setState({ moviePlay: !this.state.moviePlay });
+    let movie = document.getElementById(movieId);
+    let poster = document.getElementById(posterId);
+    poster.style.display = 'none';
+    movie.style.display = 'inline-block';
+    movie.play();
+  }
+
   componentDidMount() {
     // console.log('THUMB PROPS', this.props)
   }
 
-  displayPoster(id) {
-    let movie = document.getElementById(id);
-    let poster = document.getElementById('thumb-poster');
+  displayPoster(posterId, movieId) {
+    let movie = document.getElementById(movieId);
+    let poster = document.getElementById(posterId);
     movie.style.display = 'none';
     poster.style.display = 'inline-block';
+    this.setState({ moviePlay: !this.state.moviePlay });
   }
 
   hoverVideo(id) {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
+    this.setState({ moviePlay: !this.state.moviePlay });
     let indexMovie = document.getElementById(id);
+    let volume = document.getElementById(id + 'volume');
+    volume.style.display = 'inline-block';
     indexMovie.play();
-    console.log('enter', indexMovie);
+    console.log('enter', indexMovie, this.state);
   }
 
   exitVideo(id) {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
+    this.setState({ moviePlay: !this.state.moviePlay });
+    let volume = document.getElementById(id + 'volume');
     let indexMovie = document.getElementById(id);
     let poster = document.getElementById('thumb-poster');
+    volume.style.display = 'none';
     indexMovie.pause();
     indexMovie.load();
     poster.style.display = 'none';
     indexMovie.style.display = 'inline-block';
-    console.log('exit', indexMovie);
+    console.log('exit', indexMovie, this.state);
   }
 
   showMovie() {
@@ -53,6 +82,7 @@ class Thumbnail extends React.Component {
   render() {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year);
     this.uniqueId = this.props.movie.id + 999;
+    this.posterId = this.props.movie.id + 888;
     let watchlistId;
     let watchlist = this.props.watchlist;
     let { userMovies } = this.props;
@@ -166,7 +196,7 @@ class Thumbnail extends React.Component {
 
         <img 
           alt 
-          id="thumb-poster"
+          id={this.posterId}
           src={this.props.movie.image_url} 
           className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} 
           onClick={this.showMovie}
@@ -178,11 +208,23 @@ class Thumbnail extends React.Component {
           className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"}
           poster={this.props.movie.image_url} 
           onClick={this.showMovie}
-          onEnded={() => this.displayPoster(this.uniqueId)}
+          muted={false}
+          onEnded={() => this.displayPoster(this.posterId, this.uniqueId)}
         >
 
           <source src={this.props.test} type="video/mp4" /> 
         </video>
+
+        <div className={windowUrl === 'home' ? 'mute-and-refresh' : 'mute-and-refresh sorted'}>
+          <span 
+            className='material-icons-round featured-volume' id={this.uniqueId + 'volume'}
+            onClick={this.state.moviePlay === true ? () => this.handleMute(this.uniqueId) : () => this.replayFeatured(this.posterId, this.uniqueId)}
+          >
+            { this.state.moviePlay === true ? 
+              this.state.mute : 'refresh' 
+            }
+          </span>
+        </div>
 
         <div className="thumbnail-functions">
           <div className="thumbnail-buttons">
