@@ -54,11 +54,16 @@ class Search extends React.Component {
             <img src={window.surprised} className="mickey-surprised" />
             <h1>Try your search again!</h1>
           </div>
-        : <ul className="films-rows" style={{top: '15vh'}}>
-          {this.moviesFound.map((movie) => (
-            <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
-            ))}
-        </ul>
+
+        : 
+        <div>
+          <h1 id="search-results">{this.props.search}</h1>
+          <ul className="films-rows" style={{top: '22vh'}}>
+            {this.moviesFound.map((movie) => (
+              <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
+              ))}
+          </ul>
+        </div>
         }
         {/* <Footer /> */}
       </div>

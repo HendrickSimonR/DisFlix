@@ -66,6 +66,10 @@ class SelectProfile extends React.Component {
     console.log('stuff', window.profilePic)
     this.handleScroll();
     this.hideSelect();
+    if (window.hideProfile === true){
+      let movie = document.querySelector(".brand-container-video.featured");
+      movie.play();
+    }
   }
 
   profileMickey(e) {

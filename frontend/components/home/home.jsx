@@ -17,6 +17,16 @@ class Home extends React.Component {
     this.starWars = React.createRef();
     this.natGeo = React.createRef();
     this.watchlist = React.createRef();
+
+    this.playFeatured = this.playFeatured.bind(this);
+  }
+
+  playFeatured() {
+    let movieContainer = document.getElementById('featured-movie-container');
+    let movie = document.querySelector(".brand-container-video.featured");
+    movieContainer.style.display = 'block';
+    console.log('movieasfasf', movie)
+    movie.play();
   }
 
   handleSignout() {
@@ -37,6 +47,10 @@ class Home extends React.Component {
     this.props.getLikes({user_id: this.props.user});
     this.props.getDislikes({user_id: this.props.user}); 
     this.props.getProfiles({user_id: this.props.user});
+
+    if (window.hideProfile === true) {
+      this.playFeatured();
+    }
   }
 
   // componentWillMount() {
@@ -300,11 +314,12 @@ class Home extends React.Component {
 
     console.log('PROPITY', this.props);
     // console.log('PROPITYSTATE', this.state);
-    
+    let featured = this.props.brands[this.props.brands.length - 1];
+    console.log('FEATCH', featured)
 
     return (
       <div className="home-container">
-        <Featured />
+        <Featured featured={featured}/>
 
         <div className="home-main">
           {window.hideProfile === true ? null : <SelectProfile avatars={this.props.avatars} /> }

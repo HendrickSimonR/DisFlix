@@ -2,11 +2,56 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 // import PlayArrow from '@mui/material/Button';
 
-function Featured() {
-  return (
-    <div className="featured">
-      {/* <img className="featured-background" src="https://i.imgur.com/roimLHs.jpg" alt="" /> */}
+class Featured extends React.Component {
+  constructor(props) {
+    super(props)
+    this.displayPoster = this.displayPoster.bind(this);
+    this.displayShadow = this.displayShadow.bind(this);
+  }
 
+  displayShadow() {
+    console.log('HOOOPLAH')
+    // let shadow = document.getElementById('featured-video-shadow');
+    let mainContainer = document.getElementById('featured-container');
+    let movieContainer = document.getElementById('featured-movie-container');
+    // mainContainer.style.animation = 'fadeOut linear 1s';
+    // mainContainer.style.transition = 'all 0.1s ease 5s';
+    // movieContainer.style.animation = 'fadeIn ease 1.5s';
+    movieContainer.style.top = '-15vh'; 
+  }
+
+  displayPoster() {
+    // let video = document.getElementById('brand-container-video');
+    // let image = document.getElementById('brand-container-poster');
+    let mainContainer = document.getElementById('featured-container');
+    let movieContainer = document.getElementById('featured-movie-container');
+    // video.style.animation = 'fadeOut linear 1s';
+    movieContainer.style.animation = 'fadeOut ease 1s';
+    movieContainer.style.display = 'none';
+    mainContainer.style.animation = 'fadeIn ease 1s';
+    mainContainer.style.height = '103vh';
+    // image.style.display = 'none';
+    // container.style.background = 'inline'
+  }
+
+  
+
+  render() {
+    let movie = this.props.featured.movie_url;
+    console.log('FEATURED', this.props)
+
+    return (
+      <div className="featured" id="featured-container">
+      {/* <img className="featured-background" src="https://i.imgur.com/roimLHs.jpg" alt="" /> */}
+        {/* <img id="brand-container-poster" className="brand-container-video" src="https://i.imgur.com/roimLHs.jpg" alt='' /> */}
+        
+        <div className="featured-movie-container" id="featured-movie-container">
+          <video onPlay={() => this.displayShadow()} playsInline poster="" className="brand-container-video featured" id="brand-container-video" onEnded={() => this.displayPoster()}>
+            <source src={movie} type="video/mp4" /> 
+          </video>
+          <div className="featured-video-shadow" id="featured-video-shadow"></div>
+        </div>
+      
       <div className="featured-info">
         <img className="featured-logo" src="https://i.imgur.com/bfllKfa.png" alt="" />
         
@@ -32,7 +77,8 @@ function Featured() {
         </div>
       </div>
     </div>
-  )
+    )
+  }      
 }
 
 

@@ -50,11 +50,15 @@ b4.name='Star Wars'
 b5=Brand.new
 b5.name='National Geographic'
 
+b6=Brand.new
+b6.name='Featured'
+
 b1.save!
 b2.save!
 b3.save! 
 b4.save! 
 b5.save!
+b6.save!
 
 puts "brands created!"
 
@@ -65,6 +69,7 @@ bPhoto2 = URI.open('https://i.imgur.com/hUZxWm1.jpg')
 bPhoto3 = URI.open('https://i.imgur.com/tbnUtSL.jpg')
 bPhoto4 = URI.open('https://i.imgur.com/WZ1OcfO.jpg')
 bPhoto5 = URI.open('https://i.imgur.com/d5Bjl85.jpg')
+bPhoto6 = URI.open('https://i.imgur.com/bfllKfa.png')
 
 
 b1.image.attach(io: bPhoto1, filename: 'bp1.png')
@@ -72,6 +77,7 @@ b2.image.attach(io: bPhoto2, filename: 'bp2.png')
 b3.image.attach(io: bPhoto3, filename: 'bp3.png')
 b4.image.attach(io: bPhoto4, filename: 'bp4.png')
 b5.image.attach(io: bPhoto5, filename: 'bp5.png')
+b6.image.attach(io: bPhoto6, filename: 'bp6.png')
 
 puts "Brand posters attached!"
 
@@ -96,6 +102,10 @@ puts "Opening brand movies..."
  puts "Opening brand movie 5..."
  bMovie5 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/brand-splash-videos/bv5.mp4')
  puts "Brand movie 5 opened!"
+
+ puts "Opening brand movie 6..."
+ bMovie6 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m1.mp4')
+ puts "Brand movie 6 opened!"
 
  puts "Attaching Brand Movie 1..."
  
@@ -126,6 +136,12 @@ puts "Opening brand movies..."
  b5.movie.attach(io: bMovie5, filename: 'bv5.mp4')
  
  puts "Brand Movie 5 Finished!"
+
+puts "Attaching Brand Movie 6..."
+ 
+ b6.movie.attach(io: bMovie6, filename: 'bv6.mp4')
+ 
+ puts "Brand Movie 6 Finished!"
 
 puts "Generating movies..."
 
