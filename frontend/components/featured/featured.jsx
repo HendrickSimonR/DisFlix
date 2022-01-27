@@ -7,11 +7,13 @@ class Featured extends React.Component {
     super(props)
     this.displayPoster = this.displayPoster.bind(this);
     this.displayShadow = this.displayShadow.bind(this);
-    this.state = { mute: 'volume_up' }
+    this.replayFeatured = this.replayFeatured.bind(this);
+    this.state = { mute: 'volume_up', moviePlay: true }
   }
 
   displayShadow() {
     console.log('HOOOPLAH')
+    this.setState({ moviePlay: true })
     // let shadow = document.getElementById('featured-video-shadow');
     let mainContainer = document.getElementById('featured-container');
     let movieContainer = document.getElementById('featured-movie-container');
@@ -27,12 +29,22 @@ class Featured extends React.Component {
     let mainContainer = document.getElementById('featured-container');
     let movieContainer = document.getElementById('featured-movie-container');
     // video.style.animation = 'fadeOut linear 1s';
-    movieContainer.style.animation = 'fadeOut ease 1s';
+    // movieContainer.style.animation = 'fadeOut ease 1s';
     movieContainer.style.display = 'none';
     mainContainer.style.animation = 'fadeIn ease 1s';
     mainContainer.style.height = '103vh';
+    this.setState({ moviePlay: false });
     // image.style.display = 'none';
     // container.style.background = 'inline'
+  }
+
+  replayFeatured() {
+    this.displayPoster();
+    let movieContainer = document.getElementById('featured-movie-container');
+    let movie = document.querySelector(".brand-container-video.featured");
+    movieContainer.style.display = 'block';
+    movie.style.display = 'block';
+    movie.play();
   }
 
   handleMute(e){
@@ -51,7 +63,7 @@ class Featured extends React.Component {
 
   render() {
     let movie = this.props.featured.movie_url;
-    console.log('FEATURED', this.props)
+    console.log('FEATURED', this.props, this.state)
 
     return (
       <div className="featured" id="featured-container">
@@ -109,9 +121,12 @@ class Featured extends React.Component {
             {/* <span>More Info</span> */}
           {/* </button> */}
           <div className="featured-right"> 
-            <span className='material-icons-round featured-volume' onClick={(e) => this.handleMute(e)}>
-              {this.state.mute}
+            <span className='material-icons-round featured-volume' onClick={this.state.moviePlay === true ? (e) => this.handleMute(e) : () => this.replayFeatured()}>
+            { this.state.moviePlay === true ? 
+              this.state.mute : 'refresh' 
+            }
             </span>
+            <p>TV-PG</p>
           </div>
         </div>
       </div>
