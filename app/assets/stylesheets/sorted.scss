@@ -12,6 +12,10 @@
   /* display: grid; */
 }
 
+.films-container {
+  background: black;
+}
+
 .films-rows {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -139,8 +143,17 @@
   width: 100%;
   top: 0;
   transition: all 0.3s ease 0s;
+  filter: brightness(100%);
 }
 
 .brand-container-video.scrolled {
   filter: brightness(30%);
+}
+
+#brand-container-poster {
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 1s;
+  -moz-animation: fadeIn linear 1s;
+  -o-animation: fadeIn linear 1s;
+  -ms-animation: fadeIn linear 1s;
 }

@@ -18,6 +18,6 @@ class Brand < ApplicationRecord
     class_name: :Movie,
     foreign_key: :brand_id
 
-  has_one_attached :page_video
+  has_one_attached :movie
   has_one_attached :image
 end

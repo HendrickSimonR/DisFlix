@@ -74,6 +74,60 @@ b5.image.attach(io: bPhoto5, filename: 'bp5.png')
 
 puts "Brand posters attached!"
 
+puts "Opening brand movies..."
+
+ puts "Opening brand movie 1..."
+ bMovie1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/brand-splash-videos/bv1.mp4')
+ puts "Brand movie 1 opened!"
+
+ puts "Opening brand movie 2..."
+ bMovie2 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/brand-splash-videos/bv2.mp4')
+ puts "Brand movie 2 opened!"
+
+ puts "Opening brand movie 3..."
+ bMovie3 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/brand-splash-videos/bv3.mp4')
+ puts "Brand movie 3 opened!"
+
+ puts "Opening brand movie 4..."
+ bMovie4 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/brand-splash-videos/bv4.mp4')
+ puts "Brand movie 4 opened!"
+
+ puts "Opening brand movie 5..."
+ bMovie5 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/brand-splash-videos/bv5.mp4')
+ puts "Brand movie 5 opened!"
+
+ puts "Attaching Brand Movie 1..."
+ 
+ b1.movie.attach(io: bMovie1, filename: 'bv1.mp4')
+ 
+ puts "Brand Movie 1 Finished!"
+
+ puts "Attaching Brand Movie 2..."
+ 
+ b2.movie.attach(io: bMovie2, filename: 'bv2.mp4')
+ 
+ puts "Brand Movie 2 Finished!"
+
+ puts "Attaching Brand Movie 3..."
+ 
+ b3.movie.attach(io: bMovie3, filename: 'bv3.mp4')
+ 
+ puts "Brand Movie 3 Finished!"
+
+ puts "Attaching Brand Movie 4..."
+ 
+ b4.movie.attach(io: bMovie4, filename: 'bv4.mp4')
+ 
+ puts "Brand Movie 4 Finished!"
+
+ puts "Attaching Brand Movie 5..."
+ 
+ b5.movie.attach(io: bMovie5, filename: 'bv5.mp4')
+ 
+ puts "Brand Movie 5 Finished!"
+
+puts "Generating movies..."
+
 #movies
 
 # m1=Movie.new

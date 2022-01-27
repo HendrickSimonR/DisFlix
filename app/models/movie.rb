@@ -35,7 +35,6 @@ class Movie < ApplicationRecord
     class_name: :Dislike,
     foreign_key: :movie_id
 
-  has_one_attached :image 
-  has_one_attached :index_movie
+  has_one_attached :image
   has_one_attached :movie
 end
