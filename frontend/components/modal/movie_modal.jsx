@@ -56,8 +56,8 @@ class MovieModal extends React.Component {
     return (
       <div className="movie-modal">
         <div className="modal-movie-player">
-          <video className="modal-movie" poster={film.image_url}>
-            <source src={this.props.movie.movie_url} type="video/mp4" /> 
+          <video autoPlay playsInline className="modal-movie" poster={film.image_url}>
+            <source src={this.props.test} type="video/mp4" /> 
           </video>
           <div className="modal-movie-shadow"></div>
         </div>

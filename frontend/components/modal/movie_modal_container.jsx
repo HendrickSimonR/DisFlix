@@ -6,6 +6,7 @@ import MovieModal from './movie_modal';
 const mSTP = (state) => {
   console.log('MODAL STATE', state)
   return {
+    test: state.brands[state.brands.length - 1].movie_url,
     movies: state.movies,
     likes: state.likes,
     dislikes: state.dislikes,

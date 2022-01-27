@@ -27,7 +27,7 @@ class Thumbnail extends React.Component {
   // }
 
   showMovie() {
-    this.props.openModal(this.props.movie.id)
+    this.props.openModal(this.props.movie.id);
   }
 
   hoverPlay(event) {
