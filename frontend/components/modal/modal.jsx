@@ -45,7 +45,7 @@ function Modal({modal, closeModal}) {
   
 
   return (
-    <div className="modal-background" onClick={closeModal}>
+    <div className={window.location.href.includes('home') ? "modal-background" : "modal-background brand"} onClick={closeModal}>
       <div className="modal-child" onClick={e => e.stopPropagation()}>
         { modalComponent }
       </div>

@@ -8,6 +8,7 @@
 
 require 'open-uri'
 
+Avatar.delete_all
 User.delete_all
 Movie.delete_all
 Brand.delete_all

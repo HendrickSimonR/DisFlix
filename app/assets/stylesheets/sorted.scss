@@ -1,4 +1,4 @@
-.films-container, .watchlist-container {
+.films-container, .watchlist-container, .search-container {
   // background: url("https://i.imgur.com/MmqVKyy.png") fixed;
   display: flex;
   flex-direction: column;
@@ -142,12 +142,11 @@
   position: fixed;
   width: 100%;
   top: 0;
-  transition: all 0.3s ease 0s;
-  filter: brightness(100%);
 }
 
 .brand-container-video.scrolled {
   filter: brightness(30%);
+  transition: all 0.3s ease 0s;
 }
 
 #brand-container-poster {

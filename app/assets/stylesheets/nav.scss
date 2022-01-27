@@ -16,6 +16,7 @@
   align-items: center;
   z-index: 4;
   transition: all 0.5s linear;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5158438375350141) 0%, rgba(0,0,0,0.27942927170868344) 35%, rgba(255,255,255,0) 100%);
 }
 
 .nav-bar.show {

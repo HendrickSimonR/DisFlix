@@ -1,5 +1,6 @@
 import React from 'react';
 import ThumbnailContainer from '../thumbnail/thumbnail_container';
+import Footer from '../footer/footer'
 
 class Search extends React.Component {
   constructor(props) {
@@ -47,18 +48,19 @@ class Search extends React.Component {
     })
 
     return(
-      <div className="films-container">
+      <div className="search-container">
         {this.moviesFound.length === 0 ?
           <div className="nothing-container">
             <img src={window.surprised} className="mickey-surprised" />
             <h1>Try your search again!</h1>
           </div>
-        : <ul className="films-rows">
+        : <ul className="films-rows" style={{top: '15vh'}}>
           {this.moviesFound.map((movie) => (
             <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
             ))}
         </ul>
         }
+        {/* <Footer /> */}
       </div>
     )
   }

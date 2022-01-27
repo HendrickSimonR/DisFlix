@@ -38,7 +38,7 @@ class Watchlist extends React.Component {
       }
 
       watchlistComponent =
-        <ul className="films-rows">
+        <ul className="films-rows" style={{top: '15vh'}} >
           {this.watchlist.map((movie) => (
             <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
           ))}
