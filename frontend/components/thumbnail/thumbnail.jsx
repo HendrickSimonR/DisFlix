@@ -1,5 +1,4 @@
 import React from 'react';
-import { player } from 'videp-react';
 import { Link } from 'react-router-dom';
 import WatchlistButtonContainer from './watchlist_button_container';
 import LikeButtonsContainer from './like_buttons_container';
@@ -75,16 +74,15 @@ class Thumbnail extends React.Component {
     if (window.location.href.includes('home')) {
       let vid = document.querySelector(".brand-container-video.featured");
       vid.play();
-      console.log('VID STATE', vid.state);
       vid.muted = false;
     }
 
     volume.style.display = 'none';
     indexMovie.pause();
+    console.log('exit', indexMovie, `STOPPED AT ${indexMovie.currentTime}`, this.state);
     indexMovie.load();
     poster.style.display = 'none';
     indexMovie.style.display = 'inline-block';
-    console.log('exit', indexMovie, this.state);
   }
 
   stopFeatured() {
@@ -101,11 +99,17 @@ class Thumbnail extends React.Component {
     mainContainer.style.height = '103vh';
   }
 
-  showMovie() {
+  showMovie(id) {
     if (window.location.href.includes('home')) {
       this.stopFeatured();
       console.log('isdgbjkvsbdv')
     }
+    
+    let indexMovie = document.getElementById(id);
+    window.movieTime = indexMovie.currentTime;
+
+    console.log('MOVIETIME', window.movieTime)
+
     this.props.openModal(this.props.movie.id);
   }
 
@@ -269,7 +273,7 @@ class Thumbnail extends React.Component {
             </div>
 
             <div className="thumbnail-buttons-right">
-              <span className="material-icons-outlined expand-modal" onClick={() => this.showMovie(this.posterId, this.uniqueId)}>
+              <span className="material-icons-outlined expand-modal" onClick={() => this.showMovie(this.uniqueId)}>
                 expand_more
               </span>
             </div>

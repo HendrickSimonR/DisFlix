@@ -8,12 +8,19 @@ class MovieModal extends React.Component {
     super(props);
 
     this.displayPoster = this.displayPoster.bind(this);
-    
+    this.uniqueId;
+
     this.state = { 
       mute: 'volume_up', 
       moviePlay: true, 
-      movie: null 
+      movieComponent: null, 
     }
+  }
+
+  componentDidMount() {
+    this.setState({ movieComponent: this.uniqueId })
+    let indexMovie = document.getElementById(this.uniqueId);
+    indexMovie.currentTime = window.movieTime;  
   }
 
   handleMute(id){
@@ -55,7 +62,6 @@ class MovieModal extends React.Component {
   render() {
     let film;
     let watchlistId;
-    let uniqueId;
     let posterId;
 
     let moviesArr = Object.values(this.props.movies);
@@ -71,8 +77,8 @@ class MovieModal extends React.Component {
 
         if (this.props.movie === movie.id) {
           film = movie;
-          uniqueId = movie.id + 444;
-          posterId = movie.id + 777;
+          this.uniqueId = movie.id + 444;
+          posterId = movie.id + 777;        
           break;
         }
       }
@@ -104,14 +110,14 @@ class MovieModal extends React.Component {
           />
 
           <video 
-            id={uniqueId} 
+            id={this.uniqueId} 
             autoPlay
             playsInline
             className="modal-movie"
             poster={film.image_url} 
             onClick={this.showMovie}
             muted={false}
-            onEnded={() => this.displayPoster(posterId, uniqueId)}
+            onEnded={() => this.displayPoster(posterId, this.uniqueId)}
           >
             <source src={this.props.test} type="video/mp4" /> 
           </video>
@@ -141,8 +147,8 @@ class MovieModal extends React.Component {
 
             <div className="movie-modal-buttons-right">
               <span 
-                className='material-icons-round modal-volume-on' id={uniqueId + 'volume'}
-                onClick={this.state.moviePlay === true ? () => this.handleMute(uniqueId) : () => this.replayFeatured(posterId, uniqueId)}
+                className='material-icons-round modal-volume-on' id={this.uniqueId + 'volume'}
+                onClick={this.state.moviePlay === true ? () => this.handleMute(this.uniqueId) : () => this.replayFeatured(posterId, this.uniqueId)}
               >
                 { this.state.moviePlay === true ? 
                   this.state.mute : 'refresh' 
