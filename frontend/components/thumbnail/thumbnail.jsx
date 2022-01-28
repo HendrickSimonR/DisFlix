@@ -52,8 +52,10 @@ class Thumbnail extends React.Component {
     this.setState({ moviePlay: !this.state.moviePlay });
     let indexMovie = document.getElementById(id);
     if (window.location.href.includes('home')) {
-      let vid = document.querySelector(".brand-container-video.featured");
-      vid.muted = true;
+      // let vid = document.querySelector(".brand-container-video.featured");
+      // vid.muted = true;
+      // vid.pause();
+      this.stopFeatured();
     }
 
     let volume = document.getElementById(id + 'volume');
@@ -68,6 +70,13 @@ class Thumbnail extends React.Component {
     let volume = document.getElementById(id + 'volume');
     let indexMovie = document.getElementById(id);
     let poster = document.getElementById(posterId);
+    
+    if (window.location.href.includes('home')) {
+      let vid = document.querySelector(".brand-container-video.featured");
+      vid.play();
+      vid.muted = false;
+    }
+
     volume.style.display = 'none';
     indexMovie.pause();
     indexMovie.load();
@@ -76,7 +85,25 @@ class Thumbnail extends React.Component {
     console.log('exit', indexMovie, this.state);
   }
 
+  stopFeatured() {
+    let mainContainer = document.getElementById('featured-container');
+    let movieContainer = document.getElementById('featured-movie-container');
+    let featuredMovie = document.getElementById('brand-container-video');
+    // video.style.animation = 'fadeOut linear 1s';
+    // movieContainer.style.animation = 'fadeOut ease 1s';
+    featuredMovie.pause();
+    featuredMovie.load();
+    featuredMovie.currentTime = 30;
+    movieContainer.style.display = 'none';
+    mainContainer.style.animation = 'fadeIn ease 1s';
+    mainContainer.style.height = '103vh';
+  }
+
   showMovie() {
+    if (window.location.href.includes('home')) {
+      this.stopFeatured();
+      console.log('isdgbjkvsbdv')
+    }
     this.props.openModal(this.props.movie.id);
   }
 
@@ -240,7 +267,7 @@ class Thumbnail extends React.Component {
             </div>
 
             <div className="thumbnail-buttons-right">
-              <span className="material-icons-outlined expand-modal" onClick={this.showMovie}>
+              <span className="material-icons-outlined expand-modal" onClick={() => this.showMovie(this.posterId, this.uniqueId)}>
                 expand_more
               </span>
             </div>

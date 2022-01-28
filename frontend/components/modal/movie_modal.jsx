@@ -7,9 +7,44 @@ class MovieModal extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { movie: null }
+    this.displayPoster = this.displayPoster.bind(this);
+    
+    this.state = { 
+      mute: 'volume_up', 
+      moviePlay: true, 
+      movie: null 
+    }
   }
 
+  handleMute(id){
+    if (this.state.mute === 'volume_up'){
+      this.setState({mute: 'volume_off'});
+      let vid = document.getElementById(id);
+      console.log('id', id)
+      if (vid) vid.muted = true;    
+    } else {
+      this.setState({mute: 'volume_up'});
+      let vid = document.getElementById(id);
+      if (vid) vid.muted = false;
+    }
+  }
+
+  replayFeatured(posterId, movieId) {
+    this.setState({ moviePlay: !this.state.moviePlay });
+    let movie = document.getElementById(movieId);
+    let poster = document.getElementById(posterId);
+    poster.style.display = 'none';
+    movie.style.display = 'inline-block';
+    movie.play();
+  }
+
+  displayPoster(posterId, movieId) {
+    let movie = document.getElementById(movieId);
+    let poster = document.getElementById(posterId);
+    movie.style.display = 'none';
+    poster.style.display = 'inline-block';
+    this.setState({ moviePlay: !this.state.moviePlay });
+  }
   // componentDidMount() {
   //   this.props.getMovie(this.props.movie);
   //   // console.log('film', film)
@@ -17,8 +52,10 @@ class MovieModal extends React.Component {
   // }
 
   render() {
-    let film = null;
+    let film;
     let watchlistId;
+    let uniqueId;
+    let posterId;
 
     let moviesArr = Object.values(this.props.movies);
     if (moviesArr.length === 0) {
@@ -33,6 +70,9 @@ class MovieModal extends React.Component {
 
         if (this.props.movie === movie.id) {
           film = movie;
+          uniqueId = movie.id + 444;
+          posterId = movie.id + 777;
+          break;
         }
       }
 
@@ -47,18 +87,34 @@ class MovieModal extends React.Component {
       }
     }
 
-
-
-    
     console.log('MODAL PROPS', this.props)
     console.log('MOVIE PROPS ', film)
 
     return (
       <div className="movie-modal">
         <div className="modal-movie-player">
-          <video autoPlay playsInline className="modal-movie" poster={film.image_url}>
+          <img 
+            alt 
+            id={posterId}
+            src={film.image_url} 
+            className='modal-movie' 
+            onClick={this.showMovie}
+            style={{ display: 'none'}}
+          />
+
+          <video 
+            id={uniqueId} 
+            autoPlay
+            playsInline
+            className="modal-movie"
+            poster={film.image_url} 
+            onClick={this.showMovie}
+            muted={false}
+            onEnded={() => this.displayPoster(posterId, uniqueId)}
+          >
             <source src={this.props.test} type="video/mp4" /> 
           </video>
+
           <div className="modal-movie-shadow"></div>
         </div>
 
@@ -83,8 +139,13 @@ class MovieModal extends React.Component {
             </div>
 
             <div className="movie-modal-buttons-right">
-              <span className="material-icons-round modal-volume-on">
-                volume_up
+              <span 
+                className='material-icons-round modal-volume-on' id={uniqueId + 'volume'}
+                onClick={this.state.moviePlay === true ? () => this.handleMute(uniqueId) : () => this.replayFeatured(posterId, uniqueId)}
+              >
+                { this.state.moviePlay === true ? 
+                  this.state.mute : 'refresh' 
+                }
               </span>
             </div>
           </div>
