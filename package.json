@@ -17,6 +17,7 @@
     "redux": "^4.1.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.0",
+    "video-react": "^0.15.0",
     "webpack": "^5.65.0"
   },
   "description": "",

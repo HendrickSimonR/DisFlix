@@ -1,4 +1,5 @@
 import React from 'react';
+import { player } from 'videp-react';
 import { Link } from 'react-router-dom';
 import WatchlistButtonContainer from './watchlist_button_container';
 import LikeButtonsContainer from './like_buttons_container';
@@ -74,6 +75,7 @@ class Thumbnail extends React.Component {
     if (window.location.href.includes('home')) {
       let vid = document.querySelector(".brand-container-video.featured");
       vid.play();
+      console.log('VID STATE', vid.state);
       vid.muted = false;
     }
 

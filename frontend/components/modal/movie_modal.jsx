@@ -42,6 +42,7 @@ class MovieModal extends React.Component {
     let movie = document.getElementById(movieId);
     let poster = document.getElementById(posterId);
     movie.style.display = 'none';
+    poster.style.animation = 'fadeIn ease 1s'
     poster.style.display = 'inline-block';
     this.setState({ moviePlay: !this.state.moviePlay });
   }
