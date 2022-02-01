@@ -9,6 +9,7 @@ import Footer from '../footer/footer';
 class Home extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { loading: true }
     this.handleSignout = this.handleSignout.bind(this);
     this.watchlistLink = this.watchlistLink.bind(this);
     this.disney = React.createRef();
@@ -17,17 +18,19 @@ class Home extends React.Component {
     this.starWars = React.createRef();
     this.natGeo = React.createRef();
     this.watchlist = React.createRef();
-    this.playFeatured = this.playFeatured.bind(this);
+    this.loader;
+    this.profileSelect;
+    // this.playFeatured = this.playFeatured.bind(this);
   }
 
-  playFeatured() {
-    let movieContainer = document.getElementById('featured-movie-container');
-    let movie = document.querySelector(".brand-container-video.featured");
-    movieContainer.style.display = 'block';
-    console.log('movieasfasf', movie);
-    movie.style.display = 'block';
-    movie.play();
-  }
+  // playFeatured() {
+  //   let movieContainer = document.getElementById('featured-movie-container');
+  //   let movie = document.querySelector(".brand-container-video.featured");
+  //   movieContainer.style.display = 'block';
+  //   console.log('movieasfasf', movie);
+  //   movie.style.display = 'block';
+  //   movie.play();
+  // }
 
   handleSignout() {
     // console.log('profile', window.profilePic)
@@ -48,11 +51,19 @@ class Home extends React.Component {
     this.props.getDislikes({user_id: this.props.user}); 
     this.props.getProfiles({user_id: this.props.user});
 
-    if (window.hideProfile === true) {
-      this.playFeatured();
-    }
+    // if (window.hideProfile === true) {
+    //   this.playFeatured();
+    // }
+    setTimeout(() => {
+      this.setState({ loading: false }),
+      this.handleProfiles()
+    }, 11000);
   }
 
+  handleProfiles() {
+    let selectScreen = document.getElementById('select-profiles');
+    selectScreen.style.display = 'flex';
+  }
   // componentWillMount() {
   // }
  
@@ -310,6 +321,14 @@ class Home extends React.Component {
     //   }
     //   console.log('DISLIKED', disliked)
     // }
+    if (this.state.loading === true) {
+      this.loader =           
+        <div id='brand-loader-home' className='loader-container home'>
+          <img className='brand-loader home' src={window.loader} alt='' />
+        </div>
+    } else {
+      this.loader = '';
+    }
 
 
     console.log('PROPITY', this.props);
@@ -322,7 +341,11 @@ class Home extends React.Component {
         <Featured featured={featured} openModal={this.props.openModal}/>
 
         <div className="home-main">
-          {window.hideProfile === true ? null : <SelectProfile avatars={this.props.avatars} /> }
+          { this.loader }
+          {window.hideProfile === true ? null 
+          : <SelectProfile avatars={this.props.avatars} /> 
+          }
+
           <BrandButtons />
 
         

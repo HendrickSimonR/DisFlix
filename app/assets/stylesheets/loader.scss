@@ -29,6 +29,10 @@
   z-index: 3;
 }
 
+.loader-container.home {
+  z-index: 20;
+}
+
 .loader-container.modal {
   background: none;
   width: 850px;
