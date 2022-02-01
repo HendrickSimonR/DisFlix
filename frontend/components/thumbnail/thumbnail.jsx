@@ -13,6 +13,7 @@ class Thumbnail extends React.Component {
       fullScreen: false 
     };
 
+    this.uniqueId;
     this.showMovie = this.showMovie.bind(this);
     this.hoverVideo = this.hoverVideo.bind(this);
     this.exitVideo = this.exitVideo.bind(this);
@@ -132,7 +133,6 @@ class Thumbnail extends React.Component {
 
   render() {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year);
-    this.uniqueId = this.props.movie.id + 999;
     this.posterId = this.props.movie.id + 888;
     let watchlistId;
     let watchlist = this.props.watchlist;
@@ -146,12 +146,17 @@ class Thumbnail extends React.Component {
     let tag1;
     let tag2;
     let tag3;
-
+    
+    if (this.props.watchlistItem === true) {
+      this.uniqueId = this.props.movie.id + 111;
+    } else {
+      this.uniqueId = this.props.movie.id + 999;
+    }
     // if (this.props.index) {
     //   // console.log('THUMBPROPS', this.props.index, this.props.movie)
     // }
 
-    // console.log('THUMBPROPS', this.props)
+    console.log('THUMBPROPS', this.props)
 
     if (tags !== undefined) {
       let separated = tags.split(', ');
