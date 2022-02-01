@@ -341,7 +341,7 @@ class Home extends React.Component {
         <Featured featured={featured} openModal={this.props.openModal}/>
 
         <div className="home-main">
-          { this.loader }
+          { window.hideProfile === true ? '' :  this.loader }
           {window.hideProfile === true ? null 
           : <SelectProfile avatars={this.props.avatars} /> 
           }
