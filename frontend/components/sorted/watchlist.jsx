@@ -48,7 +48,7 @@ class Watchlist extends React.Component {
     return(
       <div className="watchlist-container">
         { watchlistComponent }
-        <Footer />
+        {/* <Footer /> */}
       </div>
     )
   }

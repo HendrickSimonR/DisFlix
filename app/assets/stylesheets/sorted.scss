@@ -12,6 +12,10 @@
   /* display: grid; */
 }
 
+.search-container, .watchlist-container {
+  background: #16162c;
+}
+
 .films-container {
   background: black;
 }
@@ -25,7 +29,7 @@
   margin-right: auto;
   /* margin-top: 15vh; */
   margin-bottom: 30vh;
-  padding-bottom: 30vh;
+  padding-bottom: 20vh;
   position: relative;
   top: 74vh;
   // bottom: 38vh;
@@ -49,7 +53,7 @@
 }
 
 .thumbnail-specific:hover {
-  transform: scale(1.4);
+  transform: scale(1.4) translate(0, -1.5vw);
   transform-origin: center;
   // outline: 3.5px solid rgb(255, 255, 255);
   // outline-offset: -3.5px;

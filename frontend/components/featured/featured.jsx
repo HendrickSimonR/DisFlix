@@ -5,10 +5,32 @@ import ReactDOM from 'react-dom';
 class Featured extends React.Component {
   constructor(props) {
     super(props)
+    this.showMovie = this.showMovie.bind(this);
     this.displayPoster = this.displayPoster.bind(this);
     this.displayShadow = this.displayShadow.bind(this);
     this.replayFeatured = this.replayFeatured.bind(this);
     this.state = { mute: 'volume_up', moviePlay: true }
+  }
+
+  showMovie() {
+    let movie = document.getElementById('brand-container-video');
+    window.movieTime = movie.currentTime;
+    this.stopFeatured();
+    this.props.openModal('1');
+  }
+
+  stopFeatured() {
+    let mainContainer = document.getElementById('featured-container');
+    let movieContainer = document.getElementById('featured-movie-container');
+    let featuredMovie = document.getElementById('brand-container-video');
+    // video.style.animation = 'fadeOut linear 1s';
+    // movieContainer.style.animation = 'fadeOut ease 1s';
+    featuredMovie.pause();
+    // featuredMovie.load();
+    featuredMovie.currentTime = 30;
+    movieContainer.style.display = 'none';
+    mainContainer.style.animation = 'fadeIn ease 1s';
+    mainContainer.style.height = '103vh';
   }
 
   displayShadow() {
@@ -20,7 +42,7 @@ class Featured extends React.Component {
     // mainContainer.style.animation = 'fadeOut linear 1s';
     // mainContainer.style.transition = 'all 0.1s ease 5s';
     // movieContainer.style.animation = 'fadeIn ease 1.5s';
-    movieContainer.style.top = '-15vh'; 
+    // movieContainer.style.top = '-18vh'; 
   }
 
   displayPoster() {
@@ -42,10 +64,10 @@ class Featured extends React.Component {
     this.displayPoster();
     let movieContainer = document.getElementById('featured-movie-container');
     let movie = document.querySelector(".brand-container-video.featured");
-    movieContainer.style.display = 'block';
-    movie.style.display = 'block';
     movie.load();
     movie.play();
+    movieContainer.style.display = 'block';
+    movie.style.display = 'block';
   }
 
   handleMute(e){
@@ -115,7 +137,7 @@ class Featured extends React.Component {
               <h1><span className="material-icons-sharp">play_arrow</span></h1>
               <h2>Play</h2>
             </div>
-            <div className="featured-info-button" onClick={() => this.props.openModal('1')}>
+            <div className="featured-info-button" onClick={this.showMovie}>
               <span className="material-icons-outlined featured-info-icon">
                 info
               </span>

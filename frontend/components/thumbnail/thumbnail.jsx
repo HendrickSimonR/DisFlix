@@ -105,7 +105,7 @@ class Thumbnail extends React.Component {
     // video.style.animation = 'fadeOut linear 1s';
     // movieContainer.style.animation = 'fadeOut ease 1s';
     featuredMovie.pause();
-    featuredMovie.load();
+    // featuredMovie.load();
     featuredMovie.currentTime = 30;
     movieContainer.style.display = 'none';
     mainContainer.style.animation = 'fadeIn ease 1s';
@@ -118,13 +118,11 @@ class Thumbnail extends React.Component {
       console.log('isdgbjkvsbdv')
     }
 
-
-    
     let indexMovie = document.getElementById(id);
     window.movieTime = indexMovie.currentTime;
 
     console.log('MOVIETIME', window.movieTime)
-
+    
     this.props.openModal(this.props.movie.id);
   }
 
