@@ -65,8 +65,8 @@ class StarWars extends React.Component {
             <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
           ))}
         </ul>
-
         <Footer />
+        <div className="brand-background"></div>
       </div>
     )
   }

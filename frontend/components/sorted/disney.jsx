@@ -65,6 +65,7 @@ class Disney extends React.Component {
           ))}
         </ul>
         <Footer />
+        <div className="brand-background"></div>
       </div>
     )
   }

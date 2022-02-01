@@ -64,6 +64,7 @@ class NatGeo extends React.Component {
           ))}
         </ul>
         <Footer />
+        <div className="brand-background"></div>
       </div>
     )
   }

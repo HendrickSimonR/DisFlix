@@ -20,7 +20,7 @@ class Watchlist extends React.Component {
   render() {
     this.watchlist = [];
     let user = this.props.user;
-    let watchlistComponent = <div></div>;
+    let watchlistComponent;
 
     // console.log('WATCHLIST PROPS', this.props)
 
@@ -38,16 +38,22 @@ class Watchlist extends React.Component {
       }
 
       watchlistComponent =
-        <ul className="films-rows" style={{top: '15vh'}} >
-          {this.watchlist.map((movie) => (
-            <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
-          ))}
-        </ul>
+        <>
+          <h1>My Watchlist</h1>
+          <ul className="films-rows" style={{top: '15vh'}} >
+            {this.watchlist.map((movie) => (
+              <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie}/>
+            ))}
+          </ul>
+        </>
     }
 
     return(
       <div className="watchlist-container">
-        { watchlistComponent }
+        { this.watchlist.length === 0 ?
+          <h1>Add some movies!</h1> 
+        : watchlistComponent }
+        <div className='watchlist-backdrop'></div>
         {/* <Footer /> */}
       </div>
     )
