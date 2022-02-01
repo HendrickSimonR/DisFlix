@@ -7,6 +7,11 @@ export const openModal = modal => {
   document.body.style.position = 'fixed';
   window.modal = true;
 
+  if (window.location.href.includes('home')) {
+    let featured = document.getElementById('featured-info')
+    featured.style.display = 'none';
+  }
+
   return {
     type: OPEN_MODAL,
     modal
@@ -19,6 +24,11 @@ export const closeModal = () => {
   document.body.style.top = '';
   window.scrollTo(0, parseInt(scrollY || '0') * -1);
   window.modal = false;
+
+  if (window.location.href.includes('home')) {
+    let featured = document.getElementById('featured-info')
+    featured.style.display = 'flex';
+  }
   
   return {
     type: CLOSE_MODAL

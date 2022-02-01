@@ -127,7 +127,7 @@ class Featured extends React.Component {
           <div className="featured-video-shadow" id="featured-video-shadow"></div>
         </div>
       
-      <div className="featured-info">
+      <div className="featured-info" id='featured-info'>
         <img className="featured-logo" src="https://i.imgur.com/bfllKfa.png" alt="" />
         
         

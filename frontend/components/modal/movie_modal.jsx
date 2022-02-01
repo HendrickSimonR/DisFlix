@@ -148,11 +148,11 @@ class MovieModal extends React.Component {
           <div className="modal-movie-shadow"></div>
         </div>
 
-        <div>
-          <span onClick={this.props.closeModal} className="material-icons-sharp close-modal">
+        <div onClick={this.props.closeModal}>
+          <span className="material-icons-sharp close-modal">
             cancel
           </span>
-          <span onClick={this.props.closeModal} className="material-icons-round" id="close-fill">
+          <span className="material-icons-round" id="close-fill">
             circle
           </span>
         </div>
