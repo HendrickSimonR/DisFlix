@@ -367,3 +367,73 @@ html, body {
     filter: grayscale(100%);
   }
 }
+
+
+.full-screen-movie-page {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  height: 100vh;
+  background: black;
+
+
+  .exit-video {
+    z-index: 10000;
+    position: fixed;
+    color: white;
+    left: 1vw;
+    top: 1vw;
+    font-size: 5vw;
+    opacity: 40%;
+    transition: all 0.4s ease 0s;
+  }
+
+  .exit-video:hover {
+    opacity: 100%;
+    cursor: pointer;
+  }
+
+  .full-screen-movie {
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .full-screen-poster {
+    filter: brightness(0.6);
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.replay-full-movie {
+  position: fixed;
+  opacity: 40%;
+  font-size: 12vw;
+  z-index: 10000;
+  color: white;
+  top: 40%;
+  left: 44%;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+}
+
+.replay-full-movie:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+#full-screen-poster {
+  position: relative;
+}

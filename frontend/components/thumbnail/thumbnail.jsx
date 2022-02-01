@@ -6,12 +6,25 @@ import LikeButtonsContainer from './like_buttons_container';
 class Thumbnail extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { mute: 'volume_up', moviePlay: false }
+
+    this.state = { 
+      mute: 'volume_up', 
+      moviePlay: false,
+      fullScreen: false 
+    };
+
     this.showMovie = this.showMovie.bind(this);
     this.hoverVideo = this.hoverVideo.bind(this);
     this.exitVideo = this.exitVideo.bind(this);
     this.displayPoster = this.displayPoster.bind(this);
+    this.watchMovie = this.watchMovie.bind(this);
   }
+
+  watchMovie() {
+    window.moviePlay = true;
+    window.movieShow = this.props.movie.id;
+    this.props.history.push('/movie');
+  };
 
   handleMute(id){
     if(this.state.mute === 'volume_up'){
@@ -104,6 +117,8 @@ class Thumbnail extends React.Component {
       this.stopFeatured();
       console.log('isdgbjkvsbdv')
     }
+
+
     
     let indexMovie = document.getElementById(id);
     window.movieTime = indexMovie.currentTime;
@@ -237,7 +252,7 @@ class Thumbnail extends React.Component {
           id={this.posterId}
           src={this.props.movie.image_url} 
           className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} 
-          onClick={this.showMovie}
+          onClick={() => this.showMovie(this.uniqueId)}
           style={{ display: 'none'}}
         />
 
@@ -245,7 +260,7 @@ class Thumbnail extends React.Component {
           id={this.uniqueId} 
           className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"}
           poster={this.props.movie.image_url} 
-          onClick={this.showMovie}
+          onClick={() => this.showMovie(this.uniqueId)}
           muted={false}
           onEnded={() => this.displayPoster(this.posterId, this.uniqueId)}
         >
@@ -267,9 +282,13 @@ class Thumbnail extends React.Component {
         <div className="thumbnail-functions">
           <div className="thumbnail-buttons">
             <div className="thumbnail-buttons-left">
-              <span className="material-icons thumb-play-circle">play_circle </span>
+              <span 
+                className="material-icons thumb-play-circle"
+                onClick={this.watchMovie}
+              >
+                play_circle </span>
               <WatchlistButtonContainer watchlistId={watchlistId} watchlist={watchlist} movieId={this.props.movie.id} />
-              <LikeButtonsContainer movieId={this.props.movie.id}/>
+              <LikeButtonsContainer movieId={this.props.movie.id} />
             </div>
 
             <div className="thumbnail-buttons-right">
@@ -294,8 +313,6 @@ class Thumbnail extends React.Component {
             <li>{tag3}</li>
           </div>
         </div>
-
-
       </div>
     )
   }

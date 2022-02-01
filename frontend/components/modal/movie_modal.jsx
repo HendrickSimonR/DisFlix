@@ -8,7 +8,10 @@ class MovieModal extends React.Component {
     super(props);
 
     this.displayPoster = this.displayPoster.bind(this);
+    this.watchMovie = this.watchMovie.bind(this);
     this.uniqueId;
+    this.posterId;
+    this.film;
 
     this.state = { 
       mute: 'volume_up', 
@@ -21,6 +24,17 @@ class MovieModal extends React.Component {
     this.setState({ movieComponent: this.uniqueId })
     let indexMovie = document.getElementById(this.uniqueId);
     indexMovie.currentTime = window.movieTime;  
+  }
+
+  watchMovie() {
+    window.movieShow = this.film.id;
+    window.moviePlay = true;
+    let indexMovie = document.getElementById(this.uniqueId);
+    indexMovie.pause()
+    indexMovie.load()
+    this.displayPoster(this.posterId, this.uniqueId);
+    this.props.closeModal();
+    this.props.history.push('/movie');
   }
 
   handleMute(id){
@@ -60,9 +74,7 @@ class MovieModal extends React.Component {
   // }
 
   render() {
-    let film;
     let watchlistId;
-    let posterId;
 
     let moviesArr = Object.values(this.props.movies);
     if (moviesArr.length === 0) {
@@ -76,9 +88,9 @@ class MovieModal extends React.Component {
         // console.log('findmovie', this.props.movie)
 
         if (this.props.movie === movie.id) {
-          film = movie;
+          this.film = movie;
           this.uniqueId = movie.id + 444;
-          posterId = movie.id + 777;        
+          this.posterId = movie.id + 777;        
           break;
         }
       }
@@ -86,7 +98,7 @@ class MovieModal extends React.Component {
       if (this.props.watchlist) { 
         for (let i = 0; i < this.props.watchlist.length; i++) {
           let watchlistMovie = this.props.watchlist[i];
-          if (watchlistMovie.movie_id === film.id) {
+          if (watchlistMovie.movie_id === this.film.id) {
             watchlistId = watchlistMovie.id;
             break;
           } 
@@ -95,15 +107,15 @@ class MovieModal extends React.Component {
     }
 
     console.log('MODAL PROPS', this.props)
-    console.log('MOVIE PROPS ', film)
+    console.log('MOVIE PROPS ', this.film)
 
     return (
       <div className="movie-modal">
         <div className="modal-movie-player">
           <img 
             alt 
-            id={posterId}
-            src={film.image_url} 
+            id={this.posterId}
+            src={this.film.image_url} 
             className='modal-movie' 
             onClick={this.showMovie}
             style={{ display: 'none'}}
@@ -114,10 +126,10 @@ class MovieModal extends React.Component {
             autoPlay
             playsInline
             className="modal-movie"
-            poster={film.image_url} 
+            poster={this.film.image_url} 
             onClick={this.showMovie}
-            muted={false}
-            onEnded={() => this.displayPoster(posterId, this.uniqueId)}
+            muted={window.moviePlay === true ? true : false}
+            onEnded={() => this.displayPoster(this.posterId, this.uniqueId)}
           >
             <source src={this.props.test} type="video/mp4" /> 
           </video>
@@ -137,18 +149,18 @@ class MovieModal extends React.Component {
         <div className="movie-modal-details">
           <div className="movie-modal-buttons">
             <div className="movie-modal-buttons-left">
-              <div className="movie-modal-play">
+              <div className="movie-modal-play" onClick={() => this.watchMovie(this.uniqueId)}>
                 <h1><span className="material-icons-sharp">play_arrow</span></h1>
                 <h2>Play</h2>
               </div>
-              <WatchlistButtonContainer modalButton={true} movieId={film.id} userId={this.props.user} watchlistId={watchlistId} watchlist={this.props.watchlist} />
-              <LikeButtonsContainer modalButton={true} movieId={film.id} user={this.props.user} />
+              <WatchlistButtonContainer modalButton={true} movieId={this.film.id} userId={this.props.user} watchlistId={watchlistId} watchlist={this.props.watchlist} />
+              <LikeButtonsContainer modalButton={true} movieId={this.film.id} user={this.props.user} />
             </div>
 
             <div className="movie-modal-buttons-right">
               <span 
                 className='material-icons-round modal-volume-on' id={this.uniqueId + 'volume'}
-                onClick={this.state.moviePlay === true ? () => this.handleMute(this.uniqueId) : () => this.replayFeatured(posterId, this.uniqueId)}
+                onClick={this.state.moviePlay === true ? () => this.handleMute(this.uniqueId) : () => this.replayFeatured(this.posterId, this.uniqueId)}
               >
                 { this.state.moviePlay === true ? 
                   this.state.mute : 'refresh' 
@@ -161,18 +173,18 @@ class MovieModal extends React.Component {
             <div className="movie-modal-left">
               <div className="movie-modal-info">
                 <h1>100% Match</h1>
-                <h3>{film.year}</h3>
-                <h2>{film.rating}</h2>
-                <h3>{film.runtime}</h3>
+                <h3>{this.film.year}</h3>
+                <h2>{this.film.rating}</h2>
+                <h3>{this.film.runtime}</h3>
               </div>
               <div className="modal-description">
-                {film.description}
+                {this.film.description}
               </div>
             </div>
             <div className="movie-modal-right">
-              <div>Cast: <span>{film.cast}</span></div>
-              <div>Genres: <span>{film.tags}</span></div>
-              <div>This feature is: <span>{film.topic}</span></div>
+              <div>Cast: <span>{this.film.cast}</span></div>
+              <div>Genres: <span>{this.film.tags}</span></div>
+              <div>This feature is: <span>{this.film.topic}</span></div>
             </div>
           </div>
         </div>

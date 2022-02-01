@@ -6,6 +6,7 @@ import SearchContainer from './search/search_container';
 import NavContainer from './home/nav/nav_container';
 import AllSorted from './sorted/sorted_container';
 import SplashPage from './splash/splash_page';
+import MovieShowContainer from './movie/movie_show_container';
 import Footer from './footer/footer';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -30,6 +31,7 @@ const App = () => (
       <ProtectedRoute path="/natgeo" component={AllSorted.natGeo} />
       <ProtectedRoute path="/watchlist" component={AllSorted.watchlist} />
       <ProtectedRoute path="/search/:search" component={SearchContainer} />
+      <ProtectedRoute path="/movie" component={MovieShowContainer} />
     </Switch>
     {/* <Footer/> */}
   </div>

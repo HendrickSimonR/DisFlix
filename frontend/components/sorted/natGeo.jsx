@@ -19,7 +19,6 @@ class NatGeo extends React.Component {
   displayPoster() {
     let video = document.getElementById('brand-container-video');
     let image = document.getElementById('brand-container-poster');
-    
     video.style.display = 'none';
     image.style.display = 'inline';
   }
