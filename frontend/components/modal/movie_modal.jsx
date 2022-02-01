@@ -9,6 +9,7 @@ class MovieModal extends React.Component {
 
     this.displayPoster = this.displayPoster.bind(this);
     this.watchMovie = this.watchMovie.bind(this);
+    this.handleLoader = this.handleLoader.bind(this);
     this.uniqueId;
     this.posterId;
     this.film;
@@ -24,6 +25,12 @@ class MovieModal extends React.Component {
     this.setState({ movieComponent: this.uniqueId })
     let indexMovie = document.getElementById(this.uniqueId);
     indexMovie.currentTime = window.movieTime;  
+  }
+
+  handleLoader() {
+    let loader = document.getElementById('brand-loader-modal');
+    loader.style.display = 'none';
+    window.scrollTo(0,0);
   }
 
   watchMovie() {
@@ -112,6 +119,9 @@ class MovieModal extends React.Component {
     return (
       <div className="movie-modal">
         <div className="modal-movie-player">
+          <div id='brand-loader-modal' className='loader-container modal'>
+            <img className='brand-loader modal' src={window.loader} alt='' />
+          </div>
           <img 
             alt 
             id={this.posterId}
@@ -123,6 +133,7 @@ class MovieModal extends React.Component {
 
           <video 
             id={this.uniqueId} 
+            onPlay={this.handleLoader}
             autoPlay
             playsInline
             className="modal-movie"

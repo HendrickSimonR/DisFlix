@@ -1,0 +1,35 @@
+.brand-loader {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 43vh;
+  animation: spin 1.1s linear infinite;
+}
+
+.brand-loader.modal {
+  top: 26vh;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: url("https://i.imgur.com/MmqVKyy.png") fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 3;
+}
+
+.loader-container.modal {
+  background: none;
+  width: 850px;
+}
