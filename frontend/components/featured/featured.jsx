@@ -1,11 +1,14 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
+// import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 // import PlayArrow from '@mui/material/Button';
 
 class Featured extends React.Component {
   constructor(props) {
     super(props)
     this.showMovie = this.showMovie.bind(this);
+    this.playFeatured = this.playFeatured.bind(this);
     this.displayPoster = this.displayPoster.bind(this);
     this.displayShadow = this.displayShadow.bind(this);
     this.replayFeatured = this.replayFeatured.bind(this);
@@ -19,6 +22,12 @@ class Featured extends React.Component {
     this.props.openModal('1');
   }
 
+  playFeatured() {
+    window.moviePlay = true;
+    window.movieShow = 1;
+    this.props.history.push('/movie');
+  }
+
   stopFeatured() {
     let mainContainer = document.getElementById('featured-container');
     let movieContainer = document.getElementById('featured-movie-container');
@@ -28,6 +37,7 @@ class Featured extends React.Component {
     featuredMovie.pause();
     // featuredMovie.load();
     featuredMovie.currentTime = 30;
+    this.setState({ moviePlay: false});
     movieContainer.style.display = 'none';
     mainContainer.style.animation = 'fadeIn ease 1s';
     mainContainer.style.height = '103vh';
@@ -133,7 +143,10 @@ class Featured extends React.Component {
         <div className="featured-buttons">
 
           <div className="featured-left">
-            <div className="featured-play-button">
+            <div 
+              className="featured-play-button"
+              onClick={this.playFeatured}
+            >
               <h1><span className="material-icons-sharp">play_arrow</span></h1>
               <h2>Play</h2>
             </div>
@@ -168,4 +181,4 @@ class Featured extends React.Component {
 }
 
 
-export default Featured;
+export default withRouter(Featured);

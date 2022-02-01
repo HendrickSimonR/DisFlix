@@ -57,6 +57,14 @@
   margin-bottom: 3vw;
 }
 
+#modal-title {
+  position: fixed;
+  font-size: 3vw;
+  bottom: 277px;
+  color: rgb(255, 252, 238);
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.719);
+}
+
 .modal-description {
   color: white;
   font-family: 'Open Sans';

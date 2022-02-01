@@ -147,6 +147,7 @@ class MovieModal extends React.Component {
         </div>
         
         <div className="movie-modal-details">
+          {this.state.moviePlay === true ? <h1 id="modal-title">{this.film.title}</h1> : null}
           <div className="movie-modal-buttons">
             <div className="movie-modal-buttons-left">
               <div className="movie-modal-play" onClick={() => this.watchMovie(this.uniqueId)}>
