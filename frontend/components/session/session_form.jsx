@@ -37,10 +37,9 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.submitForm(user)
-    // .then(
-    //   () => this.props.history.push('/dashboard'));
-    }
+    this.props.submitForm(user).then(
+      () => this.props.history.push('/home'));
+  }
 
   render() {
     console.log('session', this.props)
