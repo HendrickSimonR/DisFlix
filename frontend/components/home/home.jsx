@@ -53,10 +53,12 @@ class Home extends React.Component {
     this.props.getProfiles({user_id: this.props.user});
 
     if (window.hideProfile === true) {
+      let selectScreen = document.getElementById('select-profiles');
+      selectScreen.style.display = 'none';
       this.playFeatured();
     }
 
-    if (this.state.loading === true) {
+    if (window.hideProfile !== true) {
       setTimeout(() => {
         this.setState({ loading: false }),
         this.handleProfiles()
@@ -346,7 +348,7 @@ class Home extends React.Component {
 
         <div className="home-main">
           { window.hideProfile === true ? '' :  this.loader }
-          <SelectProfile avatars={this.props.avatars} /> 
+          <SelectProfile avatars={this.props.avatars} />
 
           <BrandButtons />
 
