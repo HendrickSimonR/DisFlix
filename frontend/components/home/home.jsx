@@ -62,7 +62,7 @@ class Home extends React.Component {
       setTimeout(() => {
         this.setState({ loading: false }),
         this.handleProfiles()
-      }, 4000);
+      }, 3000);
     }
   }
 
