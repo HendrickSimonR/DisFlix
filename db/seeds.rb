@@ -25,11 +25,6 @@ u1.username='mickeymouse'
 u1.password='imagination'
 u1.save!
 
-p1=Profile.new(user_id: u1.id, profile_name: "Mickey")
-p1avatar = open("#{Rails.root}/app/assets/images/mickey.png")
-p1.avatar.attach(io: p1avatar, filename: " mickey.png")
-p1.save!
-
 # mPhoto22 = URI.open('https://i.imgur.com/DkbGEIq.jpg') 
 
 puts "Creating brands..."
