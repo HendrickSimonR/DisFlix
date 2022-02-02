@@ -43,7 +43,7 @@ class NatGeo extends React.Component {
     for (let i = 0; i < this.props.brands.length; i++) {
       let brand = this.props.brands[i];
 
-      if (brand.id === brandId) {
+      if (brand.name === 'National Geographic') {
         poster = brand.image_url;
         brandMovie = brand.movie_url;
       }
