@@ -6,6 +6,25 @@ class ProfileMenu extends React.Component {
   constructor(props) {
     super(props)
     this.handleSignout = this.handleSignout.bind(this)
+    this.visitSite = this.visitSite.bind(this);
+    this.newAvatar = this.newAvatar.bind(this);
+    this.randomAvatar;
+    this.state = { selectNew: false }
+  }
+
+  newAvatar() {
+    window.hideProfile = false;
+    window.profilePic = null;
+    let selectScreen = document.getElementById('select-profiles');
+    selectScreen.style.display = 'flex'
+    this.setState({ selectNew: !this.state.selectNew})
+  }
+
+  visitSite(link) {
+    console.log('visit site');
+    window.open(
+      link, '_blank'
+    )
   }
 
   handleSignout() {
@@ -16,16 +35,42 @@ class ProfileMenu extends React.Component {
   }
 
   render() {
+    let randNum = Math.floor(Math.random() * (34 - 0) + 0);
+
+    if (this.props.avatars.length === 35) {
+      console.log('RANDOM NUM', randNum)
+      this.randomAvatar = this.props.avatars[randNum].image;
+    }
+
+    console.log('PROFILE PROPS', this.props)
     return (
       <div className="profile-menu-container hidden" id="profile-menu">
         <div className="profile-menu">
-
+          <p className="dropdown-username">{this.props.session.username}</p>
           <ul className="profile-links">
-            <li>
-              <a href="https://github.com/hendricksimonr/" target="_blank">
-              <div className="github-link">GitHub</div></a>
+
+            <li id="link-to-site" onClick={this.newAvatar} className="change-profile-pic">
+              <img className="profile-pic change" alt='' src={this.randomAvatar}></img>
+              <p>Change Avatar</p>
             </li>
-            <li onClick={this.handleSignout} className="logout-button">Sign out</li>
+
+            <li id="link-to-site" onClick={() => this.visitSite("https://www.linkedin.com/in/hendrick-ramos/")}>
+              LinkedIn
+            </li>
+
+            <li id="link-to-site" onClick={() => this.visitSite("https://angel.co/jobs/home")}>
+              AngelList
+            </li>            
+
+            <li id="link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
+              GitHub
+            </li>     
+
+            <li id="link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
+              My Website
+            </li>   
+
+            <li id="link-to-site" onClick={this.handleSignout}>Log Out</li>
           </ul>
         </div>
       </div>

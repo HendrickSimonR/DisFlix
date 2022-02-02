@@ -7,3 +7,23 @@
   padding: 3px;
 }
 
+.change-profile-pic {
+  display: flex;
+  flex-direction: row;
+
+  p {
+    position: relative;
+    top: 20px;
+    left: 10px;
+  }
+
+  p:hover {
+    cursor: pointer;
+  }
+}
+
+
+.profile-pic.change {
+  position: relative;
+  cursor: pointer;
+}

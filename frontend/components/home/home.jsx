@@ -56,10 +56,12 @@ class Home extends React.Component {
       this.playFeatured();
     }
 
-    setTimeout(() => {
-      this.setState({ loading: false }),
-      this.handleProfiles()
-    }, 4000);
+    if (this.state.loading === true) {
+      setTimeout(() => {
+        this.setState({ loading: false }),
+        this.handleProfiles()
+      }, 4000);
+    }
   }
 
   handleProfiles() {
@@ -344,9 +346,7 @@ class Home extends React.Component {
 
         <div className="home-main">
           { window.hideProfile === true ? '' :  this.loader }
-          {window.hideProfile === true ? null 
-          : <SelectProfile avatars={this.props.avatars} /> 
-          }
+          <SelectProfile avatars={this.props.avatars} /> 
 
           <BrandButtons />
 
