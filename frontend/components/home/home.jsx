@@ -23,14 +23,15 @@ class Home extends React.Component {
     // this.playFeatured = this.playFeatured.bind(this);
   }
 
-  // playFeatured() {
-  //   let movieContainer = document.getElementById('featured-movie-container');
-  //   let movie = document.querySelector(".brand-container-video.featured");
-  //   movieContainer.style.display = 'block';
-  //   console.log('movieasfasf', movie);
-  //   movie.style.display = 'block';
-  //   movie.play();
-  // }
+  playFeatured() {
+    let movieContainer = document.getElementById('featured-movie-container');
+    let movie = document.querySelector(".brand-container-video.featured");
+    movieContainer.style.display = 'block';
+    console.log('movieasfasf', movie);
+    movie.style.display = 'block';
+    movie.load();
+    movie.play();
+  }
 
   handleSignout() {
     // console.log('profile', window.profilePic)
@@ -51,13 +52,14 @@ class Home extends React.Component {
     this.props.getDislikes({user_id: this.props.user}); 
     this.props.getProfiles({user_id: this.props.user});
 
-    // if (window.hideProfile === true) {
-    //   this.playFeatured();
-    // }
+    if (window.hideProfile === true) {
+      this.playFeatured();
+    }
+
     setTimeout(() => {
       this.setState({ loading: false }),
       this.handleProfiles()
-    }, 11000);
+    }, 4000);
   }
 
   handleProfiles() {
