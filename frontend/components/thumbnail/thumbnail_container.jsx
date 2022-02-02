@@ -5,7 +5,7 @@ import { withRouter } from 'react-router';
 import Thumbnail from './thumbnail';
 
 const mSTP = state => {
-  // console.log('THUMBSTATE', state);
+  console.log('THUMBSTATE', state);
   return {
     test: state.brands[state.brands.length - 1].movie_url,
     user: state.session.id,
