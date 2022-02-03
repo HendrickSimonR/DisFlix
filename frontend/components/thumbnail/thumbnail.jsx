@@ -108,11 +108,11 @@ class Thumbnail extends React.Component {
     // video.style.animation = 'fadeOut linear 1s';
     // movieContainer.style.animation = 'fadeOut ease 1s';
     
-    if (window.featuredVolume === 'off') {
-      this.setState({ mute: 'volume_off'})
-    } else {
-      this.setState({ mute: 'volume_up' })
-    }
+    // if (window.featuredVolume === 'off') {
+    //   this.setState({ mute: 'volume_off'})
+    // } else {
+    //   this.setState({ mute: 'volume_up' })
+    // }
 
     featuredMovie.currentTime = 30;
     // featuredMovie.pause();
