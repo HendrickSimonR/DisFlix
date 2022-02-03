@@ -20,6 +20,15 @@ class About extends React.Component {
     console.log('ABOUT PROPS', this.props)
     return (
       <div className="about-me-modal">
+        <div id='about-close' onClick={this.props.closeModal}>
+          <span className="material-icons-sharp close-modal-about">
+            cancel
+          </span>
+          <span className="material-icons-round close-fill-about">
+            circle
+          </span>
+        </div>
+        
         <div id="my-name">
           <h3>- Hendrick</h3>
           <h3 id="last-name">Ramos</h3>
