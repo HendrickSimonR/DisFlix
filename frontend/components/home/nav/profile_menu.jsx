@@ -13,17 +13,18 @@ class ProfileMenu extends React.Component {
   }
 
   newAvatar() {
-    this.props.history.push('/home')
+    window.hideProfile = false;
+    window.profilePic = null;
 
     if (window.location.href.includes('home')) {
-      window.hideProfile = false;
-      window.profilePic = null;
       // let loader = document.getElementById('brand-loader-home');
       // loader.style.display = 'none';
       let selectScreen = document.getElementById('select-profiles');
       // console.log('SELECT SCREEN', selectScreen);
       selectScreen.style.display = 'flex';
       this.setState({ selectNew: !this.state.selectNew})
+    } else {
+      this.props.history.push('/home');
     }
   }
 

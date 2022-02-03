@@ -17,7 +17,6 @@ class Profile extends React.Component {
   }
   
   render() {
-
     return (
       <div className="profile-container">
         <img onMouseEnter={this.revealMenu} onMouseLeave={this.hideMenu} src={window.profilePic} className="profile-pic" />
