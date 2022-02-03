@@ -109,7 +109,7 @@ class SelectProfile extends React.Component {
     this.selected = [];
     avatars = avatars.sort(() => (Math.random() - 0.5));
 
-    console.log('avatars', avatars, this.props.avatars)
+    // console.log('avatars', avatars, this.props.avatars)
     
     if (avatars.length > 0) {
       let i = 0;
@@ -117,7 +117,7 @@ class SelectProfile extends React.Component {
         this.selected.push(avatars[i]);
         avatars.pop();
       // this.state.selectedAvatars.push(avatars[i]);
-        console.log('select', this.selected, this.state)
+        // console.log('select', this.selected, this.state)
         i++;
       }
     }

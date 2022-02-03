@@ -59,8 +59,8 @@ class MovieShow extends React.Component {
       }
     }
 
-    console.log('show', this.props)
-    console.log('MOVIEEEEEE', this.movie)
+    // console.log('show', this.props)
+    // console.log('MOVIEEEEEE', this.movie)
     return (
       <div className="full-screen-movie-page">
         <span 
@@ -79,7 +79,7 @@ class MovieShow extends React.Component {
         </span>
         <div id="full-screen-poster" style={{ display: 'none'}}>
           <img 
-            alt 
+            alt=''
             src={this.movie ? this.movie.image_url : null} 
             className="full-screen-poster"
           />

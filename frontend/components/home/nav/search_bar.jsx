@@ -46,7 +46,7 @@ class SearchBar extends React.Component {
   
 
   render() {
-    console.log('SEARCH BAR', this.props)
+    // console.log('SEARCH BAR', this.props)
 
     return (
       <OutsideClickHandler>

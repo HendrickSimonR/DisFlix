@@ -11,7 +11,7 @@ import { getAvatars } from '../../actions/avatar_actions';
 import { openModal } from '../../actions/modal_actions'
 
 const mSTP = state => {
-  console.log('STATE', state);
+  // console.log('STATE', state);
   return ({
     avatars: state.avatars,
     brands: state.brands,

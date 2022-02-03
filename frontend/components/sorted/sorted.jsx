@@ -48,7 +48,7 @@ class Sorted extends React.Component {
       this.setState({ brand: 'starWars' });
     }
     
-    console.log('sortedstate', this.state)
+    // console.log('sortedstate', this.state)
   }
 
   componentWillUnmount() {
@@ -80,7 +80,7 @@ class Sorted extends React.Component {
       }
     }
 
-    console.log('disneybrand', this.props)
+    // console.log('disneybrand', this.props)
     return(
       <div className="films-container disney">
         <div id='brand-loader-disney' className='loader-container'>

@@ -27,7 +27,7 @@ class Home extends React.Component {
     let movieContainer = document.getElementById('featured-movie-container');
     let movie = document.querySelector(".brand-container-video.featured");
     movieContainer.style.display = 'block';
-    console.log('movieasfasf', movie);
+    // console.log('movieasfasf', movie);
     movie.style.display = 'block';
     movie.load();
     movie.play();
@@ -56,6 +56,7 @@ class Home extends React.Component {
       let selectScreen = document.getElementById('select-profiles');
       selectScreen.style.display = 'none';
       this.playFeatured();
+      this.setState({loading: false})
     }
 
     if (window.hideProfile !== true) {
@@ -337,10 +338,10 @@ class Home extends React.Component {
     }
 
 
-    console.log('PROPITY', this.props);
+    console.log('PROPITY', this.props, this.state);
     // console.log('PROPITYSTATE', this.state);
     let featured = this.props.brands[this.props.brands.length - 1];
-    console.log('FEATCH', featured)
+    // console.log('FEATCH', featured)
 
     return (
       <div className="home-container">

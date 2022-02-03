@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getAvatars, getAvatar } from '../../actions/avatar_actions'; 
 
 const mSTP = state => {
-  console.log('AVATARSTATE', state)
+  // console.log('AVATARSTATE', state)
   return({
     avatars: state.avatars,
     user: state.session

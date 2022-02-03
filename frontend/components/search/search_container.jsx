@@ -6,8 +6,8 @@ import { selectMovies } from '../../selectors/movie_selector';
 
 
 const mSTP = (state, { match }) => {
-  console.log('SEARCHSTATE', state)
-  console.log('match', match)
+  // console.log('SEARCHSTATE', state)
+  // console.log('match', match)
   const search = match.params.search;
   
   return {

@@ -31,7 +31,7 @@ class Thumbnail extends React.Component {
     if(this.state.mute === 'volume_up'){
       this.setState({mute: 'volume_off'});
       let vid = document.getElementById(id);
-      console.log('id', id)
+      // console.log('id', id)
       if (vid) vid.muted = true;    
     } else {
       this.setState({mute: 'volume_up'});
@@ -64,7 +64,7 @@ class Thumbnail extends React.Component {
   hoverVideo(id) {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
     this.setState({ moviePlay: !this.state.moviePlay });
-    let indexMovie = document.getElementById(id);
+    let thumbMovie = document.getElementById(id);
     if (window.location.href.includes('home')) {
       // let vid = document.querySelector(".brand-container-video.featured");
       // vid.muted = true;
@@ -74,29 +74,31 @@ class Thumbnail extends React.Component {
 
     let volume = document.getElementById(id + 'volume');
     volume.style.display = 'inline-block';
-    indexMovie.play();
-    console.log('enter', indexMovie, this.state);
+    thumbMovie.play();
+    // console.log('enter', indexMovie, this.state);
   }
 
   exitVideo(id, posterId) {
     // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
     this.setState({ moviePlay: !this.state.moviePlay });
     let volume = document.getElementById(id + 'volume');
-    let indexMovie = document.getElementById(id);
+    let thumbMovie = document.getElementById(id);
     let poster = document.getElementById(posterId);
     
     if (window.location.href.includes('home')) {
       let vid = document.querySelector(".brand-container-video.featured");
-      vid.play();
+      vid.currentTime = 30;
       vid.muted = false;
     }
 
     volume.style.display = 'none';
-    indexMovie.pause();
-    console.log('exit', indexMovie, `STOPPED AT ${indexMovie.currentTime}`, this.state);
-    indexMovie.load();
+    thumbMovie.pause();
+    // console.log('exit', indexMovie, `STOPPED AT ${indexMovie.currentTime}`, this.state);
     poster.style.display = 'none';
-    indexMovie.style.display = 'inline-block';
+    thumbMovie.load();
+    thumbMovie.muted = false;
+    this.setState({ mute: 'volume_up'})
+    thumbMovie.style.display = 'inline-block';
   }
 
   stopFeatured() {
@@ -105,9 +107,16 @@ class Thumbnail extends React.Component {
     let featuredMovie = document.getElementById('brand-container-video');
     // video.style.animation = 'fadeOut linear 1s';
     // movieContainer.style.animation = 'fadeOut ease 1s';
-    featuredMovie.pause();
-    // featuredMovie.load();
+    
+    if (window.featuredVolume === 'off') {
+      this.setState({ mute: 'volume_off'})
+    } else {
+      this.setState({ mute: 'volume_up' })
+    }
+
     featuredMovie.currentTime = 30;
+    // featuredMovie.pause();
+    // featuredMovie.load();
     movieContainer.style.display = 'none';
     mainContainer.style.animation = 'fadeIn ease 1s';
     mainContainer.style.height = '103vh';
@@ -116,13 +125,13 @@ class Thumbnail extends React.Component {
   showMovie(id) {
     if (window.location.href.includes('home')) {
       this.stopFeatured();
-      console.log('isdgbjkvsbdv')
+      // console.log('isdgbjkvsbdv')
     }
 
     let indexMovie = document.getElementById(id);
     window.movieTime = indexMovie.currentTime;
 
-    console.log('MOVIETIME', window.movieTime)
+    // console.log('MOVIETIME', window.movieTime)
     
     this.props.openModal(this.props.movie.id);
   }
@@ -156,7 +165,7 @@ class Thumbnail extends React.Component {
     //   // console.log('THUMBPROPS', this.props.index, this.props.movie)
     // }
 
-    console.log('THUMBPROPS', this.props)
+    // console.log('THUMBPROPS', this.props)
 
     if (tags !== undefined) {
       let separated = tags.split(', ');
@@ -222,7 +231,7 @@ class Thumbnail extends React.Component {
 
 
 
-    console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
+    // console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     
     return (
       <div className={ 
@@ -251,7 +260,7 @@ class Thumbnail extends React.Component {
         onMouseEnter={() => this.hoverVideo(this.uniqueId)} onMouseLeave={() => this.exitVideo(this.uniqueId, this.posterId)}> 
 
         <img 
-          alt 
+          alt='' 
           id={this.posterId}
           src={this.props.movie.image_url} 
           className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} 

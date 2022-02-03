@@ -84,7 +84,7 @@ const mSTP = state => {
     brandId = 0;
   }
 
-  console.log('sorted state', state)
+  // console.log('sorted state', state)
   return ({
     current_brand: brandId,
     user: state.session.id,

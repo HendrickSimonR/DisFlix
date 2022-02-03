@@ -48,7 +48,7 @@ class MovieModal extends React.Component {
     if (this.state.mute === 'volume_up'){
       this.setState({mute: 'volume_off'});
       let vid = document.getElementById(id);
-      console.log('id', id)
+      // console.log('id', id)
       if (vid) vid.muted = true;    
     } else {
       this.setState({mute: 'volume_up'});
@@ -113,8 +113,8 @@ class MovieModal extends React.Component {
       }
     }
 
-    console.log('MODAL PROPS', this.props)
-    console.log('MOVIE PROPS ', this.film)
+    // console.log('MODAL PROPS', this.props)
+    // console.log('MOVIE PROPS ', this.film)
 
     return (
       <div className="movie-modal">
@@ -123,7 +123,7 @@ class MovieModal extends React.Component {
             <img className='brand-loader modal' src={window.loader} alt='' />
           </div>
           <img 
-            alt 
+            alt=''
             id={this.posterId}
             src={this.film.image_url} 
             className='modal-movie' 

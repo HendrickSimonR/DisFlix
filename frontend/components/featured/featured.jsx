@@ -44,7 +44,7 @@ class Featured extends React.Component {
   }
 
   displayShadow() {
-    console.log('HOOOPLAH')
+    // console.log('HOOOPLAH')
     this.setState({ moviePlay: true })
     // let shadow = document.getElementById('featured-video-shadow');
     let mainContainer = document.getElementById('featured-container');
@@ -75,6 +75,11 @@ class Featured extends React.Component {
     let movieContainer = document.getElementById('featured-movie-container');
     let movie = document.querySelector(".brand-container-video.featured");
     movie.load();
+
+    if (this.state.mute === 'volume_off') {
+      movie.muted = true;
+    }
+
     movie.play();
     movieContainer.style.display = 'block';
     movie.style.display = 'block';
@@ -85,10 +90,12 @@ class Featured extends React.Component {
       this.setState({mute: 'volume_off'})
       let vid = document.querySelector(".brand-container-video.featured");
       if (vid) vid.muted = true;    
+      window.featuredVolume = 'off';
     } else {
       this.setState({mute: 'volume_up'})
       let vid = document.querySelector(".brand-container-video.featured");
       if (vid) vid.muted = false;
+      window.featuredVolume = 'on';
     }
   }
 
@@ -104,7 +111,7 @@ class Featured extends React.Component {
 
     // if (vid && vid.muted === true) this.muteFromThumb;
 
-    console.log('FEATURED', this.props, this.state);
+    // console.log('FEATURED', this.props, this.state);
 
 
     return (

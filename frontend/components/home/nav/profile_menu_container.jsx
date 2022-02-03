@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 import ProfileMenu from './profile_menu';
 
 const mSTP = state => {
-  console.log('PROFILE STATE', state)
+  // console.log('PROFILE STATE', state)
   return {
     session: state.session,
     avatars: state.avatars

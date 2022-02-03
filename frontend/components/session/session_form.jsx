@@ -42,7 +42,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    console.log('session', this.props)
+    // console.log('session', this.props)
 
     return (
       <div className="signin-form-container">

@@ -43,7 +43,7 @@ class Search extends React.Component {
     this.props.movies.forEach(movie => {
       if(searchMovies(this.props.search, movie) === true) {
         this.moviesFound.push(movie);
-        console.log('MOVIE SEARCHED', this.moviesFound)
+        // console.log('MOVIE SEARCHED', this.moviesFound)
       }
     })
 
