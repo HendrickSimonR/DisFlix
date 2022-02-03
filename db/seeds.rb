@@ -155,7 +155,7 @@ puts "Generating movies..."
 puts "Generating avatars..."
 
 a1=Avatar.new
-a1.character='Falcon'
+a1.character='Captain America'
 a1.save!
 
 a2=Avatar.new

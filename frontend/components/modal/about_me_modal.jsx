@@ -9,7 +9,6 @@ class About extends React.Component {
   }
 
   visitSite(link) {
-    // console.log('visit site');
     window.open(
       link, '_blank'
     )

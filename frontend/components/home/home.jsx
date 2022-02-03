@@ -370,14 +370,17 @@ class Home extends React.Component {
             : <div>
                 <h1 className="row-header">Watchlist</h1>
 
-                <div className="scroll-arrows">
-                  <span className="material-icons left-arrow watchlist hidden" onClick={() => this.handleScroll('left', 'watchlist')}>
-                    arrow_back_ios
-                  </span>
-                  <span className="material-icons right-arrow watchlist" onClick={() => this.handleScroll('right', 'watchlist')}>
-                    arrow_forward_ios
-                  </span>
-                </div>
+                { this.watchlistMovies.length > 5 ? 
+                  <div className="scroll-arrows">
+                    <span className="material-icons left-arrow watchlist hidden" onClick={() => this.handleScroll('left', 'watchlist')}>
+                     arrow_back_ios
+                    </span>
+                    <span className="material-icons right-arrow watchlist" onClick={() => this.handleScroll('right', 'watchlist')}>
+                      arrow_forward_ios
+                    </span>
+                  </div> 
+                  : null 
+                }
 
                 <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
                   {this.watchlistMovies.slice(0, 8).map((movie, i) => (
