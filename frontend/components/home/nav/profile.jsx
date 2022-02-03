@@ -9,11 +9,11 @@ class Profile extends React.Component {
   }
 
   revealMenu() {
-    $('#profile-menu').removeClass('hidden');
+    $('#profile-menu').removeClass('hide');
   }
 
   hideMenu() {
-    $('#profile-menu').addClass('hidden');
+    $('#profile-menu').addClass('hide');
   }
   
   render() {

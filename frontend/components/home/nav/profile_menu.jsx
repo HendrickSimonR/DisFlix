@@ -52,7 +52,7 @@ class ProfileMenu extends React.Component {
 
     // console.log('PROFILE PROPS', this.props)
     return (
-      <div className="profile-menu-container hidden" id="profile-menu">
+      <div className="profile-menu-container hide" id="profile-menu">
         <div className="profile-menu">
           <p className="dropdown-username">{this.props.session.username}</p>
           <ul className="profile-links">
