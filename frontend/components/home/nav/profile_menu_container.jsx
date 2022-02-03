@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { signout } from '../../../actions/session_actions';
 import { withRouter } from 'react-router';
 import ProfileMenu from './profile_menu';
+import { openModal } from '../../../actions/modal_actions';
 
 const mSTP = state => {
   // console.log('PROFILE STATE', state)
@@ -12,7 +13,8 @@ const mSTP = state => {
 };
 
 const mDTP = dispatch => ({
-  signout: () => dispatch(signout())
+  signout: () => dispatch(signout()),
+  openModal: about => dispatch(openModal(about)),
 });
 
 export default withRouter(connect(mSTP, mDTP)(ProfileMenu));

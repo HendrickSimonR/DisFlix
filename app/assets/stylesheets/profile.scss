@@ -27,3 +27,42 @@
   position: relative;
   cursor: pointer;
 }
+
+#img-to-site {
+  position: relative;
+  top: 3px;
+  left: 8px;
+}
+
+.linked {
+  width: 19px;
+  height: 18px;
+}
+
+.angel {
+  width: 15px;
+  height: 19px;    
+}
+
+.git, .web {
+  width: 20px;
+  height: 18px;        
+}
+
+.mickey {
+  width: 20px;
+  height: 16px;
+  filter: invert(1) brightness(400%) contrast(400%);
+}
+
+.keyhole {
+  width: 10px;
+  height: 16px;
+  filter: invert(1) brightness(400%) contrast(400%);
+}
+
+.not-avatar {
+  position: relative;
+  bottom: 5px;
+}
+

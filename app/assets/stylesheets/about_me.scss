@@ -1,0 +1,107 @@
+#my-name {
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  position: fixed;
+  z-index: 1;
+  bottom: 22px;
+  right: 24px;
+  font-size: 28px;
+}
+
+#last-name {
+  position: relative;
+  left: 40px;
+}
+
+.modal-child.about {
+  width: 1094px;
+  overflow: hidden;
+  position: fixed;
+}
+
+.about-me-modal {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-family: 'Open Sans';
+}
+
+.me-at-disneyland {
+  width: 25vw;
+  height: fit-content;
+  margin: 17px;
+  border-radius: 7px;
+  filter: brightness(1.35);
+}
+
+.about-me-text {
+  display: flex;
+  flex-direction: column;
+  margin: 9px;
+  text-align: center;
+
+  h1 {
+    font-size: 27px;
+    margin: 10px;
+  }
+
+  h2 {
+    margin: 7px;
+    line-height: 1.38;
+  }
+
+  li {
+    list-style: none;
+    margin: 7px;
+    line-height: 1.2;
+  }
+}
+
+.about-logo {
+  width: 17px;
+  position: relative;
+  margin-right: 6px;
+  top: 1px;
+}
+
+.about-logo.aws {
+  width: 26px;
+}
+
+.about-me-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  bottom: 10px;
+  
+  li {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 14px;
+  }
+
+  li > img {
+    opacity: 0.5;
+    height: 32px;
+    width: 34px;
+    transition: all 0.4s ease 0s;
+  }
+
+  li > img:hover {
+    opacity: 1;
+  }
+}
+
+#created-with {
+  font-size: 21px;
+}
+
+#thank-you {
+    filter: invert(1);
+    height: 87px;
+    bottom: 11px;
+    position: fixed;
+    left: 392px;
+}

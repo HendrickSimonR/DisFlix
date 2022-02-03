@@ -8,7 +8,7 @@ import { selectMovies } from '../../selectors/movie_selector';
 import { getWatchlist } from '../../actions/watchlist_actions';
 import { getProfiles } from '../../actions/profile_actions';
 import { getAvatars } from '../../actions/avatar_actions';
-import { openModal } from '../../actions/modal_actions'
+import { openModal } from '../../actions/modal_actions';
 
 const mSTP = state => {
   // console.log('STATE', state);

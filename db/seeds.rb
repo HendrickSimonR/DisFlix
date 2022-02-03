@@ -21,7 +21,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('brands')
 
 # Demo 
 u1=User.new
-u1.username='mickeymouse'
+u1.username='disney4eva'
 u1.password='imagination'
 u1.save!
 

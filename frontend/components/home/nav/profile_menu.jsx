@@ -61,23 +61,37 @@ class ProfileMenu extends React.Component {
               <p>Change Avatar</p>
             </li>
 
-            <li id="link-to-site" onClick={() => this.visitSite("https://www.linkedin.com/in/hendrick-ramos/")}>
-              LinkedIn
-            </li>
+            <div className="not-avatar">
+              <li id="link-to-site" onClick={() => this.props.openModal('about')}>
+                About Me
+                <img id='img-to-site' className="mickey" alt='' src='https://i.imgur.com/HtJM1AM.png' />
+              </li>
 
-            <li id="link-to-site" onClick={() => this.visitSite("https://angel.co/jobs/home")}>
-              AngelList
-            </li>            
+              <li id="link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
+                My Website
+                <img id='img-to-site' className='web' alt='' src='https://i.imgur.com/V1TQaje.png' />
+              </li>   
 
-            <li id="link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
-              GitHub
-            </li>     
+              <li id="link-to-site" onClick={() => this.visitSite("https://www.linkedin.com/in/hendrick-ramos/")}>
+                LinkedIn
+                <img id='img-to-site' className="linked" alt='' src='https://i.imgur.com/uO5d91L.png' />
+              </li>
 
-            <li id="link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
-              My Website
-            </li>   
+              <li id="link-to-site" onClick={() => this.visitSite("https://angel.co/jobs/home")}>
+                AngelList
+                <img id='img-to-site' className="angel" alt='' src='https://i.imgur.com/NROnijm.png' />
+              </li>            
 
-            <li id="link-to-site" onClick={this.handleSignout}>Log Out</li>
+              <li id="link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
+                GitHub
+                <img id='img-to-site' className="git" alt='' src='https://i.imgur.com/Bj3ZPbm.png' />
+              </li>     
+
+              <li id="link-to-site" onClick={this.handleSignout}>
+                Log Out
+                <img id='img-to-site' className="keyhole" alt='' src='https://i.imgur.com/Q6GIubT.png' />
+              </li>
+            </div>
           </ul>
         </div>
       </div>

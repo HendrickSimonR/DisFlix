@@ -1,11 +1,13 @@
 import React from 'react';
+import AboutContainer from './about_me_modal';
 import MovieModalContainer from './movie_modal_container';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 
 function Modal({modal, closeModal}) {
   if (!modal) return null;
-  
+
+  let about;
   let movieId;
   let modalComponent;
   let renderMovie = false;
@@ -23,13 +25,17 @@ function Modal({modal, closeModal}) {
     }
   }
 
+  if (modal.includes('about')) {
+    about = true;
+  }
+
   // let other = parseInt('poop');
   
   if (renderMovie === true) {
     modalComponent = <MovieModalContainer movie={movieId} />
     // CHANGE THIS WHEN EDIT PROFILE IS ESTABLISHED
   } else {
-    return null;
+    modalComponent = <AboutContainer />;
   }
 
   // switch (num) {
@@ -53,7 +59,7 @@ function Modal({modal, closeModal}) {
       onClick={closeModal}
     >
       
-      <div className="modal-child" onClick={e => e.stopPropagation()}>
+      <div className={about ? "modal-child about" : "modal-child"} onClick={e => e.stopPropagation()}>
         { modalComponent }
       </div>
     </div>
