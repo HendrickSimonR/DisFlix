@@ -99,7 +99,7 @@ class About extends React.Component {
           <h2>If you happen to be a recruiter, look no further! I made this project the way I make all my projects: with the utmost care and attention to detail. My immense passion for creating and building is what I'll bring to your company!</h2>
           <h2>If you're just visiting, I hope you enjoy your experience, as well as the collection of scenes from these classic movies and shows!</h2>
 
-          <h2>If you'd like to know more, please visit me at these sites!</h2>
+          <h2>If you'd like to know more, please visit me at these sites:</h2>
           
           <div className="about-me-links">
             <li id="link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
@@ -125,7 +125,7 @@ class About extends React.Component {
           alt='' 
           src="https://i.imgur.com/wqSOmkW.png" 
         />
-        
+
       </div>
     )
   }
