@@ -79,15 +79,15 @@
   li {
     display: flex;
     flex-direction: column;
-    cursor: pointer;
     margin-right: 14px;
   }
 
-  li > img {
+  img {
     opacity: 0.5;
     height: 32px;
-    width: 34px;
+    width: auto;
     transition: all 0.4s ease 0s;
+    cursor: pointer;
   }
 
   li > img:hover {
@@ -104,7 +104,7 @@
   height: 87px;
   bottom: 11px;
   position: fixed;
-  left: 392px;
+  left: 378px;
 }
 
 .close-modal-about {
@@ -126,4 +126,12 @@
   right: 0.7%;
   font-size: 2vw;
   z-index: 3;
+}
+
+#about-link-to-site {
+  padding: 12px;
+}
+
+.about-img {
+  cursor: pointer;
 }
