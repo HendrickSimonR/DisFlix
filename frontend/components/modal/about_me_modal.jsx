@@ -116,6 +116,10 @@ class About extends React.Component {
             <li id="link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
               <img id='img-to-site' className="git" alt='' src='https://i.imgur.com/Bj3ZPbm.png' />
             </li>  
+
+            <li id="link-to-site" onClick={() => this.visitSite("mailto:hendricksimonr@gmail.com")}>
+              <img id='img-to-site' className="email" alt='' src='https://i.imgur.com/IGgldlO.png' />
+            </li>  
           </div>
         </div>
 

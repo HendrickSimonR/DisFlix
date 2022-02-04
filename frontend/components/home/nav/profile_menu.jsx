@@ -88,6 +88,11 @@ class ProfileMenu extends React.Component {
                 <img id='img-to-site' className="git" alt='' src='https://i.imgur.com/Bj3ZPbm.png' />
               </li>     
 
+              <li id="link-to-site" onClick={() => this.visitSite("mailto:hendricksimonr@gmail.com")}>
+                Email
+                <img id='img-to-site' className="email" alt='' src='https://i.imgur.com/IGgldlO.png' />
+              </li>    
+
               <li id="link-to-site" onClick={this.handleSignout}>
                 Log Out
                 <img id='img-to-site' className="keyhole" alt='' src='https://i.imgur.com/Q6GIubT.png' />
