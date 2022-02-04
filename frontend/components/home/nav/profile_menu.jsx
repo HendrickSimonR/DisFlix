@@ -55,7 +55,7 @@ class ProfileMenu extends React.Component {
       <div className="profile-menu-container hide" id="profile-menu">
         <div className="profile-menu">
           <p className="dropdown-username">{this.props.session.username}</p>
-          <ul className="profile-links">
+          <ul id="profile-links">
 
             <li id="link-to-site" onClick={this.newAvatar} className="change-profile-pic">
               <img className="profile-pic change" alt='' src={this.randomAvatar}></img>
