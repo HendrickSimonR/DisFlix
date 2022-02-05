@@ -138,7 +138,7 @@
 
 .brands-logo {
   padding: 20px;
-  width: 850px; //850px
+  width: 63vw; //850px
 }
 
 .terms {
@@ -156,37 +156,40 @@
   margin: 5px;
 }
 
-.info-header-left {
-  font-family: 'Open sans', sans-serif;
-  font-weight: 700;
-  font-size: 45px;
-  margin: 5px;
-  margin-left: 25px;
+.splash-info {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
 }
 
-.splash-info-left {  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  left: 20px;
-  margin-left: 15px;
+.splash-info.right {
+ text-align: right;
 }
 
-.splash-info-right{  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: right;
-  right: 20px;
-}
+// .splash-info-left {  
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: left;
+//   left: 20px;
+//   margin-left: 15px;
+// }
+
+// .splash-info-right{  
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: right;
+//   right: 20px;
+// }
 
 .info-container {
   display:flex;
   border-top: 5px solid #222;
-  justify-content: space-around;
-  padding: 15px;
+  justify-content: space-evenly;
+  padding: 30px;
 }
+
 
 .info-container-last {
   display:flex;
@@ -195,33 +198,61 @@
   padding: 35px;
 }
 
+.info-container h1 {
+  font-family: 'Open sans', sans-serif;
+  font-size: 3.5vw;
+  font-weight: 700;
+  margin: 5px;
+}
+
+.info-container h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  padding: 5px;
+  font-size: 2vw;
+}
+
+.info-container.odd img {
+  width: 50vw;
+}
+
 .info-pic-left {
-  display: relative;
+  // display: relative;
   right: 10px;
+  padding: 20px;
+  width: 33vw;
+  margin: auto;
+  position: relative;
+  bottom: 4vh;
 }
 
 
 .info-pic-right {
-  display: relative;
-  width: auto;
-  height: 400px;
-  margin-top: 30px;
-  margin-right: 30px;
+  // display: relative;
+  // width: auto;
+  // height: 400px;
+  margin: auto;
+  // margin-top: 30px;
+  // margin-right: 30px;
 }
 
+.info-text-left, .info-text-right {
+  margin: auto;
+}
 .info-text-left {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  padding: 5px;
-  font-size: 27px;
-  line-height: 1.35;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
-.info-text-right {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  padding: 5px;
-  font-size: 27px;
-  line-height: 1.35;
-}
+// .info-text-left h3 {
+//   font-family: 'Open Sans', sans-serif;
+//   font-weight: 400;
+//   padding: 5px;
+//   font-size: 2vw;
+// }
+
+// .info-text-right h3 {
+//   font-family: 'Open Sans', sans-serif;
+//   font-weight: 400;
+//   padding: 5px;
+//   font-size: 2vw;
+// }
