@@ -15,8 +15,6 @@ class About extends React.Component {
   }
 
   render() {
-
-    console.log('ABOUT PROPS', this.props)
     return (
       <div className="about-me-modal">
         <div id='about-close' onClick={this.props.closeModal}>
@@ -102,30 +100,50 @@ class About extends React.Component {
           
           <div className="about-me-links">
             <li id="about-link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
-              <img className='about-img web' alt='' src='https://i.imgur.com/V1TQaje.png' />
+              <img 
+                alt='' 
+                className='about-img web' 
+                src='https://i.imgur.com/V1TQaje.png' 
+              />
             </li>   
 
             <li id="about-link-to-site" onClick={() => this.visitSite("https://www.linkedin.com/in/hendrick-ramos/")}>
-              <img className="about-img linked" alt='' src='https://i.imgur.com/uO5d91L.png' />
+              <img 
+                alt='' 
+                className="about-img linked" 
+                src='https://i.imgur.com/uO5d91L.png' 
+              />
             </li>
 
             <li id="about-link-to-site" onClick={() => this.visitSite("https://angel.co/jobs/home")}>
-              <img className="about-img angel" alt='' src='https://i.imgur.com/NROnijm.png' />
+              <img 
+                alt='' 
+                className="about-img angel" 
+                src='https://i.imgur.com/NROnijm.png' 
+              />
             </li>  
 
             <li id="about-link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
-              <img className="about-img git" alt='' src='https://i.imgur.com/Bj3ZPbm.png' />
+              <img 
+                alt='' 
+                className="about-img git" 
+                src='https://i.imgur.com/Bj3ZPbm.png' 
+              />
             </li>  
 
             <li id="about-link-to-site" onClick={() => this.visitSite("mailto:hendricksimonr@gmail.com")}>
-              <img className="about-img email" alt='' src='https://i.imgur.com/IGgldlO.png' />
+              <img 
+                alt='' 
+                className="about-img email" 
+                src='https://i.imgur.com/IGgldlO.png' 
+              />
             </li>  
           </div>
         </div>
 
         <img 
-          id='thank-you' 
           alt='' 
+          id='thank-you' 
           src="https://i.imgur.com/wqSOmkW.png" 
         />
 
