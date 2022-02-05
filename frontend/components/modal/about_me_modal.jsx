@@ -17,6 +17,7 @@ class About extends React.Component {
   render() {
     return (
       <div className="about-me-modal">
+
         <div id='about-close' onClick={this.props.closeModal}>
           <span className="material-icons-sharp close-modal-about">
             cancel
@@ -38,10 +39,15 @@ class About extends React.Component {
         />
         
         <div className="about-me-text">
-          <h1>Hey, I'm Hendrick. Thank you for visiting my site!</h1>
+
+          <h1>
+            Hey, I'm Hendrick. Thank you for visiting my site!
+          </h1>
+
           <h2>
-            I combined the UX/UI of Disney Plus and Netflix to develop this clone/hybrid. 
-            I'm a huge fan of all things Disney, and I wanted to bring that to life with this project!
+            I combined the UX/UI of Disney Plus and Netflix to 
+            develop this clone/hybrid. I'm a huge fan of all things Disney, 
+            and I wanted to bring that to life with this project!
           </h2>  
 
           <h2>
@@ -49,57 +55,85 @@ class About extends React.Component {
             All rights to these characters, scenes, and artwork belong to Disney.
           </h2> 
           
-          <h2 id="created-with">This website was created with:</h2>
-            <li>
-              <img 
-                src="https://i.imgur.com/OEg2zl9.png" 
-                alt='' 
-                className='about-logo ruby'
-              />
-              Ruby on Rails & JBuilder [Backend]
-            </li>
-            <li>
-              <img 
-                src="https://i.imgur.com/HhtDRhP.png" 
-                alt='' 
-                className='about-logo react'
-              />
-              React/Redux, JavaScript [Frontend]
-            </li>
-            <li>
-              <img 
-                src="https://i.imgur.com/RQKh27d.png" 
-                alt='' 
-                className='about-logo sass'
-              />
-              Sass [Styling]
-            </li> 
+          <h2 id="created-with">
+            This website was created with:
+          </h2>
 
-            <li>
-              <img 
-                src="https://i.imgur.com/gppRG9C.png" 
-                alt='' 
-                className='about-logo aws'
-              />
-              Amazon Web Services S3 [Hosting/Data Transfer]
-            </li>
+          <li>
+            <img 
+              src="https://i.imgur.com/OEg2zl9.png" 
+              alt='' 
+              className='about-logo ruby'
+            />
 
-            <li>
-              <img 
-                src="https://i.imgur.com/rN4p9N0.png" 
-                alt='' 
-                className='about-logo html5'
-              />
-              HTML5
-            </li>
+            Ruby on Rails & JBuilder [Backend]
+          </li>
 
-          <h2>If you happen to be a recruiter, look no further! I made this project the way I make all my projects: with the utmost care and attention to detail. My immense passion for creating and building is what I'll bring to your company!</h2>
-          <h2>If you're just visiting, I hope you enjoy your experience, as well as the collection of scenes from these classic movies and shows!</h2>
+          <li>
+            <img 
+              src="https://i.imgur.com/HhtDRhP.png" 
+              alt='' 
+              className='about-logo react'
+            />
 
-          <h2>If you'd like to know more, click an icon below to visit me at these sites:</h2>
+            React/Redux, JavaScript [Frontend]
+          </li>
+
+          <li>
+            <img 
+              src="https://i.imgur.com/RQKh27d.png" 
+              alt='' 
+              className='about-logo sass'
+            />
+
+            Sass [Styling]
+          </li> 
+
+          <li>
+            <img 
+              src="https://i.imgur.com/gppRG9C.png" 
+              alt='' 
+              className='about-logo aws'
+            />
+
+            Amazon Web Services S3 [Hosting/Data Transfer]
+          </li>
+
+          <li>
+            <img 
+              src="https://i.imgur.com/rN4p9N0.png" 
+              alt='' 
+              className='about-logo html5'
+            />
+
+            HTML5
+          </li>
+
+          <h2>
+            If you happen to be a recruiter, look no further! 
+            I made this project the way I make all my projects: 
+            with the utmost care and attention to detail. 
+            My immense passion for creating and building is 
+            what I'll bring to your company!
+          </h2>
+
+          <h2>
+            If you're just visiting, I hope you enjoy your experience, 
+            as well as the collection of scenes from these classic 
+            movies and shows!
+          </h2>
+
+          <h2>
+            If you'd like to know more, click an icon 
+            below to visit me at these sites:
+          </h2>
           
           <div className="about-me-links">
-            <li id="about-link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
+
+            <li 
+              id="about-link-to-site" 
+              onClick={() => this.visitSite("https://github.com/hendricksimonr/")}
+            >
               <img 
                 alt='' 
                 className='about-img web' 
@@ -107,7 +141,10 @@ class About extends React.Component {
               />
             </li>   
 
-            <li id="about-link-to-site" onClick={() => this.visitSite("https://www.linkedin.com/in/hendrick-ramos/")}>
+            <li 
+              id="about-link-to-site" 
+              onClick={() => this.visitSite("https://www.linkedin.com/in/hendrick-ramos/")}
+            >
               <img 
                 alt='' 
                 className="about-img linked" 
@@ -115,7 +152,10 @@ class About extends React.Component {
               />
             </li>
 
-            <li id="about-link-to-site" onClick={() => this.visitSite("https://angel.co/jobs/home")}>
+            <li 
+              id="about-link-to-site" 
+              onClick={() => this.visitSite("https://angel.co/jobs/home")}
+            >
               <img 
                 alt='' 
                 className="about-img angel" 
@@ -123,7 +163,10 @@ class About extends React.Component {
               />
             </li>  
 
-            <li id="about-link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
+            <li 
+              id="about-link-to-site" 
+              onClick={() => this.visitSite("https://github.com/hendricksimonr/")}
+            >
               <img 
                 alt='' 
                 className="about-img git" 
@@ -131,13 +174,17 @@ class About extends React.Component {
               />
             </li>  
 
-            <li id="about-link-to-site" onClick={() => this.visitSite("mailto:hendricksimonr@gmail.com")}>
+            <li 
+              id="about-link-to-site" 
+              onClick={() => this.visitSite("mailto:hendricksimonr@gmail.com")}
+            >
               <img 
                 alt='' 
                 className="about-img email" 
                 src='https://i.imgur.com/IGgldlO.png' 
               />
             </li>  
+
           </div>
         </div>
 
