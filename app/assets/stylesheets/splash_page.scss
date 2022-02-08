@@ -2,13 +2,13 @@
   position: absolute;
   top: 2%;
   left: 2%;
-  width: 165px;
+  width: clamp(105px, 20vw, 150px);
   height: auto;
 }
 
 .splash-container{
-  display: grid;
-  grid-template-rows: 700px 500px 500px 500px;
+  // display: grid;
+  // grid-template-rows: 700px 500px 500px 500px;
   color: white;
   background-color: rgb(5, 5, 19);
   font-family: 'Nunito Sans', sans-serif;
@@ -43,11 +43,18 @@
   background: url("https://i.imgur.com/a8SD9gJ.jpg") no-repeat center center; 
   background-size: cover;
   box-shadow: inset 0 0 200px #000000;
+  height: 100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -moz-box-shadow: inset 0 0 200px #000000;
   -webkit-box-shadow: inset 0 0 200px #000000;
+}
+
+.splash-info-container {
+  position: absolute;
+  top: 100vh;
+  width: 100vw;
 }
 
 .welcome {
@@ -186,6 +193,7 @@
 .info-container {
   display:flex;
   border-top: 5px solid #222;
+  background: #050513;
   justify-content: space-evenly;
   padding: 30px;
 }
@@ -263,7 +271,7 @@
   }
 
   .splash-description {
-    font-size: 3vw;
+    font-size: clamp(17px, 24px, 3vw);
   }
 
   .brands-logo {
@@ -292,6 +300,14 @@
     }
   }
 
+  .info-text-left {
+    margin-left: 0px;
+  }
+
+  .info-text-left, .info-text-right {
+    padding-bottom: 12px;
+  }
+
   .info-pic-left {
     width: 40vw;
     position: relative;
@@ -301,5 +317,38 @@
 
   .info-container.odd img {
     width: 60vw;
+  }
+}
+
+@media (max-width: 500px) {
+  // .splash-main {
+  //   height: 94vh;
+  // }
+
+  // .splash-info-container {
+  //   position: absolute;
+  //   top: 94vh;
+  // }
+
+  .splash-header {
+    font-size: 7vw;
+  }
+
+  .info-container {
+    h1 {
+      font-size: 8vw;
+    }
+
+    h3 {
+      font-size: 4vw;
+    }
+  }
+
+  .info-pic-left {
+    width: 75vw;
+  }
+
+  .info-container.odd img {
+    width: 85vw;
   }
 }
