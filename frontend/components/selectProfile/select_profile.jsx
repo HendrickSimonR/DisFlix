@@ -12,6 +12,12 @@ class SelectProfile extends React.Component {
     this.refresh = this.refresh.bind(this);
   }
 
+  componentDidMount() {
+    if (window.profilePic === undefined || window.profilePic === null) {
+      document.body.style.position = 'fixed';
+    }
+  }
+
   refresh() {
     this.setState( { count: this.state.count += 1});
     this.selected = this.selected.sort(() => (Math.random() - 0.5));
@@ -30,6 +36,8 @@ class SelectProfile extends React.Component {
     window.profilePic = img;
     window.scrollTo(0, 0);
     this.hideSelect();
+
+    document.body.style.position = 'inherit';
 
     let homePage = document.getElementById('home-reveal');
     homePage.style.visibility = 'visible';
