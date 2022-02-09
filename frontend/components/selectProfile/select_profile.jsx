@@ -84,14 +84,14 @@ class SelectProfile extends React.Component {
               avatar
             ))}
 
-            <span onClick={this.refresh} className="material-icons-outlined re-run">
-              refresh
-            </span>       
           </ul>
             
           : '' 
 
           }
+        <span onClick={this.refresh} className="material-icons-outlined re-run">
+          refresh
+        </span>       
       </div>
     );
   }

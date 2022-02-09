@@ -12,7 +12,7 @@
   font-size: 32px;
   font-weight: 800;
   font-family: "Nunito Sans";
-  margin-top: 28.5vh;
+  margin-top: 25vh;
 }
 
 .select-profile-container {
@@ -88,7 +88,7 @@
   position: fixed;
   // top: 14vh;
   bottom: 75px;
-  left: 48.4%;
+  // left: 48.4%;
   font-size: 44px !important;
   transition: all 0.3s ease 0s;
 }
@@ -111,12 +111,13 @@
   	grid-column: span 2;
   }
 
-  // .profiles li:nth-last-child(1):nth-child(odd) {
-  // 	grid-column: 2 / span 2;
-  // }
+  .profiles li:nth-last-child(1):nth-child(odd) {
+  	grid-column: 2 / span 2;
+  }
 
   .select-header {
-    margin-top: 15vh;
+    margin-top: 7vh;
+    margin-bottom: 3vh;
     font-size: 6vw;
   }
 
@@ -134,5 +135,9 @@
     position: fixed;
     bottom: 1vh;
     top: auto;
+  }
+
+  .select-profile-logo {
+    display: none;
   }
 }
