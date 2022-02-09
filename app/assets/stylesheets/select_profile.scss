@@ -98,6 +98,12 @@
   cursor: pointer;
 }
 
+@media (max-width: 800px) {
+  .select-header {
+    margin-top: 15vh;
+  }
+}
+
 
 @media (max-width: 500px) {
   .select-profile-container {
