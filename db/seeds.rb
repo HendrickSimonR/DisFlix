@@ -191,7 +191,7 @@ a9.character='Pluto'
 a9.save!
 
 a10=Avatar.new
-a10.character='The Mandalorian'
+a10.character='Boba Fett'
 a10.save!
 
 a11=Avatar.new
