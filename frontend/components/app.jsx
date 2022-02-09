@@ -20,7 +20,9 @@ const App = () => (
     </header>
 
     <AuthRoute component={SplashPage} />
-    <Shield />
+
+    <ProtectedRoute path="/" component={Shield} />
+    
     <Modal/>
     <Switch>
       <AuthRoute exact path="/signin" component={SigninFormContainer} />
