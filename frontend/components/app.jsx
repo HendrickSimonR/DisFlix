@@ -11,6 +11,7 @@ import Footer from './footer/footer';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
+import Shield from './shield/shield';
 
 const App = () => (
   <div>
@@ -19,6 +20,7 @@ const App = () => (
     </header>
 
     <AuthRoute component={SplashPage} />
+    <Shield />
     <Modal/>
     <Switch>
       <AuthRoute exact path="/signin" component={SigninFormContainer} />

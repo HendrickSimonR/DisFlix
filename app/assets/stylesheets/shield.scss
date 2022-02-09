@@ -1,0 +1,11 @@
+.shield {
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .shield {
+    display: relative;
+  }
+}

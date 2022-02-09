@@ -101,9 +101,9 @@
 
 @media (max-width: 500px) {
   .select-profile-container {
-    visibility: hidden;
+    display: none;
   }
-  
+
   .profiles {
   	display: grid;
   	grid-template-columns: repeat( 4, 1fr );
