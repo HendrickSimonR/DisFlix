@@ -83,15 +83,15 @@ class SelectProfile extends React.Component {
             {this.selected.slice(0, 5).map(avatar => (
               avatar
             ))}
+
+            <span onClick={this.refresh} className="material-icons-outlined re-run">
+              refresh
+            </span>       
           </ul>
             
           : '' 
 
           }
-
-        <span onClick={this.refresh} className="material-icons-outlined re-run">
-          refresh
-        </span>       
       </div>
     );
   }
