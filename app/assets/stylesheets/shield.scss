@@ -1,11 +1,31 @@
 .shield {
-  height: 100vh;
-  width: 100vw;
   display: none;
 }
 
 @media (max-width: 500px) {
   .shield {
-    display: relative;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background: #16162c;
+    position: fixed;
+    z-index: 99999;
+  }
+
+  .shield h1 {
+    font-family: 'Open Sans';
+    margin-top: 6vh;
+    text-align: center;
+    width: 100vw;
+    font-size: 21px;
+  }
+
+  .shield-gif {
+    width: 100vw;
+    height: 60vh;
+    position: fixed;
+    top: 10vh;
+    filter: brightness(5);
   }
 }
