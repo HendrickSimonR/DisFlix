@@ -12,11 +12,12 @@ class SelectProfile extends React.Component {
     this.refresh = this.refresh.bind(this);
   }
 
-  // componentDidMount() {
-  //   if (window.profilePic === undefined || window.profilePic === null) {
-  //     document.body.style.position = 'fixed';
-  //   }
-  // }
+  componentDidMount() {
+    if (window.profilePic === undefined || window.profilePic === null) {
+      let home = document.getElementById('home-reveal');
+      home.style.position = 'fixed';
+    }
+  }
 
   refresh() {
     this.setState( { count: this.state.count += 1});
@@ -41,6 +42,7 @@ class SelectProfile extends React.Component {
 
     let homePage = document.getElementById('home-reveal');
     homePage.style.visibility = 'visible';
+    homePage.style.position = 'inherit';
 
     if (window.hideProfile === true){
       let movie = document.querySelector(".brand-container-video.featured");
