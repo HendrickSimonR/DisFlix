@@ -350,8 +350,8 @@ class Home extends React.Component {
 
     return (
       <div className="home-container">
-            { window.hideProfile === true ? '' :  this.loader }
-            <SelectProfile avatars={this.props.avatars} />
+        { window.hideProfile === true ? '' :  this.loader }
+        <SelectProfile avatars={this.props.avatars} />
         <div id="home-reveal" style={{ visibility: 'hidden' }}>
           <Featured featured={featured} openModal={this.props.openModal}/>
 

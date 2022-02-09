@@ -185,3 +185,16 @@
   right: 62px;
   color: white;
 }
+
+@media (max-width: 500px) {
+  .nav-link.brand {
+    display: none;
+  }
+
+  .nav-logo {
+    width: 18vw;
+    height: auto;
+    position: fixed;
+    top: 0vh;
+  }
+}
