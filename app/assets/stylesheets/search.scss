@@ -94,7 +94,7 @@
   top: 15.3vh;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 920px) {
   .search-bar-container {
     top: 8vh;
     right: 6%;
@@ -109,7 +109,7 @@
   .search-button {
     position: relative;
     right: 1vw;
-    // top: 3vh;
+    top: -1vh;
   }
 
   .search-button-expanded {

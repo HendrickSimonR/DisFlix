@@ -436,3 +436,29 @@ html, body {
 #full-screen-poster {
   position: relative;
 }
+
+@media (max-width: 920px) {
+  .left-arrow, .right-arrow {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 7vw;
+    position: absolute;
+  }
+
+  .left-arrow:hover, .right-arrow:hover {
+    background: none;
+  }
+
+  .left-arrow {
+    margin-top: -1.5vh;
+    margin-left: -3vw;
+  }
+
+  .right-arrow {
+    margin-left: 90vw;
+    margin-top: -3vh;
+  }
+
+  ::-webkit-scrollbar {
+    height: 4px; 
+  }
+}

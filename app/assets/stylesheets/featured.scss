@@ -218,7 +218,7 @@
   border-left: white solid;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 920px) {
   .featured-right {
     position: relative;
     right: 5.4vw;
@@ -239,5 +239,9 @@
   .featured-right p {
     font-size: 3.8vh;
     padding-top: 15.8px;
+  }
+
+  .featured-video-shadow {
+    top: 0vh;
   }
 }
