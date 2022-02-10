@@ -203,3 +203,68 @@
     font-size: 16.5px;
   }
 }
+
+@media (max-width: 920px) {
+  .thumbnail-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    left: -3.5%;
+  }
+
+  .thumb-play-circle {
+    font-size: 3.3vw;
+  }
+
+  .add-button {
+    margin-right: -0.2vw;
+    top: 7.5%;
+    left: 5%;
+    width: 2.6vw;
+    height: 2.7vw;
+  }
+
+  .like-button {
+    border: 1.5px solid #575757;
+    border-radius: 50%;
+    height: 91.5%;
+    width: 92%;
+    position: relative;
+    left: 10%;
+    top: -8%;
+    padding-top: 0.6vw;
+    /* padding-top: 0px; */
+    font-size: 1.8vw;
+    padding-left: 0.35vw;
+    margin-bottom: -12px;
+  }
+
+  .like-button.up {
+    padding-left: 0.45vw;
+    padding-top: 0.4vw;
+    height: 94%;
+    width: 82%;
+    position: relative;
+    left: -5%;
+    top: -4%;
+  }
+
+  .expand-modal {
+    color: white;
+    border-radius: 50%;
+    border: 1.5px solid #575757;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4%;
+    left: 34%;
+    margin-right: 2px;
+    width: 2.7vw;
+    height: 2.5vw !important;
+    padding-top: 0.3vw;
+    height: 2.9vw;
+    font-size: 4vw !important;
+  }
+}

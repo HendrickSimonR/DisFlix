@@ -17,7 +17,7 @@
   top: 52%;
   left: 50vw;
   height: 98%;
-  min-width: 850px;
+  min-width: 62.2vw;
   transform: translate(-50%, -50%);
   background: #1d1c27;
   border-radius: 7px;
@@ -292,4 +292,10 @@
   right: 2.4%;
   font-size: 2vw;
   z-index: 3;
+}
+
+@media (max-width: 920px) {
+  .modal-child {
+    min-width: 90vw;
+  }
 }
