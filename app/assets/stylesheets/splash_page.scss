@@ -319,6 +319,10 @@
   .info-container.odd img {
     width: 60vw;
   }
+
+  .info-container.odd.last {
+    padding-bottom: 10vw;
+  }
 }
 
 @media (max-width: 500px) {
@@ -366,5 +370,9 @@
 
   .errors {
     margin-left: 0px;
+  }
+
+  .info-container.odd.last {
+    padding-bottom: 20vw;
   }
 }

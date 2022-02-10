@@ -43,7 +43,7 @@ class SplashPage extends React.Component {
             </div>
           </div>
 
-          <div className="info-container odd">
+          <div className="info-container odd last">
             <div className="splash-info">
               <div className="info-text-left">
                 <h1 className="info-header-left">Watch your favorite heroes anywhere.</h1>
