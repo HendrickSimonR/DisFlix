@@ -132,6 +132,7 @@
   flex-direction: row;
 }
 
+
 .featured-play-button {
   position: relative;
   top: 4%;
@@ -141,7 +142,7 @@
   background: white;
   color: black;
   font-family: 'Lato';
-  font-size: 1.25vw;
+  // font-size: 1.25vw;
   font-weight: 600;
   border-radius: 4px;
   /* height: 70%; */
@@ -150,7 +151,7 @@
 
   span {
     color: black;
-    font-size: 2.9vw;
+    font-size: 38px;
     position: relative;
     left: 2px;
     top: 2px;
@@ -161,6 +162,7 @@
     top: 11px;
     left: 5%;
     font-weight: 700;
+    font-size: 17px;
   }
 }
 
@@ -220,5 +222,21 @@
   .featured-right {
     position: relative;
     right: 5.4vw;
+  }
+
+  .featured-info {
+    bottom: 15% !important;
+
+    img {
+      width: 45vw !important;
+    }
+  }
+
+  .featured-volume {
+    font-size: 8vh;
+  }
+
+  .featured-right p {
+    font-size: 3.9vh;
   }
 }
