@@ -72,3 +72,9 @@
   bottom: 5px;
 }
 
+@media (max-width: 900px) {
+  .profile-pic {
+    top: 3%;
+    right: 2%;
+  }
+}

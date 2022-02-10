@@ -186,15 +186,24 @@
   color: white;
 }
 
-@media (max-width: 500px) {
-  .nav-link.brand {
+@media (max-width: 900px) {
+  .nav-link.home {
     display: none;
   }
 
+  .nav-bar {
+    height: 20vh;
+  }
+
   .nav-logo {
-    width: 18vw;
+    width: 11vw;
     height: auto;
     position: fixed;
-    top: 0vh;
+    top: 14px;
+    left: 14px;
+  }
+
+  .nav-link {
+    font-size: 1.5vw;
   }
 }

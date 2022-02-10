@@ -17,6 +17,7 @@
 .search-button {
   position: relative;
   right: 0;
+  top: 0.5vh;
   transition: all 1s ease 0s;
 }
 
@@ -91,4 +92,32 @@
   font-size: 40px;
   font-weight: 400;
   top: 15.3vh;
+}
+
+@media (max-width: 900px) {
+  .search-bar-container {
+    top: 8vh;
+    right: 6%;
+  }
+
+  .search-icon {
+    position: relative;
+    top: 0.6vh;
+    font-size: 2.5vw;
+  }
+
+  .search-button {
+    position: relative;
+    right: 1vw;
+    // top: 3vh;
+  }
+
+  .search-button-expanded {
+    top: -1vh;
+  }
+
+  .search-input {
+    // top: 3vh;
+    margin-right: 5vw;
+  }
 }
