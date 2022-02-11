@@ -85,7 +85,19 @@
     z-index: 0; 
     height: 96vh;
     width: 39vw;
+    animation-duration: 0.25s;
+    animation-name: slideInResponsive; 
   }
+
+  @keyframes slideInResponsive {
+    from {
+      height: 0px;
+    }
+
+    to {
+      height: 96vh;
+    }
+}
 
   .not-avatar {
     display: grid;
