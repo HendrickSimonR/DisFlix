@@ -298,4 +298,22 @@
   .modal-child {
     min-width: 90vw;
   }
+
+  .movie-modal-info h2 {
+    font-size: 1.7vw;
+    padding-left: 6.5px;
+    padding-right: 7.5px;
+    padding-top: 5.5px;
+    padding-bottom: 5.5px;
+  }
+
+  .modal-description {
+    font-size: 1.7vw;
+    line-height: 2.4vw;
+    font-weight: 100;
+  }
+
+  .movie-modal-right {
+    font-size: 1.6vw;
+  }
 }
