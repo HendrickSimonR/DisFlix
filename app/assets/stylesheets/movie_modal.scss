@@ -122,6 +122,8 @@
 .movie-modal-buttons {
   display: flex;
   flex-direction: row;
+  position: relative;
+  z-index: 50;
 }
 
 .movie-modal-bottom {
@@ -315,5 +317,63 @@
 
   .movie-modal-right {
     font-size: 1.6vw;
+  }
+
+  .modal-volume-on {
+    font-size: 4vw;
+  }
+
+  .close-modal {
+    font-size: 5vw;
+  }
+
+  #close-fill {
+    font-size: 4vw;
+  }
+
+  .movie-modal-play {
+    font-size: 2.25vw;
+
+    span {
+      font-size: 5vw;
+    }
+  }
+
+  .add-button.modal p {
+    font-size: 4vw;
+  }
+
+  .add-button.modal {
+    width: 10.5vw;
+    height: 4.5vw;
+  }
+
+  .like-buttons.modal {
+    .like-button.up {
+      padding-left: 0.7vw;
+      padding-top: 0.6vw;
+      height: 99.8%;
+      width: 89%;
+      left: -6%;
+      top: -8.3%;
+      font-size: 3.1vw;
+    }
+
+    .like-button.down {
+      border: 2.2px solid #949494;
+      padding-left: 0.45vw;
+      padding-top: 0.75vw;
+      height: 93%;
+      width: 96%;
+      position: relative;
+      left: 23.5%;
+      top: -10%;
+      font-size: 3.1vw;
+      background: rgba(0, 0, 0, 0.45);
+    }
+  }
+
+  #modal-title {
+    display: none;
   }
 }

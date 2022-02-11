@@ -189,3 +189,37 @@
   top: 0;
   z-index: -1;
 }
+
+
+@media (max-width: 900px) {
+  .films-rows {
+    .thumbnail-specific {
+      .thumbnail-buttons {
+        left: -0.5%;
+        width: 97%;
+      }
+
+      .thumbnail-details h1 {
+        font-size: 1.3vw;
+      }
+      
+      .thumb-runtime {
+        font-size: 1.3vw;
+        top: -12.5%;
+      }
+
+      .thumb-rating {
+        font-size: 1.4vw;
+      }
+
+      .thumbnail-tags {
+        top: 30% !important;
+        font-size: 1.2vw !important;
+
+        p {
+          font-size: 1.9vw;
+        }
+      }
+    }
+  }
+}
