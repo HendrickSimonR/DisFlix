@@ -135,3 +135,43 @@
 .about-img {
   cursor: pointer;
 }
+
+@media (max-width: 920px) {
+  .modal-child.about {
+    width: 95vw;
+    overflow-y: scroll;
+  }
+
+  .about-me-modal {
+    flex-direction: column-reverse;
+  }
+
+  .me-at-disneyland {
+    width: 86vw;
+    margin: 0 auto;
+  }
+
+  #my-name {
+    position: relative;
+    bottom: 1vw;
+    left: 70vw;
+    font-size: 28px;
+  }
+
+  #thank-you {
+    display: none;
+  }
+
+  .about-me-links img {
+    height: 60px;
+  }
+
+  .close-modal-about {
+    font-size: 5vw;
+  }
+
+  .close-fill-about {
+    right: 0.8%;
+    font-size: 4.1vw;
+  }
+}
