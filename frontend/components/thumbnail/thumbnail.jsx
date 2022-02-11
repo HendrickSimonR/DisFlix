@@ -264,7 +264,7 @@ class Thumbnail extends React.Component {
           id={this.posterId}
           src={this.props.movie.image_url} 
           className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} 
-          onClick={() => this.showMovie(this.uniqueId)}
+          onClick={this.watchMovie}
           style={{ display: 'none'}}
         />
 
@@ -272,7 +272,7 @@ class Thumbnail extends React.Component {
           id={this.uniqueId} 
           className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"}
           poster={this.props.movie.image_url} 
-          onClick={() => this.showMovie(this.uniqueId)}
+          onClick={this.watchMovie}
           muted={false}
           onEnded={() => this.displayPoster(this.posterId, this.uniqueId)}
         >

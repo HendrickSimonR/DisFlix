@@ -196,12 +196,18 @@
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 920px) {
   .films-rows {
     .thumbnail-specific {
       .thumbnail-buttons {
         left: -0.5%;
         width: 97%;
+
+        .thumbnail-buttons-right {
+          .expand-modal {
+            display: none;
+          }
+        }
       }
 
       .thumbnail-details h1 {
