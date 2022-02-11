@@ -36,5 +36,5 @@ class Movie < ApplicationRecord
     foreign_key: :movie_id
 
   has_one_attached :image
-  # has_one_attached :movie
+  has_one_attached :movie
 end

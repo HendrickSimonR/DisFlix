@@ -84,6 +84,7 @@ class MovieModal extends React.Component {
     let watchlistId;
 
     let moviesArr = Object.values(this.props.movies);
+    
     if (moviesArr.length === 0) {
       return null;
     } else {
@@ -142,7 +143,7 @@ class MovieModal extends React.Component {
             muted={window.moviePlay === true ? true : false}
             onEnded={() => this.displayPoster(this.posterId, this.uniqueId)}
           >
-            <source src={this.props.test} type="video/mp4" /> 
+            <source src={this.film.movie_url} type="video/mp4" /> 
           </video>
 
           <div className="modal-movie-shadow"></div>
@@ -158,16 +159,17 @@ class MovieModal extends React.Component {
         </div>
         
         <div className="movie-modal-details">
-          {this.state.moviePlay === true ? <h1 id="modal-title">{this.film.title}</h1> : null}
-          <div className="movie-modal-buttons">
-            <div className="movie-modal-buttons-left">
-              <div className="movie-modal-play" onClick={() => this.watchMovie(this.uniqueId)}>
-                <h1><span className="material-icons-sharp">play_arrow</span></h1>
-                <h2>Play</h2>
+          <div className="modal-buttons-and-title">
+            {this.state.moviePlay === true ? <h1 id="modal-title">{this.film.title}</h1> : null}
+            <div className="movie-modal-buttons">
+              <div className="movie-modal-buttons-left">
+                <div className="movie-modal-play" onClick={() => this.watchMovie(this.uniqueId)}>
+                  <h1><span className="material-icons-sharp">play_arrow</span></h1>
+                  <h2>Play</h2>
+                </div>
+                <WatchlistButtonContainer modalButton={true} movieId={this.film.id} userId={this.props.user} watchlistId={watchlistId} watchlist={this.props.watchlist} />
+                <LikeButtonsContainer modalButton={true} movieId={this.film.id} user={this.props.user} />
               </div>
-              <WatchlistButtonContainer modalButton={true} movieId={this.film.id} userId={this.props.user} watchlistId={watchlistId} watchlist={this.props.watchlist} />
-              <LikeButtonsContainer modalButton={true} movieId={this.film.id} user={this.props.user} />
-            </div>
 
             <div className="movie-modal-buttons-right">
               <span 
@@ -180,6 +182,7 @@ class MovieModal extends React.Component {
               </span>
             </div>
           </div>
+        </div>
 
           <div className="movie-modal-bottom">
             <div className="movie-modal-left">

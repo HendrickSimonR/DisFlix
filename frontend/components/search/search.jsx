@@ -65,24 +65,9 @@ class Search extends React.Component {
           </ul>
         </div>
         }
-        {/* <Footer /> */}
       </div>
     )
   }
 }
 
 export default Search;
-
-// let movie = {
-//   brand_id: 3,
-//   cast: "Chris Pratt, Zoe Saldana, Dave Bautista, Bradley Cooper",
-//   description: "Brash adventurer Peter Quill finds himself the object of an unrelenting bounty hunt after stealing a mysterious orb coveted by a powerful villain with ambitions that threaten the entire universe. To evade capture, Quill joins with a quartet of disparate misfits: Rocket, a gun-toting raccoon; Groot, a tree-like humanoid; the deadly and enigmatic Gamora; and revenge-driven Drax the Destroyer.",
-//   id: 27,
-//   keywords: "Marvel, Comics, Saga, Superhero, James Gunn, Super-Hero, Superheroes, Star-Lord, StarLord, Gamora, Drax, Groot, Rocket, Raccoon, Space, Adventure, Journey, Thanos, Power, Infinity Stones, Mountain High Enough, Ooh Child, I Want You Back",
-//   rating: "PG-13",
-//   runtime: "2h 2m",
-//   tags: "Sci-Fi, Comedy, Adventure",
-// title: "Guardians of the Galaxy",
-// topic: "Exciting",
-// year: 2014
-// }

@@ -231,7 +231,7 @@ class Thumbnail extends React.Component {
 
 
 
-    // console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
+    console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     
     return (
       <div className={ 
@@ -277,7 +277,7 @@ class Thumbnail extends React.Component {
           onEnded={() => this.displayPoster(this.posterId, this.uniqueId)}
         >
 
-          <source src={this.props.test} type="video/mp4" /> 
+          <source src={this.props.movie.movie_url} type="video/mp4" /> 
         </video>
 
         <div className={windowUrl === 'home' ? 'mute-and-refresh' : 'mute-and-refresh sorted'}>

@@ -187,8 +187,8 @@
   color: rgba(255, 255, 255, 0.6);
 
   .featured-volume {
-    font-size: 16.7px;
-    padding: 4px;
+    font-size: 12px;
+    padding: 2px;
     border: solid 1.5px;
     display: none;
     position: relative;
@@ -203,6 +203,8 @@
   
   .featured-volume {
     font-size: 16.5px;
+    left: 4.8vw;
+    top: 1.5vh;
   }
 }
 

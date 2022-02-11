@@ -805,7 +805,7 @@ m29.save!
 
 m28=Movie.new
 m28.title='Captain America: Civil War'
-m28.description='Pressure mounts to hold the Avengers accountable for the destruction left in their wake after battling Ultron. When Captain America and Iron Man find themselves with opposing views, the Avengers take sides, leading to the ultimate battle between Earths mightiest heroes.'
+m28.description='Pressure mounts to hold the Avengers accountable for the destruction left in their wake after battling Ultron. When Captain America and Iron Man find themselves with opposing views, the Avengers take sides, leading to the ultimate battle between Earth’s mightiest heroes.'
 m28.runtime='2h 30m'
 m28.rating='PG-13'
 m28.year=2016
@@ -1141,380 +1141,417 @@ puts "Photos attached!"
 
 puts "Attaching movies. This could take a while..."
 
-# puts "Opening movie 1..."
-# mMovie1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m1.mp4')
-# puts "Movie 1 opened!"
-# 
-# puts "Opening movie 2..."
-# mMovie2 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m2.mp4')
-# puts "Movie 2 opened!"
-# 
-# puts "Opening movie 3..."
-# mMovie3 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m3.mp4')
-# puts "Movie 3 opened!"
-# 
-# puts "Opening movie 4..."
-# mMovie4 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m4.mp4')
-# puts "Movie 4 opened!"
-# 
-# puts "Opening movie 5..."
-# mMovie5 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m5.mp4')
-# puts "Movie 5 opened!"
-# 
-# puts "Opening movie 6..."
-# mMovie6 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m6.mp4')
-# puts "Movie 6 opened!"
-# 
-# puts "Opening movie 7..."
-# mMovie7 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m7.mp4')
-# puts "Movie 7 opened!"
-# 
-# puts "Opening movie 8..."
-# mMovie8 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m8.mp4')
-# puts "Movie 8 opened!"
-# 
-# puts "Opening movie 9..."
-# mMovie9 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m9.mp4')
-# puts "Movie 9 opened!"
-# 
-# puts "Opening movie 10..."
-# mMovie10 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m10.mp4')
-# puts "Movie 10 opened!"
-# 
-# puts "Opening movie 11..."
-# mMovie11 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m11.mp4')
-# puts "Movie 11 opened!"
-# 
-# puts "Opening movie 12..."
-# mMovie12 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m12.mp4')
-# puts "Movie 12 opened!"
-# 
-# puts "Opening movie 13..."
-# mMovie13 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m13.mp4')
-# puts "Movie 13 opened!"
-# 
-# puts "Opening movie 14..."
-# mMovie14 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m14.mp4')
-# puts "Movie 14 opened!"
-# 
-# puts "Opening movie 15..."
-# mMovie15 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m15.mp4')
-# puts "Movie 15 opened!"
-# 
-# puts "Opening movie 16..."
-# mMovie16 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m16.mp4')
-# puts "Movie 16 opened!"
-# 
-# puts "Opening movie 17..."
-# mMovie17 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m17.mp4')
-# puts "Movie 17 opened!"
-# 
-# puts "Opening movie 18..."
-# mMovie18 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m18.mp4')
-# puts "Movie 18 opened!"
-# 
-# puts "Opening movie 19..."
-# mMovie19 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m19.mp4')
-# puts "Movie 19 opened!"
-# 
-# puts "Opening movie 20..."
-# mMovie20 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m20.mp4')
-# puts "Movie 20 opened!"
-# 
-# puts "Opening movie 21..."
-# mMovie21 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m21.mp4')
-# puts "Movie 21 opened!"
-# 
-# puts "Opening movie 22..."
-# mMovie22 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m22.mp4')
-# puts "Movie 22 opened!"
-# 
-# puts "Opening movie 23..."
-# mMovie23 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m23.mp4')
-# puts "Movie 23 opened!"
-# 
-# puts "Opening movie 24..."
-# mMovie24 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m24.mp4')
-# puts "Movie 24 opened!"
-# 
-# puts "Opening movie 25..."
-# mMovie25 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m25.mp4')
-# puts "Movie 25 opened!"
-# 
-# puts "Opening movie 26..."
-# mMovie26 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m26.mp4')
-# puts "Movie 26 opened!"
-# 
-# puts "Opening movie 27..."
-# mMovie27 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m27.mp4')
-# puts "Movie 27 opened!"
-# 
-# puts "Opening movie 28..."
-# mMovie28 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m28.mp4')
-# puts "Movie 28 opened!"
-# 
-# puts "Opening movie 29..."
-# mMovie29 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m29.mp4')
-# puts "Movie 29 opened!"
-# 
-# puts "Opening movie 30..."
-# mMovie30 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m30.mp4')
-# puts "Movie 30 opened!"
-# 
-# puts "Opening movie 31..."
-# mMovie31 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m31.mp4')
-# puts "Movie 31 opened!"
-# 
-# puts "Opening movie 32..."
-# mMovie32 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m32.mp4')
-# puts "Movie 32 opened!"
-# 
-# puts "Opening movie 33..."
-# mMovie33 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m33.mp4')
-# puts "Movie 33 opened!"
-# 
-# puts "Opening movie 34..."
-# mMovie34 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m34.mp4')
-# puts "Movie 34 opened!"
-# 
-# puts "Opening movie 35..."
-# mMovie35 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m35.mp4')
-# puts "Movie 35 opened!"
-# 
-# puts "Opening movie 36..."
-# mMovie36 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m36.mp4')
-# puts "Movie 36 opened!"
-# 
-# puts "Opening movie 37..."
-# mMovie37 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m37.mp4')
-# puts "Movie 37 opened!"
-# 
-# puts "Opening movie 38..."
-# mMovie38 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m38.mp4')
-# puts "Movie 38 opened!"
-# 
-# puts "Opening movie 39..."
-# mMovie39 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m39.mp4')
-# puts "Movie 39 opened!"
-# 
-# puts "Opening movie 40..."
-# mMovie40 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m40.mp4')
-# puts "Movie 40 opened!"
-# 
-# puts "Opening movie 41..."
-# mMovie41 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m41.mp4')
-# puts "Movie 41 opened!"
+puts "Opening movie 1..."
+mMovie1 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m1.mp4')
+puts "Movie 1 opened!"
 
+puts "Opening movie 2..."
+mMovie2 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m2.mp4')
+puts "Movie 2 opened!"
+
+puts "Opening movie 3..."
+mMovie3 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m3.mp4')
+puts "Movie 3 opened!"
+
+puts "Opening movie 4..."
+mMovie4 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m4.mp4')
+puts "Movie 4 opened!"
+
+puts "Opening movie 5..."
+mMovie5 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m5.mp4')
+puts "Movie 5 opened!"
+
+puts "Opening movie 6..."
+mMovie6 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m6.mp4')
+puts "Movie 6 opened!"
+
+puts "Opening movie 7..."
+mMovie7 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m7.mp4')
+puts "Movie 7 opened!"
+
+puts "Opening movie 8..."
+mMovie8 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m8.mp4')
+puts "Movie 8 opened!"
+
+puts "Opening movie 9..."
+mMovie9 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m9.mp4')
+puts "Movie 9 opened!"
+
+puts "Opening movie 10..."
+mMovie10 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m10.mp4')
+puts "Movie 10 opened!"
+
+puts "Opening movie 11..."
+mMovie11 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m11.mp4')
+puts "Movie 11 opened!"
+
+puts "Opening movie 12..."
+mMovie12 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m12.mp4')
+puts "Movie 12 opened!"
+
+puts "Opening movie 13..."
+mMovie13 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m13.mp4')
+puts "Movie 13 opened!"
+
+puts "Opening movie 14..."
+mMovie14 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m14.mp4')
+puts "Movie 14 opened!"
+
+puts "Opening movie 15..."
+mMovie15 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m15.mp4')
+puts "Movie 15 opened!"
+
+puts "Opening movie 16..."
+mMovie16 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m16.mp4')
+puts "Movie 16 opened!"
+
+puts "Opening movie 17..."
+mMovie17 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m17.mp4')
+puts "Movie 17 opened!"
+
+puts "Opening movie 18..."
+mMovie18 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m18.mp4')
+puts "Movie 18 opened!"
+
+puts "Opening movie 19..."
+mMovie19 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m19.mp4')
+puts "Movie 19 opened!"
+
+puts "Opening movie 20..."
+mMovie20 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m20.mp4')
+puts "Movie 20 opened!"
+
+puts "Opening movie 21..."
+mMovie21 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m21.mp4')
+puts "Movie 21 opened!"
+
+puts "Opening movie 23..."
+mMovie23 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m23.mp4')
+puts "Movie 23 opened!"
+
+puts "Opening movie 24..."
+mMovie24 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m24.mp4')
+puts "Movie 24 opened!"
+
+puts "Opening movie 25..."
+mMovie25 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m25.mp4')
+puts "Movie 25 opened!"
+
+puts "Opening movie 26..."
+mMovie26 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m26.mp4')
+puts "Movie 26 opened!"
+
+puts "Opening movie 27..."
+mMovie27 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m27.mp4')
+puts "Movie 27 opened!"
+
+puts "Opening movie 28..."
+mMovie28 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m28.mp4')
+puts "Movie 28 opened!"
+
+puts "Opening movie 29..."
+mMovie29 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m29.mp4')
+puts "Movie 29 opened!"
+
+puts "Opening movie 30..."
+mMovie30 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m30.mp4')
+puts "Movie 30 opened!"
+
+puts "Opening movie 31..."
+mMovie31 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m31.mp4')
+puts "Movie 31 opened!"
+
+puts "Opening movie 32..."
+mMovie32 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m32.mp4')
+puts "Movie 32 opened!"
+
+puts "Opening movie 33..."
+mMovie33 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m33.mp4')
+puts "Movie 33 opened!"
+
+puts "Opening movie 34..."
+mMovie34 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m34.mp4')
+puts "Movie 34 opened!"
+
+puts "Opening movie 35..."
+mMovie35 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m35.mp4')
+puts "Movie 35 opened!"
+
+puts "Opening movie 36..."
+mMovie36 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m36.mp4')
+puts "Movie 36 opened!"
+
+puts "Opening movie 37..."
+mMovie37 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m37.mp4')
+puts "Movie 37 opened!"
+
+puts "Opening movie 38..."
+mMovie38 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m38.mp4')
+puts "Movie 38 opened!"
+
+puts "Opening movie 39..."
+mMovie39 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m39.mp4')
+puts "Movie 39 opened!"
+
+puts "Opening movie 40..."
+mMovie40 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m40.mp4')
+puts "Movie 40 opened!"
+
+puts "Opening movie 41..."
+mMovie41 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m41.mp4')
+puts "Movie 41 opened!"
+
+puts "Opening movie 42..."
+mMovie42 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m42.mp4')
+puts "Movie 42 opened!"
+
+puts "Opening movie 43..."
+mMovie43 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m43.mp4')
+puts "Movie 43 opened!"
+
+puts "Opening movie 44..."
+mMovie44 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m44.mp4')
+puts "Movie 44 opened!"
+
+puts "Opening movie 45..."
+mMovie45 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m45.mp4')
+puts "Movie 45 opened!"
+
+puts "Opening movie 46..."
+mMovie46 = URI.open('https://disneycinema.s3.us-east-2.amazonaws.com/Movie+Clips/m46.mp4')
+puts "Movie 46 opened!"
 
 
 
 puts "Attaching Movie 1..."
 
 
-#m1.movie.attach(io: mMovie1, filename: 'm1.mp4')
-# 
-# puts "Movie 1 Finished!"
-# puts "Attaching Movie 2..."
-# 
-# m2.movie.attach(io: mMovie2, filename: 'm2.mp4')
-# 
-# puts "Movie 2 Finished!"
-# puts "Attaching Movie 3..."
-# 
-# m3.movie.attach(io: mMovie3, filename: 'm3.mp4')
-# 
-# puts "Movie 3 Finished!"
-# puts "Attaching Movie 4..."
-# 
-# m4.movie.attach(io: mMovie4, filename: 'm4.mp4')
-# 
-# puts "Movie 4 Finished!"
-# puts "Attaching Movie 5..."
-# 
-# m5.movie.attach(io: mMovie5, filename: 'm5.mp4')
-# 
-# puts "Movie 5 Finished!"
-# puts "Attaching Movie 6..."
-# 
-# m6.movie.attach(io: mMovie6, filename: 'm6.mp4')
-# 
-# puts "Movie 6 Finished!"
-# puts "Attaching Movie 7..."
-# 
-# m7.movie.attach(io: mMovie7, filename: 'm7.mp4')
-# 
-# puts "Movie 7 Finished!"
-# puts "Attaching Movie 8..."
-# 
-# m8.movie.attach(io: mMovie8, filename: 'm8.mp4')
-# 
-# puts "Movie 8 Finished!"
-# puts "Attaching Movie 9..."
-# 
-# m9.movie.attach(io: mMovie9, filename: 'm9.mp4')
-# 
-# puts "Movie 9 Finished!"
-# puts "Attaching Movie 10..."
-# 
-# m10.movie.attach(io: mMovie10, filename: 'm10.mp4')
-# 
-# puts "Movie 10 Finished!"
-# puts "Attaching Movie 11..."
-# 
-# m11.movie.attach(io: mMovie11, filename: 'm11.mp4')
-# 
-# puts "Movie 11 Finished!"
-# puts "Attaching Movie 12..."
-# 
-# m12.movie.attach(io: mMovie12, filename: 'm12.mp4')
-# 
-# 
-# puts "Movie 12 Finished!"
-# puts "Attaching Movie 13..."
-# 
-# m13.movie.attach(io: mMovie13, filename: 'm13.mp4')
-# 
-# puts "Movie 13 Finished!"
-# puts "Attaching Movie 14..."
-# 
-# m14.movie.attach(io: mMovie14, filename: 'm14.mp4')
-# 
-# puts "Movie 14 Finished!"
-# puts "Attaching Movie 15..."
-# 
-# m15.movie.attach(io: mMovie15, filename: 'm15.mp4')
-# 
-# puts "Movie 15 Finished!"
-# puts "Attaching Movie 16..."
-# 
-# m16.movie.attach(io: mMovie16, filename: 'm16.mp4')
-# 
-# puts "Movie 16 Finished!"
-# puts "Attaching Movie 17..."
-# 
-# m17.movie.attach(io: mMovie17, filename: 'm17.mp4')
-# 
-# puts "Movie 17 Finished!"
-# puts "Attaching Movie 18..."
-# 
-# m18.movie.attach(io: mMovie18, filename: 'm18.mp4')
-# 
-# puts "Movie 18 Finished!"
-# puts "Attaching Movie 19..."
-# 
-# m19.movie.attach(io: mMovie19, filename: 'm19.mp4')
-# 
-# puts "Movie 19 Finished!"
-# puts "Attaching Movie 20..."
-# 
-# m20.movie.attach(io: mMovie20, filename: 'm20.mp4')
-# 
-# puts "Movie 20 Finished!"
-# puts "Attaching Movie 21..."
-# 
-# m21.movie.attach(io: mMovie21, filename: 'm21.mp4')
-# 
-# puts "Movie 21 Finished!"
-# puts "Attaching Movie 22..."
-# 
-# m22.movie.attach(io: mMovie22, filename: 'm22.mp4')
-# 
-# puts "Movie 22 Finished!"
-# puts "Attaching Movie 23..."
-# 
-# m23.movie.attach(io: mMovie23, filename: 'm23.mp4')
-# 
-# 
-# puts "Movie 23 Finished!"
-# puts "Attaching Movie 24..."
-# 
-# m24.movie.attach(io: mMovie24, filename: 'm24.mp4')
-# 
-# puts "Movie 24 Finished!"
-# puts "Attaching Movie 25..."
-# 
-# m25.movie.attach(io: mMovie25, filename: 'm25.mp4')
-# 
-# puts "Movie 25 Finished!"
-# puts "Attaching Movie 26..."
-# 
-# m26.movie.attach(io: mMovie26, filename: 'm26.mp4')
-# 
-# puts "Movie 26 Finished!"
-# puts "Attaching Movie 27..."
-# 
-# m27.movie.attach(io: mMovie27, filename: 'm27.mp4')
-# 
-# puts "Movie 27 Finished!"
-# puts "Attaching Movie 28..."
-# 
-# m28.movie.attach(io: mMovie28, filename: 'm28.mp4')
-# 
-# puts "Movie 28 Finished!"
-# puts "Attaching Movie 29..."
-# 
-# m29.movie.attach(io: mMovie29, filename: 'm29.mp4')
-# 
-# puts "Movie 29 Finished!"
-# puts "Attaching Movie 30..."
-# 
-# m30.movie.attach(io: mMovie30, filename: 'm30.mp4')
-# 
-# puts "Movie 30 Finished!"
-# puts "Attaching Movie 31..."
-# 
-# m31.movie.attach(io: mMovie31, filename: 'm31.mp4')
-# 
-# puts "Movie 31 Finished!"
-# puts "Attaching Movie 32..."
-# 
-# m32.movie.attach(io: mMovie32, filename: 'm32.mp4')
-# 
-# puts "Movie 32 Finished!"
-# puts "Attaching Movie 33..."
-# 
-# m33.movie.attach(io: mMovie33, filename: 'm33.mp4')
-# 
-# puts "Movie 33 Finished!"
-# puts "Attaching Movie 34..."
-# 
-# m34.movie.attach(io: mMovie34, filename: 'm34.mp4')
-# 
-# puts "Movie 34 Finished!"
-# puts "Attaching Movie 35..."
-# 
-# m35.movie.attach(io: mMovie35, filename: 'm35.mp4')
-# 
-# puts "Movie 35 Finished!"
-# puts "Attaching Movie 36..."
-# 
-# m36.movie.attach(io: mMovie36, filename: 'm36.mp4')
-# 
-# puts "Movie 36 Finished!"
-# puts "Attaching Movie 37..."
-# 
-# m37.movie.attach(io: mMovie37, filename: 'm37.mp4')
-# 
-# puts "Movie 37 Finished!"
-# puts "Attaching Movie 38..."
-# 
-# m38.movie.attach(io: mMovie38, filename: 'm38.mp4')
-# 
-# puts "Movie 38 Finished!"
-# puts "Attaching Movie 39..."
-# 
-# m39.movie.attach(io: mMovie39, filename: 'm39.mp4')
-# 
-# puts "Movie 39 Finished!"
-# puts "Attaching Movie 40..."
-# 
-# m40.movie.attach(io: mMovie40, filename: 'm40.mp4')
-# 
-# puts "Movie 40 Finished!"
-# puts "Attaching Movie 41..."
-# 
-# m41.movie.attach(io: mMovie41, filename: 'm41.mp4')
-# 
+m1.movie.attach(io: mMovie1, filename: 'm1.mp4')
+
+puts "Movie 1 Finished!"
+puts "Attaching Movie 2..."
+
+m2.movie.attach(io: mMovie2, filename: 'm2.mp4')
+
+puts "Movie 2 Finished!"
+puts "Attaching Movie 3..."
+
+m3.movie.attach(io: mMovie3, filename: 'm3.mp4')
+
+puts "Movie 3 Finished!"
+puts "Attaching Movie 4..."
+
+m4.movie.attach(io: mMovie4, filename: 'm4.mp4')
+
+puts "Movie 4 Finished!"
+puts "Attaching Movie 5..."
+
+m5.movie.attach(io: mMovie5, filename: 'm5.mp4')
+
+puts "Movie 5 Finished!"
+puts "Attaching Movie 6..."
+
+m6.movie.attach(io: mMovie6, filename: 'm6.mp4')
+
+puts "Movie 6 Finished!"
+puts "Attaching Movie 7..."
+
+m7.movie.attach(io: mMovie7, filename: 'm7.mp4')
+
+puts "Movie 7 Finished!"
+puts "Attaching Movie 8..."
+
+m8.movie.attach(io: mMovie8, filename: 'm8.mp4')
+
+puts "Movie 8 Finished!"
+puts "Attaching Movie 9..."
+
+m9.movie.attach(io: mMovie9, filename: 'm9.mp4')
+
+puts "Movie 9 Finished!"
+puts "Attaching Movie 10..."
+
+m10.movie.attach(io: mMovie10, filename: 'm10.mp4')
+
+puts "Movie 10 Finished!"
+puts "Attaching Movie 11..."
+
+m11.movie.attach(io: mMovie11, filename: 'm11.mp4')
+
+puts "Movie 11 Finished!"
+puts "Attaching Movie 12..."
+
+m12.movie.attach(io: mMovie12, filename: 'm12.mp4')
+
+
+puts "Movie 12 Finished!"
+puts "Attaching Movie 13..."
+
+m13.movie.attach(io: mMovie13, filename: 'm13.mp4')
+
+puts "Movie 13 Finished!"
+puts "Attaching Movie 14..."
+
+m14.movie.attach(io: mMovie14, filename: 'm14.mp4')
+
+puts "Movie 14 Finished!"
+puts "Attaching Movie 15..."
+
+m15.movie.attach(io: mMovie15, filename: 'm15.mp4')
+
+puts "Movie 15 Finished!"
+puts "Attaching Movie 16..."
+
+m16.movie.attach(io: mMovie16, filename: 'm16.mp4')
+
+puts "Movie 16 Finished!"
+puts "Attaching Movie 17..."
+
+m17.movie.attach(io: mMovie17, filename: 'm17.mp4')
+
+puts "Movie 17 Finished!"
+puts "Attaching Movie 18..."
+
+m18.movie.attach(io: mMovie18, filename: 'm18.mp4')
+
+puts "Movie 18 Finished!"
+puts "Attaching Movie 19..."
+
+m19.movie.attach(io: mMovie19, filename: 'm19.mp4')
+
+puts "Movie 19 Finished!"
+puts "Attaching Movie 20..."
+
+m20.movie.attach(io: mMovie20, filename: 'm20.mp4')
+
+puts "Movie 20 Finished!"
+puts "Attaching Movie 21..."
+
+m21.movie.attach(io: mMovie21, filename: 'm21.mp4')
+
+puts "Movie 21 Finished!"
+puts "Attaching Movie 23..."
+
+m23.movie.attach(io: mMovie23, filename: 'm23.mp4')
+
+
+puts "Movie 23 Finished!"
+puts "Attaching Movie 24..."
+
+m24.movie.attach(io: mMovie24, filename: 'm24.mp4')
+
+puts "Movie 24 Finished!"
+puts "Attaching Movie 25..."
+
+m25.movie.attach(io: mMovie25, filename: 'm25.mp4')
+
+puts "Movie 25 Finished!"
+puts "Attaching Movie 26..."
+
+m26.movie.attach(io: mMovie26, filename: 'm26.mp4')
+
+puts "Movie 26 Finished!"
+puts "Attaching Movie 27..."
+
+m27.movie.attach(io: mMovie27, filename: 'm27.mp4')
+
+puts "Movie 27 Finished!"
+puts "Attaching Movie 28..."
+
+m28.movie.attach(io: mMovie28, filename: 'm28.mp4')
+
+puts "Movie 28 Finished!"
+puts "Attaching Movie 29..."
+
+m29.movie.attach(io: mMovie29, filename: 'm29.mp4')
+
+puts "Movie 29 Finished!"
+puts "Attaching Movie 30..."
+
+m30.movie.attach(io: mMovie30, filename: 'm30.mp4')
+
+puts "Movie 30 Finished!"
+puts "Attaching Movie 31..."
+
+m31.movie.attach(io: mMovie31, filename: 'm31.mp4')
+
+puts "Movie 31 Finished!"
+puts "Attaching Movie 32..."
+
+m32.movie.attach(io: mMovie32, filename: 'm32.mp4')
+
+puts "Movie 32 Finished!"
+puts "Attaching Movie 33..."
+
+m33.movie.attach(io: mMovie33, filename: 'm33.mp4')
+
+puts "Movie 33 Finished!"
+puts "Attaching Movie 34..."
+
+m34.movie.attach(io: mMovie34, filename: 'm34.mp4')
+
+puts "Movie 34 Finished!"
+puts "Attaching Movie 35..."
+
+m35.movie.attach(io: mMovie35, filename: 'm35.mp4')
+
+puts "Movie 35 Finished!"
+puts "Attaching Movie 36..."
+
+m36.movie.attach(io: mMovie36, filename: 'm36.mp4')
+
+puts "Movie 36 Finished!"
+puts "Attaching Movie 37..."
+
+m37.movie.attach(io: mMovie37, filename: 'm37.mp4')
+
+puts "Movie 37 Finished!"
+puts "Attaching Movie 38..."
+
+m38.movie.attach(io: mMovie38, filename: 'm38.mp4')
+
+puts "Movie 38 Finished!"
+puts "Attaching Movie 39..."
+
+m39.movie.attach(io: mMovie39, filename: 'm39.mp4')
+
+puts "Movie 39 Finished!"
+puts "Attaching Movie 40..."
+
+m40.movie.attach(io: mMovie40, filename: 'm40.mp4')
+
+puts "Movie 40 Finished!"
+puts "Attaching Movie 41..."
+
+m41.movie.attach(io: mMovie41, filename: 'm41.mp4')
+
 puts "Movie 41 Finished!"
+puts "Attaching Movie 42..."
+
+m42.movie.attach(io: mMovie42, filename: 'm42.mp4')
+
+puts "Movie 42 Finished!"
+puts "Attaching Movie 43..."
+
+m43.movie.attach(io: mMovie43, filename: 'm43.mp4')
+
+puts "Movie 43 Finished!"
+puts "Attaching Movie 44..."
+
+m44.movie.attach(io: mMovie44, filename: 'm44.mp4')
+
+puts "Movie 44 Finished!"
+puts "Attaching Movie 45..."
+
+m45.movie.attach(io: mMovie45, filename: 'm45.mp4')
+
+puts "Movie 45 Finished!"
+puts "Attaching Movie 46..."
+
+m46.movie.attach(io: mMovie46, filename: 'm46.mp4')
+
+puts "Movie 46 Finished!"
+
+
 puts "Movies attached!"
 puts "ALL DONE!"

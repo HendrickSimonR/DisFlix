@@ -50,6 +50,7 @@ class MovieShow extends React.Component {
 
   render() {
     let moviesArr = Object.values(this.props.movies);
+    
     if (moviesArr.length > 0) {
       for (let i = 0; i < moviesArr.length; i++) {
         let movie = moviesArr[i];
@@ -95,7 +96,7 @@ class MovieShow extends React.Component {
           // muted={false}
           onEnded={this.displayPoster}
         >
-          <source src={this.props.test} type="video/mp4" /> 
+          <source src={this.movie.movie_url} type="video/mp4" /> 
         </video>
       </div>
     )

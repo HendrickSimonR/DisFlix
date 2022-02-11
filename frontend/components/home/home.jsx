@@ -345,7 +345,20 @@ class Home extends React.Component {
 
     console.log('PROPITY', this.props, this.state);
     // console.log('PROPITYSTATE', this.state);
-    let featured = this.props.brands[this.props.brands.length - 1];
+    let featured;
+
+    let brandsArr = Object.values(this.props.brands);
+
+    if (brandsArr.length > 0) {
+      for (let i = 0; i < brandsArr.length; i++) {
+        let brand = brandsArr[i];
+
+        if (brand.name === 'Featured') {
+          featured = brand;
+        }
+      }
+    }
+
     // console.log('FEATCH', featured)
 
     return (

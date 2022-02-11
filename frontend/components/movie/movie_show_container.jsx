@@ -4,13 +4,12 @@ import MovieShow from './movie_show';
 
 const mSTP = (state) => {
   // console.log('SHOW STATE', state)
-  let test;
-  if (state.brands.length > 0) {
-    test = state.brands[state.brands.length - 1].movie_url
-  }
+  // let test;
+  // if (state.brands.length > 0) {
+  //   test = state.brands[state.brands.length - 1].movie_url
+  // }
 
   return {
-    test: test,
     movies: state.movies
   }
 }
