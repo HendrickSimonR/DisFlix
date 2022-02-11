@@ -58,7 +58,7 @@ class Search extends React.Component {
         : 
         <div>
           <h1 id="search-results">{this.props.search}</h1>
-          <ul className="films-rows" style={{top: '22vh'}}>
+          <ul className="films-rows" style={{top: '10vw'}}>
             {this.moviesFound.map((movie) => (
               <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
               ))}
