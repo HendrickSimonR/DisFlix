@@ -312,10 +312,10 @@ class Thumbnail extends React.Component {
 
           <div className="thumbnail-details">
             <h1>100% Match</h1>
-            <h3>
+            <div className="not-match">
               <strong className="thumb-rating">{this.props.movie.rating}</strong> 
               <strong className="thumb-runtime">{this.props.movie.runtime}</strong>
-            </h3>
+            </div>
           </div>
           <div className="thumbnail-tags">
             <li>{tag1}</li>

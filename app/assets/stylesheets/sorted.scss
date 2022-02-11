@@ -113,7 +113,7 @@
   .thumbnail-details {
     // margin-left: 4px;
     // margin-top: 9px;
-    display:inline-flex;
+    display: inline-flex;
     position: relative;
     top: 12%;
     left: 1.8%;
@@ -127,6 +127,11 @@
     font-family: 'Open Sans';
     position: relative;
     top: 11%;
+  }
+
+  .not-match {
+    position: relative;
+    bottom: 2px;
   }
 
   .thumb-rating {
@@ -210,6 +215,10 @@
 
       .thumb-rating {
         font-size: 1.4vw;
+      }
+
+      .not-match {
+        bottom: 0px !important;
       }
 
       .thumbnail-tags {
