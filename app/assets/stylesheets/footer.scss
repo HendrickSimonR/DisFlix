@@ -24,9 +24,17 @@
   position: relative;
 }
 
+#visit-on-desktop {
+  display: none;
+}
+
 @media (max-width: 920px) {
   .footer-details {
     height: 30px;
     font-size: 12px;
+  }
+
+  #visit-on-desktop {
+    display:inline;
   }
 }
