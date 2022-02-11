@@ -11,8 +11,8 @@
   padding: 35px;
   font-family: 'Open Sans';
   text-align: center;
-  font-size: 14px;
-  height: 20px;
+  font-size: 11px;
+  height: 10px;
 }
 
 .footer.brand {
@@ -22,4 +22,11 @@
 .footer-splash {
   background: black;
   position: relative;
+}
+
+@media (max-width: 920px) {
+  .footer-details {
+    height: 30px;
+    font-size: 12px;
+  }
 }
