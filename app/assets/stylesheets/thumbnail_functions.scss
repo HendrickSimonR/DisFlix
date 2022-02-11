@@ -229,7 +229,7 @@
     border: 1.5px solid #575757;
     border-radius: 50%;
     height: 91.5%;
-    width: 92%;
+    width: 94%;
     position: relative;
     left: 10%;
     top: -8%;
@@ -241,10 +241,10 @@
   }
 
   .like-button.up {
-    padding-left: 0.45vw;
+    padding-left: 0.4vw;
     padding-top: 0.4vw;
-    height: 94%;
-    width: 82%;
+    height: 96%;
+    width: 85%;
     position: relative;
     left: -5%;
     top: -4%;
@@ -268,7 +268,37 @@
     font-size: 4vw !important;
   }
 
+  .thumbnail-details {
+    h1 {
+      font-size: 1vw;
+    }
+
+    h3 {
+      font-size: 1vw;
+      position: relative;
+      top: 0.5vh;
+    }
+
+    .thumb-rating {
+      font-size: .9vw;
+    }
+
+    .thumb-runtime {
+      top: 5%;
+    }
+  }
+
+  .thumbnail-tags {
+    font-size: 0.9vw;
+  }
+
   .mute-and-refresh {
     display: none;
+  }
+
+  .thumbnail-container:hover {
+    .thumbnail-functions {
+      height: 74%;
+    }
   }
 }
