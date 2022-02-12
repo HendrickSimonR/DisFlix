@@ -8,7 +8,11 @@ function Footer() {
           This website is not-for-profit.
           I simply love all things Disney!
           Please contact me using the links in the dropdown menu.
-          <p id="visit-on-desktop">&nbsp;Visit my site on a desktop/laptop for the full experience!</p>
+
+          <p id="visit-on-desktop">
+            &nbsp;Visit my site on a desktop/laptop for the full experience!
+          </p>
+          
         </h1>
     </div>
   )
