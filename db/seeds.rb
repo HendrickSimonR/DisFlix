@@ -25,8 +25,6 @@ u1.username='disney4eva'
 u1.password='imagination'
 u1.save!
 
-# mPhoto22 = URI.open('https://i.imgur.com/DkbGEIq.jpg') 
-
 puts "Creating brands..."
 
 #Brands
@@ -139,16 +137,6 @@ puts "Attaching Brand Movie 6..."
  puts "Brand Movie 6 Finished!"
 
 puts "Generating movies..."
-
-#movies
-
-# m1=Movie.new
-# m1.title='50 Years of Walt Disney World'
-# m1.description=''
-# m1.runtime='1h 24m'
-# m1.rating='TV-PG'
-# m1.year=2021
-# m1.save! 
 
 #avatars
 
