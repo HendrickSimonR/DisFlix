@@ -75,9 +75,9 @@ class Thumbnail extends React.Component {
     let poster = document.getElementById(posterId);
     
     if (window.location.href.includes('home')) {
-      let movie = document.querySelector(".brand-container-movieeo.featured");
-      movie.currentTime = 30;
-      movie.muted = false;
+      let vid = document.querySelector(".brand-container-video.featured");
+      vid.currentTime = 30;
+      vid.muted = false;
     }
 
     volume.style.display = 'none';

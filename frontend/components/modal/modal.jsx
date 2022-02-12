@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 function Modal({modal, closeModal}) {
   if (!modal) return null;
 
+  let about;
   let movieId;
   let modalComponent;
   let renderMovie = false;
@@ -20,6 +21,10 @@ function Modal({modal, closeModal}) {
       movieId = parseInt(modal);
       break;
     }
+  }
+
+  if (modal.includes('about')) {
+    about = true;
   }
   
   if (renderMovie === true) {
