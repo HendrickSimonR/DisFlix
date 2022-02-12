@@ -99,7 +99,6 @@
   font-weight: 600;
   border-radius: 4px;
   height: 91%;
-  /* line-height: 3px; */
 
 
   span {
@@ -140,7 +139,6 @@
   color: #5a5a5a;
   display: grid;
   width: 133%;
-  /* row-gap: 0px; */
   font-size: 1vw;
   line-height: 20px;
   height: 10.7vw;
@@ -175,9 +173,6 @@
     font-size: 1.18vw;
     font-weight: 500;
     font-family: 'Open Sans';
-    /* border-color: rgba(255, 255, 255, 0.404); */
-    /* border-style: solid; */
-    /* border-width: thin; */
     outline: rgba(255, 255, 255, 0.3);
     outline-width: thin;
     outline-style: solid;
@@ -186,7 +181,6 @@
     padding-right: 7.5px;
     padding-top: 2.5px;
     padding-bottom: 2.5px;
-    // left: 6%;
     bottom: 3px;
     position: relative;
     margin-right: 2%;
@@ -276,7 +270,6 @@
 }
 
 .close-modal {
-  /* background: white; */
   color: rgb(10, 10, 10);
   position: fixed;
   font-size: 2.6vw;
@@ -284,7 +277,6 @@
   right: 2%;
   z-index: 5;
   cursor: pointer;
-  /* border-radius: 21%; */
 }
 
 #close-fill {
