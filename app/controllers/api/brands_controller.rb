@@ -9,8 +9,4 @@ class Api::BrandsController < ApplicationController
     @movies = Movie.select{ |movie| @brand.id == movie.brand_id }
     render :show
   end
-
-  # def brand_params
-  #   params.require(:brand).permit(:name, :page_video, :image)
-  # end
 end
