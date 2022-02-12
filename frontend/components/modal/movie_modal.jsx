@@ -21,11 +21,13 @@ class MovieModal extends React.Component {
     }
   }
 
+
   componentDidMount() {
     this.setState({ movieComponent: this.uniqueId })
     let indexMovie = document.getElementById(this.uniqueId);
     indexMovie.currentTime = window.movieTime;  
   }
+
 
   handleLoader() {
     let loader = document.getElementById('brand-loader-modal');
@@ -33,67 +35,73 @@ class MovieModal extends React.Component {
     window.scrollTo(0,0);
   }
 
+
   watchMovie() {
     window.movieShow = this.film.id;
     window.moviePlay = true;
+
     let indexMovie = document.getElementById(this.uniqueId);
     indexMovie.pause()
     indexMovie.load()
+
     this.displayPoster(this.posterId, this.uniqueId);
     this.props.closeModal();
     this.props.history.push('/movie');
   }
 
+
   handleMute(id){
-    if (this.state.mute === 'volume_up'){
+    if (this.state.mute === 'volume_up') {
+
       this.setState({mute: 'volume_off'});
-      let vid = document.getElementById(id);
-      // console.log('id', id)
-      if (vid) vid.muted = true;    
+
+      let movie = document.getElementById(id);
+      if (movie) movie.muted = true;    
+
     } else {
+
       this.setState({mute: 'volume_up'});
-      let vid = document.getElementById(id);
-      if (vid) vid.muted = false;
+
+      let movie = document.getElementById(id);
+      if (movie) movie.muted = false;
     }
   }
 
+
   replayFeatured(posterId, movieId) {
     this.setState({ moviePlay: !this.state.moviePlay });
+
     let movie = document.getElementById(movieId);
     let poster = document.getElementById(posterId);
+
     poster.style.display = 'none';
     movie.style.display = 'inline-block';
     movie.play();
   }
 
+
   displayPoster(posterId, movieId) {
     let movie = document.getElementById(movieId);
     let poster = document.getElementById(posterId);
+
     movie.style.display = 'none';
     poster.style.animation = 'fadeIn ease 1s'
     poster.style.display = 'inline-block';
+
     this.setState({ moviePlay: !this.state.moviePlay });
   }
-  // componentDidMount() {
-  //   this.props.getMovie(this.props.movie);
-  //   // console.log('film', film)
-  //   // this.setState 
-  // }
+
 
   render() {
     let watchlistId;
-
     let moviesArr = Object.values(this.props.movies);
     
     if (moviesArr.length === 0) {
       return null;
     } else {
-      // console.log('WTF')
+
       for (let i = 0; i < moviesArr.length; i++) {
         let movie = moviesArr[i];
-        // debugger
-        // console.log('movie', movie);
-        // console.log('findmovie', this.props.movie)
 
         if (this.props.movie === movie.id) {
           this.film = movie;
@@ -114,32 +122,30 @@ class MovieModal extends React.Component {
       }
     }
 
-    // console.log('MODAL PROPS', this.props)
-    // console.log('MOVIE PROPS ', this.film)
-
     return (
       <div className="movie-modal">
         <div className="modal-movie-player">
           <div id='brand-loader-modal' className='loader-container modal'>
             <img className='brand-loader modal' src={window.loader} alt='' />
           </div>
+
           <img 
             alt=''
             id={this.posterId}
-            src={this.film.image_url} 
             className='modal-movie' 
             onClick={this.showMovie}
+            src={this.film.image_url} 
             style={{ display: 'none'}}
           />
 
           <video 
-            id={this.uniqueId} 
-            onPlay={this.handleLoader}
             autoPlay
             playsInline
+            id={this.uniqueId} 
             className="modal-movie"
-            poster={this.film.image_url} 
             onClick={this.showMovie}
+            onPlay={this.handleLoader}
+            poster={this.film.image_url} 
             muted={window.moviePlay === true ? true : false}
             onEnded={() => this.displayPoster(this.posterId, this.uniqueId)}
           >
@@ -160,24 +166,46 @@ class MovieModal extends React.Component {
         
         <div className="movie-modal-details">
           <div className="modal-buttons-and-title">
+
             {this.state.moviePlay === true ? <h1 id="modal-title">{this.film.title}</h1> : null}
+
             <div className="movie-modal-buttons">
+
               <div className="movie-modal-buttons-left">
                 <div className="movie-modal-play" onClick={() => this.watchMovie(this.uniqueId)}>
-                  <h1><span className="material-icons-sharp">play_arrow</span></h1>
+                  <h1>
+                    <span className="material-icons-sharp">play_arrow</span>
+                  </h1>
+
                   <h2>Play</h2>
                 </div>
-                <WatchlistButtonContainer modalButton={true} movieId={this.film.id} userId={this.props.user} watchlistId={watchlistId} watchlist={this.props.watchlist} />
-                <LikeButtonsContainer modalButton={true} movieId={this.film.id} user={this.props.user} />
+
+                <WatchlistButtonContainer 
+                  modalButton={true} 
+                  movieId={this.film.id} 
+                  userId={this.props.user} 
+                  watchlistId={watchlistId} 
+                  watchlist={this.props.watchlist} 
+                />
+
+                <LikeButtonsContainer 
+                  modalButton={true} 
+                  user={this.props.user} 
+                  movieId={this.film.id} 
+                />
               </div>
 
             <div className="movie-modal-buttons-right">
               <span 
-                className='material-icons-round modal-volume-on' id={this.uniqueId + 'volume'}
-                onClick={this.state.moviePlay === true ? () => this.handleMute(this.uniqueId) : () => this.replayFeatured(this.posterId, this.uniqueId)}
+                id={this.uniqueId + 'volume'}
+                className='material-icons-round modal-volume-on' 
+                onClick={this.state.moviePlay === true 
+                  ? () => this.handleMute(this.uniqueId) 
+                  : () => this.replayFeatured(this.posterId, this.uniqueId)
+                }
               >
-                { this.state.moviePlay === true ? 
-                  this.state.mute : 'refresh' 
+                { 
+                  this.state.moviePlay === true ? this.state.mute : 'refresh' 
                 }
               </span>
             </div>
