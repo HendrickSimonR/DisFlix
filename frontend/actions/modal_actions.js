@@ -2,7 +2,6 @@ export const OPEN_MODAL = 'OPEN_MODAL';
 export const CLOSE_MODAL = 'CLOSE_MODAL';
 
 export const openModal = modal => {
-  // console.log('HOOOOPLAGH')
   document.body.style.top = `-${window.scrollY}px`;
   document.body.style.position = 'fixed';
   window.modal = true;
