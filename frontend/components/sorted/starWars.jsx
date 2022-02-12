@@ -35,10 +35,8 @@ class StarWars extends React.Component {
   }
 
   render() {
-    // console.log('STARWARS', this.props);
     this.starWarsMovies = this.props.starWars.reverse();
     let user = this.props.user;
-    let brandId = this.props.current_brand;
     let poster;
     let brandMovie;
 
@@ -56,16 +54,41 @@ class StarWars extends React.Component {
         <div id='brand-loader-star-wars' className='loader-container'>
           <img className='brand-loader star-wars' src={window.loader} alt='' />
         </div>
-        <img id="brand-container-poster" className="brand-container-video" src={poster} alt='' style={{display: 'none'}}/>
-        <video onPlay={this.handleLoader} autoPlay playsInline className="brand-container-video" id="brand-container-video" onEnded={() => this.displayPoster()}>
+
+        <img 
+          alt='' 
+          src={poster} 
+          style={{display: 'none'}}
+          id="brand-container-poster" 
+          className="brand-container-video" 
+        />
+        
+        <video 
+          autoPlay 
+          playsInline 
+          id="brand-container-video" 
+          onPlay={this.handleLoader} 
+          className="brand-container-video" 
+          onEnded={() => this.displayPoster()}
+        >
           <source src={brandMovie} type="video/mp4" /> 
         </video>
+
         <ul id='star-wars-movies' className="films-rows disney">
           { this.starWarsMovies.map((movie) => (
-            <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
+            <ThumbnailContainer 
+              user={user} 
+              movie={movie} 
+              key={movie.id} 
+              likes={this.props.likes} 
+              dislikes={this.props.dislikes} 
+              watchlist={this.props.watchlist} 
+            />
           ))}
         </ul>
+
         <Footer />
+        
         <div className="brand-background"></div>
       </div>
     )

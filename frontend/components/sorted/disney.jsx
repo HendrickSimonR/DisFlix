@@ -35,8 +35,8 @@ class Disney extends React.Component {
 
   render() {
     this.disneyMovies = this.props.disney.reverse();
+
     let user = this.props.user;
-    let brandId = this.props.current_brand;
     let poster;
     let brandMovie;
 
@@ -49,22 +49,46 @@ class Disney extends React.Component {
       }
     }
 
-    // console.log('disneybrand', this.props)
     return(
       <div className="films-container disney">
         <div id='brand-loader-disney' className='loader-container'>
           <img className='brand-loader disney' src={window.loader} alt='' />
         </div>
-        <img id="brand-container-poster" className="brand-container-video" src={poster} alt='' style={{display: 'none'}}/>
-        <video onPlay={this.handleLoader} autoPlay playsInline className="brand-container-video" id="brand-container-video" onEnded={() => this.displayPoster()}>
+
+        <img 
+          alt='' 
+          src={poster} 
+          style={{display: 'none'}}
+          id="brand-container-poster" 
+          className="brand-container-video" 
+        />
+        
+        <video 
+          onPlay={this.handleLoader} 
+          autoPlay 
+          playsInline 
+          className="brand-container-video" 
+          id="brand-container-video" 
+          onEnded={() => this.displayPoster()}
+        >
           <source src={brandMovie} type="video/mp4" /> 
         </video>
+
         <ul id='disney-movies' className="films-rows disney" style={{display: 'none'}}>
           { this.disneyMovies.map((movie) => (
-            <ThumbnailContainer likes={this.props.likes} dislikes={this.props.dislikes} user={user} watchlist={this.props.watchlist} key={movie.id} movie={movie} />
+            <ThumbnailContainer 
+              user={user} 
+              movie={movie} 
+              key={movie.id} 
+              likes={this.props.likes} 
+              dislikes={this.props.dislikes} 
+              watchlist={this.props.watchlist} 
+            />
           ))}
         </ul>
+
         <Footer />
+
         <div className="brand-background"></div>
       </div>
     )

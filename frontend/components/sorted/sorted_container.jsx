@@ -10,33 +10,27 @@ import { getMovies } from '../../actions/movie_actions';
 import { signout } from '../../actions/session_actions';
 import { getWatchlist, removeMovie } from '../../actions/watchlist_actions';
 
-function shadowFilter(state) {
+function shadowFilter() {
   let image = document.getElementById('brand-container-poster');
   let video = document.getElementById('brand-container-video');
-  // let props = this.props;
 
   if ($(window).scrollTop() < 100) {
     image.style.transition = 'none';
     image.style.filter = 'brightness(100%)';
     video.style.transition = 'none';
     video.style.filter = 'brightness(100%)';
-          // $('#brand-container-video').removeClass('scrolled');
-          // $('#brand-container-poster').removeClass('scrolled');
   } else {
     image.style.transition = 'all 0.3s ease 0s';
     image.style.filter = 'brightness(30%)';
     video.style.transition = 'all 0.3s ease 0s';
     video.style.filter = 'brightness(30%)';
   }
-   if (window.modal) {
-          image.style.transition = 'none';
-          image.style.filter = 'brightness(30%)';
-          video.style.transition = 'none';
-          video.style.filter = 'brightness(30%)';
-          // $('#brand-container-video').addClass('scrolled');
-          // $('#brand-container-poster').addClass('scrolled');
-          // $('#brand-container-video').addClass('scrolled');
-          // $('#brand-container-poster').addClass('scrolled');
+
+  if (window.modal) {
+    image.style.transition = 'none';
+    image.style.filter = 'brightness(30%)';
+    video.style.transition = 'none';
+    video.style.filter = 'brightness(30%)';
   }
 }
 
@@ -84,7 +78,6 @@ const mSTP = state => {
     brandId = 0;
   }
 
-  // console.log('sorted state', state)
   return ({
     current_brand: brandId,
     user: state.session.id,
@@ -121,5 +114,3 @@ const AllSorted = {
 }
 
 export default AllSorted;
-
-// KEEP
