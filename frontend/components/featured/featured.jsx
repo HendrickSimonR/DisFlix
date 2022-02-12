@@ -4,12 +4,17 @@ import { withRouter } from 'react-router';
 class Featured extends React.Component {
   constructor(props) {
     super(props)
+    
     this.showMovie = this.showMovie.bind(this);
     this.playFeatured = this.playFeatured.bind(this);
     this.displayPoster = this.displayPoster.bind(this);
     this.displayShadow = this.displayShadow.bind(this);
     this.replayFeatured = this.replayFeatured.bind(this);
-    this.state = { mute: 'volume_up', moviePlay: true }
+    
+    this.state = { 
+      mute: 'volume_up', 
+      moviePlay: true 
+    }
   }
 
   showMovie() {
@@ -157,7 +162,7 @@ class Featured extends React.Component {
               }
 
             </span>
-            
+
             <p>TV-PG</p>
           </div>
         </div>
