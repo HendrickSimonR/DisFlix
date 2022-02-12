@@ -28,7 +28,7 @@ class About extends React.Component {
         </div>
         
         <div id="my-name">
-          <h3>- Hendrick</h3>
+          <h3>Hendrick</h3>
           <h3 id="last-name">Ramos</h3>
         </div>
         

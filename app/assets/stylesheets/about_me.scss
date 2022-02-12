@@ -3,20 +3,19 @@
   color: white;
   position: fixed;
   z-index: 1;
-  bottom: -52px;
-  left: 175px;
+  bottom: 30px;
+  right: 30px;
   font-size: 28px;
 }
 
 #last-name {
   position: relative;
-  left: 40px;
+  left: 20px;
 }
 
 .modal-child.about {
-  width: 961px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  width: 1072px;
+  overflow: hidden;
   position: fixed;
 }
 
@@ -48,7 +47,7 @@
   }
 
   h2 {
-    font-size: 12px;
+    font-size: 14px;
     margin: 7px;
     line-height: 1.38;
   }
@@ -57,7 +56,7 @@
     list-style: none;
     margin: 7px;
     line-height: 1.2;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -87,7 +86,7 @@
 
   img {
     opacity: 0.5;
-    height: 32px;
+    height: 46px;
     width: auto;
     transition: all 0.4s ease 0s;
     cursor: pointer;
@@ -105,9 +104,9 @@
 #thank-you {
   filter: invert(1);
   height: 87px;
-  bottom: -86px;
+  bottom: 20px;
   position: fixed;
-  left: 21px;
+  right: 600px;
 }
 
 .close-modal-about {
