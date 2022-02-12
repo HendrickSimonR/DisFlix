@@ -11,16 +11,6 @@
   transition: opacity 300ms ease-out, border-radius 200ms ease-out;
   border-radius: 0 0 9px 9px;
   margin-bottom: 10px;
-  // z-index: 3;
-  // left: 16%;
-  // background: #181818;
-  // color: #fff;
-  // width: 100%;
-  // height: fit-content;
-  // padding: 5px;
-  // box-sizing: border-box;
-  // transition: opacity 300ms ease-out, border-radius 200ms ease-out;
-  // border-radius: 0 0 10px 10px;  
 }
 
 .thumbnail-functions.placeholder {
@@ -32,7 +22,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // margin-top: 5px;
 }
 
 .thumbnail-buttons-left {
@@ -42,7 +31,6 @@
 
 .thumbnail-functions:hover {
   display: inline;
-  // left: 16%;  
 }
 
 .thumbnail #placeholder {
@@ -75,19 +63,18 @@
 }
 
 .expand-modal {
-    color: white;
-    border-radius: 50%;
-    border: 1.5px solid #575757;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 4%;
-    /* left: 0%; */
-    margin-right: 2px;
-    width: 1.8vw;
-    height: 1.8vw;
-    font-size: 26px;
+  color: white;
+  border-radius: 50%;
+  border: 1.5px solid #575757;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 4%;
+  margin-right: 2px;
+  width: 1.8vw;
+  height: 1.8vw;
+  font-size: 26px;
 }
 
 .expand-modal:hover {
@@ -114,32 +101,28 @@
 }
 
 .like-buttons {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    left: 12%;
-    top: 10.5%;
-    gap: 8%;
-    height: 71%;
-    /* margin-top: 3px; */
-    /* width: 24%; */
-    padding-top: -3px;
-    /* line-height: 66px; */
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 12%;
+  top: 10.5%;
+  gap: 8%;
+  height: 71%;
+  padding-top: -3px;
 }
 
 .like-button {
-    border: 1.5px solid #575757;
-    border-radius: 50%;
-    height: 85.5%;
-    width: 85.5%;
-    position: relative;
-    left: 20%;
-    top: -0.4%;
-    padding-top: 0.4vw;
-    /* padding-top: 0px; */
-    font-size: 1.1vw;
-    padding-left: 0.35vw;
-    margin-bottom: -12px;
+  border: 1.5px solid #575757;
+  border-radius: 50%;
+  height: 85.5%;
+  width: 85.5%;
+  position: relative;
+  left: 20%;
+  top: -0.4%;
+  padding-top: 0.4vw;
+  font-size: 1.1vw;
+  padding-left: 0.35vw;
+  margin-bottom: -12px;
 }
 
 .like-button.up {
@@ -198,7 +181,6 @@
 }
 
 .mute-and-refresh.sorted {
-  /* right: 3px; */
   top: 10.2vw;
   right: 5.84vw;
   
@@ -239,7 +221,6 @@
     left: 10%;
     top: -8%;
     padding-top: 0.6vw;
-    /* padding-top: 0px; */
     font-size: 1.8vw;
     padding-left: 0.35vw;
     margin-bottom: -12px;
