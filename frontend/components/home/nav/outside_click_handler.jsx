@@ -21,14 +21,6 @@ class OutsideClickHandler extends React.Component {
     button.classList.remove("search-button-expanded"); 
     input.classList.add("search-input-hidden");
     button.classList.add("search-button"); 
-
-
-    // html.addEventListener("click", function (e) {
-    //   if (e.target !== input) {
-    //     input.classList.remove("search-input");
-    //     input.classList.add("searc-input-hidden")
-    //   }
-    // });
   }
 
   handleClickOutside = (event) => {
