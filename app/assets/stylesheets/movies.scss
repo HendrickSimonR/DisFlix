@@ -8,16 +8,12 @@
 }
 
 .thumbnail {
-  // padding: 5px;
   height: auto;
   width: 18.3vw;
   cursor: pointer;
-  // height: 8.4375vw;
   border-radius: 3px;
-  // margin-right: 10px;
   transition: all .4s ease, box-shadow 0s;
   box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
-  // -webkit-font-smoothing: subpixel-antialiased;
   background-size: cover!important;
   background-position: center!important;
   display: inline-block;
@@ -58,32 +54,11 @@
 .thumbnail-container.middle.watchlist.swiped:hover {
   transform:scale(1.4) translate(2.5vw, -48px) !important;
 }
-// .thumbnail-hover {
 
-// }
-
-// .WxEV {
-//     backface-visibility: hidden;
-//     border-radius: 4px;
-//     box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
-//     cursor: pointer;
-//     display: block;
-//     position: relative;
-//     transform: scale(1, 1) translateZ(0px);
-//     transition-duration: 300ms;
-//     transition-property: transform, box-shadow;
-//     transition-timing-function: ease-out;
-//     -webkit-font-smoothing: subpixel-antialiased;
-// }
 
 .thumbnail-container:hover {
   transform: scale(1.4) translate(0, -48px);
-  // outline: 3.5px solid rgb(255, 255, 255);
-  // outline-offset: -3.5px;
-  // border-radius: 50%;
-  // z-index: 2;
   display: inline;
-  // background: rgb(32, 32, 49);
   height:100px;
   margin-top: -15px;
   transition: all .6s;
@@ -93,7 +68,6 @@
   .thumbnail {
     border-radius: 5px 5px 0px 0px;
     box-shadow: none;
-    // margin-bottom: -1.9px;
   }
   
   .thumbnail-functions {
@@ -104,7 +78,6 @@
     margin-right: 3px;
     background: linear-gradient(rgb(37, 38, 48), rgb(29, 31, 39));
     color: #fff;
-    // width: 100%;
     height: 92%;
     width: 100.02%;
     padding: 5px;
@@ -120,7 +93,6 @@
   }
 
   .thumbnail-details {
-    // margin-left: 4px;
     margin-top: 3%;
     display:inline-flex;
     gap: 1%;
@@ -141,15 +113,10 @@
   }
 
   .thumb-rating {
-    /* margin-top: 3px; */
-    /* margin-left: 7px; */
     position: relative;
     font-size: 0.75vw;
     font-weight: 500;
     font-family: 'Open Sans';
-    /* border-color: rgba(255, 255, 255, 0.404); */
-    /* border-style: solid; */
-    /* border-width: thin; */
     outline: rgba(255, 255, 255, 0.3);
     outline-width: thin;
     outline-style: solid;
@@ -163,9 +130,7 @@
 }
 
   .thumb-runtime {
-    /* margin-top: -22px; */
     position: relative;
-    /* margin-left: 9px; */
     font-size: 0.777vw;
     font-family: 'Open Sans';
     top: -6%;
@@ -180,11 +145,8 @@
 
 
 .movie-index {
-  // padding-top: 80px;
   padding-left: 3.4vw;
   margin-bottom: 11vh;
-  // padding-right: 4.1vw;
-  // height: 1490px;
   color: white;
   font-family: 'Open Sans', sans-serif;
   overflow: visible;
@@ -195,15 +157,14 @@
 .movie-row {
   display: flex;
   width: 100%;
-  // justify-content: space-between; 
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 7.9vh;
 }
 
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 #watchlist-movies-row {
@@ -241,7 +202,6 @@ html, body {
   font-weight: 700;
   margin-left: 0.5vw;
   font-size: 1.4vw;
-  // padding-top: 5px;
   padding-bottom: 10px;
   margin-top: 6px;
 }
@@ -272,27 +232,6 @@ html, body {
   cursor: pointer;
   transition: all 0.2s;
 }
-// .left-arrow, .right-arrow {
-//   // margin-top: 3.5vw;
-//   // margin-left: -2.5vw;
-//   font-size: 3vw;
-//   color: rgba(54, 54, 54, 0.068);
-//   // position: absolute;
-//   // z-index: 1;
-//   cursor: pointer;
-//   transition: all 0.2s;
-// }
-
-// .right-arrow {
-//   // margin-top: 3.5vw;
-//   // margin-left: 93vw;
-//   font-size: 3vw;
-//   color: rgba(54, 54, 54, 0.068);
-//   // position: absolute;
-//   // z-index: 1;
-//   cursor: pointer;
-//   transition: all 0.2s;
-// }
 
 .left-arrow:hover {
   color: white;
@@ -309,74 +248,12 @@ html, body {
   opacity: 0;
   cursor: default;
 } 
- 
-
-// .thumbnail-container.first.disliked {
-//   .thumbnail {
-//     filter: grayscale(100%);
-//   }
-// }
-
-// .thumbnail-container.middle.disney.disliked {
-//   .thumbnail {
-//     filter: grayscale(100%);
-//   }
-// }
-
-// .thumbnail-container.middle.pixar.disliked {
-//   .thumbnail {
-//     filter: grayscale(100%);
-//   }
-// }
-
-// .thumbnail-container.middle.marvel.disliked {
-//   .thumbnail {
-//     filter: grayscale(100%);
-//   }
-// }
-
-// .thumbnail-container.middle.star-wars.disliked {
-//   .thumbnail {
-//     filter: grayscale(100%);
-//   }
-// }
-
-// .thumbnail-container.middle.nat-geo.disliked {
-//   .thumbnail {
-//     filter: grayscale(100%);
-//   }
-// }
-
-// .thumbnail-container.middle.watchlist.disliked {
-//   .thumbnail {
-//     filter: grayscale(100%);
-//   }
-// }
-
-// .thumbnail-container.last.disliked {
-//   .thumbnail {
-//     filter: grayscale(100%);
-//   }
-// }
-
-// .thumbnail-container.disliked {
-//   .thumbnail {
-//     filter: grayscale(100%);
-//   }
-// }
-
-// .thumbnail-specific.disliked {
-//   .thumbnail {
-//     filter: grayscale(100%);
-//   }
-// }
 
 #disliked {
   .thumbnail {
     filter: grayscale(100%);
   }
 }
-
 
 .full-screen-movie-page {
   width: 100vw;
