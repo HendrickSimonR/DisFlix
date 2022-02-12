@@ -49,7 +49,7 @@ class Disney extends React.Component {
       }
     }
 
-    console.log('disneybrand', this.props)
+    // console.log('disneybrand', this.props)
     return(
       <div className="films-container disney">
         <div id='brand-loader-disney' className='loader-container'>

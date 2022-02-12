@@ -343,7 +343,7 @@ class Home extends React.Component {
     }
 
 
-    console.log('PROPITY', this.props, this.state);
+    // console.log('PROPITY', this.props, this.state);
     // console.log('PROPITYSTATE', this.state);
     let featured;
 

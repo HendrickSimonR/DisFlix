@@ -231,7 +231,7 @@ class Thumbnail extends React.Component {
 
 
 
-    console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
+    // console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
     
     return (
       <div className={ 
