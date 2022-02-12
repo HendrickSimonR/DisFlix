@@ -8,7 +8,6 @@ class Api::LikesController < ApplicationController
       render :create
     else 
       render json: ['Already liked!']
-      # render json: ['Already liked!', @like.user_id, @like.movie_id ]
     end 
   end
 
