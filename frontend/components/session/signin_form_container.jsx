@@ -10,7 +10,7 @@ const mSTP = (state) => {
     formType: 'Sign In',
     formGreeting: 'Welcome back!',
     question: 'New to Disney Cinema?',
-    link: <Link className="question-link" to="/signup">Sign up</Link>,
+    link: <Link className="question-link" to="/signup">Sign up</Link>
   };
 };
 
@@ -22,22 +22,3 @@ const mDTP = dispatch => {
 };
 
 export default connect(mSTP, mDTP)(SessionForm);
-
-
-// const mSTP = state => {
-//   return {
-//     user: {
-//       username: '',
-//       password: ''
-//     },
-//     formType: 'Sign In'
-//   };
-// };
-
-// const mDTP = dispatch => {
-//   return {
-//     submitForm: (user) => dispatch(signin(user)),
-//   };
-// };
-
-// export default connect(mDTP, mSTP)(SessionForm);
