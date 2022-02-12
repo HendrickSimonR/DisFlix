@@ -9,32 +9,35 @@ import Footer from '../footer/footer';
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { loading: true }
-    this.handleSignout = this.handleSignout.bind(this);
-    this.watchlistLink = this.watchlistLink.bind(this);
+
+    this.state = { 
+      loading: true 
+    };
+
+    this.loader;
+    this.profileSelect;
+
     this.disney = React.createRef();
     this.pixar = React.createRef();
     this.marvel = React.createRef();
     this.starWars = React.createRef();
     this.natGeo = React.createRef();
     this.watchlist = React.createRef();
-    this.loader;
-    this.profileSelect;
-    // this.playFeatured = this.playFeatured.bind(this);
+
+    this.handleSignout = this.handleSignout.bind(this);
+    this.watchlistLink = this.watchlistLink.bind(this);
   }
 
   playFeatured() {
     let movieContainer = document.getElementById('featured-movie-container');
     let movie = document.querySelector(".brand-container-video.featured");
     movieContainer.style.display = 'block';
-    // console.log('movieasfasf', movie);
     movie.style.display = 'block';
     movie.load();
     movie.play();
   }
 
   handleSignout() {
-    // console.log('profile', window.profilePic)
     this.props.signout();
   }
 
@@ -54,17 +57,14 @@ class Home extends React.Component {
 
     if (window.hideProfile === true) {
       let selectScreen = document.getElementById('select-profiles');
-      selectScreen.style.display = 'none';
-      this.playFeatured();
-      this.setState({ loading: false })
       let homePage = document.getElementById('home-reveal');
+      selectScreen.style.display = 'none';
       homePage.style.visibility = 'visible';
+      this.playFeatured();
+      this.setState({ loading: false });
     }
 
     if (window.hideProfile !== true) {
-      // let homePage = document.getElementById('home-reveal');
-      // homePage.style.visibility = hidden;
-
       setTimeout(() => {
         this.setState({ loading: false }),
         this.handleProfiles()
@@ -76,12 +76,9 @@ class Home extends React.Component {
     let selectScreen = document.getElementById('select-profiles');
     selectScreen.style.display = 'flex';
   }
-  // componentWillMount() {
-  // }
- 
+
   handleScroll = (direction, brand) => {
     if (direction === 'left') {
-
       if (brand === 'disney') {
         this.disney.current.style.transform = 'translateX(0px)';
         
@@ -233,15 +230,7 @@ class Home extends React.Component {
     }
   }
 
-  // refreshPage() {
-  //   window.location.reload(true);
-  // }
-
   render() {
-    // console.log('window', typeof(window.location.href))
-    // console.log('HOMEPAGE', this.props);
-    // console.log('state', this.state);
-
     this.disneyMovies = [];
     this.pixarMovies = [];
     this.marvelMovies = [];
@@ -249,21 +238,24 @@ class Home extends React.Component {
     this.natGeoMovies = []; 
     this.watchlistMovies = [];
 
-    let { movies } = this.props; //equivalent to this.props.movies
-    let moviesArr = Object.values(movies);
-    let watchlistObj = this.props.watchlist;
+    
+    
+    let featured;
     let watchlistArr;
-    // let disliked = false;
+    let { movies } = this.props; 
+    let moviesArr = Object.values(movies);
+    let user = this.props.user;
+    let watchlist = this.props.watchlist;
+    let userWatchlistMovies = [];
 
-    if (Object.values(watchlistObj) !== undefined) {
-      watchlistArr = Object.values(watchlistObj)
+    if (Object.values(watchlist) !== undefined) {
+      watchlistArr = Object.values(watchlist)
     }
-    // moviesArr.sort(() => Math.random() - 0.5);
 
     if (moviesArr.length === 0) {
       return null;
+
     } else {
-      // console.log('MOVIESARR', moviesArr);
 
       moviesArr.forEach(movie => {
         if (movie['brand_id'] === 1) {
@@ -277,13 +269,14 @@ class Home extends React.Component {
         } else {
           this.natGeoMovies.push(movie);
         }
-      })
+      });
+
     }
 
     if (watchlistArr === undefined || watchlistArr.length === 0) {
       return null;
     } else {
-      watchlistArr = Object.values(watchlistObj);
+      watchlistArr = Object.values(watchlist);
 
       for (let i = 0; i < watchlistArr.length; i++) {
         let watchlistMovie = watchlistArr[i];
@@ -299,53 +292,22 @@ class Home extends React.Component {
       }
     }
 
-    // if (this.disneyMovies.length > 1) {
-    //   console.log('MOVIES', this.disneyMovies);
-    //   console.log('MOVIES', this.pixarMovies);
-    //   console.log('MOVIES', this.marvelMovies);
-    //   console.log('MOVIES', this.starWarsMovies);
-    //   console.log('MOVIES', this.natGeoMovies);
-    // }
-
-    let user = this.props.user;
-    let watchlist = this.props.watchlist;
-    let userWatchlistMovies = [];
-
     if (this.props.watchlist) {
       for (let i = 0; i < this.props.watchlist.length; i++) {
         userWatchlistMovies.push(this.props.watchlist[i].movie_id);
       };
     }
 
-    
-    // if (this.props.dislikes) {
-    //   for (let i = 0; i < this.props.dislikes.length; i++) {
-    //     let dislike = this.props.dislikes[i];
-
-    //     for (let j = 0; j < moviesArr.length; j++) {
-    //       let movie = moviesArr[j];
-          
-    //       if (dislike.movie_id === movie.id) {
-    //         disliked = true;
-    //         break;
-    //       }
-    //     } 
-    //   }
-    //   console.log('DISLIKED', disliked)
-    // }
     if (this.state.loading === true) {
+
       this.loader =           
         <div id='brand-loader-home' className='loader-container home'>
           <img className='brand-loader home' src={window.loader} alt='' />
         </div>
+
     } else {
       this.loader = '';
     }
-
-
-    // console.log('PROPITY', this.props, this.state);
-    // console.log('PROPITYSTATE', this.state);
-    let featured;
 
     let brandsArr = Object.values(this.props.brands);
 
@@ -359,37 +321,30 @@ class Home extends React.Component {
       }
     }
 
-    // console.log('FEATCH', featured)
-
     return (
       <div className="home-container">
+
         { window.hideProfile === true ? '' :  this.loader }
+
         <SelectProfile avatars={this.props.avatars} />
+
         <div id="home-reveal" style={{ visibility: 'hidden' }}>
           <Featured featured={featured} openModal={this.props.openModal}/>
 
           <div className="home-main">
-
             <BrandButtons />
 
-
             <div className="movie-index">
-              { (this.props.watchlist.includes('No watchlists!') && this.props.watchlist.length === 1) || this.props.watchlist === []
+              { (this.props.watchlist.includes('No watchlists!') && this.props.watchlist.length === 1) 
+                || this.props.watchlist === []
 
-              ?  null //<div>
-              //     <h1 className="row-header">Watchlist</h1>
-              //       <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
-              //         <li className="thumbnail-container" >
-              //           <img src={window.placeholder} className="thumbnail" id="placeholder" ></img>
-              //         </li>
-              //       </ul>
-              //   </div>
-
+              ?  null 
 
               : <div>
                   <h1 className="row-header">Watchlist</h1>
 
                   { this.watchlistMovies.length > 5 ? 
+
                     <div className="scroll-arrows">
                       <span className="material-icons left-arrow watchlist hidden" onClick={() => this.handleScroll('left', 'watchlist')}>
                        arrow_back_ios
@@ -398,41 +353,82 @@ class Home extends React.Component {
                         arrow_forward_ios
                       </span>
                     </div> 
+
                     : null 
                   }
 
                   <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
+
                     {this.watchlistMovies.slice(0, 8).map((movie, i) => (
-                      <ThumbnailContainer watchlistItem={true} likes={this.props.likes} dislikes={this.props.dislikes} brand={6} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                      <ThumbnailContainer 
+                        index={i} 
+                        brand={6} 
+                        user={user} 
+                        movie={movie} 
+                        key={movie.id} 
+                        watchlistItem={true} 
+                        watchlist={watchlist} 
+                        likes={this.props.likes} 
+                        dislikes={this.props.dislikes} 
+                        userMovies={userWatchlistMovies} 
+                      />
                     ))}
 
                     {this.watchlistMovies.length >= 9 ? 
+
                       <li className="thumbnail-container placeholder" >
-                        <img onClick={this.watchlistLink} src={window.placeholder} className="thumbnail" id="placeholder" ></img>
+                        <img 
+                          id="placeholder" 
+                          className="thumbnail" 
+                          src={window.placeholder} 
+                          onClick={this.watchlistLink} 
+                        />
+
                         <div className="thumbnail-functions placeholder">
                           Visit the Watchlist Page for your full watchlist!
                         </div>
                       </li> 
-                    : null }
+
+                      : null 
+                    }
+
                   </ul>
-                </div> }
+                </div> 
+              }
 
 
               <div>
                 <h1 className="row-header">Disney</h1>
                     
                 <div className="scroll-arrows">
-                  <span className="material-icons left-arrow disney hidden" onClick={() => this.handleScroll('left', 'disney')}>
+                  <span 
+                    className="material-icons left-arrow disney hidden" 
+                    onClick={() => this.handleScroll('left', 'disney')}
+                  >
                     arrow_back_ios
                   </span>
-                  <span className="material-icons right-arrow disney"  onClick={() => this.handleScroll('right', 'disney')}>
+                  <span 
+                    className="material-icons right-arrow disney"  
+                    onClick={() => this.handleScroll('right', 'disney')}
+                  >
                     arrow_forward_ios
                   </span>
                 </div>
                     
                 <ul className="movie-row" id="disney-movies" ref={this.disney}>
                   {this.disneyMovies.map((movie, i) => (
-                    <ThumbnailContainer watchlistItem={false} likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
+                    <ThumbnailContainer 
+                      index={i} 
+                      user={user} 
+                      movie={movie}
+                      key={movie.id} 
+                      watchlist={watchlist} 
+                      watchlistItem={false} 
+                      brand={movie.brand_id} 
+                      likes={this.props.likes} 
+                      dislikes={this.props.dislikes} 
+                      userMovies={userWatchlistMovies} 
+                    />
                   ))}
                 </ul>
 
@@ -442,17 +438,34 @@ class Home extends React.Component {
                 <h1 className="row-header">Pixar</h1>
                   
                 <div className="scroll-arrows">
-                  <span className="material-icons left-arrow pixar hidden" onClick={() => this.handleScroll('left', 'pixar')}>
+                  <span 
+                    className="material-icons left-arrow pixar hidden" 
+                    onClick={() => this.handleScroll('left', 'pixar')}
+                  >
                     arrow_back_ios
                   </span>
-                  <span className="material-icons right-arrow pixar" onClick={() => this.handleScroll('right', 'pixar')}>
+                  <span 
+                    className="material-icons right-arrow pixar" 
+                    onClick={() => this.handleScroll('right', 'pixar')}
+                  >
                     arrow_forward_ios
                   </span>
                 </div>
 
                 <ul className="movie-row" id="pixar-movies" ref={this.pixar}>
                   {this.pixarMovies.map((movie, i) => (
-                    <ThumbnailContainer watchlistItem={false} likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie}/>
+                    <ThumbnailContainer 
+                      index={i} 
+                      user={user} 
+                      movie={movie}
+                      key={movie.id} 
+                      watchlist={watchlist} 
+                      watchlistItem={false} 
+                      brand={movie.brand_id} 
+                      likes={this.props.likes} 
+                      dislikes={this.props.dislikes} 
+                      userMovies={userWatchlistMovies} 
+                    />
                   ))}
                 </ul>
               </div>
@@ -461,17 +474,34 @@ class Home extends React.Component {
                 <h1 className="row-header">Marvel</h1>
 
                 <div className="scroll-arrows">
-                  <span className="material-icons left-arrow marvel hidden" onClick={() => this.handleScroll('left', 'marvel')}>
+                  <span 
+                    className="material-icons left-arrow marvel hidden" 
+                    onClick={() => this.handleScroll('left', 'marvel')}
+                  >
                     arrow_back_ios
                   </span>
-                  <span className="material-icons right-arrow marvel" onClick={() => this.handleScroll('right', 'marvel')}>
+                  <span 
+                    className="material-icons right-arrow marvel" 
+                    onClick={() => this.handleScroll('right', 'marvel')}
+                  >
                     arrow_forward_ios
                   </span>
                 </div>
 
                 <ul className="movie-row" id="marvel-movies" ref={this.marvel}>
                   {this.marvelMovies.map((movie, i) => (
-                    <ThumbnailContainer watchlistItem={false} likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                    <ThumbnailContainer 
+                      index={i} 
+                      user={user} 
+                      movie={movie} 
+                      key={movie.id} 
+                      watchlist={watchlist} 
+                      watchlistItem={false} 
+                      brand={movie.brand_id} 
+                      likes={this.props.likes} 
+                      dislikes={this.props.dislikes} 
+                      userMovies={userWatchlistMovies} 
+                    />
                   ))}
                 </ul>
               </div>
@@ -480,17 +510,34 @@ class Home extends React.Component {
                 <h1 className="row-header">Star Wars</h1>
 
                 <div className="scroll-arrows">
-                  <span className="material-icons left-arrow star-wars hidden" onClick={() => this.handleScroll('left', 'starWars')}>
+                  <span 
+                    className="material-icons left-arrow star-wars hidden" 
+                    onClick={() => this.handleScroll('left', 'starWars')}
+                  >
                     arrow_back_ios
                   </span>
-                  <span className="material-icons right-arrow star-wars" onClick={() => this.handleScroll('right', 'starWars')}>
+                  <span 
+                    className="material-icons right-arrow star-wars" 
+                    onClick={() => this.handleScroll('right', 'starWars')}
+                  >
                     arrow_forward_ios
                   </span>
                 </div>
 
                 <ul className="movie-row" id="star-wars-movies" ref={this.starWars}>
                   {this.starWarsMovies.map((movie, i) => (
-                    <ThumbnailContainer watchlistItem={false} likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                    <ThumbnailContainer 
+                      index={i} 
+                      user={user} 
+                      movie={movie} 
+                      key={movie.id} 
+                      watchlist={watchlist}
+                      watchlistItem={false} 
+                      brand={movie.brand_id} 
+                      likes={this.props.likes} 
+                      dislikes={this.props.dislikes} 
+                      userMovies={userWatchlistMovies} 
+                    />
                   ))}
                 </ul>
               </div>
@@ -499,32 +546,42 @@ class Home extends React.Component {
                 <h1 className="row-header ">National Geographic</h1>
                   
                 <div className="scroll-arrows">
-                  <span className="material-icons left-arrow nat-geo hidden" onClick={() => this.handleScroll('left', 'natGeo')}>
+                  <span 
+                    className="material-icons left-arrow nat-geo hidden" 
+                    onClick={() => this.handleScroll('left', 'natGeo')}
+                  >
                     arrow_back_ios
                   </span>
-                  <span className="material-icons right-arrow nat-geo" onClick={() => this.handleScroll('right', 'natGeo')}>
+                  <span 
+                    className="material-icons right-arrow nat-geo" 
+                    onClick={() => this.handleScroll('right', 'natGeo')}
+                  >
                     arrow_forward_ios
                   </span>
                 </div>
 
                 <ul className="movie-row" id="nat-geo-movies" ref={this.natGeo}>
                   {this.natGeoMovies.map((movie, i) => (
-                    <ThumbnailContainer watchlistItem={false} likes={this.props.likes} dislikes={this.props.dislikes} brand={movie.brand_id} index={i} user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
+                    <ThumbnailContainer 
+                      index={i} 
+                      user={user} 
+                      movie={movie} 
+                      key={movie.id} 
+                      watchlist={watchlist} 
+                      watchlistItem={false} 
+                      brand={movie.brand_id} 
+                      likes={this.props.likes} 
+                      dislikes={this.props.dislikes} 
+                      userMovies={userWatchlistMovies} 
+                    />
                   ))}
                 </ul>
               </div>
 
             </div>
-
-              {/* <div className='sign-out-container'>
-                <button 
-                  className='signout-button' 
-                  onClick={this.handleSignout}>SIGN OUT
-                </button>
-              </div> */}
           </div>
 
-          <Footer/>
+          <Footer />
         </div>
       </div>
     );
@@ -532,7 +589,3 @@ class Home extends React.Component {
 }
 
 export default Home;
-
-{/* <video className='video-test' autoPlay={true} playsInline={true} loop={true}>
-            <source src="b1.button_video" type='video/mp4' />
-          </video> */}

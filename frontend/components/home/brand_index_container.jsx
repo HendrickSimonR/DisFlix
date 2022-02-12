@@ -9,4 +9,4 @@ const mDTP = dispatch => ({
   getBrands: () => dispatch(getBrands())
 });
 
-export default connect(mSTP, mDTP)(BrandButtons)
+export default connect(mSTP, mDTP)(BrandButtons);
