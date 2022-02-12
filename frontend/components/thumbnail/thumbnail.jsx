@@ -30,13 +30,12 @@ class Thumbnail extends React.Component {
   handleMute(id){
     if(this.state.mute === 'volume_up'){
       this.setState({mute: 'volume_off'});
-      let vid = document.getElementById(id);
-      // console.log('id', id)
-      if (vid) vid.muted = true;    
+      let movie = document.getElementById(id);
+      if (movie) movie.muted = true;    
     } else {
       this.setState({mute: 'volume_up'});
-      let vid = document.getElementById(id);
-      if (vid) vid.muted = false;
+      let movie = document.getElementById(id);
+      if (movie) movie.muted = false;
     }
   }
 
@@ -49,10 +48,6 @@ class Thumbnail extends React.Component {
     movie.play();
   }
 
-  componentDidMount() {
-    // console.log('THUMB PROPS', this.props)
-  }
-
   displayPoster(posterId, movieId) {
     let movie = document.getElementById(movieId);
     let poster = document.getElementById(posterId);
@@ -62,42 +57,35 @@ class Thumbnail extends React.Component {
   }
 
   hoverVideo(id) {
-    // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
     this.setState({ moviePlay: !this.state.moviePlay });
     let thumbMovie = document.getElementById(id);
     if (window.location.href.includes('home')) {
-      // let vid = document.querySelector(".brand-container-video.featured");
-      // vid.muted = true;
-      // vid.pause();
       this.stopFeatured();
     }
 
     let volume = document.getElementById(id + 'volume');
     volume.style.display = 'inline-block';
     thumbMovie.play();
-    // console.log('enter', indexMovie, this.state);
   }
 
   exitVideo(id, posterId) {
-    // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year)
     this.setState({ moviePlay: !this.state.moviePlay });
     let volume = document.getElementById(id + 'volume');
     let thumbMovie = document.getElementById(id);
     let poster = document.getElementById(posterId);
     
     if (window.location.href.includes('home')) {
-      let vid = document.querySelector(".brand-container-video.featured");
-      vid.currentTime = 30;
-      vid.muted = false;
+      let movie = document.querySelector(".brand-container-movieeo.featured");
+      movie.currentTime = 30;
+      movie.muted = false;
     }
 
     volume.style.display = 'none';
     thumbMovie.pause();
-    // console.log('exit', indexMovie, `STOPPED AT ${indexMovie.currentTime}`, this.state);
     poster.style.display = 'none';
     thumbMovie.load();
     thumbMovie.muted = false;
-    this.setState({ mute: 'volume_up'})
+    this.setState({ mute: 'volume_up'});
     thumbMovie.style.display = 'inline-block';
   }
 
@@ -105,18 +93,8 @@ class Thumbnail extends React.Component {
     let mainContainer = document.getElementById('featured-container');
     let movieContainer = document.getElementById('featured-movie-container');
     let featuredMovie = document.getElementById('brand-container-video');
-    // video.style.animation = 'fadeOut linear 1s';
-    // movieContainer.style.animation = 'fadeOut ease 1s';
-    
-    // if (window.featuredVolume === 'off') {
-    //   this.setState({ mute: 'volume_off'})
-    // } else {
-    //   this.setState({ mute: 'volume_up' })
-    // }
 
     featuredMovie.currentTime = 30;
-    // featuredMovie.pause();
-    // featuredMovie.load();
     movieContainer.style.display = 'none';
     mainContainer.style.animation = 'fadeIn ease 1s';
     mainContainer.style.height = '103vh';
@@ -125,23 +103,14 @@ class Thumbnail extends React.Component {
   showMovie(id) {
     if (window.location.href.includes('home')) {
       this.stopFeatured();
-      // console.log('isdgbjkvsbdv')
     }
 
     let indexMovie = document.getElementById(id);
     window.movieTime = indexMovie.currentTime;
-
-    // console.log('MOVIETIME', window.movieTime)
-    
     this.props.openModal(this.props.movie.id);
   }
 
-  // hoverPlay(event) {
-  //   event.target.play();
-  // }
-
   render() {
-    // this.uniqueId = (this.props.movie.brand_id).toString().concat(this.props.movie.id).concat(this.props.movie.year);
     this.posterId = this.props.movie.id + 888;
     let watchlistId;
     let watchlist = this.props.watchlist;
@@ -149,8 +118,6 @@ class Thumbnail extends React.Component {
     let windowUrl = 'home';
     let tags = this.props.movie.tags;
     let separator = <p id="tag-separator">•</p>;
-    // let likes = [];
-    // let dislikes = [];
     let disliked = false;
     let tag1;
     let tag2;
@@ -161,77 +128,40 @@ class Thumbnail extends React.Component {
     } else {
       this.uniqueId = this.props.movie.id + 999;
     }
-    // if (this.props.index) {
-    //   // console.log('THUMBPROPS', this.props.index, this.props.movie)
-    // }
-
-    // console.log('THUMBPROPS', this.props)
 
     if (tags !== undefined) {
       let separated = tags.split(', ');
-      // console.log('TAGS', separateTags)
 
       tag1 = separated[0];
       tag2 = separated[1];
       tag3 = separated[2];
     }
 
-    // if (this.props.likes) {
-    //   for (let i = 0; i < this.props.likes.length; i++) {
-    //     let movie = this.props.likes[i];
-    //     likes.push(movie.movie_id);
-    //   }
-    //   console.log('likes', likes)
-    // }
-
     if (this.props.dislikes) {
       for (let i = 0; i < this.props.dislikes.length; i++) {
         let dislike = this.props.dislikes[i];
-        // console.log('DL', dislike, this.props.movie.id)
 
         if (dislike.movie_id === this.props.movie.id) {
           disliked = true;
           break;
         }
-        // console.log(`DISLIKED ${disliked}`, dislike, `MOVIEID = ${this.props.movie.id}`)
       }
     }
 
-
-
-    // let movieCheck = false;
-
     if (!window.location.href.includes('home')) {
       windowUrl = 'other';
-      // console.log('disliked', disliked)
     } 
 
     if (watchlist) { 
-
-      // if (userMovies) {
-      //   if (userMovies.includes(this.props.movie.id)) {
-      //     movieCheck = true;
-      //   }
-      // }
-      
       for (let i = 0; i < this.props.watchlist.length; i++) {
         let watchlistMovie = this.props.watchlist[i];
-        // console.log('WATCHLIST MOVIE', watchlistMovie)
+
         if (watchlistMovie.movie_id === this.props.movie.id) {
           watchlistId = watchlistMovie.id;
-          // console.log('WATCHLIST ID', watchlistId)
           break;
         } 
-         // else {
-        //   watchlistId = watchlistMovie.id;
-        // }
       } 
-    }    
-
-
-
-
-    // console.log('THUMBMOVIE', this.props) //  onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}
+    }
     
     return (
       <div className={ 
@@ -257,24 +187,26 @@ class Thumbnail extends React.Component {
         
         id={ disliked === true ? 'disliked' : "" }
         
-        onMouseEnter={() => this.hoverVideo(this.uniqueId)} onMouseLeave={() => this.exitVideo(this.uniqueId, this.posterId)}> 
+        onMouseEnter={() => this.hoverVideo(this.uniqueId)} 
+        onMouseLeave={() => this.exitVideo(this.uniqueId, this.posterId)}
+      > 
 
         <img 
           alt='' 
           id={this.posterId}
-          src={this.props.movie.image_url} 
-          className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} 
           onClick={this.watchMovie}
           style={{ display: 'none'}}
+          src={this.props.movie.image_url} 
+          className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"} 
         />
 
         <video 
-          id={this.uniqueId} 
-          className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"}
-          poster={this.props.movie.image_url} 
-          onClick={this.watchMovie}
           muted={false}
+          id={this.uniqueId} 
+          onClick={this.watchMovie}
+          poster={this.props.movie.image_url} 
           onEnded={() => this.displayPoster(this.posterId, this.uniqueId)}
+          className={windowUrl === 'home' ? "thumbnail" : "thumbnail sorted"}
         >
 
           <source src={this.props.movie.movie_url} type="video/mp4" /> 
@@ -282,12 +214,14 @@ class Thumbnail extends React.Component {
 
         <div className={windowUrl === 'home' ? 'mute-and-refresh' : 'mute-and-refresh sorted'}>
           <span 
-            className='material-icons-round featured-volume' id={this.uniqueId + 'volume'}
-            onClick={this.state.moviePlay === true ? () => this.handleMute(this.uniqueId) : () => this.replayFeatured(this.posterId, this.uniqueId)}
-          >
-            { this.state.moviePlay === true ? 
-              this.state.mute : 'refresh' 
+            className='material-icons-round featured-volume' 
+            id={this.uniqueId + 'volume'}
+            onClick={this.state.moviePlay === true ? 
+              () => this.handleMute(this.uniqueId) : 
+              () => this.replayFeatured(this.posterId, this.uniqueId)
             }
+          >
+            { this.state.moviePlay === true ? this.state.mute : 'refresh' }
           </span>
         </div>
 
@@ -299,12 +233,21 @@ class Thumbnail extends React.Component {
                 onClick={this.watchMovie}
               >
                 play_circle </span>
-              <WatchlistButtonContainer watchlistId={watchlistId} watchlist={watchlist} movieId={this.props.movie.id} />
+
+              <WatchlistButtonContainer 
+                watchlist={watchlist} 
+                watchlistId={watchlistId} 
+                movieId={this.props.movie.id} 
+              />
+
               <LikeButtonsContainer movieId={this.props.movie.id} />
             </div>
 
             <div className="thumbnail-buttons-right">
-              <span className="material-icons-outlined expand-modal" onClick={() => this.showMovie(this.uniqueId)}>
+              <span 
+                className="material-icons-outlined expand-modal" 
+                onClick={() => this.showMovie(this.uniqueId)}
+              >
                 expand_more
               </span>
             </div>
