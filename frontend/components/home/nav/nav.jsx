@@ -18,32 +18,13 @@ class Nav extends React.Component {
   }
 
   render() {
-//     function Nav() {
-//   const [show, handleShow] = useState(false);
-
-//   useEffect(() => {
-//     window.addEventListener('scroll', () => {
-//       if (window.scrollY > 350) {
-//         handleShow(true);
-//       } else {
-//         handleShow(false);
-//       }
-//     });
-    
-//     return () => {
-//       window.removeEventListener('scroll', null);
-//     };
-//   }, []);
-// }
-
-
-    
     return(
       <div className="nav-bar-hidden" id="nav-bar">
         <div className="nav-left">
           <Link to="/home">
             <img src={window.logo} className="nav-logo" />
           </Link>
+          
           <NavLinks />
         </div>
 

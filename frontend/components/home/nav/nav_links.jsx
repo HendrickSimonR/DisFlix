@@ -14,13 +14,49 @@ class NavLinks extends React.Component {
   render() {
     return (
       <ul className="nav-links-container">
-        <li><Link onClick={this.handleScroll} className="nav-link home" to="/home">Home</Link></li>
-        <li><Link onClick={this.handleScroll} className="nav-link" to="/disney">Disney</Link></li>
-        <li><Link onClick={this.handleScroll} className="nav-link" to="/pixar">Pixar</Link></li>
-        <li><Link onClick={this.handleScroll} className="nav-link" to="/marvel">Marvel</Link></li>
-        <li><Link onClick={this.handleScroll} className="nav-link" to="/starwars">Star Wars</Link></li>
-        <li><Link onClick={this.handleScroll} className="nav-link" to="/natgeo">National Geographic</Link></li>
-        <li><Link onClick={this.handleScroll} className="nav-link" to="/watchlist">Watchlist</Link></li>
+        
+        <li>
+          <Link onClick={this.handleScroll} className="nav-link home" to="/home">
+            Home
+          </Link>
+        </li>
+
+        <li>
+          <Link onClick={this.handleScroll} className="nav-link" to="/disney">
+            Disney
+          </Link>
+        </li>
+
+        <li>
+          <Link onClick={this.handleScroll} className="nav-link" to="/pixar">
+            Pixar
+          </Link>
+        </li>
+
+        <li>
+          <Link onClick={this.handleScroll} className="nav-link" to="/marvel">
+            Marvel
+          </Link>
+        </li>
+
+        <li>
+          <Link onClick={this.handleScroll} className="nav-link" to="/starwars">
+            Star Wars
+          </Link>
+        </li>
+
+        <li>
+          <Link onClick={this.handleScroll} className="nav-link" to="/natgeo">
+            National Geographic
+          </Link>
+        </li>
+
+        <li>
+          <Link onClick={this.handleScroll} className="nav-link" to="/watchlist">
+            Watchlist
+          </Link>
+        </li>
+
       </ul>
     )
   }
