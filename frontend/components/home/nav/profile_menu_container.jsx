@@ -1,11 +1,10 @@
 import { connect } from 'react-redux';
 import { signout } from '../../../actions/session_actions';
 import { withRouter } from 'react-router';
-import ProfileMenu from './profile_menu';
 import { openModal } from '../../../actions/modal_actions';
+import ProfileMenu from './profile_menu';
 
 const mSTP = state => {
-  // console.log('PROFILE STATE', state)
   return {
     session: state.session,
     avatars: state.avatars

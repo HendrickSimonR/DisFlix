@@ -19,7 +19,13 @@ class Profile extends React.Component {
   render() {
     return (
       <div className="profile-container">
-        <img onMouseEnter={this.revealMenu} onMouseLeave={this.hideMenu} src={window.profilePic} className="profile-pic" />
+        <img 
+          className="profile-pic" 
+          src={window.profilePic} 
+          onMouseLeave={this.hideMenu} 
+          onMouseEnter={this.revealMenu} 
+        />
+
         <ProfileMenuContainer />
       </div>
     );

@@ -4,7 +4,10 @@ import OutsideClickHandler from './outside_click_handler';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { search: '' };
+    
+    this.state = { 
+      search: '' 
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleButton = this.handleButton.bind(this);
@@ -46,8 +49,6 @@ class SearchBar extends React.Component {
   
 
   render() {
-    // console.log('SEARCH BAR', this.props)
-
     return (
       <OutsideClickHandler>
         <div className="search-bar-container">
@@ -65,6 +66,7 @@ class SearchBar extends React.Component {
             className="search-input-hidden"
             disabled
           />
+          
         </div>
       </OutsideClickHandler>
     );
