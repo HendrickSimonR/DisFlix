@@ -29,12 +29,12 @@
   transition: all 1s ease 0s;
 }
 
-.search-button:hover{
-    cursor: pointer;
+.search-button:hover {
+  cursor: pointer;
 }
 
-.search-button-expanded:hover{
-    cursor: pointer;
+.search-button-expanded:hover {
+  cursor: pointer;
 }
 
 .search-input-hidden {
@@ -85,7 +85,6 @@
   color: white;
   font-family: 'Open Sans';
   position: relative;
-  /* margin: 0 auto; */
   text-align: center;
   left: 0;
   right: 0;
@@ -117,7 +116,6 @@
   }
 
   .search-input {
-    // top: 3vh;
     margin-right: 5vw;
     z-index: 20;
     background-color: black;
