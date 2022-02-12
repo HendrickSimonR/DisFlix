@@ -5,7 +5,6 @@ class Api::WatchlistsController < ApplicationController
     @watchlist.user_id = params[:user_id]
     
     if @watchlist.save      
-      # @watchlists = Watchlist.where(user_id: params[:userId])
       render :create
     else 
       render json: ['Movie already inside watchlist!']
