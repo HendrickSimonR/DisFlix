@@ -7,7 +7,6 @@
 }
 
 .nav-bar {
-  // background-color: rgb(10, 15, 22);
   position: fixed;
   width: 100%;
   height: 74px;
@@ -48,8 +47,6 @@
 
 .profile-menu-container {
   display: inline-flex;
-  /* margin-left: 525px; */
-  /* margin-bottom: 50px; */
   color: white;
   position: fixed;
   top: 0%;
@@ -62,7 +59,6 @@
   z-index: -1;
   text-align: left;
   font-family: 'Open Sans';
-  /* font-weight: 400; */
   font-size: 11px;
   transition: all 1s;
   animation-duration: 0.25s;
@@ -187,10 +183,6 @@
 }
 
 @media (max-width: 920px) {
-  // .nav-link.home {
-  //   display: none;
-  // }
-
   .nav-links-container {
     z-index: -1;
   }
