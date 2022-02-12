@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 function Modal({modal, closeModal}) {
   if (!modal) return null;
 
-  let about;
   let movieId;
   let modalComponent;
   let renderMovie = false;
@@ -22,50 +21,34 @@ function Modal({modal, closeModal}) {
       break;
     }
   }
-
-  if (modal.includes('about')) {
-    about = true;
-  }
-
-  // let other = parseInt('poop');
   
   if (renderMovie === true) {
     modalComponent = <MovieModalContainer movie={movieId} />
-    // CHANGE THIS WHEN EDIT PROFILE IS ESTABLISHED
   } else {
     modalComponent = <AboutContainer />;
   }
 
-  // switch (num) {
-  //   // case 'editProfile':
-  //   //   component = <EditProfileModalContainer/>;
-  //   //   break;
-  //   case typeof(num) === 'number':
-  //     component = <MovieModalContainer />;
-  //     break;
-  //   default:
-  //     return null;
-  // }
-  
-
   return (
     <div 
-      className={window.location.href.includes('home') ? "modal-background" 
-      : window.location.href.includes('watchlist') ? "modal-background watchlist" 
-      : window.location.href.includes('search') ? "modal-background search" 
-      : "modal-background brand"} 
       onClick={closeModal}
+      className={window.location.href.includes('home') ? "modal-background" 
+        : window.location.href.includes('watchlist') ? "modal-background watchlist" 
+        : window.location.href.includes('search') ? "modal-background search" 
+        : "modal-background brand"} 
     >
       
-      <div className={about ? "modal-child about" : "modal-child"} onClick={e => e.stopPropagation()}>
+      <div 
+        className={about ? "modal-child about" : "modal-child"} 
+        onClick={e => e.stopPropagation()}
+      >
         { modalComponent }
       </div>
+
     </div>
   );
 }
 
-const mapStateToProps = state => {
-  // console.log('MODAL STATE', state)
+const mSTP = state => {
   return {
     modal: state.modal,
     props: state.props,
@@ -73,10 +56,10 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mDTP = dispatch => {
   return {
     closeModal: () => dispatch(closeModal())
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+export default connect(mSTP, mDTP)(Modal);
