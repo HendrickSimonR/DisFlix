@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReactPlayer from 'react-player';
-// const disneyButtonVid = require('../../../app/assets/videos/disneyButton.mp4');
-
 
 class BrandButtons extends React.Component {
   constructor(props) {
@@ -28,41 +25,62 @@ class BrandButtons extends React.Component {
     });
   }
 
-  componentDidMount() {
-    // this.getBrands();
-  }
-
   render() {
     return (
       <div className='brand-buttons-container'>
 
         <div className='brand-button brand-disney'>
           <Link to='/disney'>
-            <img onClick={this.handleScroll} src={window.disneyButton} className="brand-button-img" alt="" />
+            <img 
+              alt="" 
+              src={window.disneyButton} 
+              onClick={this.handleScroll} 
+              className="brand-button-img" 
+            />
           </Link>
         </div>
 
         <div className='brand-button brand-pixar'>
           <Link to='/pixar'>
-            <img onClick={this.handleScroll} src={window.pixarButton} className="brand-button-img" alt="" />
+            <img 
+              alt="" 
+              src={window.pixarButton} 
+              onClick={this.handleScroll} 
+              className="brand-button-img" 
+            />
           </Link>
         </div>
 
         <div className='brand-button brand-marvel'>
           <Link to='/marvel'>
-            <img onClick={this.handleScroll} src={window.marvelButton} className="brand-button-img" alt="" />
+            <img 
+              alt="" 
+              src={window.marvelButton} 
+              onClick={this.handleScroll} 
+              className="brand-button-img" 
+            />
           </Link>
         </div>
 
         <div className='brand-button brand-star-wars'>
           <Link to='/starwars'>
-            <img onClick={this.handleScroll} src={window.swButton} className="brand-button-img" alt="" />
+            <img 
+              alt="" 
+              src={window.swButton} 
+              onClick={this.handleScroll} 
+              className="brand-button-img" 
+            />
           </Link>
         </div>
 
         <div className='brand-button brand-nat-geo'>
           <Link to='/natgeo'>
-            <img onClick={this.handleScroll} src={window.natButton} className="brand-button-img" alt="" />
+            <img 
+              alt="" 
+              src={window.natButton} 
+              onClick={this.handleScroll} 
+              className="brand-button-img" 
+            />
           </Link>
         </div>
 
@@ -71,13 +89,4 @@ class BrandButtons extends React.Component {
   }
 }
 
-
 export default BrandButtons;
-
-{/* <video autoPlay={true} loop={true} playsInline={true}>
-            <source src='../../../app/assets/videos/disneyButton.mp4' type='video/mp4' />
-          </video> */}
-{/* <video loop={true} autoPlay={true} playsInline={true} className="brand-button-video">  */ }
-{/* <source src={brand.button_video_url} type="video/mp4" />  */ }
-{/* </video> */ }
-{/* <video controls autoPlay className="brand-button-video"> <source src={this.props.brand.button_video} type="video/mp4" /> </video> */ }
