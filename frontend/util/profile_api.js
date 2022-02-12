@@ -1,7 +1,6 @@
 export const fetchProfiles = data => {
-  // console.log('USERID', userId)
   let id = data.user_id;
-  // console.log('id', id);
+  
   return $.ajax({
     url: `/api/users/${id}/profiles`,
     method: "GET"

@@ -7,10 +7,12 @@ const watchlistReducer =  (oldState = {}, action) => {
   switch (action.type) {
     case RECEIVE_WATCHLIST:
       return action.watchlist;
+
     case RECEIVE_NEW_MOVIE: 
       let next = Object.values(newState);
       next.push(action.movie);
       return next;
+      
     default:
       return oldState;
   }

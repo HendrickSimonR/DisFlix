@@ -11,8 +11,9 @@ const likesReducer = (oldState = {}, action) => {
     case RECEIVE_LIKE:
       let nextLikes = Object.values(newState);
       nextLikes.push(action.like);
-      return nextLikes;
 
+      return nextLikes;
+      
     case RETURN_LIKES: 
       return action.likes;
 

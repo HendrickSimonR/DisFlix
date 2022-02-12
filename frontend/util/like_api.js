@@ -8,7 +8,7 @@ export const addLike = data => (
 
 export const removeLike = data => {
   let id = data.like_id;
-  // console.log(data);
+  
   return $.ajax({
     url: `/api/likes/${id}`,
     method: 'DELETE',

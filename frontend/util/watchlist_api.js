@@ -7,9 +7,6 @@ export const createWatchlist = data => (
 );
 
 export const fetchWatchlist = data => {
-  // let id = data.user_id;
-  // debugger
-
   return $.ajax({
     url: `/api/watchlists`,
     method: 'GET',
@@ -18,7 +15,6 @@ export const fetchWatchlist = data => {
 };
 
 export const deleteWatchlist = data => {
-  // console.log('DATA' ,data)
   let id = data.watchlist_id;
   
   return $.ajax({
