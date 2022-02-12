@@ -8,46 +8,72 @@ class LikeButtons extends React.Component {
     this.toggleDislike = this.toggleDislike.bind(this);
   }
 
-  componentDidMount() {
-    // this.props.getLikes({ user_id: this.props.user });
-    // this.props.getDislikes({ user_id: this.props.user });
-  }
-
   toggleLike() {
     if (this.liked === true) {
       this.liked = false;
-      this.props.deleteLike({ like_id: this.likeId, user_id: this.props.user, movie_id: this.props.movieId });
-      // console.log('NO MORE LIKE', this.liked);
+      this.props.deleteLike({ 
+        like_id: this.likeId, 
+        user_id: this.props.user, 
+        movie_id: this.props.movieId 
+      });
+    
     } else if (this.disliked === true) {
       this.disliked = false;
       this.liked = true;
-      this.props.deleteDislike({ dislike_id: this.dislikeId, user_id: this.props.user, movie_id: this.props.movieId });
-      // console.log('NO MORE DISLIKE', this.disliked);
-      this.props.newLike({ movie_id: this.props.movieId, user_id: this.props.user });
-      // console.log('ME LIKEY', this.liked);
+
+      this.props.deleteDislike({ 
+        dislike_id: this.dislikeId, 
+        user_id: this.props.user, 
+        movie_id: this.props.movieId 
+      });
+
+      this.props.newLike({ 
+        movie_id: this.props.movieId, 
+        user_id: this.props.user 
+      });
+
     } else {
       this.liked = true;
-      this.props.newLike({ movie_id: this.props.movieId, user_id: this.props.user });
-      // console.log('FRESH LIKE', this.liked);
+
+      this.props.newLike({ 
+        movie_id: this.props.movieId, 
+        user_id: this.props.user 
+      });
     }
   }
 
   toggleDislike() {
     if (this.disliked === true) {
       this.disliked = false;
-      this.props.deleteDislike({ dislike_id: this.dislikeId, user_id: this.props.user, movie_id: this.props.movieId });
-      // console.log('NO MORE DISLIKE', this.disliked);
+
+      this.props.deleteDislike({ 
+        dislike_id: this.dislikeId, 
+        user_id: this.props.user, 
+        movie_id: this.props.movieId 
+      });
+
     } else if (this.liked === true) {
       this.liked = false;
       this.disliked = true;
-      this.props.deleteLike({ like_id: this.likeId, user_id: this.props.user, movie_id: this.props.movieId });
-      // console.log('NO MORE LIKE', this.liked);
-      this.props.newDislike({ movie_id: this.props.movieId, user_id: this.props.user });
-      // console.log('ME DISLIKEY', this.disliked);
+
+      this.props.deleteLike({ 
+        like_id: this.likeId, 
+        user_id: this.props.user, 
+        movie_id: this.props.movieId 
+      });
+
+      this.props.newDislike({ 
+        movie_id: this.props.movieId, 
+        user_id: this.props.user 
+      });
+
     } else {
       this.disliked = true;
-      this.props.newDislike({ movie_id: this.props.movieId, user_id: this.props.user });
-      // console.log('FRESH DISLIKE', this.disliked);
+      
+      this.props.newDislike({ 
+        movie_id: this.props.movieId, 
+        user_id: this.props.user 
+      });
     }
   }
 
@@ -57,10 +83,37 @@ class LikeButtons extends React.Component {
     this.likeId;
     this.dislikeId;
 
-    let blankThumbUp = <span className="material-icons-outlined like-button up" onClick={this.toggleLike}>thumb_up</span>
-    let filledThumbUp = <span className="material-icons-round like-button up" onClick={this.toggleLike}>thumb_up</span>
-    let blankThumbDown = <span className="material-icons-outlined like-button down" onClick={this.toggleDislike}>thumb_down</span>
-    let filledThumbDown = <span className="material-icons-round like-button down" onClick={this.toggleDislike}>thumb_down</span>
+    let blankThumbUp = 
+      <span 
+        className="material-icons-outlined like-button up" 
+        onClick={this.toggleLike}
+      >
+        thumb_up
+      </span>
+
+    let filledThumbUp = 
+      <span 
+        className="material-icons-round like-button up" 
+        onClick={this.toggleLike}
+      >
+        thumb_up
+      </span>
+
+    let blankThumbDown = 
+      <span 
+        className="material-icons-outlined like-button down" 
+        onClick={this.toggleDislike}
+      >
+        thumb_down
+      </span>
+
+    let filledThumbDown = 
+      <span 
+        className="material-icons-round like-button down" 
+        onClick={this.toggleDislike}
+      >
+        thumb_down
+      </span>
 
     for (let i = 0; i < this.props.likes.length; i++) {
       let like = this.props.likes[i];
@@ -70,8 +123,6 @@ class LikeButtons extends React.Component {
       if (this.props.user === user && this.props.movieId === movie) {
         this.liked = true;
         this.likeId = like.id;
-        // console.log('truechains', this.liked, user, movie);
-        // console.log('Like Id', this.likeId);
         break;
       }
     }
@@ -84,8 +135,6 @@ class LikeButtons extends React.Component {
       if (this.props.user === user && this.props.movieId === movie) {
         this.disliked = true;
         this.dislikeId = dislike.id;
-        // console.log('truechains', this.disliked, user, movie);
-        // console.log('disike Id', this.dislikeId);
         break;
       }
     }
