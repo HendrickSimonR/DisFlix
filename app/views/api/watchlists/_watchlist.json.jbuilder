@@ -1,1 +1,0 @@
-# json.extract! watchlist, :id, :movie_id
