@@ -4,12 +4,15 @@ import { Link } from 'react-router-dom';
 class SelectProfile extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
+
+    this.state = { 
+      count: 0 
+    };
 
     this.selected = [];
-    this.selectProfile = this.selectProfile.bind(this);
-    this.hideSelect = this.hideSelect.bind(this);
     this.refresh = this.refresh.bind(this);
+    this.hideSelect = this.hideSelect.bind(this);
+    this.selectProfile = this.selectProfile.bind(this);
   }
 
   componentDidMount() {
@@ -27,9 +30,11 @@ class SelectProfile extends React.Component {
   hideSelect() {
     let nav = document.querySelector('#nav-bar');
     let selectScreen = document.getElementById('select-profiles');
+
     selectScreen.style.display = 'none';
     nav.classList.remove('nav-bar-hidden');
     nav.classList.add('nav-bar');
+
     window.hideProfile = true;
   }
 
@@ -37,8 +42,6 @@ class SelectProfile extends React.Component {
     window.profilePic = img;
     window.scrollTo(0, 0);
     this.hideSelect();
-
-    // document.body.style.position = 'inherit';
 
     let homePage = document.getElementById('home-reveal');
     homePage.style.visibility = 'visible';
@@ -56,6 +59,7 @@ class SelectProfile extends React.Component {
     avatars = avatars.sort(() => (Math.random() - 0.5));
 
     if (avatars.length > 0 && this.selected.length < 35) {
+
       for (let i = 0; i < avatars.length; i++) {
         let avatar = avatars[i];
 
@@ -66,6 +70,7 @@ class SelectProfile extends React.Component {
               <h2>{avatar.character}</h2>
             </Link>
           </li>
+        ;
 
         this.selected.push(avatarContainer);
       }
@@ -79,11 +84,11 @@ class SelectProfile extends React.Component {
 
           { this.selected.length > 0 ?
 
-          <ul className="profiles">
-            {this.selected.slice(0, 5).map(avatar => (
-              avatar
-            ))}
-          </ul>
+            <ul className="profiles">
+              {this.selected.slice(0, 5).map(avatar => (
+                avatar
+             ))}
+            </ul>
             
           : '' 
 
