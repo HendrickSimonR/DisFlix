@@ -24,19 +24,26 @@ Disclaimer: I do not own any rights to these characters, images, or video clips,
 
 # Features
 
-1) Preview playback and more information on hovering the movie's thumbnail.
+1) On hovering a movie thumbnail, styling changes display functional buttons, as well as a preview of the movie.
 
 2) Like and Dislike movies.
 
-3) Watchlist: Add and remove movies from a watchlist. Watchlist is updated in real-time on both the Home page and Watchlist page.
+3) Play buttons render a full screen view of the chosen movie.
 
-4) Movie Modal: Clicking on the down arrow on the thumbnail opens a modal featuring more information about the movie (Cast, Blurb, Genres).
+4) Watchlist: Add and remove movies from a Watchlist. Watchlist is updated in real-time on both the Home page and Watchlist page, and will be stored in the database.
 
-5) URLs sorting movies by brand (Disney, Pixar, Marvel, Star Wars, National Geographic), featuring styling as they appear on Disney Plus.
+5) Movie Modal: Clicking on the down arrow on the thumbnail opens a modal featuring more information about the movie (Cast, Blurb, Genres).
 
-6) Search: search for movies based on title, genre, cast, keywords, and more.
+6) URLs sorting movies by brand (Disney, Pixar, Marvel, Star Wars, National Geographic), featuring styling as they appear on Disney Plus.
+
+7) Search: search for movies based on title, genre, cast, keywords, and more.
  
-7) Avatars: select your favorite Disney Plus character. If not there, shuffle using the button below the displayed avatars and see who else pops up!
+8) Avatars: select your favorite Disney Plus character. If not there, shuffle using the button below the displayed avatars and see who else pops up!
+
+9) Interactive styling provides an exciting experience for users, while the theme adds a touch of nostalgia
+
+10) Users can access the live site on both Desktop and Mobile.
+
 
 # Code
 
@@ -82,42 +89,55 @@ handleScroll = (direction, brand) => {
 </div>
 ```
 
+## Modal
 
-Using React, Javascript and SCSS, a movie will expand and play a preview when moused over by the user. CSS rules make this all possible, while JavaScript handles the rendering of the videos. The homepage also allows a user to add movies to a watchlist, which updates in real time.
+Clicking the down arrow button on a thumbnail or clicking the About Me link on the dropdown menu will initiate the function below.
+The function takes in an input and a callback which closes the modal. The input is either one of two things:
 
-`````
+#### - Movie ID 
+The movie ID is taken as a string and converted to an integer. The integer is provided as a prop to the Movie Modal Container, which is used to find the matching data in the movie's slice of state, finally rendering the information onto the component.
 
+#### - About
+About is a string 'about', which simply renders the About Me component to the page.
 
-`````
+#### Other Info
+e.stopPropagation() prevents the modal from closing when a user interacts with the component.
+closeModal applied to the parent container (onClick) allows the user to close the modal when they click outside of the child component.
+Based on what the URL is during a User's experience, conditions will change the class name of the components, resulting in different styling.
 
-## REACT
-`````
-        <div className="movie-index">
-          {this.props.watchlist.includes('No watchlists!') && this.props.watchlist.length === 1 
-        
-          ? <div>
-                <h1 className="row-header">Watchlist</h1>
-                <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
-                  <li className="thumbnail-container" onMouseOver={event => this.hoverPlay(event)} onMouseOut={event => event.target.load()}>
-                    <img src={window.placeholder} className="thumbnail" id="placeholder" ></img>
-                  </li>
-                </ul>
-            </div>
-        
-          
-          : <div>
-            <h1 className="row-header">Watchlist</h1>
-            <span className="material-icons left-arrow" onClick={() => this.handleScroll('left', 'watchlist')}>
-              arrow_back_ios
-            </span>
-            <span className="material-icons right-arrow" onClick={() => this.handleScroll('right', 'watchlist')}>
-              arrow_forward_ios
-            </span>
-            <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
-              {this.watchlistMovies.map((movie) => (
-                <Thumbnail user={user} watchlist={watchlist} userMovies={userWatchlistMovies} key={movie.id} movie={movie} />
-              ))}
-            </ul>
-          </div> }
+``` javascript
+const Modal = ({ input, closeModal }) => {
+  if (!modal) return null;
 
-`````
+  let about;
+  let movieId;
+  let modalComponent;
+  let url = window.location.href;
+
+  if (modal.includes('about')) {
+    about = true;
+    modalComponent = <AboutContainer />;
+  } else {
+    movieId = parseInt(modal);
+    modalComponent = <MovieModalContainer movie={movieId} />
+  }
+
+  return (
+    <div 
+      onClick={closeModal}
+      className={ url.includes('home') ? "modal-background" 
+        : url.includes('watchlist') ? "modal-background watchlist" 
+        : url.includes('search') ? "modal-background search" 
+        : "modal-background brand"} 
+    >
+      
+      <div 
+        className={about ? "modal-child about" : "modal-child"} 
+        onClick={e => e.stopPropagation()}
+      >
+        { modalComponent }
+      </div>
+    </div>
+  );
+}
+```
