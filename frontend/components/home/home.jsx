@@ -76,9 +76,7 @@ class Home extends React.Component {
     selectScreen.style.display = 'flex';
   }
 
-  handleScroll = ( direction, brand ) => {
-    let ref;
-
+  handleScroll = ( direction, brand, ref ) => {
     let mid = [
       document.getElementsByClassName(`thumbnail-container middle ${brand} swiped`),
       document.getElementsByClassName(`thumbnail-container middle ${brand}`)
@@ -93,20 +91,6 @@ class Home extends React.Component {
       document.getElementsByClassName(`material-icons right-arrow ${brand}`),
       document.getElementsByClassName(`material-icons right-arrow ${brand} hidden`)
     ];
-
-    if (brand === 'disney') {
-      ref = this.disney;
-    } else if (brand === 'pixar') {
-      ref = this.pixar;
-    } else if (brand === 'marvel') {
-      ref = this.marvel;
-    } else if (brand === 'star-wars') {
-      ref = this.starWars;
-    } else if (brand === 'nat-geo') {
-      ref = this.natGeo;
-    } else {
-      ref = this.watchlist;
-    }
 
     if (direction === 'left') {
       ref.current.style.transform = 'translateX(0px)';
@@ -191,14 +175,14 @@ class Home extends React.Component {
                     
               <div className="scroll-arrows">
                 <span 
-                  className={scrollLeft} 
-                  onClick={() => this.handleScroll('left', currentInput)}
+                  className={scrollLeft}
+                  onClick={() => this.handleScroll('left', currentInput, currentRef)}
                 >
                   arrow_back_ios
                 </span>
                 <span 
-                  className={scrollRight}  
-                  onClick={() => this.handleScroll('right', currentInput)}
+                  className={scrollRight}
+                  onClick={() => this.handleScroll('right', currentInput, currentRef)}
                 >
                   arrow_forward_ios
                 </span>
@@ -329,10 +313,16 @@ class Home extends React.Component {
                   { this.watchlistMovies.length > 5 ? 
 
                     <div className="scroll-arrows">
-                      <span className="material-icons left-arrow watchlist hidden" onClick={() => this.handleScroll('left', 'watchlist')}>
+                      <span 
+                        className="material-icons left-arrow watchlist hidden" 
+                        onClick={() => this.handleScroll('left', 'watchlist', this.watchlist)}
+                      >
                        arrow_back_ios
                       </span>
-                      <span className="material-icons right-arrow watchlist" onClick={() => this.handleScroll('right', 'watchlist')}>
+                      <span 
+                        className="material-icons right-arrow watchlist" 
+                        onClick={() => this.handleScroll('right', 'watchlist', this.watchlist)}
+                      >
                         arrow_forward_ios
                       </span>
                     </div> 
