@@ -9,16 +9,22 @@ class WatchlistButton extends React.Component {
     };
 
     this.watchlistButton = this.watchlistButton.bind(this);
+    this.movieCheck;
+  }
+
+  componentDidMount() {
+    this.movieCheck 
+      ? this.setState({ added: 'done' }) 
+      : this.setState({ added: 'add' })
   }
 
   watchlistButton() {
     if (this.state.added === 'add') {
       this.setState({ added: 'done' });
-      this.props.newAddition({ movie_id: 
-        this.props.movieId, 
+      this.props.newAddition({ 
+        movie_id: this.props.movieId, 
         user_id: this.props.userId 
       });
-
     } else {
       this.setState({ added: 'add' });
       this.props.removeMovie({ 
@@ -30,14 +36,12 @@ class WatchlistButton extends React.Component {
   }
 
   render() {
-    let movieCheck; 
-
     if (this.props.watchlist) {
       for (let i = 0; i < this.props.watchlist.length; i++) {
         let watchlistMovie = this.props.watchlist[i];
 
         if (watchlistMovie['movie_id'] === this.props.movieId) {
-          movieCheck = true;
+          this.movieCheck = true;
           break;
         }
       }
@@ -49,7 +53,7 @@ class WatchlistButton extends React.Component {
         className={this.props.modalButton ? "add-button modal" : "add-button"}
       >
         <p className="material-icons-outlined">
-          { movieCheck === true ? this.state.added = 'done' : this.state.added = 'add' }
+          { this.state.added }
         </p>
       </div>
     )
