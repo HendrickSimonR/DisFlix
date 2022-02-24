@@ -70,9 +70,54 @@ Disclaimer: I do not own any rights to these characters, images, or video clips,
 
 # Code
 
+## Watchlist Button Functionality
+
+Using a React Hook, the Watchlist button is able to accomplish multiple things. 
+- editWatchlist is initiated on click. It adds and removes movies from a user's watchlist, updating the back-end whenever the button is clicked.
+- useEffect is utilized to update the state and DOM when the movie is added or removed.
+- The added state uses the Google Font API, rendering a simple check or plus sign according to the button's state.
+- 
+```javascript
+
+const WatchlistButton =  props => {
+  const [ added, status ] = useState('add');
+  let className = "add-button";
+  
+  props.modalButton ? className += " modal" : null;
+
+  useEffect(() => {
+    status('add')
+    if (props.watchlistId) status('done');
+  }); 
+  
+  const editWatchlist = () => {
+    if (added === 'add') {
+      props.newAddition({ 
+        movie_id: props.movieId, 
+        user_id: props.userId 
+      });
+    } else {
+      props.removeMovie({ 
+        watchlist_id: props.watchlistId, 
+        movie_id: props.movieId, 
+        user_id: props.userId 
+      });
+    }
+  }
+
+  return (
+    <div onClick={ () => editWatchlist() } className={ className } >
+      <p className="material-icons-outlined">
+        { added }
+      </p>
+    </div>
+  )
+}
+```
+
 ## Scroll Functionality
 
-Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll to the original position. The responsive styling is done with changing class names, resulting in different styling rules. React Refs are used in order to manipulate and update the proper row. Futhermore, the middle thumbnail changes styling rules as well, depending on which arrow is clicked.
+Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll to the original position. Responsive styling is achieved with changing class names, resulting in different styling rules. React Refs are used in order to manipulate and update the proper row. Futhermore, the middle thumbnail changes styling rules as well, depending on which arrow is clicked.
 
 ### JS Function
 ```javascript
