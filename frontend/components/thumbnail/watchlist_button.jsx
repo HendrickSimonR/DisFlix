@@ -7,11 +7,8 @@ const WatchlistButton =  props => {
   props.modalButton ? className += " modal" : null;
 
   useEffect(() => {
-    if (props.watchlistId) {
-      status('done');
-    } else {
-      status('add');
-    }
+    status('add')
+    if (props.watchlistId) status('done');
   }); 
   
   const editWatchlist = () => {
