@@ -118,7 +118,7 @@ The following code showcases how a row of movies and functional arrows are rende
   <div className="scroll-arrows">
     <span 
      className={ scrollLeft } 
-     onClick={() => this.handleScroll('left', currentInput, currentRef)}
+     onClick={ () => this.handleScroll('left', currentInput, currentRef) }
     >
       arrow_back_ios
     </span>
