@@ -72,44 +72,87 @@ Disclaimer: I do not own any rights to these characters, images, or video clips,
 
 ## Scroll Functionality
 
-Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll back. The following snippet is an abridged version, showcasing the effects caused by clicking the left arrow on the Disney row of movies.
+Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll back. React Refs are used in order to manipulate and update the proper row.
 
 ### JS Function
 ```javascript
-handleScroll = (direction, brand) => {
-    if (direction === 'left') {
-      if (brand === 'disney') {
-        this.disney.current.style.transform = 'translateX(0px)';
-        
-        let mid = document.getElementsByClassName("thumbnail-container middle disney swiped");
-        mid[0].classList.remove('swiped');
+handleScroll = ( direction, brand ) => {
+  let ref = this.brand;
 
-        let leftArrow = document.getElementsByClassName("material-icons left-arrow disney");
-        let rightArrow = document.getElementsByClassName("material-icons right-arrow disney hidden");
+  let mid = [
+    document.getElementsByClassName(`thumbnail-container middle ${brand} swiped`),
+    document.getElementsByClassName(`thumbnail-container middle ${brand}`)
+  ]
 
-        leftArrow[0].classList.add('hidden');
-        rightArrow[0].classList.remove('hidden');
-      }
-    }
+  let leftArrow = [
+    document.getElementsByClassName(`material-icons left-arrow ${brand}`),
+    document.getElementsByClassName(`material-icons left-arrow ${brand} hidden`)
+  ];
+
+  let rightArrow = [
+    document.getElementsByClassName(`material-icons right-arrow ${brand}`),
+    document.getElementsByClassName(`material-icons right-arrow ${brand} hidden`)
+  ];
+
+  if (brand === 'disney') {
+    ref = this.disney;
+  } else if (brand === 'pixar') {
+    ref = this.pixar;
+  } else if (brand === 'marvel') {
+    ref = this.marvel;
+  } else if (brand === 'star-wars') {
+    ref = this.starWars;
+  } else if (brand === 'nat-geo') {
+    ref = this.natGeo;
+  } else {
+    ref = this.watchlist;
+  }
+
+  if (direction === 'left') {
+    ref.current.style.transform = 'translateX(0px)';
+    mid[0][0].classList.remove('swiped');
+    leftArrow[0][0].classList.add('hidden');
+    rightArrow[1][0].classList.remove('hidden');
+  } else {
+    ref.current.style.transform = 'translateX(-78.5%)';
+    mid[1][0].classList.add('swiped');
+    leftArrow[1][0].classList.remove('hidden');
+    rightArrow[0][0].classList.add('hidden');
+  }
+}
 ```
+
+The following code showcases a 
 
 ### React 
 ``` javascript
-<div className="scroll-arrows">
-  <span 
-   className="material-icons left-arrow disney hidden" 
-   onClick={() => this.handleScroll('left', 'disney')} 
-  >
-   arrow_back_ios
-  </span>
-  
-  <span 
-   className="material-icons right-arrow disney"  
-   onClick={() => this.handleScroll('right', 'disney')}
-  >
-   arrow_forward_ios
-  </span>
+<div>
+  <h1 className="row-header">
+    Disney
+  </h1>
+                    
+  <div className="scroll-arrows">
+    <span 
+     className="material-icons left-arrow disney hidden" 
+     onClick={() => this.handleScroll('left', 'disney')}
+    >
+     arrow_back_ios
+    </span>
+    <span 
+     className="material-icons right-arrow disney"  
+     onClick={() => this.handleScroll('right', 'disney')}
+    >
+     arrow_forward_ios
+    </span>
+  </div>
+                    
+  <ul className="movie-row" id="disney-movies" ref={this.disney}>
+    { this.disneyMovies.map((film) => (
+     <ThumbnailContainer movie={film} />
+    ))}
+  </ul>
 </div>
+
 ```
 
 ## Modal
