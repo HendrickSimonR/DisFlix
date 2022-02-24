@@ -23,9 +23,7 @@ function Modal({modal, closeModal}) {
     }
   }
 
-  if (modal.includes('about')) {
-    about = true;
-  }
+  if (modal.includes('about')) about = true;
   
   if (renderMovie === true) {
     modalComponent = <MovieModalContainer movie={movieId} />
