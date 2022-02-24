@@ -1,18 +1,25 @@
 <p align="center">
- <img src="https://github.com/HendrickSimonR/Disney-Cinema/blob/main/app/assets/images/logo.png?raw=true" align="center" width="300">
+ <img src="https://github.com/HendrickSimonR/Disney-Cinema/blob/main/app/assets/images/logo.png?raw=true" width="300">
 </p>
 
 <h1 align="center">
  https://disney-cinema.herokuapp.com
 </h1>
+
+<p align="center">
+ <img src="https://github.com/HendrickSimonR/Disney-Cinema/blob/main/app/assets/images/screen_capture.gif?raw=true" />
+</p>
  
-Disney Cinema is a Netflix website clone utilizing Disney properties and specific UI eleements from Disney Plus. You can browse and watch Disney classics and other Disney-owned films all on this platform.
+### Disney Cinema is a "hybrid-clone", combining the UX/UI of Netflix and Disney Plus. With this app, user's can view classic Disney (and Disney-owned properties) scenes all in one place! 
 
+Disclaimer: I do not own any rights to these characters, images, or video clips, and this website is not-for-profit!
 
-- Backend : Ruby on Rails
-- Frontend : React-Redux
-- Database : PostgreSQL
-- Hosting : Heroku
+## Languages & Frameworks
+- Back-End: Ruby on Rails
+- Front-End: React-Redux
+- Database: PostgreSQL
+- Data Transfer: Amazon Web Services S3
+- Styling: SCSS
 
 
 # Features
