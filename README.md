@@ -32,7 +32,7 @@ Disclaimer: I do not own any rights to these characters, images, or video clips,
  
 8) Avatars: select your favorite Disney Plus character. If not there, shuffle using the button below the displayed avatars and see who else pops up!
 
-9) Interactive styling provides an exciting experience for users, while the theme adds a touch of nostalgia
+9) Interactive styling provides an exciting experience for users, while the theme adds a touch of nostalgia.
 
 10) Users can access the live site on both Desktop and Mobile.
 
