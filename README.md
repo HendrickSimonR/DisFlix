@@ -106,7 +106,7 @@ handleScroll = ( direction, brand, ref ) => {
 }
 ```
 
-The following code showcases how a row of movies and functional arrows are rendered on the React component.
+The following code showcases how a row of movies and functional arrows are rendered on the React component. This snippet is taken from a loop, which is responsible for rendering different data for each row.
 
 ### React 
 ``` javascript
