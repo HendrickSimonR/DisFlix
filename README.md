@@ -14,14 +14,6 @@
 
 Disclaimer: I do not own any rights to these characters, images, or video clips, and this website is not-for-profit!
 
-## Languages & Frameworks
-- Back-End: Ruby on Rails
-- Front-End: React-Redux
-- Database: PostgreSQL
-- Data Transfer: Amazon Web Services S3
-- Styling: SCSS
-- Babel, Webpack, GitHub, HTML5
-
 # Features
 
 1) On hovering a movie thumbnail, styling changes display functional buttons, as well as a preview of the movie.
@@ -43,6 +35,37 @@ Disclaimer: I do not own any rights to these characters, images, or video clips,
 9) Interactive styling provides an exciting experience for users, while the theme adds a touch of nostalgia
 
 10) Users can access the live site on both Desktop and Mobile.
+
+# Languages & Frameworks
+### Rails
+- The Rails back-end provides the structure of the data. Rails routes provide the pathway for which functions in the back-end are executed, and data is stored or changed.
+
+### JBuilder
+- JBuilder converts API calls to the Rails back-end into JSON. 
+
+### PostgreSQL
+- PostgreSQL is used to store, query, and filter data in the back-end.
+
+### React.js
+- The front-end utilizes React for functionality and user interactivity, allowing for real-time updates. This project utilizes a mix of hooks and classes, and classic JavaScript for certain functions.
+
+### Redux
+- Redux handles the application's state. Redux is utlized as the intermediary between the React front-end and Rails back-end to apply updates in both. For instance, User Auth is accomplished through the Redux cycle. 
+
+### SCSS
+- Syntactically Awesome Stylesheets allow for responsive styling in a user's screen size and specific user interactions.
+
+### Amazon Web Services S3
+- AWS S3 hosts video clips and images, populating the application with the data on render.
+
+### HTML5
+- Using the classic internet language allows for special features, such as using Google API Fonts, favicon, scrollbar styling, and utilizing the window for globally accessed variables.
+
+### GitHub, Heroku
+- GitHub stores and hosts the code, while Heroku compiles to allow the website to be accessible to any and all users.
+
+### Babel, Webpack
+- Both build tools are used with custom config files.
 
 
 # Code
@@ -92,7 +115,7 @@ handleScroll = (direction, brand) => {
 ## Modal
 
 Clicking the down arrow button on a thumbnail or clicking the About Me link on the dropdown menu will initiate the function below.
-The function takes in an input and a callback which closes the modal. The input is either one of two things:
+The function takes in an input and a callback function which closes the modal. The input is either one of two things:
 
 #### - Movie ID 
 The movie ID is taken as a string and converted to an integer. The integer is provided as a prop to the Movie Modal Container, which is used to find the matching data in the movie's slice of state, finally rendering the information onto the component.
