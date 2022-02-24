@@ -1,4 +1,10 @@
-# Disney Cinema
+<p align="center">
+ <img src="https://github.com/HendrickSimonR/Disney-Cinema/blob/main/app/assets/images/logo.png?raw=true" align="center" width="300">
+</p>
+
+<h1 align="center">
+ https://disney-cinema.herokuapp.com
+</h1>
  
 Disney Cinema is a Netflix website clone utilizing Disney properties and specific UI eleements from Disney Plus. You can browse and watch Disney classics and other Disney-owned films all on this platform.
 
