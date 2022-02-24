@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 const WatchlistButton =  props => {
   const [ added, status ] = useState('add');
-  let className = "add-button";
   
-  props.modalButton ? className += " modal" : null;
-
   useEffect(() => {
     status('add')
     if (props.watchlistId) status('done');
   }); 
+  
+  let className = "add-button";
+  props.modalButton ? className += " modal" : null;
   
   const editWatchlist = () => {
     if (added === 'add') {
