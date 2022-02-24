@@ -72,7 +72,7 @@ Disclaimer: I do not own any rights to these characters, images, or video clips,
 
 ## Scroll Functionality
 
-Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll back. The responsive styling is done with changing class names, resulting in different styling rules. React Refs are used in order to manipulate and update the proper row.
+Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll to the original position. The responsive styling is done with changing class names, resulting in different styling rules. React Refs are used in order to manipulate and update the proper row.
 
 ### JS Function
 ```javascript
