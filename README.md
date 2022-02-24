@@ -76,7 +76,7 @@ Using JavaScript, I developed the functionality of a row moving once an arrow is
 
 ### JS Function
 ```javascript
-handleScroll = ( direction, brand ) => {
+handleScroll = ( direction, brand, ref ) => {
   let ref;
 
   let mid = [
@@ -93,20 +93,6 @@ handleScroll = ( direction, brand ) => {
     document.getElementsByClassName(`material-icons right-arrow ${brand}`),
     document.getElementsByClassName(`material-icons right-arrow ${brand} hidden`)
   ];
-
-  if (brand === 'disney') {
-    ref = this.disney;
-  } else if (brand === 'pixar') {
-    ref = this.pixar;
-  } else if (brand === 'marvel') {
-    ref = this.marvel;
-  } else if (brand === 'star-wars') {
-    ref = this.starWars;
-  } else if (brand === 'nat-geo') {
-    ref = this.natGeo;
-  } else {
-    ref = this.watchlist;
-  }
 
   if (direction === 'left') {
     ref.current.style.transform = 'translateX(0px)';
@@ -132,13 +118,13 @@ The following code showcases how a row of movies and functional arrows are rende
   <div className="scroll-arrows">
     <span 
      className={scrollLeft} 
-     onClick={() => this.handleScroll('left', currentInput)}
+     onClick={() => this.handleScroll('left', currentInput, currentRef)}
     >
       arrow_back_ios
     </span>
     <span 
      className={scrollRight}  
-     onClick={() => this.handleScroll('right', currentInput)}
+     onClick={() => this.handleScroll('right', currentInput, currentRef)}
     >
      arrow_forward_ios
     </span>
