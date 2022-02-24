@@ -1,63 +1,50 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
-class WatchlistButton extends React.Component {
-  constructor(props) {
-    super(props);
+const WatchlistButton =  props => {
+  const [ added, status ] = useState('add');
+  let className;
+  
+  props.modalButton 
+    ? className = "add-button modal"
+    : className = "add-button";
 
-    this.state = { 
-      added: 'add' 
-    };
+  useEffect(() => {
+    for (let i = 0; i < props.watchlist.length; i++) {
+      let watchlistMovie = props.watchlist[i];
 
-    this.watchlistButton = this.watchlistButton.bind(this);
-    this.movieCheck;
-  }
-
-  componentDidMount() {
-    this.movieCheck 
-      ? this.setState({ added: 'done' }) 
-      : this.setState({ added: 'add' })
-  }
-
-  watchlistButton() {
-    if (this.state.added === 'add') {
-      this.setState({ added: 'done' });
-      this.props.newAddition({ 
-        movie_id: this.props.movieId, 
-        user_id: this.props.userId 
-      });
-    } else {
-      this.setState({ added: 'add' });
-      this.props.removeMovie({ 
-        watchlist_id: this.props.watchlistId, 
-        movie_id: this.props.movieId, 
-        user_id: this.props.userId 
-      });
-    }
-  }
-
-  render() {
-    if (this.props.watchlist) {
-      for (let i = 0; i < this.props.watchlist.length; i++) {
-        let watchlistMovie = this.props.watchlist[i];
-
-        if (watchlistMovie['movie_id'] === this.props.movieId) {
-          this.movieCheck = true;
-          break;
-        }
+      if (watchlistMovie['movie_id'] === props.movieId) {
+        status('done');
+        break;
+      } else {
+        status('add');
       }
     }
-
-    return (
-      <div 
-        onClick={this.watchlistButton} 
-        className={this.props.modalButton ? "add-button modal" : "add-button"}
-      >
-        <p className="material-icons-outlined">
-          { this.state.added }
-        </p>
-      </div>
-    )
+  }, [ props.watchlist ]); 
+  
+  const editWatchlist = () => {
+    if (added === 'add') {
+      status('done');
+      props.newAddition({ 
+        movie_id: props.movieId, 
+        user_id: props.userId 
+      });
+    } else {
+      status('add');
+      props.removeMovie({ 
+        watchlist_id: props.watchlistId, 
+        movie_id: props.movieId, 
+        user_id: props.userId 
+      });
+    }
   }
+
+  return (
+    <div onClick={ () => editWatchlist() } className={ className } >
+      <p className="material-icons-outlined">
+        { added }
+      </p>
+    </div>
+  )
 }
 
 export default WatchlistButton;
