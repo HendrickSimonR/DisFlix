@@ -76,7 +76,7 @@ class Home extends React.Component {
     selectScreen.style.display = 'flex';
   }
 
-  handleScroll = (direction, brand) => {
+  handleScroll = ( direction, brand ) => {
     let ref;
 
     let mid = [
