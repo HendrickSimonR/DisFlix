@@ -72,44 +72,71 @@ Disclaimer: I do not own any rights to these characters, images, or video clips,
 
 ## Scroll Functionality
 
-Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll back. The following snippet is an abridged version, showcasing the effects caused by clicking the left arrow on the Disney row of movies.
+Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll to the original position. The responsive styling is done with changing class names, resulting in different styling rules. React Refs are used in order to manipulate and update the proper row.
 
 ### JS Function
 ```javascript
-handleScroll = (direction, brand) => {
-    if (direction === 'left') {
-      if (brand === 'disney') {
-        this.disney.current.style.transform = 'translateX(0px)';
-        
-        let mid = document.getElementsByClassName("thumbnail-container middle disney swiped");
-        mid[0].classList.remove('swiped');
+handleScroll = ( direction, brand, ref ) => {
+  let ref;
 
-        let leftArrow = document.getElementsByClassName("material-icons left-arrow disney");
-        let rightArrow = document.getElementsByClassName("material-icons right-arrow disney hidden");
+  let mid = [
+    document.getElementsByClassName(`thumbnail-container middle ${brand} swiped`),
+    document.getElementsByClassName(`thumbnail-container middle ${brand}`)
+  ]
 
-        leftArrow[0].classList.add('hidden');
-        rightArrow[0].classList.remove('hidden');
-      }
-    }
+  let leftArrow = [
+    document.getElementsByClassName(`material-icons left-arrow ${brand}`),
+    document.getElementsByClassName(`material-icons left-arrow ${brand} hidden`)
+  ];
+
+  let rightArrow = [
+    document.getElementsByClassName(`material-icons right-arrow ${brand}`),
+    document.getElementsByClassName(`material-icons right-arrow ${brand} hidden`)
+  ];
+
+  if (direction === 'left') {
+    ref.current.style.transform = 'translateX(0px)';
+    mid[0][0].classList.remove('swiped');
+    leftArrow[0][0].classList.add('hidden');
+    rightArrow[1][0].classList.remove('hidden');
+  } else {
+    ref.current.style.transform = 'translateX(-78.5%)';
+    mid[1][0].classList.add('swiped');
+    leftArrow[1][0].classList.remove('hidden');
+    rightArrow[0][0].classList.add('hidden');
+  }
+}
 ```
+
+The following code showcases how a row of movies and functional arrows are rendered on the React component.
 
 ### React 
 ``` javascript
-<div className="scroll-arrows">
-  <span 
-   className="material-icons left-arrow disney hidden" 
-   onClick={() => this.handleScroll('left', 'disney')} 
-  >
-   arrow_back_ios
-  </span>
-  
-  <span 
-   className="material-icons right-arrow disney"  
-   onClick={() => this.handleScroll('right', 'disney')}
-  >
-   arrow_forward_ios
-  </span>
+<div key={`${header}-${i}`}>
+  <h1 className="row-header">{ header }</h1>
+                    
+  <div className="scroll-arrows">
+    <span 
+     className={scrollLeft} 
+     onClick={() => this.handleScroll('left', currentInput, currentRef)}
+    >
+      arrow_back_ios
+    </span>
+    <span 
+     className={scrollRight}  
+     onClick={() => this.handleScroll('right', currentInput, currentRef)}
+    >
+     arrow_forward_ios
+    </span>
+  </div>
+                    
+  <ul className="movie-row" id={id} ref={currentRef}>
+    { movies.map((movie) => (
+       <ThumbnailContainer movie={movie} />
+    ))}
+  </ul>
 </div>
+
 ```
 
 ## Modal
