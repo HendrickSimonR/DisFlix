@@ -201,35 +201,30 @@ closeModal applied to the parent container (onClick) allows the user to close th
 Based on what the URL is during a User's experience, conditions will change the class name of the components, resulting in different styling.
 
 ``` javascript
-const Modal = ({ input, closeModal }) => {
+const Modal = ({ modal, closeModal }) => {
   if (!modal) return null;
 
-  let about;
   let movieId;
   let modalComponent;
-  let url = window.location.href;
+  let url = window.location.href.split('/');
   let modalName = 'modal-background';
+  let childName = 'modal-child';
+  let location = [ 'home', 'watchlist', 'search' ]
+
+  !location.includes(url[4]) ? modalName += ` brand` : modalName += ` ${url[4]}`;
 
   if (modal.includes('about')) {
-    about = true;
+    childName += ' about';
     modalComponent = <AboutContainer />;
   } else {
     movieId = parseInt(modal);
     modalComponent = <MovieModalContainer movie={movieId} />
   }
-  
-  if (url.includes('watchlist')) {
-    modalName += ' watchlist';
-  } else if (url.includes('search')) {
-    modalName += ' search';
-  } else if (!url.includes('home')) {
-    modalName += ' brand';
-  }   
 
   return (
     <div onClick={ closeModal } className={ modalName } >
       <div 
-        className={ about ? "modal-child about" : "modal-child" } 
+        className={ childName } 
         onClick={ e => e.stopPropagation() }
       >
         { modalComponent }
