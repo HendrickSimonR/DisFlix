@@ -1,7 +1,6 @@
 import React from 'react';
 import SelectProfile from '../selectProfile/select_profile';
 import BrandButtons from './brand_buttons';
-import AvatarsContainer from '../avatars/avatars_container';
 import ThumbnailContainer from '../thumbnail/thumbnail_container';
 import Featured from '../featured/featured';
 import Footer from '../footer/footer';
@@ -79,7 +78,22 @@ class Home extends React.Component {
 
   handleScroll = (direction, brand) => {
     let ref;
-  
+
+    let mid = [
+      document.getElementsByClassName(`thumbnail-container middle ${brand} swiped`),
+      document.getElementsByClassName(`thumbnail-container middle ${brand}`)
+    ]
+
+    let leftArrow = [
+      document.getElementsByClassName(`material-icons left-arrow ${brand}`),
+      document.getElementsByClassName(`material-icons left-arrow ${brand} hidden`)
+    ];
+
+    let rightArrow = [
+      document.getElementsByClassName(`material-icons right-arrow ${brand}`),
+      document.getElementsByClassName(`material-icons right-arrow ${brand} hidden`)
+    ];
+
     if (brand === 'disney') {
       ref = this.disney;
     } else if (brand === 'pixar') {
@@ -93,25 +107,17 @@ class Home extends React.Component {
     } else {
       ref = this.watchlist;
     }
-  
+
     if (direction === 'left') {
-      let mid = document.getElementsByClassName(`thumbnail-container middle ${brand} swiped`);
-      let leftArrow = document.getElementsByClassName(`material-icons left-arrow ${brand}`);
-      let rightArrow = document.getElementsByClassName(`material-icons right-arrow ${brand} hidden`);
-      
       ref.current.style.transform = 'translateX(0px)';
-      mid[0].classList.remove('swiped');
-      leftArrow[0].classList.add('hidden');
-      rightArrow[0].classList.remove('hidden');
+      mid[0][0].classList.remove('swiped');
+      leftArrow[0][0].classList.add('hidden');
+      rightArrow[1][0].classList.remove('hidden');
     } else {
-      let mid = document.getElementsByClassName(`thumbnail-container middle ${brand}`);
-      let leftArrow = document.getElementsByClassName(`material-icons left-arrow ${brand} hidden`);
-      let rightArrow = document.getElementsByClassName(`material-icons right-arrow ${brand}`);
-      
       ref.current.style.transform = 'translateX(-78.5%)';
-      mid[0].classList.add('swiped');
-      leftArrow[0].classList.remove('hidden');
-      rightArrow[0].classList.add('hidden');
+      mid[1][0].classList.add('swiped');
+      leftArrow[1][0].classList.remove('hidden');
+      rightArrow[0][0].classList.add('hidden');
     }
   }
 
@@ -242,7 +248,7 @@ class Home extends React.Component {
                     : null 
                   }
 
-                  <ul className="movie-row" id="watchlist-movies-row" ref={this.watchlist}>
+                  <ul className="movie-row" id="watchlist-movies" ref={this.watchlist}>
 
                     {this.watchlistMovies.slice(0, 8).map((movie, i) => (
                       <ThumbnailContainer 
