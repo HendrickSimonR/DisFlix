@@ -4,7 +4,7 @@ import MovieModalContainer from './movie_modal_container';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 
-function Modal({modal, closeModal}) {
+const Modal = ({modal, closeModal}) => {
   if (!modal) return null;
 
   let about;
