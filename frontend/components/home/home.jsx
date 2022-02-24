@@ -78,30 +78,30 @@ class Home extends React.Component {
 
   handleScroll = ( direction, brand, ref ) => {
     let mid = [
-      document.getElementsByClassName(`thumbnail-container middle ${brand} swiped`),
-      document.getElementsByClassName(`thumbnail-container middle ${brand}`)
-    ]
+      document.getElementsByClassName(`thumbnail-container middle ${brand} swiped`)[0],
+      document.getElementsByClassName(`thumbnail-container middle ${brand}`)[0]
+    ];
 
     let leftArrow = [
-      document.getElementsByClassName(`material-icons left-arrow ${brand}`),
-      document.getElementsByClassName(`material-icons left-arrow ${brand} hidden`)
+      document.getElementsByClassName(`material-icons left-arrow ${brand}`)[0],
+      document.getElementsByClassName(`material-icons left-arrow ${brand} hidden`)[0]
     ];
 
     let rightArrow = [
-      document.getElementsByClassName(`material-icons right-arrow ${brand}`),
-      document.getElementsByClassName(`material-icons right-arrow ${brand} hidden`)
+      document.getElementsByClassName(`material-icons right-arrow ${brand}`)[0],
+      document.getElementsByClassName(`material-icons right-arrow ${brand} hidden`)[0]
     ];
 
     if (direction === 'left') {
       ref.current.style.transform = 'translateX(0px)';
-      mid[0][0].classList.remove('swiped');
-      leftArrow[0][0].classList.add('hidden');
-      rightArrow[1][0].classList.remove('hidden');
+      mid[0].classList.remove('swiped');
+      leftArrow[0].classList.add('hidden');
+      rightArrow[1].classList.remove('hidden');
     } else {
       ref.current.style.transform = 'translateX(-78.5%)';
-      mid[1][0].classList.add('swiped');
-      leftArrow[1][0].classList.remove('hidden');
-      rightArrow[0][0].classList.add('hidden');
+      mid[1].classList.add('swiped');
+      leftArrow[1].classList.remove('hidden');
+      rightArrow[0].classList.add('hidden');
     }
   }
 
