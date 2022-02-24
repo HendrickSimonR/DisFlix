@@ -80,7 +80,7 @@ handleScroll = ( direction, brand, ref ) => {
   let mid = [
     document.getElementsByClassName(`thumbnail-container middle ${brand} swiped`)[0],
     document.getElementsByClassName(`thumbnail-container middle ${brand}`)[0]
-  ]
+  ];
 
   let leftArrow = [
     document.getElementsByClassName(`material-icons left-arrow ${brand}`)[0],
