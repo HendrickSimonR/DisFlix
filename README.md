@@ -72,12 +72,12 @@ Disclaimer: I do not own any rights to these characters, images, or video clips,
 
 ## Scroll Functionality
 
-Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll back. React Refs are used in order to manipulate and update the proper row.
+Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll back. The responsive styling is done with changing class names, resulting in different styling rules. React Refs are used in order to manipulate and update the proper row.
 
 ### JS Function
 ```javascript
 handleScroll = ( direction, brand ) => {
-  let ref = this.brand;
+  let ref;
 
   let mid = [
     document.getElementsByClassName(`thumbnail-container middle ${brand} swiped`),
@@ -122,33 +122,31 @@ handleScroll = ( direction, brand ) => {
 }
 ```
 
-The following code showcases a 
+The following code showcases how a row of movies and functional arrows are rendered on the React component.
 
 ### React 
 ``` javascript
-<div>
-  <h1 className="row-header">
-    Disney
-  </h1>
+<div key={`${header}-${i}`}>
+  <h1 className="row-header">{ header }</h1>
                     
   <div className="scroll-arrows">
     <span 
-     className="material-icons left-arrow disney hidden" 
-     onClick={() => this.handleScroll('left', 'disney')}
+     className={scrollLeft} 
+     onClick={() => this.handleScroll('left', currentInput)}
     >
-     arrow_back_ios
+      arrow_back_ios
     </span>
     <span 
-     className="material-icons right-arrow disney"  
-     onClick={() => this.handleScroll('right', 'disney')}
+     className={scrollRight}  
+     onClick={() => this.handleScroll('right', currentInput)}
     >
      arrow_forward_ios
     </span>
   </div>
                     
-  <ul className="movie-row" id="disney-movies" ref={this.disney}>
-    { this.disneyMovies.map((film) => (
-     <ThumbnailContainer movie={film} />
+  <ul className="movie-row" id={id} ref={currentRef}>
+    { movies.map((movie) => (
+       <ThumbnailContainer movie={movie} />
     ))}
   </ul>
 </div>
