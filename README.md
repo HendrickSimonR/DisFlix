@@ -72,38 +72,36 @@ Disclaimer: I do not own any rights to these characters, images, or video clips,
 
 ## Scroll Functionality
 
-Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll to the original position. The responsive styling is done with changing class names, resulting in different styling rules. React Refs are used in order to manipulate and update the proper row.
+Using JavaScript, I developed the functionality of a row moving once an arrow is clicked. Once clicked, the arrow is removed, and the arrow on the opposite side of the row is revealed, allowing the row to scroll to the original position. The responsive styling is done with changing class names, resulting in different styling rules. React Refs are used in order to manipulate and update the proper row. Futhermore, the middle thumbnail changes styling rules as well, depending on which arrow is clicked.
 
 ### JS Function
 ```javascript
 handleScroll = ( direction, brand, ref ) => {
-  let ref;
-
   let mid = [
-    document.getElementsByClassName(`thumbnail-container middle ${brand} swiped`),
-    document.getElementsByClassName(`thumbnail-container middle ${brand}`)
+    document.getElementsByClassName(`thumbnail-container middle ${brand} swiped`)[0],
+    document.getElementsByClassName(`thumbnail-container middle ${brand}`)[0]
   ]
 
   let leftArrow = [
-    document.getElementsByClassName(`material-icons left-arrow ${brand}`),
-    document.getElementsByClassName(`material-icons left-arrow ${brand} hidden`)
+    document.getElementsByClassName(`material-icons left-arrow ${brand}`)[0],
+    document.getElementsByClassName(`material-icons left-arrow ${brand} hidden`)[0]
   ];
 
   let rightArrow = [
-    document.getElementsByClassName(`material-icons right-arrow ${brand}`),
-    document.getElementsByClassName(`material-icons right-arrow ${brand} hidden`)
+    document.getElementsByClassName(`material-icons right-arrow ${brand}`)[0],
+    document.getElementsByClassName(`material-icons right-arrow ${brand} hidden`)[0]
   ];
 
   if (direction === 'left') {
     ref.current.style.transform = 'translateX(0px)';
-    mid[0][0].classList.remove('swiped');
-    leftArrow[0][0].classList.add('hidden');
-    rightArrow[1][0].classList.remove('hidden');
+    mid[0].classList.remove('swiped');
+    leftArrow[0].classList.add('hidden');
+    rightArrow[1].classList.remove('hidden');
   } else {
     ref.current.style.transform = 'translateX(-78.5%)';
-    mid[1][0].classList.add('swiped');
-    leftArrow[1][0].classList.remove('hidden');
-    rightArrow[0][0].classList.add('hidden');
+    mid[1].classList.add('swiped');
+    leftArrow[1].classList.remove('hidden');
+    rightArrow[0].classList.add('hidden');
   }
 }
 ```
@@ -112,27 +110,29 @@ The following code showcases how a row of movies and functional arrows are rende
 
 ### React 
 ``` javascript
-<div key={`${header}-${i}`}>
-  <h1 className="row-header">{ header }</h1>
+<div key={ `${header}-${i}` }>
+  <h1 className="row-header">
+    { header }
+  </h1>
                     
   <div className="scroll-arrows">
     <span 
-     className={scrollLeft} 
+     className={ scrollLeft } 
      onClick={() => this.handleScroll('left', currentInput, currentRef)}
     >
       arrow_back_ios
     </span>
     <span 
-     className={scrollRight}  
-     onClick={() => this.handleScroll('right', currentInput, currentRef)}
+     className={ scrollRight }  
+     onClick={ () => this.handleScroll('right', currentInput, currentRef) }
     >
-     arrow_forward_ios
+      arrow_forward_ios
     </span>
   </div>
                     
-  <ul className="movie-row" id={id} ref={currentRef}>
+  <ul className="movie-row" id={ id } ref={ currentRef }>
     { movies.map((movie) => (
-       <ThumbnailContainer movie={movie} />
+       <ThumbnailContainer movie={ movie } />
     ))}
   </ul>
 </div>
