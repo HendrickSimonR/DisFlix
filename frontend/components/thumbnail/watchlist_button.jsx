@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const WatchlistButton =  props => {
+const WatchlistButton = props => {
   const [ added, status ] = useState('add');
   
   useEffect(() => {
