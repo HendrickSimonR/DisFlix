@@ -20,17 +20,26 @@ Disclaimer: I do not own any rights to these characters, images, or video clips,
 - Database: PostgreSQL
 - Data Transfer: Amazon Web Services S3
 - Styling: SCSS
-
+- Babel, Webpack, GitHub, HTML5
 
 # Features
 
-## Movies
+1) Preview playback and more information on hovering the movie's thumbnail.
 
-- Preview playback and more information on hover
-- Interactive scrolling and watchlist
+2) Like and Dislike movies.
+
+3) Watchlist: Add and remove movies from a watchlist. Watchlist is updated in real-time on both the Home page and Watchlist page.
+
+4) Movie Modal: Clicking on the down arrow on the thumbnail opens a modal featuring more information about the movie (Cast, Blurb, Genres).
+
+5) URLs sorting movies by brand (Disney, Pixar, Marvel, Star Wars, National Geographic), featuring styling as they appear on Disney Plus.
+
+6) Search: search for movies based on title, genre, cast, keywords, and more.
+ 
+7) Avatars: select your favorite Disney Plus character. If not there, shuffle using the button below the displayed avatars and see who else pops up!
 
 
-Using React, Javascript and CSS, a movie will expand and play a preview when moused over by the user. CSS elements make this all possible, while JavaScript handles the rendering of the videos. The homepage also allows a user to add movies to a watchlist, which updates in real time.
+Using React, Javascript and SCSS, a movie will expand and play a preview when moused over by the user. CSS rules make this all possible, while JavaScript handles the rendering of the videos. The homepage also allows a user to add movies to a watchlist, which updates in real time.
 
 ## JAVASCRIPT
 
