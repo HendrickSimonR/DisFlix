@@ -132,7 +132,7 @@ class About extends React.Component {
 
             <li 
               id="about-link-to-site" 
-              onClick={() => this.visitSite("https://github.com/hendricksimonr/")}
+              onClick={() => this.visitSite("https://hendrickramos.com")}
             >
               <img 
                 alt='' 

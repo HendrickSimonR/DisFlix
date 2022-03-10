@@ -73,7 +73,7 @@ class Home extends React.Component {
 
   handleProfiles() {
     let selectScreen = document.getElementById('select-profiles');
-    selectScreen.style.display = 'flex';
+    if (selectScreen) selectScreen.style.display = 'flex';
   }
 
   handleScroll = ( direction, brand, ref ) => {
