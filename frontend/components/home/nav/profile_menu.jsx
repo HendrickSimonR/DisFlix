@@ -83,7 +83,7 @@ class ProfileMenu extends React.Component {
                 />
               </li>
 
-              <li id="link-to-site" onClick={() => this.visitSite("https://github.com/hendricksimonr/")}>
+              <li id="link-to-site" onClick={() => this.visitSite("https://hendrickramos.com")}>
                 My Website
 
                 <img 
