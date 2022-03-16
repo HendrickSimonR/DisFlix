@@ -154,7 +154,7 @@ class About extends React.Component {
 
             <li 
               id="about-link-to-site" 
-              onClick={() => this.visitSite("https://angel.co/jobs/home")}
+              onClick={() => this.visitSite("https://angel.co/u/hendrick-ramos")}
             >
               <img 
                 alt='' 

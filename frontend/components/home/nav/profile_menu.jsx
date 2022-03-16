@@ -105,7 +105,7 @@ class ProfileMenu extends React.Component {
                 />
               </li>
 
-              <li id="link-to-site" onClick={() => this.visitSite("https://angel.co/jobs/home")}>
+              <li id="link-to-site" onClick={() => this.visitSite("https://angel.co/u/hendrick-ramos")}>
                 AngelList
 
                 <img 
