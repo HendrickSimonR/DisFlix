@@ -340,3 +340,15 @@
   position: relative;
   top: 35%;
 }
+
+#site-protector-access {
+  padding: 8px;
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+}
+
+#site-protector-access:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

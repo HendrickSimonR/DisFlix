@@ -15,9 +15,7 @@ class SplashPage extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(e);
-    console.log(this.state)
-    if (this.state.password === '$dis-project!$-94~') {
+    if (this.state.password === '$dis-pr0ject!$-94~') {
       let splashContainer = document.getElementById('splash-container');
       let protector = document.getElementById('site-protector');
       let mainSplash = document.getElementById('splash-main');
@@ -35,6 +33,11 @@ class SplashPage extends React.Component {
     });
   }
 
+  visitSite(link) {
+    window.open(
+      link, '_blank'
+    )
+  }
 
   render() {
     return (
@@ -45,12 +48,16 @@ class SplashPage extends React.Component {
               {this.props.errors.session.length > 0 ? this.renderErrors() : ''}
             </div> */}
 
+            <p id='site-protector-access' onClick={() => this.visitSite("mailto:hendricksimonr@gmail.com")}>
+              Please contact me for access! 
+            </p>
+
             <br />
 
             <div className="signin-form">
               <input 
                 type="password"
-                placeholder="Password Please"
+                placeholder="Password"
                 className="signin-input"
                 value={this.state.password}
                 onChange={this.update('password')}
