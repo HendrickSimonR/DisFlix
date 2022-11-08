@@ -22,7 +22,8 @@ class Welcome extends React.Component {
         <h1 className="splash-header">Unlimited Disney magic.</h1>
         <h3 className="splash-description">Watch anywhere. Cancel anytime.</h3>
         <button 
-          className='demobutton' 
+          className='demobutton'
+          id='demobutton' 
           onClick={this.handleDemo}>DEMO LOGIN
         </button>
         <br />

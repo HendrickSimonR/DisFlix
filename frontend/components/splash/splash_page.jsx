@@ -21,11 +21,13 @@ class SplashPage extends React.Component {
       let mainSplash = document.getElementById('splash-main');
       let description = document.getElementById('splash-info');
       let signin = document.getElementById('splash-signin');
+      let demo = document.getElementById('demobutton');
       protector.remove();
       signin.style.display = 'flex';
       splashContainer.style.position = 'inherit';
       mainSplash.style.visibility = 'visible';
       description.style.visibility = 'visible';
+      demo.style.visibility = 'visible';
     }
   }
 
@@ -81,7 +83,7 @@ class SplashPage extends React.Component {
             <img src={window.logo} className="splash-logo" />
           </Link>
 
-          <Link className="splash-signin" to="/signin" id='splash-signin'>
+          <Link className="splash-signin" to={this.state.password === '$dis-pr0ject!$-94~' ? "/signin" : "/"} id='splash-signin'>
             SIGN IN
           </Link>
 
