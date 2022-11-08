@@ -59,6 +59,7 @@ class SplashPage extends React.Component {
                 type="password"
                 placeholder="Password"
                 className="signin-input"
+                id='protector-signin'
                 value={this.state.password}
                 onChange={this.update('password')}
               />
