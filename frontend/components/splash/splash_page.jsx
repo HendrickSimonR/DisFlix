@@ -40,7 +40,7 @@ class SplashPage extends React.Component {
     return (
       <div className="splash-container" id="splash-container">
         <div id='site-protector'>
-          <form onSubmit={this.handleSubmit} className="sign-form-box">
+          <form onSubmit={this.handleSubmit} className="sign-form-box" id='protector-form'>
             {/* <div>
               {this.props.errors.session.length > 0 ? this.renderErrors() : ''}
             </div> */}
