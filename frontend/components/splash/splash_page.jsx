@@ -20,7 +20,9 @@ class SplashPage extends React.Component {
       let protector = document.getElementById('site-protector');
       let mainSplash = document.getElementById('splash-main');
       let description = document.getElementById('splash-info');
+      let signin = document.getElementById('splash-signin');
       protector.remove();
+      signin.style.display = 'flex';
       splashContainer.style.position = 'inherit';
       mainSplash.style.visibility = 'visible';
       description.style.visibility = 'visible';
@@ -79,7 +81,7 @@ class SplashPage extends React.Component {
             <img src={window.logo} className="splash-logo" />
           </Link>
 
-          <Link className="splash-signin" to="/signin">
+          <Link className="splash-signin" to="/signin" id='splash-signin'>
             SIGN IN
           </Link>
 
