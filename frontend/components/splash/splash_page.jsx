@@ -34,9 +34,7 @@ class SplashPage extends React.Component {
   }
 
   visitSite(link) {
-    window.open(
-      link, '_blank'
-    )
+    window.open(link)
   }
 
   render() {
