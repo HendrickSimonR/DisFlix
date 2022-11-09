@@ -26,6 +26,7 @@ class Welcome extends React.Component {
         <button 
           className='demobutton'
           id='demobutton' 
+          disabled = {true}
           onClick={this.handleDemo}>DEMO LOGIN
         </button>
         <br />

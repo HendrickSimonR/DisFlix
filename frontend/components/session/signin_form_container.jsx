@@ -9,8 +9,8 @@ const mSTP = (state) => {
     errors: state.errors,
     formType: 'Sign In',
     formGreeting: 'Welcome back!',
-    question: 'New to Disney Cinema?',
-    link: <Link className="question-link" to="/signup">Sign up</Link>
+    question: '', // New to Disney Cinema?
+    link: <Link className="question-link" to="" /*/signup*/>Come back soon to join us!</Link> // Sign Up
   };
 };
 
