@@ -9,8 +9,10 @@ class Welcome extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    const demo = { username: "disney4eva", password: "imagination" };
-    this.props.signin(demo)
+    if (window.allowAccess) {
+      const demo = { username: "disney4eva", password: "imagination" };
+      this.props.signin(demo)
+    }
     // .then(
       // () => this.props.history.push('/dashboard')
     // );

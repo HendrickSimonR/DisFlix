@@ -38,7 +38,8 @@ class ProfileMenu extends React.Component {
     window.hideProfile = false;
     window.profilePic = null;
     this.props.signout();
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
+    // console.log(window.allowAccess) 
   }
 
   render() {

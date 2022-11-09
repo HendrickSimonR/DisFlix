@@ -7,15 +7,16 @@ class SplashPage extends React.Component {
     super(props);
 
     this.state = {
-      password: '' 
+      passkey: '' 
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.restoreDemo = this.restoreDemo.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.password === '$dis-pr0ject!$-94~') {
+    if (this.state.passkey === '$dis-pr0ject!$-94~') {
       let splashContainer = document.getElementById('splash-container');
       let protector = document.getElementById('site-protector');
       let mainSplash = document.getElementById('splash-main');
@@ -35,6 +36,11 @@ class SplashPage extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  restoreDemo() {
+    let demo = document.getElementById('demobutton');
+    if (demo) demo.style.visibility = 'visible';
   }
 
   visitSite(link) {
@@ -62,8 +68,8 @@ class SplashPage extends React.Component {
                 placeholder="Password"
                 className="signin-input"
                 id='protector-signin'
-                value={this.state.password}
-                onChange={this.update('password')}
+                value={this.state.passkey}
+                onChange={this.update('passkey')}
               />
 
               <br />
@@ -79,11 +85,11 @@ class SplashPage extends React.Component {
           </form>
         </div>
         <div className="splash-main" id='splash-main'>
-          <Link to="/">
+          <Link to="/" onClick={this.restoreDemo()}>
             <img src={window.logo} className="splash-logo" />
           </Link>
 
-          <Link className="splash-signin" to={this.state.password === '$dis-pr0ject!$-94~' ? "/signin" : "/"} id='splash-signin'>
+          <Link className="splash-signin" to={this.state.passkey === '$dis-pr0ject!$-94~' ? "/signin" : "/"} id='splash-signin'>
             SIGN IN
           </Link>
 
