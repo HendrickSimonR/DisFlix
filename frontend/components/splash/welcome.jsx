@@ -9,10 +9,10 @@ class Welcome extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    if (window.allowAccess) {
+    // if (window.allowAccess) {
       const demo = { username: "disney4eva", password: "imagination" };
       this.props.signin(demo)
-    }
+    // }
     // .then(
       // () => this.props.history.push('/dashboard')
     // );
@@ -26,7 +26,7 @@ class Welcome extends React.Component {
         <button 
           className='demobutton'
           id='demobutton' 
-          disabled = {true}
+          // disabled = {true}
           onClick={this.handleDemo}>DEMO LOGIN
         </button>
         <br />

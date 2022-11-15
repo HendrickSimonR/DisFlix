@@ -50,11 +50,8 @@ class SplashPage extends React.Component {
   render() {
     return (
       <div className="splash-container" id="splash-container">
-        <div id='site-protector'>
+        {/* <div id='site-protector'>
           <form onSubmit={this.handleSubmit} className="sign-form-box" id='protector-form'>
-            {/* <div>
-              {this.props.errors.session.length > 0 ? this.renderErrors() : ''}
-            </div> */}
 
             <p id='site-protector-access' onClick={() => this.visitSite("mailto:hendricksimonr@gmail.com")}>
               Please contact me for access! 
@@ -83,13 +80,13 @@ class SplashPage extends React.Component {
               <br />
             </div>
           </form>
-        </div>
+        </div> */}
         <div className="splash-main" id='splash-main'>
           <Link to="/" onClick={this.restoreDemo()}>
             <img src={window.logo} className="splash-logo" />
           </Link>
-
-          <Link className="splash-signin" to={this.state.passkey === '$dis-pr0ject!$-94~' ? "/signin" : "/"} id='splash-signin'>
+          <Link className="splash-signin" to="/signin" id='splash-signin'>
+          {/* <Link className="splash-signin" to={this.state.passkey === '$dis-pr0ject!$-94~' ? "/signin" : "/"} id='splash-signin'> */}
             SIGN IN
           </Link>
 
