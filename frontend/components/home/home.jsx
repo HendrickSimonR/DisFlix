@@ -130,9 +130,7 @@ class Home extends React.Component {
 
     if (moviesArr.length === 0) {
       return null;
-
     } else {
-
       moviesArr.forEach(movie => {
         if (movie['brand_id'] === 1) {
           this.disneyMovies.push(movie);
@@ -144,16 +142,10 @@ class Home extends React.Component {
           this.starWarsMovies.push(movie);
         } else {
           this.natGeoMovies.push(movie);
-        }
+        } 
       });
 
-      allMovies = [
-        this.disneyMovies,
-        this.pixarMovies,
-        this.marvelMovies,
-        this.starWarsMovies,
-        this.natGeoMovies
-      ];
+      allMovies = [ this.disneyMovies, this.pixarMovies, this.marvelMovies, this.starWarsMovies, this.natGeoMovies ];
 
       let headers = [ 'Disney', 'Pixar', 'Marvel', 'Star Wars', 'National Geographic' ];
       let input = [ 'disney', 'pixar', 'marvel', 'star-wars', 'nat-geo' ];
@@ -164,26 +156,19 @@ class Home extends React.Component {
         let currentInput = input[i];
         let currentRef = refs[i];
         let header = headers[i];
-
         let scrollLeft = `material-icons left-arrow ${currentInput} hidden`;
         let scrollRight = `material-icons right-arrow ${currentInput}`;
-        let id = `${currentInput}-movies`
+        let id = `${currentInput}-movies`;
         
         let brandContainer = 
           <div key={`${header}-${i}`}>
             <h1 className="row-header">{ header }</h1>
                     
               <div className="scroll-arrows">
-                <span 
-                  className={scrollLeft}
-                  onClick={() => this.handleScroll('left', currentInput, currentRef)}
-                >
+                <span className={scrollLeft} onClick={() => this.handleScroll('left', currentInput, currentRef)}>
                   arrow_back_ios
                 </span>
-                <span 
-                  className={scrollRight}
-                  onClick={() => this.handleScroll('right', currentInput, currentRef)}
-                >
+                <span className={scrollRight} onClick={() => this.handleScroll('right', currentInput, currentRef)}>
                   arrow_forward_ios
                 </span>
               </div>
@@ -221,10 +206,7 @@ class Home extends React.Component {
 
         for (let j = 0; j < moviesArr.length; j++) {
           let movie = moviesArr[j];
-
-          if (movie.id === watchlistMovieId) {
-            this.watchlistMovies.push(movie);
-          }
+          if (movie.id === watchlistMovieId) this.watchlistMovies.push(movie);
         }
       }
 
@@ -245,11 +227,7 @@ class Home extends React.Component {
         ))
     }
 
-    if (this.props.watchlist) {
-      for (let i = 0; i < this.props.watchlist.length; i++) {
-        userWatchlistMovies.push(this.props.watchlist[i].movie_id);
-      };
-    }
+    if (this.props.watchlist) for (let i = 0; i < this.props.watchlist.length; i++) userWatchlistMovies.push(this.props.watchlist[i].movie_id);
 
     if (this.state.loading === true) {
 
@@ -267,10 +245,7 @@ class Home extends React.Component {
     if (brandsArr.length > 0) {
       for (let i = 0; i < brandsArr.length; i++) {
         let brand = brandsArr[i];
-
-        if (brand.name === 'Featured') {
-          featured = brand;
-        }
+        if (brand.name === 'Featured') featured = brand;
       }
     }
 
@@ -302,10 +277,7 @@ class Home extends React.Component {
             <BrandButtons />
 
             <div className="movie-index">
-              { (this.props.watchlist.includes('No watchlists!') && this.props.watchlist.length === 1) 
-                || this.props.watchlist === []
-
-              ?  null 
+              { (this.props.watchlist.includes('No watchlists!') && this.props.watchlist.length === 1) || this.props.watchlist === [] ? null 
 
               : <div>
                   <h1 className="row-header">Watchlist</h1>
@@ -317,7 +289,7 @@ class Home extends React.Component {
                         className="material-icons left-arrow watchlist hidden" 
                         onClick={() => this.handleScroll('left', 'watchlist', this.watchlist)}
                       >
-                       arrow_back_ios
+                        arrow_back_ios
                       </span>
                       <span 
                         className="material-icons right-arrow watchlist" 
@@ -341,10 +313,7 @@ class Home extends React.Component {
                 </div> 
               }
                 
-              { brandRows.map((component) => (
-                component 
-              ))}
-
+              { brandRows.map(component => component) }
             </div>
           </div>
 
