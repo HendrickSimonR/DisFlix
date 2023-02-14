@@ -126,7 +126,7 @@ class Home extends React.Component {
 
     if (Object.values(watchlist) !== undefined) {
       watchlistArr = Object.values(watchlist)
-    }
+    } 
 
     if (moviesArr.length === 0) {
       return null;
